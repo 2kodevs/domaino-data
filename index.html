@@ -12,7 +12,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
     
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
@@ -76,6 +76,144 @@
         <div class="subtitle main-text">
           Simulaciones
         </div>
+
+        <p>
+          Las estrategias implementadas fueron:
+        </p>
+        <div style="display: flex; justify-content: space-around;">
+          <div>
+            <article id="strategies">
+              <ul>
+                <li class="strat">
+                  <a href="#event1">Bota Gorda</a>
+                  <div <h2>Bota Gorda</h2>
+                    <p>
+                      El jugador trata de botar en cada turno, por indeseadas, las fichas más “gordas” (las 
+                      que tienen más puntos). Es una estrategia simple, que no requiere de mucho análisis del
+                      desarrollo del partido por parte del jugador.
+                    </p>
+                  </div>
+                </li>
+                <li class="strat">
+                  <a href="#event2">Bota Flaca</a>
+                  <div <h2>Bota Flaca</h2>
+                    <p>
+                      El jugador, contrario a la estrategia de Bota Gorda, intenta siempre jugar 
+                      la ficha más "flaca" (la que menos puntos acumula).
+                    </p>
+                  </div>
+                </li>
+                <li class="strat">
+                  <a href="#event3">Más frecuente</a>
+                  <div <h2>Más Frecuente</h2>
+                    <p>
+                      El jugador intenta siempre tener alguna ficha para jugar en su turno, 
+                      por lo que siempre juega alguna de las fichas con mayor frecuencia en su mano.
+                    </p>
+                  </div>
+                </li>
+                <li class="strat">
+                  <a href="#event4">Agachao</a>
+                  <div <h2>Agachao</h2>
+                    <p>
+                      El jugador que se "agacha" a una ficha, es porque es la que única que tiene 
+                      un número específico y está tratando de no quedarse sin ella; solamente jugará 
+                      esta ficha si es la única jugada válida para ese turno.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </article>
+          </div>
+          <div>
+            <article id="strategies">
+              <ul>
+                <li class="strat">
+                  <a href="#event5">Aleatorio</a>
+                  <div <h2>Aleatorio</h2>
+                    <p>
+                      El jugador escoge de forma aleatoria alguna de las fichas válidas a jugar en 
+                      ese turno.
+                    </p>
+                  </div>
+                </li>
+                <li class="strat">
+                  <a href="#event6">Repetidor</a>
+                  <div <h2>Repetidor</h2>
+                    <p>
+                      El jugador trata de que el siguiente siempre reciba los mismos números para 
+                      decidir su jugada; esto aumenta las probabilidades de que el siguiente jugador
+                      se quede sin fichas de estos números y se vea obligado a perder su turno.
+                    </p>
+                  </div>
+                </li>
+                <li class="strat">
+                  <a href="#event7">Contador de la mesa</a>
+                  <div <h2>Contador de la mesa</h2>
+                    <p>
+                      El jugador cuenta la cantidad de veces que ha aparecido un número en la mesa y 
+                      trata siempre de jugar aquel con mayor frecuencia.
+                    </p>
+                  </div>
+                </li>
+                <li class="strat">
+                  <a href="#event8">Menos Jugada</a>
+                  <div <h2>Menos Jugada</h2>
+                    <p>
+                      El jugador trata de "fresquear" la mesa, o sea, cuenta la mesa y decide poner
+                      la ficha que con menor frecuencia se ha utilizado en el juego.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </article>
+          </div>
+          <div>
+            <article id="strategies">
+              <ul>
+                <li class="strat">
+                  <a href="#event9">Pasador</a>
+                  <div <h2>Pasador</h2>
+                    <p>
+                      El objetivo de este jugador es tratar de que el siguiente se pase (no tenga 
+                      ninguna ficha que jugar en su turno), por lo que siempre trata de dejar en las
+                      cabezas algunas que ya sepa que el siguiente no tiene.
+                    </p>
+                  </div>
+                </li>
+                <li class="strat">
+                  <a href="#event10">No gastar la data</a>
+                  <div <h2>No gastar la data</h2>
+                    <p>
+                      El jugador trata de guardar su data (mayor subconjunto de las fichas que 
+                      recibe el jugador al inicio del juego que tienen un número en común) para
+                      el final del juego.
+                    </p>
+                  </div>
+                </li>
+                <li class="strat">
+                  <a href="#event11">Gastar la data</a>
+                  <div <h2>Gastar la data</h2>
+                    <p>
+                      El jugador intenta siempre hacer un movimiento tal que su data quede en las 
+                      cabezas del juego.
+                    </p>
+                  </div>
+                </li>
+                <li class="strat">
+                  <a href="#event12">Siempre doble</a>
+                  <div <h2>Siempre doble</h2>
+                    <p>
+                      Este jugador siempre que tiene la oportunidad de jugarlo, pone un doble (fichas 
+                      que tienen el mismo número por los dos extremos).
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+        
       </div>
 
       <br />
