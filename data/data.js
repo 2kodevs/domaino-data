@@ -27,10 +27,10 @@ var SITE_JSON = {
             "OneGame": {
                 "BigDrop": {
                     "BigDrop": 54,
-                    "Frequent": 36,
-                    "Random": 35,
-                    "Repeater": 41,
-                    "TableCounter": 40,
+                    "La tisongola molida pa q sea talco": 90,
+                    "Random": 100,
+                    "Repeater": 1,
+                    "TableCounter": 5,
                     "Passer": 39,
                     "LessPlayed": 40,
                     "DataKeeper": 42,
