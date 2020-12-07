@@ -66,11 +66,16 @@ function upd_data(json, i, j){
 function populate_select(json, i){
   //TODO: get the json and remove the function argument
   var sel = document.getElementById(`id${i}`);
+  var old_value = sel.value;
   lines = "";
   for(var key in json){
     lines += `<option value="${key}">${key}</option>\n`;
   }
   sel.innerHTML = lines;
+  var new_value = sel.value;
+  sel.value = old_value;
+  if(sel.value === "")
+    sel.value = new_value;
 };
 
 function populate_selectors(n){
