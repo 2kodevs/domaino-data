@@ -29,6 +29,7 @@ h1 {
   margin: 0 auto;
 }
 .bar {
+  right: -5.25em;
   background: #ff413d;
   width: 0;
   margin: .25em 0;
@@ -42,6 +43,8 @@ h1 {
   background: #ff6461;
 }
 .bar .label {
+  white-space: unset;
+  right: 6.50em;
   font-size: .75em;
   padding: 1em;
   background: #212121;
@@ -56,9 +59,10 @@ h1 {
 }
 .count {
   position: absolute;
-  right: .25em;
+  right: -3.25em;
   top: .75em;
   padding: .15em;
   font-size: .75em;
   font-weight: bold;
+  color: black;
 }
