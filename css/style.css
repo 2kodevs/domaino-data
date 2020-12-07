@@ -43,6 +43,7 @@ h1 {
   background: #ff6461;
 }
 .bar .label {
+  white-space: unset;
   right: 6.50em;
   font-size: .75em;
   padding: 1em;
