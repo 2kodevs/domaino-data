@@ -12,15 +12,17 @@
 
   <body>
     <div class="wrap">
-      <select name='strategy' id='strategy' onchange="load(SITE_JSON);"></select>
+      <div id='selectors'></div>
+     
       <h1  id="main-label"></h1>
       <div id="holder"></div>
 
       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
       <script src="js/function.js"></script>
       <script>
-        populate_select(SITE_JSON);
-        load(SITE_JSON);
+        var levels = 4;
+        populate_selectors(levels);
+        upd_data(SITE_JSON, 1, levels);
       </script>
     </div>
   </body>
