@@ -1,103 +1,118 @@
 <!DOCTYPE html>
-<html lang="en" >
-  <head>
-    <meta charset="UTF-8">
-    <title>Domaino Data</title>
-    <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
-    <link href="https://fonts.googleapis.com/css?family=Electrolize&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" type="text/css" href="css/c3.css">
-    <link href='fonts/font-awesome-4.2.0/css/font-awesome.min.css' rel="stylesheet" type="text/css">
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    
-    <!-- Custom styles for this template -->
-    <link href="css/custom.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Remove the following line and add a js code to load data.json -->
-    <script src='data/data.js'></script>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Domaino Data</title>
+  <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico" />
+
+  <link rel="stylesheet" type="text/css" href="css/c3.css">
+  <link href='fonts/font-awesome-4.2.0/css/font-awesome.min.css' rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/bar.css" rel="stylesheet">
+
+  <!-- Remove the following line and add a js code to load data.json -->
+  <script src='data/data.js'></script>
 
 
-    <div class="article-header row  main-color">
-        <div class="article-news-title">La mejor estrategia del domino</div>
-        <div class="article-news-author">Por L. Raúl Iglesias, Miguel Tenorio, Carmen I. Cabrera</a> <span class="article-date">7/12/2020</span></div>
-        <div class="article-new-hr"><img  src="images/rule.png"></div>
-        <div class="article-news-lead">¿Mito o realidad?</div> 
-         <div class="article-news-image">
-            <img src="images/domino-para-niños.jpg">
-
-        </div>           
-    </div>  
-  </head>
-
-  <body>
-    <div class="text-body">
-      <div id="Intro" class="text-block">
-        <p>
-          El juego de Dominó es uno de los juegos de mesa con mayor arraigo y tradición en Cuba. El 
-          mismo está compuesto por fichas rectangulares que muestran un número (representados por puntos) 
-          por cada uno de sus dos extremos o “cabezas”. Aunque no existe impedimento para que pueda ser 
-          jugado por dos, tres o cuatro personas independientes, es sin dudas el juego entre dos parejas 
-          el que más interesante y competitivo resulta. Se juega de manera oficial en campeonatos a 
-          diferentes niveles, incluido el internacional, pero el dominó callejero, el que se juega en los 
-          portales y las esquinas de los barrios o incluso al interior de la casa, con familiares y amigos, 
-          es el que mayor colorido aporta a este juego, con sus dichos, burlas, griterías y alardes, no 
-          permitidos, evidentemente, en partidos oficiales.
-        </p>
-        <p>
-          En Cuba se juegan dos tipos de Dominó. En uno, que se juega fundamentalmente en la zona oriental, 
-          las fichas llegan del blanco (cero) hasta el seis, por lo que las posibles combinaciones, teniendo 
-          en cuenta que las fichas pueden repetir un mismo número por sus dos cabezas (los conocidos 
-          “dobles”), es de 28. A la hora de jugar, cada jugador debe coger 7 fichas, por lo que no sobra 
-          ninguna. 
-        </p>
-        <p>
-          En la otra variante, que es la usada en la zona occidental y central, las fichas van del blanco 
-          al nueve, por lo que las posibles combinaciones dan un total de 55 fichas. En esta modalidad 
-          cada jugador coge diez fichas, por lo que restan 15 que no formarán parte de la partida y cuyo valor no conoce ningún jugador. 
-          Esta es la mayor diferencia entre ambas modalidades, y la que establece la manera de aplicar las estrategias en 
-          cada una, pues en la primera se sabe que todas las fichas están en juego y las tiene algún 
-          jugador en la mesa, mientras que en la segunda hay un margen de incertidumbre acerca de cuáles fichas 
-          están en juego y cuáles no, al quedar siempre quince fichas, que no juegan en cada data y que, 
-          por supuesto, varían de una data a otra. Nos enfocaremos principalmente en esta última variante.
-        </p>
-        <p>
-          Entre los jugadores abundan criterios con respecto a cuáles son las mejores prácticas para alcanzar 
-          la victoria en este juego, ya sea por experiencia adquirida o las enseñanzas transmitidas de generación 
-          en generación. Sin embargo, surge la duda de cuán eficiente realmente son las estrategias y tácticas 
-          popularmente utilizadas; por tanto, en un intento de clarificar esta cuestión, se desarrollaron numerosas 
-          simulaciones computarizadas que semejan el comportamiento real de los juegos y que permiten un posterior 
-          análisis de los datos resultantes.
-        </p>
-        <div class="subtitle main-text">
-          Simulaciones
-        </div>
-      </div>
-
-      <br />
-
-    
-      <div class="wrap">
-        <div id='selectors'></div>
-      
-        <h1  id="main-label"></h1>
-        <div id="holder"></div>
-
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src="js/function.js"></script>
-        <script>
-          var levels = 4;
-          populate_selectors(levels);
-          upd_data(SITE_JSON, 1, levels);
-        </script>
-      </div>
+  <div class="article-header row  main-color">
+    <div class="article-news-title">La mejor estrategia del Dominó</div>
+    <div class="article-news-author">Por L. Raúl Iglesias, Miguel Tenorio, Carmen I. Cabrera</a> <span
+        class="article-date">7/12/2020</span></div>
+    <div class="article-new-hr"><img src="images/rule.png"></div>
+    <div class="article-news-lead">¿Mito o realidad?</div>
+    <div class="article-news-image">
+      <img src="images/domino-para-niños.jpg">
 
     </div>
+  </div>
+</head>
+
+<body>
+  <div class="text-body">
+    <div id="Intro" class="text-block">
+      <p>
+        El juego de Dominó es uno de los juegos de mesa con mayor arraigo y tradición en Cuba. El
+        mismo está compuesto por fichas rectangulares que muestran un número (representados por puntos)
+        por cada uno de sus dos extremos o “cabezas”. Aunque no existe impedimento para que pueda ser
+        jugado por dos, tres o cuatro personas independientes, es sin dudas el juego entre dos parejas
+        el que más interesante y competitivo resulta. Se juega de manera oficial en campeonatos a
+        diferentes niveles, incluido el internacional, pero el dominó callejero, el que se juega en los
+        portales y las esquinas de los barrios o incluso al interior de la casa, con familiares y amigos,
+        es el que mayor colorido aporta a este juego, con sus dichos, burlas, griterías y alardes, no
+        permitidos, evidentemente, en partidos oficiales.
+      </p>
+      <p>
+        En Cuba se juegan dos tipos de Dominó. En uno, que se juega fundamentalmente en la zona oriental,
+        las fichas llegan del blanco (cero) hasta el seis, por lo que las posibles combinaciones, teniendo
+        en cuenta que las fichas pueden repetir un mismo número por sus dos cabezas (los conocidos
+        “dobles”), es de 28. A la hora de jugar, cada jugador debe coger 7 fichas, por lo que no sobra
+        ninguna.
+      </p>
+      <p>
+        En la otra variante, que es la usada en la zona occidental y central, las fichas van del blanco
+        al nueve, por lo que las posibles combinaciones dan un total de 55 fichas. En esta modalidad
+        cada jugador coge diez fichas, por lo que restan 15 que no formarán parte de la partida y cuyo valor no conoce
+        ningún jugador.
+        Esta es la mayor diferencia entre ambas modalidades, y la que establece la manera de aplicar las estrategias en
+        cada una, pues en la primera se sabe que todas las fichas están en juego y las tiene algún
+        jugador en la mesa, mientras que en la segunda hay un margen de incertidumbre acerca de cuáles fichas
+        están en juego y cuáles no, al quedar siempre quince fichas, que no juegan en cada data y que,
+        por supuesto, varían de una data a otra. Nos enfocaremos principalmente en esta última variante.
+      </p>
+      <p>
+        Entre los jugadores abundan criterios con respecto a cuáles son las mejores prácticas para alcanzar
+        la victoria en este juego, ya sea por experiencia adquirida o las enseñanzas transmitidas de generación
+        en generación. Sin embargo, surge la duda de cuán eficiente realmente son las estrategias y tácticas
+        popularmente utilizadas; por tanto, en un intento de clarificar esta cuestión, se desarrollaron numerosas
+        simulaciones computarizadas que semejan el comportamiento real de los juegos y que permiten un posterior
+        análisis de los datos resultantes.
+      </p>
+      <div class="subtitle main-text">
+        Simulaciones
+      </div>
+    </div>
+
+    <br />
 
 
-  </body>
+    <div class="wrap">
+      <div id='selectors'></div>
+
+      <h1 id="main-label"></h1>
+      <div id="holder"></div>
+
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src="js/function.js"></script>
+      <script>
+        var levels = 5;
+        populate_selectors(levels);
+        upd_data(SITE_JSON, 1, levels);
+      </script>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div>
+      <span><a href="../../index.html"><img class="logo-footer" src="../../assets/images/logo-white.png"></a></span>
+      <span class="footer-icons">
+        <a href="mailto://social@postdata.club"><i class="fa fa-envelope"></i></a>
+        <a href="http://facebook.com/postdataclub"><i class="fa fa-facebook"></i></a>
+        <a href="http://twitter.com/postdataclub"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCZ14lFS4j0Aczm8OniDa9DQ"><i class="fa fa-youtube"></i></a>
+      </span>
+    </div>
+
+    <div class="copyright">Copyright 2020</div>
+  </div>
+</body>
+
 </html>
