@@ -1,0 +1,30 @@
+{
+    "Casino": {
+        "BigDrop": 52,
+        "Frequent": 48.4,
+        "Random": 50.6,
+        "Repeater": 47.4,
+        "TableCounter": 46,
+        "Passer": 47,
+        "LessPlayed": 52.8,
+        "DataKeeper": 45,
+        "SmallDrop": 44,
+        "Agachao": 48.2,
+        "DataDropper": 49.2,
+        "AlwaysDouble": 44
+    },
+    "BigDrop": {
+        "BigDrop": 28.2,
+        "Frequent": 27.8,
+        "Random": 26.2,
+        "Repeater": 28,
+        "TableCounter": 24.6,
+        "Passer": 23,
+        "LessPlayed": 25.2,
+        "DataKeeper": 29,
+        "SmallDrop": 25,
+        "Agachao": 25,
+        "DataDropper": 29.2,
+        "AlwaysDouble": 23.6
+    }
+}
