@@ -438,8 +438,8 @@
               <th>Estrategias</th>
               <th>Casino</th>
               <th>BigDrop</th>
+            </tr>
           </thead>
-          </tr>
           <tbody>
             <tr>
               <th>BigDrop</th>
@@ -535,105 +535,141 @@
         salida de casino es una mala idea es ... un mito.
       </p>
 
+      <div class="subtitle main-text">
+        ¿Jugar con o en contra del enemigo?
+      </div>
+
+      <p>
+        Cuando sucede que un jugador obtiene una buena data, inmediatamente arma su estrategia en torno a ella y asume
+        que
+        probablemente vaya a ganar el juego si la aprovecha de forma correcta. Pero de repente el contrario, que es el
+        salidor,
+        comparte la misma data, y ya no es tan sencillo definir qué hacer: muchos optan por jugar tratando siempre de
+        matar la jugada
+        de su oponente, sacrificando su data, y apoyando a su compañero, que lo más probable es que no tenga fichas con
+        ese número;
+        pero hay otros que deciden probar fuerza, y juegan aprovechando la data del contrario con la suya, incluso
+        aunque su compañero
+        sufra las consecuencias. ¿Qué opción será la más acertada?
+      </p>
+      <p>
+        Para realizar las simulaciones en este caso, las parejas tienen dos jugadores oponentes que comparten la misma
+        data (entre los
+        dos tienen 8 fichas al menos que tienen el mismo número en común). En ambos casos las dos parejas juegan en modo
+        cooperativo.
+        Como nos interesa saber los resultados para la pareja que no es salidora, en un caso se le definió como
+        estrategia gastar la data
+        y en el otro no hacerlo; ambas variantes se enfrentaron al resto de las estrategias implementadas, obteniendo
+        los siguientes
+        resultados:
+      </p>
+
+      <div style="display: flex; justify-content: center;">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Estrategias</th>
+              <th>DataDropper</th>
+              <th>DataKeeper</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>BigDrop</th>
+              <td>
+                43.8</td>
+              <td>
+                42.8</td>
+            </tr>
+            <tr>
+              <th>Frequent</th>
+              <td>
+                52.0</td>
+              <td>
+                45.8</td>
+            </tr>
+            <tr>
+              <th>Random</th>
+              <td>
+                50.6</td>
+              <td>
+                48.0</td>
+            </tr>
+            <tr>
+              <th>Repeater</th>
+              <td>
+                52.2</td>
+              <td>
+                48.2</td>
+            </tr>
+            <tr>
+              <th>TableCounter</th>
+              <td>
+                52.0</td>
+              <td>
+                48.6</td>
+            </tr>
+            <tr>
+              <th>Passer</th>
+              <td>
+                50.4</td>
+              <td>
+                48.8</td>
+            </tr>
+            <tr>
+              <th>LessPlayed</th>
+              <td>
+                51.2</td>
+              <td>
+                49.0</td>
+            </tr>
+            <tr>
+              <th>DataKeeper</th>
+              <td>
+                53.8</td>
+              <td>
+                53.6</td>
+            </tr>
+            <tr>
+              <th>SmallDrop</th>
+              <td>
+                60.6</td>
+              <td>
+                54.8</td>
+            </tr>
+            <tr>
+              <th>Agachao</th>
+              <td>
+                51.6</td>
+              <td>
+                49.8</td>
+            </tr>
+            <tr>
+              <th>DataDropper</th>
+              <td>
+                53.0</td>
+              <td>
+                48.2</td>
+            </tr>
+            <tr>
+              <th>AlwaysDouble</th>
+              <td>
+                52.0</td>
+              <td>
+                52.0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Se puede observar que con ambas estrategias se obtienen resultados muy similares, aunque el que juega con el
+        contrario es ligeramente superior en casi todos los casos. No obstante, la diferencia es tan pequeña que no se
+        debería asegurar
+        que una estrategia sea mejor que la otra, simplemente utilice aquella con la que más cómodo se sienta.
+      </p>
     </div>
 
-    <div style="display: flex; justify-content: center;">
-      <table class="styled-table">
-        <thead>
-          <tr>
-            <th>Estrategias</th>
-            <th>DataDropper</th>
-            <th>DataKeeper</th>
-        </thead>
-        </tr>
-        <tbody>
-          <tr>
-            <th>BigDrop</th>
-            <td>
-              43.8</td>
-            <td>
-              42.8</td>
-          </tr>
-          <tr>
-            <th>Frequent</th>
-            <td>
-              52.0</td>
-            <td>
-              45.8</td>
-          </tr>
-          <tr>
-            <th>Random</th>
-            <td>
-              50.6</td>
-            <td>
-              48.0</td>
-          </tr>
-          <tr>
-            <th>Repeater</th>
-            <td>
-              52.2</td>
-            <td>
-              48.2</td>
-          </tr>
-          <tr>
-            <th>TableCounter</th>
-            <td>
-              52.0</td>
-            <td>
-              48.6</td>
-          </tr>
-          <tr>
-            <th>Passer</th>
-            <td>
-              50.4</td>
-            <td>
-              48.8</td>
-          </tr>
-          <tr>
-            <th>LessPlayed</th>
-            <td>
-              51.2</td>
-            <td>
-              49.0</td>
-          </tr>
-          <tr>
-            <th>DataKeeper</th>
-            <td>
-              53.8</td>
-            <td>
-              53.6</td>
-          </tr>
-          <tr>
-            <th>SmallDrop</th>
-            <td>
-              60.6</td>
-            <td>
-              54.8</td>
-          </tr>
-          <tr>
-            <th>Agachao</th>
-            <td>
-              51.6</td>
-            <td>
-              49.8</td>
-          </tr>
-          <tr>
-            <th>DataDropper</th>
-            <td>
-              53.0</td>
-            <td>
-              48.2</td>
-          </tr>
-          <tr>
-            <th>AlwaysDouble</th>
-            <td>
-              52.0</td>
-            <td>
-              52.0</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
     <div class="text-block">
       <div class="subtitle main-text">
@@ -641,7 +677,7 @@
       </div>
 
       <p>
-        Se puede pesar que una partida en la que se tenga una buena data, se puede jugar
+        Se puede pesar que una partida en la que se tenga una buena data se puede jugar
         de forma cómoda y optimista. Si entre las fichas de un jugador y su pareja, está
         la mayoría de uno de los números, entonces las expectativas son aún mejores debido
         a que esta pareja no tendrá muchos obstáculos para dominar buena parte de la partida.
@@ -651,8 +687,8 @@
 
       <p>
         Simulaciones con el juego de 9x9 fueron las usadas, como ha sido usual, en la búsqueda de la
-        respuesta. Los jugadores de una pareja comparten al menos 5 fichas de una data, y juegan con la
-        estrategia de gastar la data y en modo cooperativo. Se pone a jugar esta pareja contra todas las
+        respuesta. Los jugadores de una pareja comparten al menos 8 fichas de una data, juegan con la
+        estrategia de gastar la data, y en modo cooperativo. Se pone a jugar esta pareja contra todas las
         demás estrategias implementadas, también en modo cooperativo.
       </p>
 
@@ -743,8 +779,8 @@
           <tr>
             <th>Estrategias</th>
             <th>AlwaysDouble</th>
+          </tr>
         </thead>
-        </tr>
         <tbody>
           <tr>
             <th>BigDrop</th>
