@@ -1,0 +1,132 @@
+/** Code By Webdevtrick ( https://webdevtrick.com ) **/
+/* * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: 'Raleway', sans-serif;
+}
+body {
+  color: #212121;
+  -webkit-font-smoothing: antialiased;
+  padding: 2%;
+  line-height: 1;
+} */
+h1 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5em;
+  padding: .5em 0;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #212121;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+.bar {
+  right: -5.25em;
+  background: #ff413d;
+  width: 0;
+  margin: .25em 0;
+  color: #fff;
+  position: relative;
+  transition: width 2s, background .2s;
+  -webkit-transform: translate3d(0, 0, 0);
+  clear: both;
+}
+.bar:nth-of-type(odd) {
+  background: #ff6461;
+}
+.bar .label {
+  white-space: unset;
+  right: 6.50em;
+  font-size: .75em;
+  padding: 1em;
+  background: #212121;
+  width: 7em;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+}
+.bar .label.second {
+  background: #333;
+}
+.count {
+  position: absolute;
+  right: -3.25em;
+  top: .75em;
+  padding: .15em;
+  font-size: .75em;
+  font-weight: bold;
+  color: black;
+}
+
+
+#strategies a {
+  color: #ff413d;
+  text-decoration: none;
+}
+
+#strategies a:hover {
+  color: #f3b4b3;
+}
+
+#strategies ul {
+  display: inline-block;
+}
+
+.strat {
+  position: relative;
+}
+
+.strat div {
+  /*visiblity: hidden; */
+  
+  display: none;
+  position: absolute;
+  top: 0;
+  left:100%;
+  margin-top: -30px; /* approx adjustment for arrow */
+  margin-left: 25px; /* approx adjustment for arrow */
+}
+
+.strat a:hover + div {
+  cursor: pointer;
+  display: block;
+  /*visibility: visible; */
+  width: 180px;
+  line-height: 20px;
+  padding: 8px;
+  font-size: 14px;
+  text-align: center;
+  z-index: 999;
+  color: #ff413d;
+  background: rgb(255, 255, 255);
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  text-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 1px;
+  box-shadow: #333 -4px 4px 16px 2px;
+  -webkit-transition: opacity 100ms ease-in;
+  -o-transition: opacity 100ms ease-in;
+  -moz-transition: opacity 100ms ease-in;
+  transition: opacity 100ms ease-in;
+  pointer-events: none;
+}
+
+.strat div:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #FFFFFF transparent transparent;
+  top: 22px;
+  left: -23px;
+}
