@@ -366,10 +366,32 @@
       <div class="subtitle main-text">
         Salida de Casino vs Bota Gorda
       </div>
-      <br />
+
+      <p>
+        La "salida de casino" hace referencia a la salida con el doble blanco (doble cero). Esta es considerada 
+        por muchos como una mala táctica, teniendo en cuenta que es la ficha más baja de todo el juego, y aseguran 
+        que el jugador que la usa tiene la derrota asegurada. Sin embargo, los partidarios de emplear esta técnica
+        generalmente cuentan con una data de blancos, y se arriesgan a jugar de esta forma pensando en apretar al 
+        contrario con la misma. ¿Mito o realidad?
+      </p>
+      <p>
+        Para determinar la respuesta a esta interrogante se implementaron las simulaciones con el juego de 9x9. El 
+        jugador que inicia el juego cuenta con una data de blancos de al menos cinco fichas, entre las que se encuentra
+        el doble blanco, para poder realizar la salida. La pareja juega con la estrategia de gastar la data y en modo 
+        cooperativo. Se pone a jugar esta pareja contra todas las demás estrategias implementadas, también en modo 
+        cooperativo.
+      </p>
+      <p>
+        Por otro lado, si se cuenta con una data de blancos, y la salida de casino es una mala idea, entonces la pareja que 
+        tiene al salidor con esta data implementa la estrategia de bota-gorda cooperativa, y se pasa a la simulaciones de juego
+        de esta pareja contra las demás estrategias implementadas, también en modo cooperativo.
+      </p>
+      <p>
+        Se corrieron 500 simulaciones de cada par y los resultados fueron los siguientes:
+      </p>
+
       <div style="display: flex; justify-content: center;">
         <table class="styled-table">
-            <caption>Jugador de Casino Vs Bota Gorda</caption>
             <thead>
                 <tr>
                     <th>Estrategias</th>
@@ -465,6 +487,11 @@
             </tbody>
         </table>
       </div>
+
+      <p>
+        Notoriamente la salida de casino es una mejor opción que ignorar tu data de blancos y jugar a botar la más gorda. Que la 
+        salida de casino es una mala idea es ... un mito.
+      </p>
 
     </div>
 
