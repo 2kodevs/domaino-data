@@ -88,7 +88,7 @@
               <ul>
                 <li class="strat">
                   <a href="#event1">Bota Gorda</a>
-                  <div <h2>Bota Gorda</h2>
+                  <div> <h2>Bota Gorda</h2>
                     <p>
                       El jugador trata de botar en cada turno, por indeseadas, las fichas más “gordas” (las 
                       que tienen más puntos). Es una estrategia simple, que no requiere de mucho análisis del
@@ -98,7 +98,7 @@
                 </li>
                 <li class="strat">
                   <a href="#event2">Bota Flaca</a>
-                  <div <h2>Bota Flaca</h2>
+                  <div> <h2>Bota Flaca</h2>
                     <p>
                       El jugador, contrario a la estrategia de Bota Gorda, intenta siempre jugar 
                       la ficha más "flaca" (la que menos puntos acumula).
@@ -107,7 +107,7 @@
                 </li>
                 <li class="strat">
                   <a href="#event3">Más frecuente</a>
-                  <div <h2>Más Frecuente</h2>
+                  <div> <h2>Más Frecuente</h2>
                     <p>
                       El jugador intenta siempre tener alguna ficha para jugar en su turno, 
                       por lo que siempre juega alguna de las fichas con mayor frecuencia en su mano.
@@ -116,7 +116,7 @@
                 </li>
                 <li class="strat">
                   <a href="#event4">Agachao</a>
-                  <div <h2>Agachao</h2>
+                  <div> <h2>Agachao</h2>
                     <p>
                       El jugador que se "agacha" a una ficha, es porque es la que única que tiene 
                       un número específico y está tratando de no quedarse sin ella; solamente jugará 
@@ -132,7 +132,7 @@
               <ul>
                 <li class="strat">
                   <a href="#event5">Aleatorio</a>
-                  <div <h2>Aleatorio</h2>
+                  <div> <h2>Aleatorio</h2>
                     <p>
                       El jugador escoge de forma aleatoria alguna de las fichas válidas a jugar en 
                       ese turno.
@@ -141,7 +141,7 @@
                 </li>
                 <li class="strat">
                   <a href="#event6">Repetidor</a>
-                  <div <h2>Repetidor</h2>
+                  <div> <h2>Repetidor</h2>
                     <p>
                       El jugador trata de que el siguiente siempre reciba los mismos números para 
                       decidir su jugada; esto aumenta las probabilidades de que el siguiente jugador
@@ -151,7 +151,7 @@
                 </li>
                 <li class="strat">
                   <a href="#event7">Contador de la mesa</a>
-                  <div <h2>Contador de la mesa</h2>
+                  <div> <h2>Contador de la mesa</h2>
                     <p>
                       El jugador cuenta la cantidad de veces que ha aparecido un número en la mesa y 
                       trata siempre de jugar aquel con mayor frecuencia.
@@ -160,7 +160,7 @@
                 </li>
                 <li class="strat">
                   <a href="#event8">Menos Jugada</a>
-                  <div <h2>Menos Jugada</h2>
+                  <div> <h2>Menos Jugada</h2>
                     <p>
                       El jugador trata de "fresquear" la mesa, o sea, cuenta la mesa y decide poner
                       la ficha que con menor frecuencia se ha utilizado en el juego.
@@ -175,7 +175,7 @@
               <ul>
                 <li class="strat">
                   <a href="#event9">Pasador</a>
-                  <div <h2>Pasador</h2>
+                  <div> <h2>Pasador</h2>
                     <p>
                       El objetivo de este jugador es tratar de que el siguiente se pase (no tenga 
                       ninguna ficha que jugar en su turno), por lo que siempre trata de dejar en las
@@ -185,7 +185,7 @@
                 </li>
                 <li class="strat">
                   <a href="#event10">No gastar la data</a>
-                  <div <h2>No gastar la data</h2>
+                  <div> <h2>No gastar la data</h2>
                     <p>
                       El jugador trata de guardar su data (mayor subconjunto de las fichas que 
                       recibe el jugador al inicio del juego que tienen un número en común) para
@@ -195,7 +195,7 @@
                 </li>
                 <li class="strat">
                   <a href="#event11">Gastar la data</a>
-                  <div <h2>Gastar la data</h2>
+                  <div> <h2>Gastar la data</h2>
                     <p>
                       El jugador intenta siempre hacer un movimiento tal que su data quede en las 
                       cabezas del juego.
@@ -204,7 +204,7 @@
                 </li>
                 <li class="strat">
                   <a href="#event12">Siempre doble</a>
-                  <div <h2>Siempre doble</h2>
+                  <div> <h2>Siempre doble</h2>
                     <p>
                       Este jugador siempre que tiene la oportunidad de jugarlo, pone un doble (fichas 
                       que tienen el mismo número por los dos extremos).
@@ -216,6 +216,129 @@
           </div>
         </div>
         
+        <p>
+          Las partidas pueden desarrollarse en ambas variantes de juego (6x6 y 9x9). Igualmente se puede seleccionar la regla 
+          que determine el ganador de una partida, la cual puede tener, en dependencia de dicha regla, más de una data:
+        </p>
+        <div style="display: flex; justify-content: space-around;">
+          <article id="strategies">
+            <ul>
+              <li class="strat">
+                <a href="#event1">Un juego</a>
+                <div> <h2>Un juego</h2>
+                  <p>
+                    El ganador de la data es el ganador de la partida.
+                  </p>
+                </div>
+              </li>
+              <li class="strat">
+                <a href="#event2">Dos de Tres</a>
+                <div> <h2>Dos de Tres</h2>
+                  <p>
+                    El ganador de la partida es el primero en ganar dos juegos.
+                  </p>
+                </div>
+              </li>
+              <li class="strat">
+                <a href="#event3">Partida a ganar 100</a>
+                <div> <h2>Partida a ganar 100</h2>
+                  <p>
+                    El ganador de la partida es aquel que alcance primero los 100 puntos. Los puntos se acumulan 
+                    sumando los valores de las fichas que tenía la pareja contraria cuando la pareja gana una data.
+                  </p>
+                </div>
+              </li>
+              <li class="strat">
+                <a href="#event4">Primera doble</a>
+                <div> <h2>Primera doble</h2>
+                  <p>
+                    La partida termina cuando alguna de las parejas obtiene 100 puntos, pero la primera data se cuenta doble.
+                  </p>
+                </div>
+              </li>
+              <li class="strat">
+                <a href="#event4">Capicúa doble</a>
+                <div> <h2>Capicúa doble</h2>
+                  <p>
+                    Se conoce como capicúa cuando una pareja gana el juego porque uno de los jugadores se pega, y podía poner 
+                    su última ficha por cualquiera de las dos cabezas, en este caso los puntos obtenidos en esta data se cuentan doble. Igualmente 
+                    la partida finaliza cuando alguna de las parejas alcance los 100 puntos.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <p>
+          Se tuvo en cuenta también, que independientemente de la estrategia escogida para una pareja, el salidor puede elegir su ficha de salida
+          de formas diferentes; de ahí que se implementaran los siguientes comportamientos:
+        </p>
+        <div style="display: flex; justify-content: space-around;">
+          <article id="strategies">
+            <ul>
+              <li class="strat">
+                <a href="#event1">Aleatorio</a>
+                <div> <h2>Aleatorio</h2>
+                  <p>
+                    No hace ninguna elección especial, deja la decisión de la salida en manos de la estrategia seleccionada.
+                  </p>
+                </div>
+              </li>
+              <li class="strat">
+                <a href="#event2">Mejor acompañada</a>
+                <div> <h2>Mejor acompañada</h2>
+                  <p>
+                    Determina el mayor subconjunto de fichas que tienen el mismo número en común, y entre esas fichas elige 
+                    la que será la salida, dando prioridad a los dobles.
+                  </p>
+                </div>
+              </li>
+              <li class="strat">
+                <a href="#event3">Más alta</a>
+                <div> <h2>Más alta</h2>
+                  <p>
+                    Como su nombre indica, toma como salida la ficha más alta. Note que siempre que tenga el doble 9 la 
+                    utilizará como salida.
+                  </p>
+                </div>
+              </li>
+              <li class="strat">
+                <a href="#event4">Más alta mejor acompañada</a>
+                <div> <h2>Más alta mejor acompañada</h2>
+                  <p>
+                    Busca entre los números más altos (de 6 en adelante) los que están mejor acompañados, y de ese conjunto 
+                    selecciona la salida, dando prioridad a los dobles.
+                  </p>
+                </div>
+              </li>
+              <li class="strat">
+                <a href="#event4">Salida a la falla</a>
+                <div> <h2>Salida a la falla</h2>
+                  <p>
+                    La "falla" es una ficha que contiene un número, tal que ese número no aparece en ninguna otra ficha. Busca 
+                    entre las fichas alguna que sea falla y decide salir con ella. Este comportamiento también se aplica a la 
+                    primera jugada de los integrantes de la otra pareja, si tienen varias opciones para matar la salida deciden 
+                    jugar con la falla.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <p>
+          Por último, los jugadores de una pareja juegan con la misma estrategia, pero también se implementó que pudieran tener un 
+          comportamiento cooperativo, es decir, siempre uno de ellos juega para la mano de los dos. La mano en un juego, es el jugador 
+          que menos fichas tiene, lo cual se puede aplicar también en la misma pareja; este jugador es en principio, el que tiene la 
+          ventaja para quedarse sin fichas primero.
+        </p>
+        <p>
+          En el siguiente gráfico usted podrá elegir el modo de juego que desee, la regla, la forma de salida, si se juega en modo 
+          cooperativo o no, y la estrategia que aplicará la pareja; y este mostrará el porciento de partidas ganadas obtenido de esta 
+          estrategia con respecto a cada una de las estrategias implementadas. (Se realizaron 100 simulaciones por cada par de estrategias).
+        </p>
+
       </div>
 
       <br />
