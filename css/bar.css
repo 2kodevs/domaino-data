@@ -1,19 +1,19 @@
 /** Code By Webdevtrick ( https://webdevtrick.com ) **/
-* {
+/* * {
   margin: 0;
   padding: 0;
   border: 0;
   font: inherit;
   font-size: 100%;
   vertical-align: baseline;
-  font-family: 'Electrolize', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 body {
   color: #212121;
   -webkit-font-smoothing: antialiased;
   padding: 2%;
   line-height: 1;
-}
+} */
 h1 {
   font-weight: bold;
   text-align: center;
@@ -69,12 +69,12 @@ h1 {
 
 
 #strategies a {
-  color: midnightblue
+  color: #ff413d;
   text-decoration: none;
 }
 
 #strategies a:hover {
-  color: lightblue;
+  color: #f3b4b3;
 }
 
 #strategies ul {
@@ -106,7 +106,7 @@ h1 {
   font-size: 14px;
   text-align: center;
   z-index: 999;
-  color: rgb(113, 157, 171);
+  color: #ff413d;
   background: rgb(255, 255, 255);
   border: 4px solid rgb(255, 255, 255);
   border-radius: 5px;
