@@ -422,10 +422,8 @@
       </p>
       <p>
         Por otro lado, si se cuenta con una data de blancos, y la salida de casino es una mala idea, entonces la pareja
-        que
-        tiene al salidor con esta data implementa la estrategia de bota-gorda cooperativa, y se pasa a la simulaciones
-        de juego
-        de esta pareja contra las demás estrategias implementadas, también en modo cooperativo.
+        que tiene al salidor con esta data implementa la estrategia de bota-gorda cooperativa, y se pasa a la 
+        simulaciones de juego de esta pareja contra las demás estrategias implementadas, también en modo cooperativo.
       </p>
       <p>
         Se corrieron 500 simulaciones de cada par y los resultados fueron los siguientes:
@@ -531,10 +529,11 @@
 
       <p>
         Notoriamente la salida de casino es una mejor opción que ignorar tu data de blancos y jugar a botar la más
-        gorda. Que la
-        salida de casino es una mala idea es ... un mito.
+        gorda. Que la salida de casino es una mala idea es ... un mito.
       </p>
+    </div>
 
+    <div class="text-block">
       <div class="subtitle main-text">
         ¿Jugar con o en contra del enemigo?
       </div>
@@ -545,12 +544,15 @@
         el salidor, comparte la misma data, y ya no es tan sencillo definir qué hacer: muchos optan por jugar tratando 
         siempre de matar la jugada de su oponente, sacrificando su data, y apoyando a su compañero, que lo más probable 
         es que no tenga fichas con ese número; pero hay otros que deciden probar fuerza, y juegan aprovechando la data 
-        del contrario con la suya, incluso aunque su compañero sufra las consecuencias. ¿Qué opción será la más acertada?
+        del contrario con la suya, incluso aunque eso signifique que su compañero deba sufrir las consecuencias. Son 
+        generalmente esos compañeros los que, cuando no es exitosa la estrategia, acusan a su pareja como culpable del 
+        resultado y aseguran que jugando de esa forma no llegarán a ningún lado; bajo ninguna circunstancia se juega con 
+        el contrario. ¿Mito o realidad?
       </p>
       <p>
         Para realizar las simulaciones en este caso, se arregla que un jugador y alguno de sus oponentes compartan la 
         misma data y acumulen entre ellos al menos 8 fichas con el mismo número en común. En ambos casos las dos parejas
-        juegan en modo cooperativo. Como nos interesa saber los resultados para la pareja que no es salidora, en un caso 
+        juegan en modo cooperativo. Nos interesa saber los resultados para la pareja que no es salidora, en un caso 
         se le definió como estrategia gastar la data y en el otro no hacerlo; ambas variantes se enfrentaron al resto de 
         las estrategias implementadas, obteniendo los siguientes resultados:
       </p>
@@ -655,12 +657,10 @@
 
       <p>
         Se puede observar que con ambas estrategias se obtienen resultados muy similares, aunque el que juega con el
-        contrario es ligeramente superior en casi todos los casos. No obstante, la diferencia es tan pequeña que no se
-        debería asegurar
-        que una estrategia sea mejor que la otra, simplemente utilice aquella con la que más cómodo se sienta.
+        contrario es ligeramente superior en casi todos los casos. En consecuencia, no es necesario frustrarse si el 
+        resultado de una data no es el esperado, pues que esta estrategia sea una mala táctica es ... solo un mito.
       </p>
     </div>
-
 
     <div class="text-block">
       <div class="subtitle main-text">
@@ -668,7 +668,7 @@
       </div>
 
       <p>
-        Se puede pesar que una partida en la que se tenga una buena data se puede jugar
+        Se puede pensar que una partida en la que se tenga una buena data se puede jugar
         de forma cómoda y optimista. Si entre las fichas de un jugador y su pareja, está
         la mayoría de uno de los números, entonces las expectativas son aún mejores debido
         a que esta pareja no tendrá muchos obstáculos para dominar buena parte de la partida.
@@ -689,8 +689,8 @@
             <tr>
               <th>Estrategias</th>
               <th>DataDropper</th>
+            </tr>
           </thead>
-          </tr>
           <tbody>
             <tr>
               <th>BigDrop</th>
@@ -763,103 +763,106 @@
         con la pareja sea victoria segura es ... un mito.
       </p>
     </div>
-
-    <div class="subtitle main-text">
-      ¡Data de dobles! Ya perdí
+    
+    <div class="text-block">
+      
+      <div class="subtitle main-text">
+        ¡Data de dobles! Ya perdí
+      </div>
+  
+      <p>
+        En ocasiones ocurre que el jugador obtiene un montón de dobles en su mano inicial (5 o más), y esto hace
+        muy difícil para él jugar, dado que las opciones que le permiten poner estas fichas disminuyen. En general, se 
+        considera que si algo así sucede, a menos que la suerte esté de su lado (o el de su compañero), la victoria del 
+        otro equipo es segura. Incluso se han visto jugadores, que definen como regla para jugar, que por lo injusto de esta 
+        situación, se pueden volver a repartir las fichas. ¿Será tan catastrófica como parece?
+      </p>
+      <p>
+        Para llevar a cabo estas simulaciones, se fijó un jugador al cual se le reparten inicialmente al menos 5 dobles; este 
+        jugador y su pareja juegan de modo cooperativo con la estrategia de siempre que se pueda jugar algún doble. Se puso a
+        esta pareja a jugar contra las otras estrategias implementadas, obteniendo los siguientes resultados:
+      </p>
+  
+      <div style="display: flex; justify-content: center;">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Estrategias</th>
+              <th>AlwaysDouble</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>BigDrop</th>
+              <td>
+                55.2</td>
+            </tr>
+            <tr>
+              <th>Frequent</th>
+              <td>
+                51.6</td>
+            </tr>
+            <tr>
+              <th>Random</th>
+              <td>
+                44.8</td>
+            </tr>
+            <tr>
+              <th>Repeater</th>
+              <td>
+                50.8</td>
+            </tr>
+            <tr>
+              <th>TableCounter</th>
+              <td>
+                49.8</td>
+            </tr>
+            <tr>
+              <th>Passer</th>
+              <td>
+                49.0</td>
+            </tr>
+            <tr>
+              <th>LessPlayed</th>
+              <td>
+                48.8</td>
+            </tr>
+            <tr>
+              <th>DataKeeper</th>
+              <td>
+                49.2</td>
+            </tr>
+            <tr>
+              <th>SmallDrop</th>
+              <td>
+                45.2</td>
+            </tr>
+            <tr>
+              <th>Agachao</th>
+              <td>
+                48.0</td>
+            </tr>
+            <tr>
+              <th>DataDropper</th>
+              <td>
+                49.6</td>
+            </tr>
+            <tr>
+              <th>AlwaysDouble</th>
+              <td>
+                46.6</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <p>
+        Como se puede observar, se puede llevar a cabo un juego con estas características y aún así ganar la partida, siendo 
+        esto algo no poco común: en todos los casos los datos rondan la mitad de juegos ganados y la otra mitad, perdidos. Así 
+        que no es necesario dejarse influenciar por esta idea, y aquel que intente repartir las fichas nuevamente, bueno, pues
+        aclararle que es solo un mito.
+      </p>
     </div>
-
-    <p>
-      En ocasiones ocurre que el jugador obtiene un montón de dobles en su mano inicial (5 o más), y esto hace
-      muy difícil para él jugar, dado que las opciones que le permiten poner estas fichas disminuyen. En general, se 
-      considera que si algo así sucede, a menos que la suerte esté de su lado (o el de su compañero), la victoria del 
-      otro equipo es segura. Incluso se han visto jugadores, que definen como regla para jugar, que por lo injusto de esta 
-      situación, se pueden volver a repartir las fichas. ¿Será tan catastrófica como parece?
-    </p>
-    <p>
-      Para llevar a cabo estas simulaciones, se fijó un jugador al cual se le reparten inicialmente al menos 5 dobles; este 
-      jugador y su pareja juegan de modo cooperativo con la estrategia de siempre que se pueda jugar algún doble. Se puso a
-      esta pareja a jugar contra las otras estrategias implementadas, obteniendo los siguientes resultados:
-    </p>
-
-    <div style="display: flex; justify-content: center;">
-      <table class="styled-table">
-        <thead>
-          <tr>
-            <th>Estrategias</th>
-            <th>AlwaysDouble</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>BigDrop</th>
-            <td>
-              55.2</td>
-          </tr>
-          <tr>
-            <th>Frequent</th>
-            <td>
-              51.6</td>
-          </tr>
-          <tr>
-            <th>Random</th>
-            <td>
-              44.8</td>
-          </tr>
-          <tr>
-            <th>Repeater</th>
-            <td>
-              50.8</td>
-          </tr>
-          <tr>
-            <th>TableCounter</th>
-            <td>
-              49.8</td>
-          </tr>
-          <tr>
-            <th>Passer</th>
-            <td>
-              49.0</td>
-          </tr>
-          <tr>
-            <th>LessPlayed</th>
-            <td>
-              48.8</td>
-          </tr>
-          <tr>
-            <th>DataKeeper</th>
-            <td>
-              49.2</td>
-          </tr>
-          <tr>
-            <th>SmallDrop</th>
-            <td>
-              45.2</td>
-          </tr>
-          <tr>
-            <th>Agachao</th>
-            <td>
-              48.0</td>
-          </tr>
-          <tr>
-            <th>DataDropper</th>
-            <td>
-              49.6</td>
-          </tr>
-          <tr>
-            <th>AlwaysDouble</th>
-            <td>
-              46.6</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p>
-      Como se puede observar, se puede llevar a cabo un juego con estas características y aún así ganar la partida, siendo 
-      esto algo no poco común: en todos los casos los datos rondan la mitad de juegos ganados y la otra mitad, perdidos. Así 
-      que no es necesario dejarse influenciar por esta idea, y aquel que intente repartir las fichas nuevamente, bueno, pues
-      aclararle que es solo un mito.
-    </p>
 
   </div>
 
