@@ -9,34 +9,39 @@ strategies = {
 strategies55 = {}
 counts = {}
 
-for n in data.values():
-    for g in n.values():
-        for r in g.values():
-            for p, dp in r.items():
-                for s, ds in dp.items():
-                    k = f'{p}-{s}'
-                    for v in ds.values():
-                        strategies[p][k] = strategies[p].get(k, 0) + v
+for game in data.values():
+    for rule in game.values():
+        for behavior in rule.values():
+            for prefix, d_prefix in behavior.items():
+                for strategy, d_strategy in d_prefix.items():
+                    k = f'{prefix}-{strategy}'
+                    for v in d_strategy.values():
+                        strategies[prefix][k] = strategies[prefix].get(k, 0) + v
                         strategies55[k] = strategies55.get(k, True) and v >= 55
-                    counts[k] = counts.get(k, 0) + len(ds)
+                    counts[k] = counts.get(k, 0) + len(d_strategy)
 
-best_by_mean = []
+best_by_mean = {
+    'Normal':     [],
+    'Supportive': []
+}
 best_55 = []
 
 for p in strategies.keys():
-    best = ('', 0)
     for k, s in strategies[p].items():
         mean = strategies[p][k] / counts[k]
-        if mean > best[1]:  
-            best = (k, mean)   
+        best_by_mean[p].append((mean, k))
 
         if strategies55[k]:
             best_55.append(k)
-    
-    best_by_mean.append(best)
+
+for v in best_by_mean.values(): 
+    v.sort(reverse=True)
 
 print('Best by mean:')
-print(best_by_mean[0], '-----', best_by_mean[1])
+for k, v in best_by_mean.items():
+    print(k)
+    for s in v[:5]:
+        print(s)
 
 print('Strategies with absolute values greater than 55:')
 print(best_55)
