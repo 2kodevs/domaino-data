@@ -22,6 +22,8 @@
 
   <link href="css/table.css" rel="stylesheet">
   <link href="css/myth.css" rel="stylesheet">
+  <link href="css/hover.css" rel="stylesheet">
+
 
   <div class="article-header row  main-color">
     <div class="article-news-title">La mejor estrategia del Dominó</div>
@@ -1237,19 +1239,30 @@
       </p>
     </div>
 
-    <p>
-      Cada jugador fue implementado de modo que recibe un conjunto de fichas válidas a jugar y devuelve un 
-      subconjunto (no vacío) de las mismas acordes a la estrategia que está utilizando. Esto permite tomar 
-      un grupo de estrategias y componerlas para crear nuevos y mejores jugadores.
-    </p>
-    <p>
-      El campeón del doble 9 fue creado a partir de la composición de las estrategias implementadas. Tras la 
-      ejecución de las simulaciones fue posible calcular el promedio de victorias para cada estrategia con respecto 
-      a las demás, y se definió este como su peso; lo que, a su vez, permitió la ordenación de las estrategias según 
-      su peso asignado. El orden obtenido fue el utilizado para componer las estrategias.
-    </p>
 
+    <div id="methodology" class="text-block">
+      <button type="button" class="button" onclick="toggle_methodology();">
+        <span id='hover' data-content='»'> ¿ Cómo se hizo ? </span> 
+      </button>
 
+      <div id="methodology-body" hidden>
+        <p>
+          Cada jugador fue implementado de modo que recibe un conjunto de fichas válidas a jugar y devuelve un 
+          subconjunto (no vacío) de las mismas acordes a la estrategia que está utilizando. Esto permite tomar 
+          un grupo de estrategias y componerlas para crear nuevos y mejores jugadores.
+        </p>
+        <p>
+          El campeón del doble 9 fue creado a partir de la composición de las estrategias implementadas. Tras la 
+          ejecución de las simulaciones fue posible calcular el promedio de victorias para cada estrategia con respecto 
+          a las demás, y se definió este como su peso; lo que, a su vez, permitió la ordenación de las estrategias según 
+          su peso asignado. El orden obtenido fue el utilizado para componer las estrategias.
+        </p>
+
+        <button type="button" class="button" onclick="toggle_methodology();">
+          <span data-content='«'> Cerrar metodología </span> 
+        </button>
+      </div>
+    </div>
   </div>
 
   <div class="copyright">Copyright 2020</div>

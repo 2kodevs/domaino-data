@@ -94,3 +94,11 @@ function populate_selectors(n, labels){
   lines += `</div>\n</div>\n`
   div.innerHTML = lines;
 };
+
+function toggle_methodology() {
+  var container = document.getElementById('methodology-body');
+  var hover = document.getElementById('hover');
+  var i = 1 - container.hidden;
+  container.hidden = i;
+  hover.setAttribute('data-content', ['«', '»'][i]);
+};
