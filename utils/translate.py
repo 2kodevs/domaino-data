@@ -14,6 +14,9 @@ translate = [
     ('TableCounter', 'Contador de la mesa'),
     ('Supportive', 'Cooperativo'),
     ('ThePlayer', 'Campeón del doble 9'),
+    ('AllStrategies', 'Campeón del doble 9'),
+    ('NoDoublesAtTheEnd', 'No doblarse al final'),
+    ('DoublesAtTheEndIfNeeded', 'Doblarse sin restricción'),
 
     # Behaviors
     ('BestAccompanied', 'Mejor acompañada'),
@@ -25,7 +28,7 @@ translate = [
     ('OneGame', 'Un juego'),
     ('TwoOfThree', 'Dos de Tres'),
     ('FirstToGain100', 'Partida a ganar 100'),
-    ('FirstDouble', 'Primera doble'),
+    ('FirstDoble', 'Primera doble'),
     ('CapicuaDoble', 'Capicúa doble'),
 
     # Games

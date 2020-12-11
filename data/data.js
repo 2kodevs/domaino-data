@@ -6786,7 +6786,7 @@ var SITE_JSON = {
                 }
             }
         },
-        "FirstDoble": {
+        "Primera doble": {
             "Aleatorio": {
                 "Normal": {
                     "Bota Gorda": {
@@ -18098,7 +18098,7 @@ var SITE_JSON = {
                 }
             }
         },
-        "FirstDoble": {
+        "Primera doble": {
             "Aleatorio": {
                 "Normal": {
                     "Bota Gorda": {
