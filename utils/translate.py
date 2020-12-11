@@ -25,7 +25,7 @@ translate = [
     ('OneGame', 'Un juego'),
     ('TwoOfThree', 'Dos de Tres'),
     ('FirstToGain100', 'Partida a ganar 100'),
-    ('FirstDouble', 'Primera doble'),
+    ('FirstDoble', 'Primera doble'),
     ('CapicuaDoble', 'Capicúa doble'),
 
     # Games
