@@ -20,5 +20,13 @@ def domino_prob(n, max_number=9, pieces=10):
     den = combinations(total, pieces)
     return num / den
 
+def one_piece_prob(max_number=9, pieces=10):
+    total = ((max_number + 1) * (max_number)) // 2
+    total += max_number + 1
+    fac = factorial(total)
+    num = combinations(total - 1, pieces - 1, fac)
+    den = combinations(total, pieces)
+    return num / den
+
 if __name__ == "__main__":
     print(domino_prob(int(input('Cuantas quieres en la data: '))))

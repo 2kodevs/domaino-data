@@ -1,5 +1,14 @@
+var SELECT_LABEL = [
+    '',
+    'Dominó',
+    'Tipo de partida',
+    'Salida',
+    'Modo',
+    'Estrategia',
+];
+
 var SITE_JSON = {
-    "9x9": {
+    "Doble 9": {
         "Un juego": {
             "Aleatorio": {
                 "Normal": {
@@ -16,7 +25,8 @@ var SITE_JSON = {
                         "Agachao": 37.4,
                         "Gastar la data": 37.0,
                         "Siempre doble": 39.6,
-                        "Inteligente": 43.0
+                        "Campeón del doble 6": 43.0,
+                        "Campeón del doble 9": 32.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 59.0,
@@ -31,7 +41,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 47.2,
                         "Siempre doble": 42.4,
-                        "Inteligente": 56.2
+                        "Campeón del doble 6": 56.2,
+                        "Campeón del doble 9": 36.4
                     },
                     "Aleatorio": {
                         "Bota Gorda": 56.4,
@@ -46,7 +57,8 @@ var SITE_JSON = {
                         "Agachao": 44.0,
                         "Gastar la data": 51.2,
                         "Siempre doble": 46.4,
-                        "Inteligente": 57.8
+                        "Campeón del doble 6": 57.8,
+                        "Campeón del doble 9": 39.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 58.2,
@@ -61,7 +73,8 @@ var SITE_JSON = {
                         "Agachao": 48.6,
                         "Gastar la data": 47.4,
                         "Siempre doble": 43.2,
-                        "Inteligente": 59.4
+                        "Campeón del doble 6": 59.4,
+                        "Campeón del doble 9": 43.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 60.4,
@@ -76,7 +89,8 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 47.8,
                         "Siempre doble": 45.2,
-                        "Inteligente": 57.4
+                        "Campeón del doble 6": 57.4,
+                        "Campeón del doble 9": 40.0
                     },
                     "Pasador": {
                         "Bota Gorda": 59.0,
@@ -91,7 +105,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 53.0,
                         "Siempre doble": 47.4,
-                        "Inteligente": 50.6
+                        "Campeón del doble 6": 50.6,
+                        "Campeón del doble 9": 37.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 58.2,
@@ -106,7 +121,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 52.0,
                         "Siempre doble": 50.8,
-                        "Inteligente": 52.2
+                        "Campeón del doble 6": 52.2,
+                        "Campeón del doble 9": 40.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 58.0,
@@ -121,7 +137,8 @@ var SITE_JSON = {
                         "Agachao": 53.6,
                         "Gastar la data": 53.8,
                         "Siempre doble": 45.2,
-                        "Inteligente": 56.6
+                        "Campeón del doble 6": 56.6,
+                        "Campeón del doble 9": 43.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 68.0,
@@ -136,7 +153,8 @@ var SITE_JSON = {
                         "Agachao": 57.4,
                         "Gastar la data": 58.4,
                         "Siempre doble": 58.0,
-                        "Inteligente": 57.2
+                        "Campeón del doble 6": 57.2,
+                        "Campeón del doble 9": 50.6
                     },
                     "Agachao": {
                         "Bota Gorda": 59.2,
@@ -151,7 +169,8 @@ var SITE_JSON = {
                         "Agachao": 52.4,
                         "Gastar la data": 55.4,
                         "Siempre doble": 44.2,
-                        "Inteligente": 54.0
+                        "Campeón del doble 6": 54.0,
+                        "Campeón del doble 9": 38.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 51.0,
@@ -166,7 +185,8 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 54.4,
                         "Siempre doble": 50.0,
-                        "Inteligente": 55.6
+                        "Campeón del doble 6": 55.6,
+                        "Campeón del doble 9": 35.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 59.4,
@@ -181,13 +201,14 @@ var SITE_JSON = {
                         "Agachao": 53.8,
                         "Gastar la data": 55.6,
                         "Siempre doble": 51.4,
-                        "Inteligente": 54.0
+                        "Campeón del doble 6": 54.0,
+                        "Campeón del doble 9": 47.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 57.0,
                         "Más Frecuente": 43.8,
                         "Aleatorio": 42.2,
-                        "Inteligente": 52.6,
+                        "Campeón del doble 6": 52.6,
                         "Repetidor": 40.6,
                         "Contador de la mesa": 42.6,
                         "Pasador": 49.4,
@@ -196,7 +217,23 @@ var SITE_JSON = {
                         "Bota Flaca": 42.8,
                         "Agachao": 46.0,
                         "Gastar la data": 44.4,
-                        "Siempre doble": 46.0
+                        "Siempre doble": 46.0,
+                        "Campeón del doble 9": 40.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 67.8,
+                        "Más Frecuente": 63.6,
+                        "Aleatorio": 60.6,
+                        "Campeón del doble 6": 59.6,
+                        "Repetidor": 56.8,
+                        "Contador de la mesa": 60.0,
+                        "Pasador": 62.2,
+                        "Menos Jugada": 59.6,
+                        "No gastar la data": 57.0,
+                        "Bota Flaca": 49.4,
+                        "Agachao": 61.6,
+                        "Gastar la data": 65.0,
+                        "Siempre doble": 52.6
                     }
                 },
                 "Cooperativo": {
@@ -213,7 +250,8 @@ var SITE_JSON = {
                         "Agachao": 35.4,
                         "Gastar la data": 43.2,
                         "Siempre doble": 37.4,
-                        "Inteligente": 44.6
+                        "Campeón del doble 6": 44.6,
+                        "Campeón del doble 9": 32.599999999999994
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 59.2,
@@ -228,7 +266,8 @@ var SITE_JSON = {
                         "Agachao": 44.6,
                         "Gastar la data": 44.4,
                         "Siempre doble": 41.8,
-                        "Inteligente": 48.2
+                        "Campeón del doble 6": 48.2,
+                        "Campeón del doble 9": 36.4
                     },
                     "Aleatorio": {
                         "Bota Gorda": 58.8,
@@ -243,7 +282,8 @@ var SITE_JSON = {
                         "Agachao": 48.0,
                         "Gastar la data": 50.0,
                         "Siempre doble": 47.4,
-                        "Inteligente": 54.0
+                        "Campeón del doble 6": 54.0,
+                        "Campeón del doble 9": 42.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 56.0,
@@ -258,7 +298,8 @@ var SITE_JSON = {
                         "Agachao": 45.2,
                         "Gastar la data": 52.8,
                         "Siempre doble": 45.6,
-                        "Inteligente": 50.8
+                        "Campeón del doble 6": 50.8,
+                        "Campeón del doble 9": 40.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 53.0,
@@ -273,7 +314,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 50.6,
                         "Siempre doble": 42.2,
-                        "Inteligente": 52.0
+                        "Campeón del doble 6": 52.0,
+                        "Campeón del doble 9": 48.0
                     },
                     "Pasador": {
                         "Bota Gorda": 56.4,
@@ -288,7 +330,8 @@ var SITE_JSON = {
                         "Agachao": 51.6,
                         "Gastar la data": 50.0,
                         "Siempre doble": 47.0,
-                        "Inteligente": 54.0
+                        "Campeón del doble 6": 54.0,
+                        "Campeón del doble 9": 44.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 53.2,
@@ -303,7 +346,8 @@ var SITE_JSON = {
                         "Agachao": 45.8,
                         "Gastar la data": 49.6,
                         "Siempre doble": 47.4,
-                        "Inteligente": 54.0
+                        "Campeón del doble 6": 54.0,
+                        "Campeón del doble 9": 41.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 56.6,
@@ -318,7 +362,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 50.4,
                         "Siempre doble": 48.6,
-                        "Inteligente": 53.4
+                        "Campeón del doble 6": 53.4,
+                        "Campeón del doble 9": 44.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 64.6,
@@ -333,7 +378,8 @@ var SITE_JSON = {
                         "Agachao": 60.0,
                         "Gastar la data": 56.6,
                         "Siempre doble": 53.0,
-                        "Inteligente": 56.8
+                        "Campeón del doble 6": 56.8,
+                        "Campeón del doble 9": 48.8
                     },
                     "Agachao": {
                         "Bota Gorda": 64.0,
@@ -348,7 +394,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 51.4,
                         "Siempre doble": 50.4,
-                        "Inteligente": 52.8
+                        "Campeón del doble 6": 52.8,
+                        "Campeón del doble 9": 46.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 56.0,
@@ -363,7 +410,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 50.2,
                         "Siempre doble": 47.8,
-                        "Inteligente": 52.0
+                        "Campeón del doble 6": 52.0,
+                        "Campeón del doble 9": 42.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 58.4,
@@ -378,13 +426,14 @@ var SITE_JSON = {
                         "Agachao": 53.6,
                         "Gastar la data": 53.6,
                         "Siempre doble": 51.4,
-                        "Inteligente": 54.6
+                        "Campeón del doble 6": 54.6,
+                        "Campeón del doble 9": 42.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 55.4,
                         "Más Frecuente": 51.8,
                         "Aleatorio": 46.0,
-                        "Inteligente": 53.6,
+                        "Campeón del doble 6": 53.6,
                         "Repetidor": 49.2,
                         "Contador de la mesa": 48.0,
                         "Pasador": 46.0,
@@ -393,7 +442,23 @@ var SITE_JSON = {
                         "Bota Flaca": 43.2,
                         "Agachao": 47.2,
                         "Gastar la data": 48.0,
-                        "Siempre doble": 45.4
+                        "Siempre doble": 45.4,
+                        "Campeón del doble 9": 39.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 67.4,
+                        "Más Frecuente": 63.6,
+                        "Aleatorio": 58.0,
+                        "Campeón del doble 6": 60.6,
+                        "Repetidor": 59.2,
+                        "Contador de la mesa": 52.0,
+                        "Pasador": 55.8,
+                        "Menos Jugada": 58.2,
+                        "No gastar la data": 56.0,
+                        "Bota Flaca": 51.2,
+                        "Agachao": 53.8,
+                        "Gastar la data": 58.0,
+                        "Siempre doble": 57.4
                     }
                 }
             },
@@ -412,7 +477,8 @@ var SITE_JSON = {
                         "Agachao": 37.0,
                         "Gastar la data": 38.4,
                         "Siempre doble": 39.0,
-                        "Inteligente": 46.2
+                        "Campeón del doble 6": 46.2,
+                        "Campeón del doble 9": 37.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 55.2,
@@ -427,7 +493,8 @@ var SITE_JSON = {
                         "Agachao": 44.6,
                         "Gastar la data": 42.6,
                         "Siempre doble": 40.8,
-                        "Inteligente": 52.2
+                        "Campeón del doble 6": 52.2,
+                        "Campeón del doble 9": 33.2
                     },
                     "Aleatorio": {
                         "Bota Gorda": 57.4,
@@ -442,7 +509,8 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 47.6,
                         "Siempre doble": 45.4,
-                        "Inteligente": 51.2
+                        "Campeón del doble 6": 51.2,
+                        "Campeón del doble 9": 42.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 52.4,
@@ -457,7 +525,8 @@ var SITE_JSON = {
                         "Agachao": 41.8,
                         "Gastar la data": 44.2,
                         "Siempre doble": 43.6,
-                        "Inteligente": 54.6
+                        "Campeón del doble 6": 54.6,
+                        "Campeón del doble 9": 42.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 52.4,
@@ -472,7 +541,8 @@ var SITE_JSON = {
                         "Agachao": 48.0,
                         "Gastar la data": 47.6,
                         "Siempre doble": 43.2,
-                        "Inteligente": 53.8
+                        "Campeón del doble 6": 53.8,
+                        "Campeón del doble 9": 46.6
                     },
                     "Pasador": {
                         "Bota Gorda": 58.2,
@@ -487,7 +557,8 @@ var SITE_JSON = {
                         "Agachao": 46.0,
                         "Gastar la data": 46.4,
                         "Siempre doble": 45.4,
-                        "Inteligente": 55.8
+                        "Campeón del doble 6": 55.8,
+                        "Campeón del doble 9": 43.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 59.0,
@@ -502,7 +573,8 @@ var SITE_JSON = {
                         "Agachao": 51.2,
                         "Gastar la data": 48.6,
                         "Siempre doble": 44.8,
-                        "Inteligente": 54.4
+                        "Campeón del doble 6": 54.4,
+                        "Campeón del doble 9": 42.2
                     },
                     "No gastar la data": {
                         "Bota Gorda": 57.6,
@@ -517,7 +589,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 51.0,
                         "Siempre doble": 51.2,
-                        "Inteligente": 53.6
+                        "Campeón del doble 6": 53.6,
+                        "Campeón del doble 9": 45.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 68.2,
@@ -532,7 +605,8 @@ var SITE_JSON = {
                         "Agachao": 55.6,
                         "Gastar la data": 56.2,
                         "Siempre doble": 53.6,
-                        "Inteligente": 57.6
+                        "Campeón del doble 6": 57.6,
+                        "Campeón del doble 9": 54.4
                     },
                     "Agachao": {
                         "Bota Gorda": 56.4,
@@ -547,7 +621,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 47.8,
                         "Siempre doble": 48.8,
-                        "Inteligente": 59.2
+                        "Campeón del doble 6": 59.2,
+                        "Campeón del doble 9": 42.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 55.0,
@@ -562,7 +637,8 @@ var SITE_JSON = {
                         "Agachao": 45.8,
                         "Gastar la data": 49.2,
                         "Siempre doble": 44.4,
-                        "Inteligente": 52.6
+                        "Campeón del doble 6": 52.6,
+                        "Campeón del doble 9": 45.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 61.0,
@@ -577,13 +653,14 @@ var SITE_JSON = {
                         "Agachao": 53.2,
                         "Gastar la data": 50.6,
                         "Siempre doble": 48.6,
-                        "Inteligente": 58.8
+                        "Campeón del doble 6": 58.8,
+                        "Campeón del doble 9": 47.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 53.8,
                         "Más Frecuente": 47.8,
                         "Aleatorio": 48.8,
-                        "Inteligente": 55.0,
+                        "Campeón del doble 6": 55.0,
                         "Repetidor": 45.4,
                         "Contador de la mesa": 46.2,
                         "Pasador": 44.2,
@@ -592,7 +669,23 @@ var SITE_JSON = {
                         "Bota Flaca": 42.4,
                         "Agachao": 40.8,
                         "Gastar la data": 47.4,
-                        "Siempre doble": 41.2
+                        "Siempre doble": 41.2,
+                        "Campeón del doble 9": 39.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 62.6,
+                        "Más Frecuente": 66.8,
+                        "Aleatorio": 57.8,
+                        "Campeón del doble 6": 60.4,
+                        "Repetidor": 57.6,
+                        "Contador de la mesa": 53.4,
+                        "Pasador": 56.4,
+                        "Menos Jugada": 57.8,
+                        "No gastar la data": 54.6,
+                        "Bota Flaca": 45.6,
+                        "Agachao": 57.6,
+                        "Gastar la data": 55.0,
+                        "Siempre doble": 52.8
                     }
                 },
                 "Cooperativo": {
@@ -609,7 +702,8 @@ var SITE_JSON = {
                         "Agachao": 37.2,
                         "Gastar la data": 39.4,
                         "Siempre doble": 37.6,
-                        "Inteligente": 48.8
+                        "Campeón del doble 6": 48.8,
+                        "Campeón del doble 9": 37.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 53.2,
@@ -624,7 +718,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 47.0,
                         "Siempre doble": 41.0,
-                        "Inteligente": 49.2
+                        "Campeón del doble 6": 49.2,
+                        "Campeón del doble 9": 38.6
                     },
                     "Aleatorio": {
                         "Bota Gorda": 49.2,
@@ -639,7 +734,8 @@ var SITE_JSON = {
                         "Agachao": 46.0,
                         "Gastar la data": 49.0,
                         "Siempre doble": 44.8,
-                        "Inteligente": 54.6
+                        "Campeón del doble 6": 54.6,
+                        "Campeón del doble 9": 46.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 51.2,
@@ -654,7 +750,8 @@ var SITE_JSON = {
                         "Agachao": 40.8,
                         "Gastar la data": 47.8,
                         "Siempre doble": 43.8,
-                        "Inteligente": 59.6
+                        "Campeón del doble 6": 59.6,
+                        "Campeón del doble 9": 49.6
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 50.8,
@@ -669,7 +766,8 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 47.2,
                         "Siempre doble": 44.4,
-                        "Inteligente": 51.0
+                        "Campeón del doble 6": 51.0,
+                        "Campeón del doble 9": 49.6
                     },
                     "Pasador": {
                         "Bota Gorda": 53.0,
@@ -684,7 +782,8 @@ var SITE_JSON = {
                         "Agachao": 50.2,
                         "Gastar la data": 48.4,
                         "Siempre doble": 44.2,
-                        "Inteligente": 48.6
+                        "Campeón del doble 6": 48.6,
+                        "Campeón del doble 9": 49.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 56.2,
@@ -699,7 +798,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 50.0,
                         "Siempre doble": 43.2,
-                        "Inteligente": 54.0
+                        "Campeón del doble 6": 54.0,
+                        "Campeón del doble 9": 47.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 60.4,
@@ -714,7 +814,8 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 50.0,
                         "Siempre doble": 46.6,
-                        "Inteligente": 54.6
+                        "Campeón del doble 6": 54.6,
+                        "Campeón del doble 9": 45.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 65.6,
@@ -729,7 +830,8 @@ var SITE_JSON = {
                         "Agachao": 55.0,
                         "Gastar la data": 54.6,
                         "Siempre doble": 52.0,
-                        "Inteligente": 61.0
+                        "Campeón del doble 6": 61.0,
+                        "Campeón del doble 9": 50.4
                     },
                     "Agachao": {
                         "Bota Gorda": 52.6,
@@ -744,7 +846,8 @@ var SITE_JSON = {
                         "Agachao": 48.0,
                         "Gastar la data": 49.0,
                         "Siempre doble": 43.6,
-                        "Inteligente": 53.6
+                        "Campeón del doble 6": 53.6,
+                        "Campeón del doble 9": 46.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 56.0,
@@ -759,7 +862,8 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 47.8,
                         "Siempre doble": 48.4,
-                        "Inteligente": 54.6
+                        "Campeón del doble 6": 54.6,
+                        "Campeón del doble 9": 41.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 59.6,
@@ -774,13 +878,14 @@ var SITE_JSON = {
                         "Agachao": 55.4,
                         "Gastar la data": 51.6,
                         "Siempre doble": 48.6,
-                        "Inteligente": 55.0
+                        "Campeón del doble 6": 55.0,
+                        "Campeón del doble 9": 48.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 51.2,
                         "Más Frecuente": 50.8,
                         "Aleatorio": 45.4,
-                        "Inteligente": 50.0,
+                        "Campeón del doble 6": 50.0,
                         "Repetidor": 40.4,
                         "Contador de la mesa": 49.0,
                         "Pasador": 51.4,
@@ -789,7 +894,23 @@ var SITE_JSON = {
                         "Bota Flaca": 39.0,
                         "Agachao": 46.4,
                         "Gastar la data": 45.4,
-                        "Siempre doble": 45.0
+                        "Siempre doble": 45.0,
+                        "Campeón del doble 9": 46.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 62.6,
+                        "Más Frecuente": 61.4,
+                        "Aleatorio": 54.0,
+                        "Campeón del doble 6": 54.0,
+                        "Repetidor": 50.4,
+                        "Contador de la mesa": 50.4,
+                        "Pasador": 50.4,
+                        "Menos Jugada": 53.0,
+                        "No gastar la data": 54.8,
+                        "Bota Flaca": 49.6,
+                        "Agachao": 54.0,
+                        "Gastar la data": 58.4,
+                        "Siempre doble": 51.8
                     }
                 }
             },
@@ -808,7 +929,8 @@ var SITE_JSON = {
                         "Agachao": 36.0,
                         "Gastar la data": 41.8,
                         "Siempre doble": 36.6,
-                        "Inteligente": 43.0
+                        "Campeón del doble 6": 43.0,
+                        "Campeón del doble 9": 34.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 58.6,
@@ -823,7 +945,8 @@ var SITE_JSON = {
                         "Agachao": 43.8,
                         "Gastar la data": 43.4,
                         "Siempre doble": 43.4,
-                        "Inteligente": 53.0
+                        "Campeón del doble 6": 53.0,
+                        "Campeón del doble 9": 40.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 56.6,
@@ -838,7 +961,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 49.2,
                         "Siempre doble": 43.2,
-                        "Inteligente": 55.2
+                        "Campeón del doble 6": 55.2,
+                        "Campeón del doble 9": 42.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 55.0,
@@ -853,7 +977,8 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 45.0,
                         "Siempre doble": 46.8,
-                        "Inteligente": 55.6
+                        "Campeón del doble 6": 55.6,
+                        "Campeón del doble 9": 44.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 56.4,
@@ -868,7 +993,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 48.4,
                         "Siempre doble": 46.6,
-                        "Inteligente": 51.6
+                        "Campeón del doble 6": 51.6,
+                        "Campeón del doble 9": 46.8
                     },
                     "Pasador": {
                         "Bota Gorda": 56.2,
@@ -883,7 +1009,8 @@ var SITE_JSON = {
                         "Agachao": 45.8,
                         "Gastar la data": 49.4,
                         "Siempre doble": 43.2,
-                        "Inteligente": 50.0
+                        "Campeón del doble 6": 50.0,
+                        "Campeón del doble 9": 44.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 60.2,
@@ -898,7 +1025,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 50.6,
                         "Siempre doble": 47.6,
-                        "Inteligente": 56.6
+                        "Campeón del doble 6": 56.6,
+                        "Campeón del doble 9": 45.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 59.6,
@@ -913,7 +1041,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 54.8,
                         "Siempre doble": 48.8,
-                        "Inteligente": 56.4
+                        "Campeón del doble 6": 56.4,
+                        "Campeón del doble 9": 46.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 60.8,
@@ -928,7 +1057,8 @@ var SITE_JSON = {
                         "Agachao": 55.2,
                         "Gastar la data": 54.2,
                         "Siempre doble": 52.8,
-                        "Inteligente": 58.0
+                        "Campeón del doble 6": 58.0,
+                        "Campeón del doble 9": 50.2
                     },
                     "Agachao": {
                         "Bota Gorda": 59.8,
@@ -943,7 +1073,8 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 48.2,
                         "Siempre doble": 47.4,
-                        "Inteligente": 55.4
+                        "Campeón del doble 6": 55.4,
+                        "Campeón del doble 9": 40.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 58.0,
@@ -958,7 +1089,8 @@ var SITE_JSON = {
                         "Agachao": 44.4,
                         "Gastar la data": 49.2,
                         "Siempre doble": 46.2,
-                        "Inteligente": 50.4
+                        "Campeón del doble 6": 50.4,
+                        "Campeón del doble 9": 40.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 61.8,
@@ -973,13 +1105,14 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 51.0,
                         "Siempre doble": 50.0,
-                        "Inteligente": 55.2
+                        "Campeón del doble 6": 55.2,
+                        "Campeón del doble 9": 44.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 57.0,
                         "Más Frecuente": 47.0,
                         "Aleatorio": 44.8,
-                        "Inteligente": 47.0,
+                        "Campeón del doble 6": 47.0,
                         "Repetidor": 44.4,
                         "Contador de la mesa": 48.4,
                         "Pasador": 50.0,
@@ -988,7 +1121,23 @@ var SITE_JSON = {
                         "Bota Flaca": 42.0,
                         "Agachao": 44.6,
                         "Gastar la data": 49.6,
-                        "Siempre doble": 44.8
+                        "Siempre doble": 44.8,
+                        "Campeón del doble 9": 39.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 65.8,
+                        "Más Frecuente": 60.0,
+                        "Aleatorio": 57.8,
+                        "Campeón del doble 6": 60.8,
+                        "Repetidor": 55.6,
+                        "Contador de la mesa": 53.2,
+                        "Pasador": 55.6,
+                        "Menos Jugada": 55.0,
+                        "No gastar la data": 53.4,
+                        "Bota Flaca": 49.8,
+                        "Agachao": 59.4,
+                        "Gastar la data": 59.2,
+                        "Siempre doble": 55.6
                     }
                 },
                 "Cooperativo": {
@@ -1005,7 +1154,8 @@ var SITE_JSON = {
                         "Agachao": 43.6,
                         "Gastar la data": 44.0,
                         "Siempre doble": 39.0,
-                        "Inteligente": 47.4
+                        "Campeón del doble 6": 47.4,
+                        "Campeón del doble 9": 36.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 53.6,
@@ -1020,7 +1170,8 @@ var SITE_JSON = {
                         "Agachao": 42.0,
                         "Gastar la data": 44.2,
                         "Siempre doble": 43.0,
-                        "Inteligente": 52.2
+                        "Campeón del doble 6": 52.2,
+                        "Campeón del doble 9": 40.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 53.6,
@@ -1035,7 +1186,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 46.4,
                         "Siempre doble": 49.2,
-                        "Inteligente": 51.0
+                        "Campeón del doble 6": 51.0,
+                        "Campeón del doble 9": 43.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 50.4,
@@ -1050,7 +1202,8 @@ var SITE_JSON = {
                         "Agachao": 44.8,
                         "Gastar la data": 47.0,
                         "Siempre doble": 40.4,
-                        "Inteligente": 54.4
+                        "Campeón del doble 6": 54.4,
+                        "Campeón del doble 9": 45.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 57.4,
@@ -1065,7 +1218,8 @@ var SITE_JSON = {
                         "Agachao": 42.6,
                         "Gastar la data": 48.6,
                         "Siempre doble": 45.2,
-                        "Inteligente": 52.0
+                        "Campeón del doble 6": 52.0,
+                        "Campeón del doble 9": 50.2
                     },
                     "Pasador": {
                         "Bota Gorda": 54.4,
@@ -1080,7 +1234,8 @@ var SITE_JSON = {
                         "Agachao": 44.6,
                         "Gastar la data": 49.2,
                         "Siempre doble": 45.8,
-                        "Inteligente": 51.6
+                        "Campeón del doble 6": 51.6,
+                        "Campeón del doble 9": 45.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 56.2,
@@ -1095,7 +1250,8 @@ var SITE_JSON = {
                         "Agachao": 44.4,
                         "Gastar la data": 50.6,
                         "Siempre doble": 45.0,
-                        "Inteligente": 52.2
+                        "Campeón del doble 6": 52.2,
+                        "Campeón del doble 9": 47.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 59.0,
@@ -1110,7 +1266,8 @@ var SITE_JSON = {
                         "Agachao": 44.6,
                         "Gastar la data": 53.4,
                         "Siempre doble": 46.4,
-                        "Inteligente": 53.8
+                        "Campeón del doble 6": 53.8,
+                        "Campeón del doble 9": 46.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 66.6,
@@ -1125,7 +1282,8 @@ var SITE_JSON = {
                         "Agachao": 55.0,
                         "Gastar la data": 58.8,
                         "Siempre doble": 53.0,
-                        "Inteligente": 57.4
+                        "Campeón del doble 6": 57.4,
+                        "Campeón del doble 9": 55.8
                     },
                     "Agachao": {
                         "Bota Gorda": 51.8,
@@ -1140,7 +1298,8 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 50.6,
                         "Siempre doble": 46.0,
-                        "Inteligente": 56.0
+                        "Campeón del doble 6": 56.0,
+                        "Campeón del doble 9": 40.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 53.0,
@@ -1155,7 +1314,8 @@ var SITE_JSON = {
                         "Agachao": 46.0,
                         "Gastar la data": 43.6,
                         "Siempre doble": 50.4,
-                        "Inteligente": 52.6
+                        "Campeón del doble 6": 52.6,
+                        "Campeón del doble 9": 44.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 58.2,
@@ -1170,13 +1330,14 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 50.0,
                         "Siempre doble": 48.6,
-                        "Inteligente": 55.2
+                        "Campeón del doble 6": 55.2,
+                        "Campeón del doble 9": 47.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 52.6,
                         "Más Frecuente": 47.8,
                         "Aleatorio": 49.0,
-                        "Inteligente": 50.8,
+                        "Campeón del doble 6": 50.8,
                         "Repetidor": 45.6,
                         "Contador de la mesa": 48.0,
                         "Pasador": 48.4,
@@ -1185,7 +1346,23 @@ var SITE_JSON = {
                         "Bota Flaca": 42.6,
                         "Agachao": 44.0,
                         "Gastar la data": 47.4,
-                        "Siempre doble": 44.8
+                        "Siempre doble": 44.8,
+                        "Campeón del doble 9": 42.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 64.0,
+                        "Más Frecuente": 60.0,
+                        "Aleatorio": 56.6,
+                        "Campeón del doble 6": 57.4,
+                        "Repetidor": 54.2,
+                        "Contador de la mesa": 49.8,
+                        "Pasador": 54.6,
+                        "Menos Jugada": 53.0,
+                        "No gastar la data": 53.4,
+                        "Bota Flaca": 44.2,
+                        "Agachao": 59.2,
+                        "Gastar la data": 56.0,
+                        "Siempre doble": 52.8
                     }
                 }
             },
@@ -1204,7 +1381,8 @@ var SITE_JSON = {
                         "Agachao": 38.4,
                         "Gastar la data": 40.6,
                         "Siempre doble": 37.4,
-                        "Inteligente": 51.6
+                        "Campeón del doble 6": 51.6,
+                        "Campeón del doble 9": 31.200000000000003
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 58.0,
@@ -1219,7 +1397,8 @@ var SITE_JSON = {
                         "Agachao": 42.6,
                         "Gastar la data": 43.2,
                         "Siempre doble": 42.0,
-                        "Inteligente": 57.4
+                        "Campeón del doble 6": 57.4,
+                        "Campeón del doble 9": 38.6
                     },
                     "Aleatorio": {
                         "Bota Gorda": 58.2,
@@ -1234,7 +1413,8 @@ var SITE_JSON = {
                         "Agachao": 48.0,
                         "Gastar la data": 49.4,
                         "Siempre doble": 46.8,
-                        "Inteligente": 54.0
+                        "Campeón del doble 6": 54.0,
+                        "Campeón del doble 9": 41.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 56.4,
@@ -1249,7 +1429,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 49.6,
                         "Siempre doble": 45.8,
-                        "Inteligente": 54.0
+                        "Campeón del doble 6": 54.0,
+                        "Campeón del doble 9": 39.0
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 53.4,
@@ -1264,7 +1445,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 49.8,
                         "Siempre doble": 48.2,
-                        "Inteligente": 55.0
+                        "Campeón del doble 6": 55.0,
+                        "Campeón del doble 9": 45.2
                     },
                     "Pasador": {
                         "Bota Gorda": 54.8,
@@ -1279,7 +1461,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 47.2,
                         "Siempre doble": 45.8,
-                        "Inteligente": 53.6
+                        "Campeón del doble 6": 53.6,
+                        "Campeón del doble 9": 38.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 59.8,
@@ -1294,7 +1477,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 46.4,
                         "Siempre doble": 46.6,
-                        "Inteligente": 53.2
+                        "Campeón del doble 6": 53.2,
+                        "Campeón del doble 9": 38.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 57.4,
@@ -1309,7 +1493,8 @@ var SITE_JSON = {
                         "Agachao": 54.4,
                         "Gastar la data": 48.2,
                         "Siempre doble": 50.8,
-                        "Inteligente": 53.2
+                        "Campeón del doble 6": 53.2,
+                        "Campeón del doble 9": 44.8
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 67.4,
@@ -1324,7 +1509,8 @@ var SITE_JSON = {
                         "Agachao": 61.4,
                         "Gastar la data": 57.4,
                         "Siempre doble": 54.0,
-                        "Inteligente": 57.2
+                        "Campeón del doble 6": 57.2,
+                        "Campeón del doble 9": 52.0
                     },
                     "Agachao": {
                         "Bota Gorda": 60.0,
@@ -1339,7 +1525,8 @@ var SITE_JSON = {
                         "Agachao": 49.6,
                         "Gastar la data": 49.6,
                         "Siempre doble": 50.8,
-                        "Inteligente": 58.4
+                        "Campeón del doble 6": 58.4,
+                        "Campeón del doble 9": 37.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 55.0,
@@ -1354,7 +1541,8 @@ var SITE_JSON = {
                         "Agachao": 51.0,
                         "Gastar la data": 49.8,
                         "Siempre doble": 45.8,
-                        "Inteligente": 52.2
+                        "Campeón del doble 6": 52.2,
+                        "Campeón del doble 9": 42.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 57.8,
@@ -1369,13 +1557,14 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 53.4,
                         "Siempre doble": 49.8,
-                        "Inteligente": 56.6
+                        "Campeón del doble 6": 56.6,
+                        "Campeón del doble 9": 50.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 48.4,
                         "Más Frecuente": 42.6,
                         "Aleatorio": 46.0,
-                        "Inteligente": 48.8,
+                        "Campeón del doble 6": 48.8,
                         "Repetidor": 46.0,
                         "Contador de la mesa": 45.0,
                         "Pasador": 46.4,
@@ -1384,7 +1573,23 @@ var SITE_JSON = {
                         "Bota Flaca": 42.8,
                         "Agachao": 41.6,
                         "Gastar la data": 47.8,
-                        "Siempre doble": 43.4
+                        "Siempre doble": 43.4,
+                        "Campeón del doble 9": 41.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 68.8,
+                        "Más Frecuente": 61.4,
+                        "Aleatorio": 58.6,
+                        "Campeón del doble 6": 58.4,
+                        "Repetidor": 61.0,
+                        "Contador de la mesa": 54.8,
+                        "Pasador": 61.2,
+                        "Menos Jugada": 61.4,
+                        "No gastar la data": 55.2,
+                        "Bota Flaca": 48.0,
+                        "Agachao": 62.4,
+                        "Gastar la data": 57.2,
+                        "Siempre doble": 50.0
                     }
                 },
                 "Cooperativo": {
@@ -1401,7 +1606,8 @@ var SITE_JSON = {
                         "Agachao": 42.4,
                         "Gastar la data": 44.0,
                         "Siempre doble": 38.0,
-                        "Inteligente": 42.0
+                        "Campeón del doble 6": 42.0,
+                        "Campeón del doble 9": 42.6
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 51.2,
@@ -1416,7 +1622,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 46.2,
                         "Siempre doble": 43.2,
-                        "Inteligente": 47.4
+                        "Campeón del doble 6": 47.4,
+                        "Campeón del doble 9": 39.6
                     },
                     "Aleatorio": {
                         "Bota Gorda": 55.6,
@@ -1431,7 +1638,8 @@ var SITE_JSON = {
                         "Agachao": 44.0,
                         "Gastar la data": 48.8,
                         "Siempre doble": 46.8,
-                        "Inteligente": 56.2
+                        "Campeón del doble 6": 56.2,
+                        "Campeón del doble 9": 46.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 53.2,
@@ -1446,7 +1654,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 46.6,
                         "Siempre doble": 45.4,
-                        "Inteligente": 53.4
+                        "Campeón del doble 6": 53.4,
+                        "Campeón del doble 9": 46.6
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.4,
@@ -1461,7 +1670,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 46.8,
                         "Siempre doble": 47.4,
-                        "Inteligente": 51.2
+                        "Campeón del doble 6": 51.2,
+                        "Campeón del doble 9": 51.0
                     },
                     "Pasador": {
                         "Bota Gorda": 59.2,
@@ -1476,7 +1686,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 50.2,
                         "Siempre doble": 46.0,
-                        "Inteligente": 52.6
+                        "Campeón del doble 6": 52.6,
+                        "Campeón del doble 9": 41.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 55.8,
@@ -1491,7 +1702,8 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 52.0,
                         "Siempre doble": 45.4,
-                        "Inteligente": 48.4
+                        "Campeón del doble 6": 48.4,
+                        "Campeón del doble 9": 42.2
                     },
                     "No gastar la data": {
                         "Bota Gorda": 54.6,
@@ -1506,7 +1718,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 49.8,
                         "Siempre doble": 47.4,
-                        "Inteligente": 55.4
+                        "Campeón del doble 6": 55.4,
+                        "Campeón del doble 9": 43.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 64.0,
@@ -1521,7 +1734,8 @@ var SITE_JSON = {
                         "Agachao": 56.6,
                         "Gastar la data": 57.6,
                         "Siempre doble": 54.4,
-                        "Inteligente": 53.0
+                        "Campeón del doble 6": 53.0,
+                        "Campeón del doble 9": 55.6
                     },
                     "Agachao": {
                         "Bota Gorda": 57.0,
@@ -1536,7 +1750,8 @@ var SITE_JSON = {
                         "Agachao": 50.6,
                         "Gastar la data": 53.0,
                         "Siempre doble": 47.4,
-                        "Inteligente": 51.0
+                        "Campeón del doble 6": 51.0,
+                        "Campeón del doble 9": 44.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 59.0,
@@ -1551,7 +1766,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 49.2,
                         "Siempre doble": 45.6,
-                        "Inteligente": 52.0
+                        "Campeón del doble 6": 52.0,
+                        "Campeón del doble 9": 49.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 57.6,
@@ -1566,13 +1782,14 @@ var SITE_JSON = {
                         "Agachao": 53.0,
                         "Gastar la data": 53.6,
                         "Siempre doble": 52.8,
-                        "Inteligente": 53.4
+                        "Campeón del doble 6": 53.4,
+                        "Campeón del doble 9": 49.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 58.0,
                         "Más Frecuente": 52.6,
                         "Aleatorio": 43.8,
-                        "Inteligente": 49.8,
+                        "Campeón del doble 6": 49.8,
                         "Repetidor": 46.6,
                         "Contador de la mesa": 48.8,
                         "Pasador": 47.4,
@@ -1581,7 +1798,23 @@ var SITE_JSON = {
                         "Bota Flaca": 47.0,
                         "Agachao": 49.0,
                         "Gastar la data": 48.0,
-                        "Siempre doble": 46.6
+                        "Siempre doble": 46.6,
+                        "Campeón del doble 9": 45.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 57.4,
+                        "Más Frecuente": 60.4,
+                        "Aleatorio": 54.0,
+                        "Campeón del doble 6": 54.2,
+                        "Repetidor": 53.4,
+                        "Contador de la mesa": 49.0,
+                        "Pasador": 58.4,
+                        "Menos Jugada": 57.8,
+                        "No gastar la data": 56.6,
+                        "Bota Flaca": 44.4,
+                        "Agachao": 55.4,
+                        "Gastar la data": 50.2,
+                        "Siempre doble": 50.6
                     }
                 }
             },
@@ -1600,7 +1833,8 @@ var SITE_JSON = {
                         "Agachao": 40.8,
                         "Gastar la data": 43.8,
                         "Siempre doble": 40.0,
-                        "Inteligente": 46.8
+                        "Campeón del doble 6": 46.8,
+                        "Campeón del doble 9": 33.599999999999994
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 59.2,
@@ -1615,7 +1849,8 @@ var SITE_JSON = {
                         "Agachao": 44.6,
                         "Gastar la data": 45.4,
                         "Siempre doble": 43.0,
-                        "Inteligente": 54.4
+                        "Campeón del doble 6": 54.4,
+                        "Campeón del doble 9": 36.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 58.0,
@@ -1630,7 +1865,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 49.4,
                         "Siempre doble": 46.6,
-                        "Inteligente": 48.6
+                        "Campeón del doble 6": 48.6,
+                        "Campeón del doble 9": 41.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 52.0,
@@ -1645,7 +1881,8 @@ var SITE_JSON = {
                         "Agachao": 45.2,
                         "Gastar la data": 48.8,
                         "Siempre doble": 50.0,
-                        "Inteligente": 52.6
+                        "Campeón del doble 6": 52.6,
+                        "Campeón del doble 9": 42.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.8,
@@ -1660,7 +1897,8 @@ var SITE_JSON = {
                         "Agachao": 45.4,
                         "Gastar la data": 54.0,
                         "Siempre doble": 46.6,
-                        "Inteligente": 50.6
+                        "Campeón del doble 6": 50.6,
+                        "Campeón del doble 9": 42.2
                     },
                     "Pasador": {
                         "Bota Gorda": 58.8,
@@ -1675,7 +1913,8 @@ var SITE_JSON = {
                         "Agachao": 49.6,
                         "Gastar la data": 45.6,
                         "Siempre doble": 45.8,
-                        "Inteligente": 54.2
+                        "Campeón del doble 6": 54.2,
+                        "Campeón del doble 9": 44.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 57.2,
@@ -1690,7 +1929,8 @@ var SITE_JSON = {
                         "Agachao": 45.6,
                         "Gastar la data": 49.0,
                         "Siempre doble": 45.8,
-                        "Inteligente": 53.4
+                        "Campeón del doble 6": 53.4,
+                        "Campeón del doble 9": 43.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 57.4,
@@ -1705,7 +1945,8 @@ var SITE_JSON = {
                         "Agachao": 52.6,
                         "Gastar la data": 51.0,
                         "Siempre doble": 45.0,
-                        "Inteligente": 52.6
+                        "Campeón del doble 6": 52.6,
+                        "Campeón del doble 9": 43.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 65.0,
@@ -1720,7 +1961,8 @@ var SITE_JSON = {
                         "Agachao": 59.8,
                         "Gastar la data": 58.6,
                         "Siempre doble": 55.4,
-                        "Inteligente": 59.6
+                        "Campeón del doble 6": 59.6,
+                        "Campeón del doble 9": 46.6
                     },
                     "Agachao": {
                         "Bota Gorda": 60.8,
@@ -1735,7 +1977,8 @@ var SITE_JSON = {
                         "Agachao": 48.8,
                         "Gastar la data": 47.6,
                         "Siempre doble": 45.8,
-                        "Inteligente": 54.6
+                        "Campeón del doble 6": 54.6,
+                        "Campeón del doble 9": 40.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 59.2,
@@ -1750,7 +1993,8 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 47.0,
                         "Siempre doble": 46.8,
-                        "Inteligente": 52.8
+                        "Campeón del doble 6": 52.8,
+                        "Campeón del doble 9": 39.2
                     },
                     "Siempre doble": {
                         "Bota Gorda": 59.4,
@@ -1765,13 +2009,14 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 47.8,
                         "Siempre doble": 50.0,
-                        "Inteligente": 58.2
+                        "Campeón del doble 6": 58.2,
+                        "Campeón del doble 9": 48.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 53.2,
                         "Más Frecuente": 45.6,
                         "Aleatorio": 51.4,
-                        "Inteligente": 47.4,
+                        "Campeón del doble 6": 47.4,
                         "Repetidor": 47.4,
                         "Contador de la mesa": 49.4,
                         "Pasador": 45.8,
@@ -1780,7 +2025,23 @@ var SITE_JSON = {
                         "Bota Flaca": 40.4,
                         "Agachao": 45.4,
                         "Gastar la data": 47.2,
-                        "Siempre doble": 41.8
+                        "Siempre doble": 41.8,
+                        "Campeón del doble 9": 40.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 66.4,
+                        "Más Frecuente": 63.2,
+                        "Aleatorio": 59.0,
+                        "Campeón del doble 6": 59.6,
+                        "Repetidor": 57.8,
+                        "Contador de la mesa": 57.8,
+                        "Pasador": 55.2,
+                        "Menos Jugada": 56.6,
+                        "No gastar la data": 56.8,
+                        "Bota Flaca": 53.4,
+                        "Agachao": 59.2,
+                        "Gastar la data": 60.8,
+                        "Siempre doble": 51.6
                     }
                 },
                 "Cooperativo": {
@@ -1797,7 +2058,8 @@ var SITE_JSON = {
                         "Agachao": 40.0,
                         "Gastar la data": 42.8,
                         "Siempre doble": 39.8,
-                        "Inteligente": 44.4
+                        "Campeón del doble 6": 44.4,
+                        "Campeón del doble 9": 40.6
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 54.0,
@@ -1812,7 +2074,8 @@ var SITE_JSON = {
                         "Agachao": 45.4,
                         "Gastar la data": 46.8,
                         "Siempre doble": 44.2,
-                        "Inteligente": 57.6
+                        "Campeón del doble 6": 57.6,
+                        "Campeón del doble 9": 39.6
                     },
                     "Aleatorio": {
                         "Bota Gorda": 55.6,
@@ -1827,7 +2090,8 @@ var SITE_JSON = {
                         "Agachao": 44.6,
                         "Gastar la data": 49.4,
                         "Siempre doble": 47.0,
-                        "Inteligente": 53.2
+                        "Campeón del doble 6": 53.2,
+                        "Campeón del doble 9": 45.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 56.6,
@@ -1842,7 +2106,8 @@ var SITE_JSON = {
                         "Agachao": 48.6,
                         "Gastar la data": 49.8,
                         "Siempre doble": 46.4,
-                        "Inteligente": 52.0
+                        "Campeón del doble 6": 52.0,
+                        "Campeón del doble 9": 42.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 54.4,
@@ -1857,7 +2122,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 54.6,
                         "Siempre doble": 43.6,
-                        "Inteligente": 54.2
+                        "Campeón del doble 6": 54.2,
+                        "Campeón del doble 9": 45.2
                     },
                     "Pasador": {
                         "Bota Gorda": 54.4,
@@ -1872,7 +2138,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 49.4,
                         "Siempre doble": 44.4,
-                        "Inteligente": 50.0
+                        "Campeón del doble 6": 50.0,
+                        "Campeón del doble 9": 40.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 58.8,
@@ -1887,7 +2154,8 @@ var SITE_JSON = {
                         "Agachao": 48.0,
                         "Gastar la data": 47.2,
                         "Siempre doble": 47.4,
-                        "Inteligente": 51.0
+                        "Campeón del doble 6": 51.0,
+                        "Campeón del doble 9": 44.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 58.0,
@@ -1902,7 +2170,8 @@ var SITE_JSON = {
                         "Agachao": 50.2,
                         "Gastar la data": 51.8,
                         "Siempre doble": 41.2,
-                        "Inteligente": 51.8
+                        "Campeón del doble 6": 51.8,
+                        "Campeón del doble 9": 48.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 65.6,
@@ -1917,7 +2186,8 @@ var SITE_JSON = {
                         "Agachao": 54.8,
                         "Gastar la data": 58.4,
                         "Siempre doble": 50.8,
-                        "Inteligente": 57.2
+                        "Campeón del doble 6": 57.2,
+                        "Campeón del doble 9": 50.8
                     },
                     "Agachao": {
                         "Bota Gorda": 58.4,
@@ -1932,7 +2202,8 @@ var SITE_JSON = {
                         "Agachao": 50.4,
                         "Gastar la data": 51.8,
                         "Siempre doble": 45.4,
-                        "Inteligente": 57.6
+                        "Campeón del doble 6": 57.6,
+                        "Campeón del doble 9": 41.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 57.4,
@@ -1947,7 +2218,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 47.4,
                         "Siempre doble": 46.0,
-                        "Inteligente": 54.2
+                        "Campeón del doble 6": 54.2,
+                        "Campeón del doble 9": 41.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 56.4,
@@ -1962,13 +2234,14 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 55.0,
                         "Siempre doble": 47.2,
-                        "Inteligente": 55.4
+                        "Campeón del doble 6": 55.4,
+                        "Campeón del doble 9": 47.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 55.6,
                         "Más Frecuente": 42.4,
                         "Aleatorio": 46.8,
-                        "Inteligente": 47.8,
+                        "Campeón del doble 6": 47.8,
                         "Repetidor": 48.0,
                         "Contador de la mesa": 45.8,
                         "Pasador": 50.0,
@@ -1977,7 +2250,23 @@ var SITE_JSON = {
                         "Bota Flaca": 42.8,
                         "Agachao": 42.4,
                         "Gastar la data": 45.8,
-                        "Siempre doble": 44.6
+                        "Siempre doble": 44.6,
+                        "Campeón del doble 9": 45.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 59.4,
+                        "Más Frecuente": 60.4,
+                        "Aleatorio": 54.6,
+                        "Campeón del doble 6": 54.6,
+                        "Repetidor": 57.6,
+                        "Contador de la mesa": 54.8,
+                        "Pasador": 59.2,
+                        "Menos Jugada": 55.4,
+                        "No gastar la data": 51.8,
+                        "Bota Flaca": 49.2,
+                        "Agachao": 58.8,
+                        "Gastar la data": 58.2,
+                        "Siempre doble": 52.2
                     }
                 }
             }
@@ -1998,7 +2287,8 @@ var SITE_JSON = {
                         "Agachao": 34.4,
                         "Gastar la data": 38.4,
                         "Siempre doble": 27.4,
-                        "Inteligente": 39.0
+                        "Campeón del doble 6": 39.0,
+                        "Campeón del doble 9": 23.400000000000006
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 65.2,
@@ -2013,7 +2303,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 43.6,
                         "Siempre doble": 40.4,
-                        "Inteligente": 55.2
+                        "Campeón del doble 6": 55.2,
+                        "Campeón del doble 9": 28.599999999999994
                     },
                     "Aleatorio": {
                         "Bota Gorda": 64.4,
@@ -2028,7 +2319,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 53.0,
                         "Siempre doble": 43.6,
-                        "Inteligente": 51.8
+                        "Campeón del doble 6": 51.8,
+                        "Campeón del doble 9": 32.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 63.0,
@@ -2043,7 +2335,8 @@ var SITE_JSON = {
                         "Agachao": 45.8,
                         "Gastar la data": 47.8,
                         "Siempre doble": 49.8,
-                        "Inteligente": 54.4
+                        "Campeón del doble 6": 54.4,
+                        "Campeón del doble 9": 33.400000000000006
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.8,
@@ -2058,7 +2351,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 53.0,
                         "Siempre doble": 46.6,
-                        "Inteligente": 58.0
+                        "Campeón del doble 6": 58.0,
+                        "Campeón del doble 9": 38.2
                     },
                     "Pasador": {
                         "Bota Gorda": 66.2,
@@ -2073,7 +2367,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 51.4,
                         "Siempre doble": 45.0,
-                        "Inteligente": 51.6
+                        "Campeón del doble 6": 51.6,
+                        "Campeón del doble 9": 35.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 64.2,
@@ -2088,7 +2383,8 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 52.8,
                         "Siempre doble": 43.8,
-                        "Inteligente": 56.2
+                        "Campeón del doble 6": 56.2,
+                        "Campeón del doble 9": 34.2
                     },
                     "No gastar la data": {
                         "Bota Gorda": 65.6,
@@ -2103,7 +2399,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 52.8,
                         "Siempre doble": 48.0,
-                        "Inteligente": 53.4
+                        "Campeón del doble 6": 53.4,
+                        "Campeón del doble 9": 39.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 76.4,
@@ -2118,7 +2415,8 @@ var SITE_JSON = {
                         "Agachao": 70.6,
                         "Gastar la data": 61.4,
                         "Siempre doble": 59.0,
-                        "Inteligente": 65.8
+                        "Campeón del doble 6": 65.8,
+                        "Campeón del doble 9": 48.6
                     },
                     "Agachao": {
                         "Bota Gorda": 70.8,
@@ -2133,7 +2431,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 52.0,
                         "Siempre doble": 42.6,
-                        "Inteligente": 55.6
+                        "Campeón del doble 6": 55.6,
+                        "Campeón del doble 9": 34.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 58.8,
@@ -2148,7 +2447,8 @@ var SITE_JSON = {
                         "Agachao": 45.4,
                         "Gastar la data": 50.8,
                         "Siempre doble": 43.6,
-                        "Inteligente": 58.2
+                        "Campeón del doble 6": 58.2,
+                        "Campeón del doble 9": 39.4
                     },
                     "Siempre doble": {
                         "Bota Gorda": 66.2,
@@ -2163,13 +2463,14 @@ var SITE_JSON = {
                         "Agachao": 52.6,
                         "Gastar la data": 53.0,
                         "Siempre doble": 47.6,
-                        "Inteligente": 54.0
+                        "Campeón del doble 6": 54.0,
+                        "Campeón del doble 9": 41.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 61.0,
                         "Más Frecuente": 44.8,
                         "Aleatorio": 48.2,
-                        "Inteligente": 52.2,
+                        "Campeón del doble 6": 52.2,
                         "Repetidor": 45.6,
                         "Contador de la mesa": 42.0,
                         "Pasador": 48.4,
@@ -2178,7 +2479,23 @@ var SITE_JSON = {
                         "Bota Flaca": 34.2,
                         "Agachao": 44.4,
                         "Gastar la data": 41.8,
-                        "Siempre doble": 46.0
+                        "Siempre doble": 46.0,
+                        "Campeón del doble 9": 36.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 76.6,
+                        "Más Frecuente": 71.4,
+                        "Aleatorio": 68.0,
+                        "Campeón del doble 6": 63.4,
+                        "Repetidor": 66.6,
+                        "Contador de la mesa": 61.8,
+                        "Pasador": 64.8,
+                        "Menos Jugada": 65.8,
+                        "No gastar la data": 60.4,
+                        "Bota Flaca": 51.4,
+                        "Agachao": 65.8,
+                        "Gastar la data": 60.6,
+                        "Siempre doble": 58.4
                     }
                 },
                 "Cooperativo": {
@@ -2195,7 +2512,8 @@ var SITE_JSON = {
                         "Agachao": 36.8,
                         "Gastar la data": 37.2,
                         "Siempre doble": 38.4,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 25.799999999999997
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 62.0,
@@ -2210,7 +2528,8 @@ var SITE_JSON = {
                         "Agachao": 43.8,
                         "Gastar la data": 46.0,
                         "Siempre doble": 43.2,
-                        "Inteligente": 48.6
+                        "Campeón del doble 6": 48.6,
+                        "Campeón del doble 9": 27.400000000000006
                     },
                     "Aleatorio": {
                         "Bota Gorda": 63.2,
@@ -2225,7 +2544,8 @@ var SITE_JSON = {
                         "Agachao": 50.4,
                         "Gastar la data": 48.6,
                         "Siempre doble": 50.4,
-                        "Inteligente": 52.2
+                        "Campeón del doble 6": 52.2,
+                        "Campeón del doble 9": 37.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 61.6,
@@ -2240,7 +2560,8 @@ var SITE_JSON = {
                         "Agachao": 42.8,
                         "Gastar la data": 44.6,
                         "Siempre doble": 45.6,
-                        "Inteligente": 53.2
+                        "Campeón del doble 6": 53.2,
+                        "Campeón del doble 9": 36.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 57.4,
@@ -2255,7 +2576,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 53.2,
                         "Siempre doble": 47.2,
-                        "Inteligente": 53.6
+                        "Campeón del doble 6": 53.6,
+                        "Campeón del doble 9": 42.8
                     },
                     "Pasador": {
                         "Bota Gorda": 59.2,
@@ -2270,7 +2592,8 @@ var SITE_JSON = {
                         "Agachao": 51.6,
                         "Gastar la data": 49.8,
                         "Siempre doble": 46.8,
-                        "Inteligente": 53.2
+                        "Campeón del doble 6": 53.2,
+                        "Campeón del doble 9": 34.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 59.6,
@@ -2285,7 +2608,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 50.2,
                         "Siempre doble": 42.6,
-                        "Inteligente": 52.8
+                        "Campeón del doble 6": 52.8,
+                        "Campeón del doble 9": 37.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 62.6,
@@ -2300,7 +2624,8 @@ var SITE_JSON = {
                         "Agachao": 53.2,
                         "Gastar la data": 56.2,
                         "Siempre doble": 46.8,
-                        "Inteligente": 52.8
+                        "Campeón del doble 6": 52.8,
+                        "Campeón del doble 9": 41.8
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 75.2,
@@ -2315,7 +2640,8 @@ var SITE_JSON = {
                         "Agachao": 61.4,
                         "Gastar la data": 58.4,
                         "Siempre doble": 55.6,
-                        "Inteligente": 60.8
+                        "Campeón del doble 6": 60.8,
+                        "Campeón del doble 9": 48.4
                     },
                     "Agachao": {
                         "Bota Gorda": 61.4,
@@ -2330,7 +2656,8 @@ var SITE_JSON = {
                         "Agachao": 51.6,
                         "Gastar la data": 48.4,
                         "Siempre doble": 44.0,
-                        "Inteligente": 56.6
+                        "Campeón del doble 6": 56.6,
+                        "Campeón del doble 9": 33.400000000000006
                     },
                     "Gastar la data": {
                         "Bota Gorda": 63.0,
@@ -2345,7 +2672,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 52.2,
                         "Siempre doble": 47.2,
-                        "Inteligente": 52.8
+                        "Campeón del doble 6": 52.8,
+                        "Campeón del doble 9": 38.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 61.2,
@@ -2360,13 +2688,14 @@ var SITE_JSON = {
                         "Agachao": 55.0,
                         "Gastar la data": 56.2,
                         "Siempre doble": 51.8,
-                        "Inteligente": 56.2
+                        "Campeón del doble 6": 56.2,
+                        "Campeón del doble 9": 46.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 60.0,
                         "Más Frecuente": 51.4,
                         "Aleatorio": 47.8,
-                        "Inteligente": 49.0,
+                        "Campeón del doble 6": 49.0,
                         "Repetidor": 46.8,
                         "Contador de la mesa": 46.4,
                         "Pasador": 46.8,
@@ -2375,7 +2704,23 @@ var SITE_JSON = {
                         "Bota Flaca": 39.2,
                         "Agachao": 43.4,
                         "Gastar la data": 47.2,
-                        "Siempre doble": 43.8
+                        "Siempre doble": 43.8,
+                        "Campeón del doble 9": 41.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 74.2,
+                        "Más Frecuente": 72.6,
+                        "Aleatorio": 62.8,
+                        "Campeón del doble 6": 58.8,
+                        "Repetidor": 63.6,
+                        "Contador de la mesa": 57.2,
+                        "Pasador": 66.0,
+                        "Menos Jugada": 62.4,
+                        "No gastar la data": 58.2,
+                        "Bota Flaca": 51.6,
+                        "Agachao": 66.6,
+                        "Gastar la data": 61.2,
+                        "Siempre doble": 53.8
                     }
                 }
             },
@@ -2394,7 +2739,8 @@ var SITE_JSON = {
                         "Agachao": 30.6,
                         "Gastar la data": 40.0,
                         "Siempre doble": 33.8,
-                        "Inteligente": 42.8
+                        "Campeón del doble 6": 42.8,
+                        "Campeón del doble 9": 24.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 61.8,
@@ -2409,7 +2755,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 47.8,
                         "Siempre doble": 42.2,
-                        "Inteligente": 50.8
+                        "Campeón del doble 6": 50.8,
+                        "Campeón del doble 9": 29.599999999999994
                     },
                     "Aleatorio": {
                         "Bota Gorda": 63.4,
@@ -2424,7 +2771,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 51.2,
                         "Siempre doble": 42.8,
-                        "Inteligente": 54.0
+                        "Campeón del doble 6": 54.0,
+                        "Campeón del doble 9": 35.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 59.8,
@@ -2439,7 +2787,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 48.6,
                         "Siempre doble": 46.0,
-                        "Inteligente": 52.8
+                        "Campeón del doble 6": 52.8,
+                        "Campeón del doble 9": 33.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.8,
@@ -2454,7 +2803,8 @@ var SITE_JSON = {
                         "Agachao": 50.4,
                         "Gastar la data": 48.0,
                         "Siempre doble": 40.4,
-                        "Inteligente": 53.8
+                        "Campeón del doble 6": 53.8,
+                        "Campeón del doble 9": 38.8
                     },
                     "Pasador": {
                         "Bota Gorda": 64.8,
@@ -2469,7 +2819,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 48.0,
                         "Siempre doble": 50.6,
-                        "Inteligente": 53.0
+                        "Campeón del doble 6": 53.0,
+                        "Campeón del doble 9": 35.599999999999994
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 63.2,
@@ -2484,7 +2835,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 51.4,
                         "Siempre doble": 45.6,
-                        "Inteligente": 51.4
+                        "Campeón del doble 6": 51.4,
+                        "Campeón del doble 9": 32.599999999999994
                     },
                     "No gastar la data": {
                         "Bota Gorda": 67.0,
@@ -2499,7 +2851,8 @@ var SITE_JSON = {
                         "Agachao": 50.4,
                         "Gastar la data": 51.2,
                         "Siempre doble": 45.8,
-                        "Inteligente": 56.0
+                        "Campeón del doble 6": 56.0,
+                        "Campeón del doble 9": 39.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 72.8,
@@ -2514,7 +2867,8 @@ var SITE_JSON = {
                         "Agachao": 65.8,
                         "Gastar la data": 62.0,
                         "Siempre doble": 54.4,
-                        "Inteligente": 62.4
+                        "Campeón del doble 6": 62.4,
+                        "Campeón del doble 9": 49.8
                     },
                     "Agachao": {
                         "Bota Gorda": 63.6,
@@ -2529,7 +2883,8 @@ var SITE_JSON = {
                         "Agachao": 44.6,
                         "Gastar la data": 51.4,
                         "Siempre doble": 47.0,
-                        "Inteligente": 59.2
+                        "Campeón del doble 6": 59.2,
+                        "Campeón del doble 9": 36.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.6,
@@ -2544,7 +2899,8 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 52.2,
                         "Siempre doble": 44.6,
-                        "Inteligente": 54.4
+                        "Campeón del doble 6": 54.4,
+                        "Campeón del doble 9": 37.4
                     },
                     "Siempre doble": {
                         "Bota Gorda": 69.8,
@@ -2559,13 +2915,14 @@ var SITE_JSON = {
                         "Agachao": 52.8,
                         "Gastar la data": 51.4,
                         "Siempre doble": 49.8,
-                        "Inteligente": 59.2
+                        "Campeón del doble 6": 59.2,
+                        "Campeón del doble 9": 46.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 57.2,
                         "Más Frecuente": 49.2,
                         "Aleatorio": 46.0,
-                        "Inteligente": 47.6,
+                        "Campeón del doble 6": 47.6,
                         "Repetidor": 47.2,
                         "Contador de la mesa": 46.2,
                         "Pasador": 47.0,
@@ -2574,7 +2931,23 @@ var SITE_JSON = {
                         "Bota Flaca": 37.6,
                         "Agachao": 40.8,
                         "Gastar la data": 45.6,
-                        "Siempre doble": 40.8
+                        "Siempre doble": 40.8,
+                        "Campeón del doble 9": 41.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 76.0,
+                        "Más Frecuente": 70.4,
+                        "Aleatorio": 65.0,
+                        "Campeón del doble 6": 58.2,
+                        "Repetidor": 66.8,
+                        "Contador de la mesa": 61.2,
+                        "Pasador": 64.4,
+                        "Menos Jugada": 67.4,
+                        "No gastar la data": 61.0,
+                        "Bota Flaca": 50.2,
+                        "Agachao": 64.0,
+                        "Gastar la data": 62.6,
+                        "Siempre doble": 54.0
                     }
                 },
                 "Cooperativo": {
@@ -2591,7 +2964,8 @@ var SITE_JSON = {
                         "Agachao": 39.8,
                         "Gastar la data": 38.6,
                         "Siempre doble": 33.8,
-                        "Inteligente": 42.6
+                        "Campeón del doble 6": 42.6,
+                        "Campeón del doble 9": 30.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 60.8,
@@ -2606,7 +2980,8 @@ var SITE_JSON = {
                         "Agachao": 44.0,
                         "Gastar la data": 46.0,
                         "Siempre doble": 45.6,
-                        "Inteligente": 52.4
+                        "Campeón del doble 6": 52.4,
+                        "Campeón del doble 9": 29.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 61.0,
@@ -2621,7 +2996,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 48.8,
                         "Siempre doble": 45.8,
-                        "Inteligente": 49.8
+                        "Campeón del doble 6": 49.8,
+                        "Campeón del doble 9": 35.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 58.4,
@@ -2636,7 +3012,8 @@ var SITE_JSON = {
                         "Agachao": 48.8,
                         "Gastar la data": 48.0,
                         "Siempre doble": 43.6,
-                        "Inteligente": 52.0
+                        "Campeón del doble 6": 52.0,
+                        "Campeón del doble 9": 38.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 61.0,
@@ -2651,7 +3028,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 52.0,
                         "Siempre doble": 47.4,
-                        "Inteligente": 52.2
+                        "Campeón del doble 6": 52.2,
+                        "Campeón del doble 9": 36.6
                     },
                     "Pasador": {
                         "Bota Gorda": 53.8,
@@ -2666,7 +3044,8 @@ var SITE_JSON = {
                         "Agachao": 48.8,
                         "Gastar la data": 46.6,
                         "Siempre doble": 44.0,
-                        "Inteligente": 53.2
+                        "Campeón del doble 6": 53.2,
+                        "Campeón del doble 9": 39.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 60.4,
@@ -2681,7 +3060,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 48.6,
                         "Siempre doble": 43.6,
-                        "Inteligente": 50.8
+                        "Campeón del doble 6": 50.8,
+                        "Campeón del doble 9": 39.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 61.6,
@@ -2696,7 +3076,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 52.0,
                         "Siempre doble": 47.6,
-                        "Inteligente": 51.0
+                        "Campeón del doble 6": 51.0,
+                        "Campeón del doble 9": 41.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 71.0,
@@ -2711,7 +3092,8 @@ var SITE_JSON = {
                         "Agachao": 56.6,
                         "Gastar la data": 58.8,
                         "Siempre doble": 49.0,
-                        "Inteligente": 63.6
+                        "Campeón del doble 6": 63.6,
+                        "Campeón del doble 9": 52.0
                     },
                     "Agachao": {
                         "Bota Gorda": 57.8,
@@ -2726,7 +3108,8 @@ var SITE_JSON = {
                         "Agachao": 51.8,
                         "Gastar la data": 50.8,
                         "Siempre doble": 52.4,
-                        "Inteligente": 53.2
+                        "Campeón del doble 6": 53.2,
+                        "Campeón del doble 9": 36.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 61.4,
@@ -2741,7 +3124,8 @@ var SITE_JSON = {
                         "Agachao": 52.6,
                         "Gastar la data": 54.2,
                         "Siempre doble": 48.0,
-                        "Inteligente": 54.2
+                        "Campeón del doble 6": 54.2,
+                        "Campeón del doble 9": 42.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 60.0,
@@ -2756,13 +3140,14 @@ var SITE_JSON = {
                         "Agachao": 50.2,
                         "Gastar la data": 55.0,
                         "Siempre doble": 48.2,
-                        "Inteligente": 55.2
+                        "Campeón del doble 6": 55.2,
+                        "Campeón del doble 9": 45.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 57.4,
                         "Más Frecuente": 47.6,
                         "Aleatorio": 50.2,
-                        "Inteligente": 52.8,
+                        "Campeón del doble 6": 52.8,
                         "Repetidor": 48.0,
                         "Contador de la mesa": 47.8,
                         "Pasador": 46.8,
@@ -2771,7 +3156,23 @@ var SITE_JSON = {
                         "Bota Flaca": 36.4,
                         "Agachao": 46.8,
                         "Gastar la data": 45.8,
-                        "Siempre doble": 44.8
+                        "Siempre doble": 44.8,
+                        "Campeón del doble 9": 36.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 70.0,
+                        "Más Frecuente": 71.0,
+                        "Aleatorio": 64.2,
+                        "Campeón del doble 6": 63.4,
+                        "Repetidor": 61.8,
+                        "Contador de la mesa": 63.4,
+                        "Pasador": 61.0,
+                        "Menos Jugada": 61.0,
+                        "No gastar la data": 58.6,
+                        "Bota Flaca": 48.0,
+                        "Agachao": 63.2,
+                        "Gastar la data": 58.0,
+                        "Siempre doble": 54.4
                     }
                 }
             },
@@ -2790,7 +3191,8 @@ var SITE_JSON = {
                         "Agachao": 32.4,
                         "Gastar la data": 38.0,
                         "Siempre doble": 31.6,
-                        "Inteligente": 43.0
+                        "Campeón del doble 6": 43.0,
+                        "Campeón del doble 9": 26.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 64.0,
@@ -2805,7 +3207,8 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 43.2,
                         "Siempre doble": 39.2,
-                        "Inteligente": 51.8
+                        "Campeón del doble 6": 51.8,
+                        "Campeón del doble 9": 27.400000000000006
                     },
                     "Aleatorio": {
                         "Bota Gorda": 63.2,
@@ -2820,7 +3223,8 @@ var SITE_JSON = {
                         "Agachao": 48.8,
                         "Gastar la data": 50.6,
                         "Siempre doble": 46.6,
-                        "Inteligente": 54.8
+                        "Campeón del doble 6": 54.8,
+                        "Campeón del doble 9": 36.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 56.4,
@@ -2835,7 +3239,8 @@ var SITE_JSON = {
                         "Agachao": 45.4,
                         "Gastar la data": 50.6,
                         "Siempre doble": 45.6,
-                        "Inteligente": 52.0
+                        "Campeón del doble 6": 52.0,
+                        "Campeón del doble 9": 38.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 64.0,
@@ -2850,7 +3255,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 51.0,
                         "Siempre doble": 45.6,
-                        "Inteligente": 53.0
+                        "Campeón del doble 6": 53.0,
+                        "Campeón del doble 9": 37.0
                     },
                     "Pasador": {
                         "Bota Gorda": 67.0,
@@ -2865,7 +3271,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 47.8,
                         "Siempre doble": 47.0,
-                        "Inteligente": 54.0
+                        "Campeón del doble 6": 54.0,
+                        "Campeón del doble 9": 34.400000000000006
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 67.0,
@@ -2880,7 +3287,8 @@ var SITE_JSON = {
                         "Agachao": 45.2,
                         "Gastar la data": 52.2,
                         "Siempre doble": 44.8,
-                        "Inteligente": 53.4
+                        "Campeón del doble 6": 53.4,
+                        "Campeón del doble 9": 35.599999999999994
                     },
                     "No gastar la data": {
                         "Bota Gorda": 67.8,
@@ -2895,7 +3303,8 @@ var SITE_JSON = {
                         "Agachao": 55.6,
                         "Gastar la data": 50.6,
                         "Siempre doble": 48.6,
-                        "Inteligente": 53.2
+                        "Campeón del doble 6": 53.2,
+                        "Campeón del doble 9": 40.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 74.4,
@@ -2910,7 +3319,8 @@ var SITE_JSON = {
                         "Agachao": 64.6,
                         "Gastar la data": 65.8,
                         "Siempre doble": 54.4,
-                        "Inteligente": 63.8
+                        "Campeón del doble 6": 63.8,
+                        "Campeón del doble 9": 49.4
                     },
                     "Agachao": {
                         "Bota Gorda": 62.6,
@@ -2925,7 +3335,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 47.0,
                         "Siempre doble": 42.4,
-                        "Inteligente": 56.2
+                        "Campeón del doble 6": 56.2,
+                        "Campeón del doble 9": 31.599999999999994
                     },
                     "Gastar la data": {
                         "Bota Gorda": 63.2,
@@ -2940,7 +3351,8 @@ var SITE_JSON = {
                         "Agachao": 50.4,
                         "Gastar la data": 49.4,
                         "Siempre doble": 42.0,
-                        "Inteligente": 53.2
+                        "Campeón del doble 6": 53.2,
+                        "Campeón del doble 9": 35.400000000000006
                     },
                     "Siempre doble": {
                         "Bota Gorda": 68.4,
@@ -2955,13 +3367,14 @@ var SITE_JSON = {
                         "Agachao": 52.2,
                         "Gastar la data": 54.6,
                         "Siempre doble": 50.2,
-                        "Inteligente": 57.0
+                        "Campeón del doble 6": 57.0,
+                        "Campeón del doble 9": 42.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 57.0,
                         "Más Frecuente": 48.2,
                         "Aleatorio": 45.2,
-                        "Inteligente": 50.0,
+                        "Campeón del doble 6": 50.0,
                         "Repetidor": 48.0,
                         "Contador de la mesa": 47.0,
                         "Pasador": 46.0,
@@ -2970,7 +3383,23 @@ var SITE_JSON = {
                         "Bota Flaca": 36.2,
                         "Agachao": 43.8,
                         "Gastar la data": 46.8,
-                        "Siempre doble": 43.0
+                        "Siempre doble": 43.0,
+                        "Campeón del doble 9": 36.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 74.0,
+                        "Más Frecuente": 72.6,
+                        "Aleatorio": 64.0,
+                        "Campeón del doble 6": 63.6,
+                        "Repetidor": 61.8,
+                        "Contador de la mesa": 63.0,
+                        "Pasador": 65.6,
+                        "Menos Jugada": 64.4,
+                        "No gastar la data": 60.0,
+                        "Bota Flaca": 50.6,
+                        "Agachao": 68.4,
+                        "Gastar la data": 64.6,
+                        "Siempre doble": 57.6
                     }
                 },
                 "Cooperativo": {
@@ -2987,7 +3416,8 @@ var SITE_JSON = {
                         "Agachao": 33.6,
                         "Gastar la data": 40.8,
                         "Siempre doble": 35.6,
-                        "Inteligente": 43.6
+                        "Campeón del doble 6": 43.6,
+                        "Campeón del doble 9": 34.599999999999994
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 57.8,
@@ -3002,7 +3432,8 @@ var SITE_JSON = {
                         "Agachao": 43.2,
                         "Gastar la data": 46.0,
                         "Siempre doble": 46.0,
-                        "Inteligente": 49.0
+                        "Campeón del doble 6": 49.0,
+                        "Campeón del doble 9": 30.599999999999994
                     },
                     "Aleatorio": {
                         "Bota Gorda": 60.0,
@@ -3017,7 +3448,8 @@ var SITE_JSON = {
                         "Agachao": 50.6,
                         "Gastar la data": 52.6,
                         "Siempre doble": 48.6,
-                        "Inteligente": 48.6
+                        "Campeón del doble 6": 48.6,
+                        "Campeón del doble 9": 37.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 59.6,
@@ -3032,7 +3464,8 @@ var SITE_JSON = {
                         "Agachao": 52.2,
                         "Gastar la data": 48.6,
                         "Siempre doble": 45.6,
-                        "Inteligente": 50.4
+                        "Campeón del doble 6": 50.4,
+                        "Campeón del doble 9": 38.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 53.0,
@@ -3047,7 +3480,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 48.2,
                         "Siempre doble": 48.0,
-                        "Inteligente": 50.8
+                        "Campeón del doble 6": 50.8,
+                        "Campeón del doble 9": 40.6
                     },
                     "Pasador": {
                         "Bota Gorda": 57.0,
@@ -3062,7 +3496,8 @@ var SITE_JSON = {
                         "Agachao": 51.8,
                         "Gastar la data": 56.0,
                         "Siempre doble": 42.4,
-                        "Inteligente": 50.8
+                        "Campeón del doble 6": 50.8,
+                        "Campeón del doble 9": 39.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 61.4,
@@ -3077,7 +3512,8 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 52.0,
                         "Siempre doble": 47.0,
-                        "Inteligente": 54.8
+                        "Campeón del doble 6": 54.8,
+                        "Campeón del doble 9": 39.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 60.2,
@@ -3092,7 +3528,8 @@ var SITE_JSON = {
                         "Agachao": 54.4,
                         "Gastar la data": 52.4,
                         "Siempre doble": 47.8,
-                        "Inteligente": 56.4
+                        "Campeón del doble 6": 56.4,
+                        "Campeón del doble 9": 45.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 70.0,
@@ -3107,7 +3544,8 @@ var SITE_JSON = {
                         "Agachao": 56.2,
                         "Gastar la data": 58.8,
                         "Siempre doble": 55.8,
-                        "Inteligente": 61.6
+                        "Campeón del doble 6": 61.6,
+                        "Campeón del doble 9": 45.2
                     },
                     "Agachao": {
                         "Bota Gorda": 61.4,
@@ -3122,7 +3560,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 53.0,
                         "Siempre doble": 51.4,
-                        "Inteligente": 56.6
+                        "Campeón del doble 6": 56.6,
+                        "Campeón del doble 9": 36.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 57.6,
@@ -3137,7 +3576,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 51.0,
                         "Siempre doble": 44.4,
-                        "Inteligente": 54.8
+                        "Campeón del doble 6": 54.8,
+                        "Campeón del doble 9": 40.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 64.4,
@@ -3152,13 +3592,14 @@ var SITE_JSON = {
                         "Agachao": 55.2,
                         "Gastar la data": 54.4,
                         "Siempre doble": 49.4,
-                        "Inteligente": 57.0
+                        "Campeón del doble 6": 57.0,
+                        "Campeón del doble 9": 41.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 56.4,
                         "Más Frecuente": 51.0,
                         "Aleatorio": 51.4,
-                        "Inteligente": 48.8,
+                        "Campeón del doble 6": 48.8,
                         "Repetidor": 49.6,
                         "Contador de la mesa": 49.2,
                         "Pasador": 49.2,
@@ -3167,7 +3608,23 @@ var SITE_JSON = {
                         "Bota Flaca": 38.4,
                         "Agachao": 43.4,
                         "Gastar la data": 45.2,
-                        "Siempre doble": 43.0
+                        "Siempre doble": 43.0,
+                        "Campeón del doble 9": 34.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 65.4,
+                        "Más Frecuente": 69.4,
+                        "Aleatorio": 63.0,
+                        "Campeón del doble 6": 65.8,
+                        "Repetidor": 61.6,
+                        "Contador de la mesa": 59.4,
+                        "Pasador": 60.4,
+                        "Menos Jugada": 61.0,
+                        "No gastar la data": 54.8,
+                        "Bota Flaca": 54.8,
+                        "Agachao": 63.8,
+                        "Gastar la data": 59.2,
+                        "Siempre doble": 58.6
                     }
                 }
             },
@@ -3186,7 +3643,8 @@ var SITE_JSON = {
                         "Agachao": 31.8,
                         "Gastar la data": 36.8,
                         "Siempre doble": 29.8,
-                        "Inteligente": 44.8
+                        "Campeón del doble 6": 44.8,
+                        "Campeón del doble 9": 25.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 57.8,
@@ -3201,7 +3659,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 51.2,
                         "Siempre doble": 44.0,
-                        "Inteligente": 54.4
+                        "Campeón del doble 6": 54.4,
+                        "Campeón del doble 9": 29.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 65.4,
@@ -3216,7 +3675,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 51.8,
                         "Siempre doble": 44.0,
-                        "Inteligente": 55.2
+                        "Campeón del doble 6": 55.2,
+                        "Campeón del doble 9": 38.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 58.8,
@@ -3231,7 +3691,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 50.2,
                         "Siempre doble": 43.4,
-                        "Inteligente": 56.8
+                        "Campeón del doble 6": 56.8,
+                        "Campeón del doble 9": 36.6
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.6,
@@ -3246,7 +3707,8 @@ var SITE_JSON = {
                         "Agachao": 50.4,
                         "Gastar la data": 50.8,
                         "Siempre doble": 52.2,
-                        "Inteligente": 49.0
+                        "Campeón del doble 6": 49.0,
+                        "Campeón del doble 9": 39.6
                     },
                     "Pasador": {
                         "Bota Gorda": 61.4,
@@ -3261,7 +3723,8 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 49.8,
                         "Siempre doble": 45.8,
-                        "Inteligente": 52.4
+                        "Campeón del doble 6": 52.4,
+                        "Campeón del doble 9": 38.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 67.0,
@@ -3276,7 +3739,8 @@ var SITE_JSON = {
                         "Agachao": 51.0,
                         "Gastar la data": 48.4,
                         "Siempre doble": 45.0,
-                        "Inteligente": 56.6
+                        "Campeón del doble 6": 56.6,
+                        "Campeón del doble 9": 32.400000000000006
                     },
                     "No gastar la data": {
                         "Bota Gorda": 64.6,
@@ -3291,7 +3755,8 @@ var SITE_JSON = {
                         "Agachao": 56.4,
                         "Gastar la data": 57.4,
                         "Siempre doble": 47.4,
-                        "Inteligente": 55.0
+                        "Campeón del doble 6": 55.0,
+                        "Campeón del doble 9": 43.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 73.8,
@@ -3306,7 +3771,8 @@ var SITE_JSON = {
                         "Agachao": 63.2,
                         "Gastar la data": 64.4,
                         "Siempre doble": 55.8,
-                        "Inteligente": 65.4
+                        "Campeón del doble 6": 65.4,
+                        "Campeón del doble 9": 52.0
                     },
                     "Agachao": {
                         "Bota Gorda": 65.0,
@@ -3321,7 +3787,8 @@ var SITE_JSON = {
                         "Agachao": 50.4,
                         "Gastar la data": 51.0,
                         "Siempre doble": 45.6,
-                        "Inteligente": 60.0
+                        "Campeón del doble 6": 60.0,
+                        "Campeón del doble 9": 33.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.0,
@@ -3336,7 +3803,8 @@ var SITE_JSON = {
                         "Agachao": 45.8,
                         "Gastar la data": 52.4,
                         "Siempre doble": 46.4,
-                        "Inteligente": 60.6
+                        "Campeón del doble 6": 60.6,
+                        "Campeón del doble 9": 34.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 70.6,
@@ -3351,13 +3819,14 @@ var SITE_JSON = {
                         "Agachao": 52.0,
                         "Gastar la data": 54.8,
                         "Siempre doble": 52.0,
-                        "Inteligente": 59.0
+                        "Campeón del doble 6": 59.0,
+                        "Campeón del doble 9": 42.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 55.2,
                         "Más Frecuente": 45.6,
                         "Aleatorio": 44.8,
-                        "Inteligente": 44.8,
+                        "Campeón del doble 6": 44.8,
                         "Repetidor": 43.2,
                         "Contador de la mesa": 51.0,
                         "Pasador": 47.6,
@@ -3366,7 +3835,23 @@ var SITE_JSON = {
                         "Bota Flaca": 34.6,
                         "Agachao": 40.0,
                         "Gastar la data": 39.4,
-                        "Siempre doble": 41.0
+                        "Siempre doble": 41.0,
+                        "Campeón del doble 9": 36.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 75.0,
+                        "Más Frecuente": 71.0,
+                        "Aleatorio": 61.8,
+                        "Campeón del doble 6": 63.4,
+                        "Repetidor": 63.4,
+                        "Contador de la mesa": 60.4,
+                        "Pasador": 61.6,
+                        "Menos Jugada": 67.6,
+                        "No gastar la data": 56.4,
+                        "Bota Flaca": 48.0,
+                        "Agachao": 67.0,
+                        "Gastar la data": 65.2,
+                        "Siempre doble": 57.6
                     }
                 },
                 "Cooperativo": {
@@ -3383,7 +3868,8 @@ var SITE_JSON = {
                         "Agachao": 38.4,
                         "Gastar la data": 41.0,
                         "Siempre doble": 37.0,
-                        "Inteligente": 44.6
+                        "Campeón del doble 6": 44.6,
+                        "Campeón del doble 9": 27.400000000000006
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 59.0,
@@ -3398,7 +3884,8 @@ var SITE_JSON = {
                         "Agachao": 44.4,
                         "Gastar la data": 46.8,
                         "Siempre doble": 43.6,
-                        "Inteligente": 50.8
+                        "Campeón del doble 6": 50.8,
+                        "Campeón del doble 9": 31.200000000000003
                     },
                     "Aleatorio": {
                         "Bota Gorda": 63.8,
@@ -3413,7 +3900,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 51.2,
                         "Siempre doble": 48.6,
-                        "Inteligente": 51.0
+                        "Campeón del doble 6": 51.0,
+                        "Campeón del doble 9": 37.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 57.0,
@@ -3428,7 +3916,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 48.0,
                         "Siempre doble": 46.6,
-                        "Inteligente": 55.0
+                        "Campeón del doble 6": 55.0,
+                        "Campeón del doble 9": 42.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 58.8,
@@ -3443,7 +3932,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 50.2,
                         "Siempre doble": 46.6,
-                        "Inteligente": 48.4
+                        "Campeón del doble 6": 48.4,
+                        "Campeón del doble 9": 43.0
                     },
                     "Pasador": {
                         "Bota Gorda": 59.8,
@@ -3458,7 +3948,8 @@ var SITE_JSON = {
                         "Agachao": 52.2,
                         "Gastar la data": 49.2,
                         "Siempre doble": 44.6,
-                        "Inteligente": 56.4
+                        "Campeón del doble 6": 56.4,
+                        "Campeón del doble 9": 39.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 64.6,
@@ -3473,7 +3964,8 @@ var SITE_JSON = {
                         "Agachao": 50.4,
                         "Gastar la data": 53.2,
                         "Siempre doble": 44.4,
-                        "Inteligente": 51.8
+                        "Campeón del doble 6": 51.8,
+                        "Campeón del doble 9": 36.2
                     },
                     "No gastar la data": {
                         "Bota Gorda": 63.8,
@@ -3488,7 +3980,8 @@ var SITE_JSON = {
                         "Agachao": 51.0,
                         "Gastar la data": 48.4,
                         "Siempre doble": 45.0,
-                        "Inteligente": 56.8
+                        "Campeón del doble 6": 56.8,
+                        "Campeón del doble 9": 39.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 68.0,
@@ -3503,7 +3996,8 @@ var SITE_JSON = {
                         "Agachao": 62.6,
                         "Gastar la data": 61.0,
                         "Siempre doble": 63.2,
-                        "Inteligente": 57.6
+                        "Campeón del doble 6": 57.6,
+                        "Campeón del doble 9": 47.2
                     },
                     "Agachao": {
                         "Bota Gorda": 57.0,
@@ -3518,7 +4012,8 @@ var SITE_JSON = {
                         "Agachao": 54.6,
                         "Gastar la data": 53.4,
                         "Siempre doble": 45.2,
-                        "Inteligente": 56.0
+                        "Campeón del doble 6": 56.0,
+                        "Campeón del doble 9": 41.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 62.0,
@@ -3533,7 +4028,8 @@ var SITE_JSON = {
                         "Agachao": 48.0,
                         "Gastar la data": 50.0,
                         "Siempre doble": 46.2,
-                        "Inteligente": 52.0
+                        "Campeón del doble 6": 52.0,
+                        "Campeón del doble 9": 38.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 66.6,
@@ -3548,13 +4044,14 @@ var SITE_JSON = {
                         "Agachao": 52.6,
                         "Gastar la data": 51.2,
                         "Siempre doble": 49.4,
-                        "Inteligente": 56.8
+                        "Campeón del doble 6": 56.8,
+                        "Campeón del doble 9": 43.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 55.4,
                         "Más Frecuente": 49.2,
                         "Aleatorio": 49.0,
-                        "Inteligente": 49.4,
+                        "Campeón del doble 6": 49.4,
                         "Repetidor": 45.0,
                         "Contador de la mesa": 51.6,
                         "Pasador": 43.6,
@@ -3563,7 +4060,23 @@ var SITE_JSON = {
                         "Bota Flaca": 42.4,
                         "Agachao": 44.0,
                         "Gastar la data": 48.0,
-                        "Siempre doble": 43.2
+                        "Siempre doble": 43.2,
+                        "Campeón del doble 9": 38.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 72.6,
+                        "Más Frecuente": 68.8,
+                        "Aleatorio": 62.8,
+                        "Campeón del doble 6": 61.4,
+                        "Repetidor": 57.8,
+                        "Contador de la mesa": 57.0,
+                        "Pasador": 60.6,
+                        "Menos Jugada": 63.8,
+                        "No gastar la data": 61.0,
+                        "Bota Flaca": 52.8,
+                        "Agachao": 58.2,
+                        "Gastar la data": 62.0,
+                        "Siempre doble": 56.8
                     }
                 }
             },
@@ -3582,7 +4095,8 @@ var SITE_JSON = {
                         "Agachao": 34.2,
                         "Gastar la data": 41.2,
                         "Siempre doble": 32.2,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 26.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 58.4,
@@ -3597,7 +4111,8 @@ var SITE_JSON = {
                         "Agachao": 39.0,
                         "Gastar la data": 47.2,
                         "Siempre doble": 43.0,
-                        "Inteligente": 49.8
+                        "Campeón del doble 6": 49.8,
+                        "Campeón del doble 9": 28.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 61.0,
@@ -3612,7 +4127,8 @@ var SITE_JSON = {
                         "Agachao": 50.2,
                         "Gastar la data": 52.0,
                         "Siempre doble": 44.6,
-                        "Inteligente": 55.0
+                        "Campeón del doble 6": 55.0,
+                        "Campeón del doble 9": 37.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 60.0,
@@ -3627,7 +4143,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 47.8,
                         "Siempre doble": 42.6,
-                        "Inteligente": 54.2
+                        "Campeón del doble 6": 54.2,
+                        "Campeón del doble 9": 37.0
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 61.2,
@@ -3642,7 +4159,8 @@ var SITE_JSON = {
                         "Agachao": 51.0,
                         "Gastar la data": 52.6,
                         "Siempre doble": 43.8,
-                        "Inteligente": 57.0
+                        "Campeón del doble 6": 57.0,
+                        "Campeón del doble 9": 39.0
                     },
                     "Pasador": {
                         "Bota Gorda": 62.0,
@@ -3657,7 +4175,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 52.6,
                         "Siempre doble": 44.0,
-                        "Inteligente": 53.0
+                        "Campeón del doble 6": 53.0,
+                        "Campeón del doble 9": 38.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 64.2,
@@ -3672,7 +4191,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 52.2,
                         "Siempre doble": 46.2,
-                        "Inteligente": 54.2
+                        "Campeón del doble 6": 54.2,
+                        "Campeón del doble 9": 36.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 64.0,
@@ -3687,7 +4207,8 @@ var SITE_JSON = {
                         "Agachao": 53.8,
                         "Gastar la data": 55.4,
                         "Siempre doble": 47.8,
-                        "Inteligente": 57.2
+                        "Campeón del doble 6": 57.2,
+                        "Campeón del doble 9": 38.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 76.2,
@@ -3702,7 +4223,8 @@ var SITE_JSON = {
                         "Agachao": 62.2,
                         "Gastar la data": 61.2,
                         "Siempre doble": 55.0,
-                        "Inteligente": 63.2
+                        "Campeón del doble 6": 63.2,
+                        "Campeón del doble 9": 52.8
                     },
                     "Agachao": {
                         "Bota Gorda": 66.8,
@@ -3717,7 +4239,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 49.8,
                         "Siempre doble": 46.2,
-                        "Inteligente": 56.4
+                        "Campeón del doble 6": 56.4,
+                        "Campeón del doble 9": 38.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 62.4,
@@ -3732,7 +4255,8 @@ var SITE_JSON = {
                         "Agachao": 51.6,
                         "Gastar la data": 48.4,
                         "Siempre doble": 41.8,
-                        "Inteligente": 56.4
+                        "Campeón del doble 6": 56.4,
+                        "Campeón del doble 9": 38.2
                     },
                     "Siempre doble": {
                         "Bota Gorda": 67.0,
@@ -3747,13 +4271,14 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 57.0,
                         "Siempre doble": 51.6,
-                        "Inteligente": 55.0
+                        "Campeón del doble 6": 55.0,
+                        "Campeón del doble 9": 40.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 60.0,
                         "Más Frecuente": 50.2,
                         "Aleatorio": 45.0,
-                        "Inteligente": 49.0,
+                        "Campeón del doble 6": 49.0,
                         "Repetidor": 45.8,
                         "Contador de la mesa": 43.0,
                         "Pasador": 47.0,
@@ -3762,7 +4287,23 @@ var SITE_JSON = {
                         "Bota Flaca": 36.8,
                         "Agachao": 43.6,
                         "Gastar la data": 43.6,
-                        "Siempre doble": 45.0
+                        "Siempre doble": 45.0,
+                        "Campeón del doble 9": 36.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 74.0,
+                        "Más Frecuente": 72.0,
+                        "Aleatorio": 63.0,
+                        "Campeón del doble 6": 64.0,
+                        "Repetidor": 63.0,
+                        "Contador de la mesa": 61.0,
+                        "Pasador": 62.0,
+                        "Menos Jugada": 63.2,
+                        "No gastar la data": 62.0,
+                        "Bota Flaca": 47.2,
+                        "Agachao": 62.0,
+                        "Gastar la data": 61.8,
+                        "Siempre doble": 60.0
                     }
                 },
                 "Cooperativo": {
@@ -3779,7 +4320,8 @@ var SITE_JSON = {
                         "Agachao": 33.4,
                         "Gastar la data": 37.0,
                         "Siempre doble": 34.6,
-                        "Inteligente": 46.6
+                        "Campeón del doble 6": 46.6,
+                        "Campeón del doble 9": 29.599999999999994
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 61.6,
@@ -3794,7 +4336,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 48.4,
                         "Siempre doble": 45.2,
-                        "Inteligente": 51.6
+                        "Campeón del doble 6": 51.6,
+                        "Campeón del doble 9": 33.400000000000006
                     },
                     "Aleatorio": {
                         "Bota Gorda": 61.2,
@@ -3809,7 +4352,8 @@ var SITE_JSON = {
                         "Agachao": 47.8,
                         "Gastar la data": 52.8,
                         "Siempre doble": 47.4,
-                        "Inteligente": 52.8
+                        "Campeón del doble 6": 52.8,
+                        "Campeón del doble 9": 36.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 57.2,
@@ -3824,7 +4368,8 @@ var SITE_JSON = {
                         "Agachao": 51.0,
                         "Gastar la data": 48.4,
                         "Siempre doble": 46.4,
-                        "Inteligente": 54.6
+                        "Campeón del doble 6": 54.6,
+                        "Campeón del doble 9": 38.6
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 58.6,
@@ -3839,7 +4384,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 52.2,
                         "Siempre doble": 46.8,
-                        "Inteligente": 49.2
+                        "Campeón del doble 6": 49.2,
+                        "Campeón del doble 9": 43.0
                     },
                     "Pasador": {
                         "Bota Gorda": 62.0,
@@ -3854,7 +4400,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 49.0,
                         "Siempre doble": 42.4,
-                        "Inteligente": 53.4
+                        "Campeón del doble 6": 53.4,
+                        "Campeón del doble 9": 41.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 62.0,
@@ -3869,7 +4416,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 44.8,
                         "Siempre doble": 44.0,
-                        "Inteligente": 50.2
+                        "Campeón del doble 6": 50.2,
+                        "Campeón del doble 9": 40.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 59.6,
@@ -3884,7 +4432,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 56.0,
                         "Siempre doble": 49.4,
-                        "Inteligente": 53.0
+                        "Campeón del doble 6": 53.0,
+                        "Campeón del doble 9": 42.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 69.2,
@@ -3899,7 +4448,8 @@ var SITE_JSON = {
                         "Agachao": 58.2,
                         "Gastar la data": 61.2,
                         "Siempre doble": 55.6,
-                        "Inteligente": 63.2
+                        "Campeón del doble 6": 63.2,
+                        "Campeón del doble 9": 50.8
                     },
                     "Agachao": {
                         "Bota Gorda": 63.2,
@@ -3914,7 +4464,8 @@ var SITE_JSON = {
                         "Agachao": 53.2,
                         "Gastar la data": 53.0,
                         "Siempre doble": 45.0,
-                        "Inteligente": 57.6
+                        "Campeón del doble 6": 57.6,
+                        "Campeón del doble 9": 33.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 57.8,
@@ -3929,7 +4480,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 51.4,
                         "Siempre doble": 46.0,
-                        "Inteligente": 54.6
+                        "Campeón del doble 6": 54.6,
+                        "Campeón del doble 9": 39.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 63.6,
@@ -3944,13 +4496,14 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 51.4,
                         "Siempre doble": 50.2,
-                        "Inteligente": 55.4
+                        "Campeón del doble 6": 55.4,
+                        "Campeón del doble 9": 47.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 53.4,
                         "Más Frecuente": 48.4,
                         "Aleatorio": 47.2,
-                        "Inteligente": 52.6,
+                        "Campeón del doble 6": 52.6,
                         "Repetidor": 45.4,
                         "Contador de la mesa": 50.8,
                         "Pasador": 46.6,
@@ -3959,7 +4512,23 @@ var SITE_JSON = {
                         "Bota Flaca": 36.8,
                         "Agachao": 42.4,
                         "Gastar la data": 45.4,
-                        "Siempre doble": 44.6
+                        "Siempre doble": 44.6,
+                        "Campeón del doble 9": 35.400000000000006
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 70.4,
+                        "Más Frecuente": 66.6,
+                        "Aleatorio": 64.0,
+                        "Campeón del doble 6": 64.6,
+                        "Repetidor": 61.4,
+                        "Contador de la mesa": 57.0,
+                        "Pasador": 59.0,
+                        "Menos Jugada": 60.0,
+                        "No gastar la data": 58.0,
+                        "Bota Flaca": 49.2,
+                        "Agachao": 66.2,
+                        "Gastar la data": 60.4,
+                        "Siempre doble": 52.2
                     }
                 }
             }
@@ -3980,7 +4549,8 @@ var SITE_JSON = {
                         "Agachao": 34.0,
                         "Gastar la data": 38.0,
                         "Siempre doble": 34.0,
-                        "Inteligente": 43.6
+                        "Campeón del doble 6": 43.6,
+                        "Campeón del doble 9": 34.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 56.6,
@@ -3995,7 +4565,8 @@ var SITE_JSON = {
                         "Agachao": 41.4,
                         "Gastar la data": 45.8,
                         "Siempre doble": 42.2,
-                        "Inteligente": 47.0
+                        "Campeón del doble 6": 47.0,
+                        "Campeón del doble 9": 32.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 56.6,
@@ -4010,7 +4581,8 @@ var SITE_JSON = {
                         "Agachao": 42.6,
                         "Gastar la data": 44.2,
                         "Siempre doble": 41.8,
-                        "Inteligente": 49.0
+                        "Campeón del doble 6": 49.0,
+                        "Campeón del doble 9": 39.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 57.8,
@@ -4025,7 +4597,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 48.2,
                         "Siempre doble": 43.0,
-                        "Inteligente": 46.0
+                        "Campeón del doble 6": 46.0,
+                        "Campeón del doble 9": 34.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 56.0,
@@ -4040,7 +4613,8 @@ var SITE_JSON = {
                         "Agachao": 46.0,
                         "Gastar la data": 51.6,
                         "Siempre doble": 42.8,
-                        "Inteligente": 55.2
+                        "Campeón del doble 6": 55.2,
+                        "Campeón del doble 9": 38.8
                     },
                     "Pasador": {
                         "Bota Gorda": 55.4,
@@ -4055,7 +4629,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 48.4,
                         "Siempre doble": 39.0,
-                        "Inteligente": 47.2
+                        "Campeón del doble 6": 47.2,
+                        "Campeón del doble 9": 41.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 59.0,
@@ -4070,7 +4645,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 48.8,
                         "Siempre doble": 42.0,
-                        "Inteligente": 51.2
+                        "Campeón del doble 6": 51.2,
+                        "Campeón del doble 9": 39.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 59.8,
@@ -4085,7 +4661,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 49.0,
                         "Siempre doble": 43.8,
-                        "Inteligente": 44.4
+                        "Campeón del doble 6": 44.4,
+                        "Campeón del doble 9": 47.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 67.8,
@@ -4100,7 +4677,8 @@ var SITE_JSON = {
                         "Agachao": 58.2,
                         "Gastar la data": 56.8,
                         "Siempre doble": 49.0,
-                        "Inteligente": 42.2
+                        "Campeón del doble 6": 42.2,
+                        "Campeón del doble 9": 50.4
                     },
                     "Agachao": {
                         "Bota Gorda": 65.4,
@@ -4115,7 +4693,8 @@ var SITE_JSON = {
                         "Agachao": 52.0,
                         "Gastar la data": 52.0,
                         "Siempre doble": 47.0,
-                        "Inteligente": 52.8
+                        "Campeón del doble 6": 52.8,
+                        "Campeón del doble 9": 42.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 59.4,
@@ -4130,7 +4709,8 @@ var SITE_JSON = {
                         "Agachao": 45.8,
                         "Gastar la data": 49.4,
                         "Siempre doble": 45.4,
-                        "Inteligente": 48.0
+                        "Campeón del doble 6": 48.0,
+                        "Campeón del doble 9": 44.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 64.6,
@@ -4145,13 +4725,14 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 55.8,
                         "Siempre doble": 51.8,
-                        "Inteligente": 53.6
+                        "Campeón del doble 6": 53.6,
+                        "Campeón del doble 9": 51.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 56.4,
                         "Más Frecuente": 53.0,
                         "Aleatorio": 51.0,
-                        "Inteligente": 49.8,
+                        "Campeón del doble 6": 49.8,
                         "Repetidor": 54.0,
                         "Contador de la mesa": 44.8,
                         "Pasador": 52.8,
@@ -4160,7 +4741,23 @@ var SITE_JSON = {
                         "Bota Flaca": 57.8,
                         "Agachao": 47.2,
                         "Gastar la data": 52.0,
-                        "Siempre doble": 46.4
+                        "Siempre doble": 46.4,
+                        "Campeón del doble 9": 55.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 65.8,
+                        "Más Frecuente": 67.2,
+                        "Aleatorio": 61.0,
+                        "Campeón del doble 6": 44.6,
+                        "Repetidor": 65.2,
+                        "Contador de la mesa": 61.2,
+                        "Pasador": 58.8,
+                        "Menos Jugada": 60.4,
+                        "No gastar la data": 53.0,
+                        "Bota Flaca": 49.6,
+                        "Agachao": 57.4,
+                        "Gastar la data": 55.2,
+                        "Siempre doble": 48.4
                     }
                 },
                 "Cooperativo": {
@@ -4177,7 +4774,8 @@ var SITE_JSON = {
                         "Agachao": 39.2,
                         "Gastar la data": 43.6,
                         "Siempre doble": 37.0,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 39.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 55.0,
@@ -4192,7 +4790,8 @@ var SITE_JSON = {
                         "Agachao": 46.0,
                         "Gastar la data": 48.2,
                         "Siempre doble": 38.0,
-                        "Inteligente": 48.4
+                        "Campeón del doble 6": 48.4,
+                        "Campeón del doble 9": 32.2
                     },
                     "Aleatorio": {
                         "Bota Gorda": 57.8,
@@ -4207,7 +4806,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 47.6,
                         "Siempre doble": 40.4,
-                        "Inteligente": 47.0
+                        "Campeón del doble 6": 47.0,
+                        "Campeón del doble 9": 43.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 61.4,
@@ -4222,7 +4822,8 @@ var SITE_JSON = {
                         "Agachao": 44.8,
                         "Gastar la data": 47.8,
                         "Siempre doble": 42.4,
-                        "Inteligente": 47.0
+                        "Campeón del doble 6": 47.0,
+                        "Campeón del doble 9": 39.0
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 60.2,
@@ -4237,7 +4838,8 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 52.6,
                         "Siempre doble": 46.2,
-                        "Inteligente": 48.0
+                        "Campeón del doble 6": 48.0,
+                        "Campeón del doble 9": 43.4
                     },
                     "Pasador": {
                         "Bota Gorda": 57.8,
@@ -4252,7 +4854,8 @@ var SITE_JSON = {
                         "Agachao": 47.8,
                         "Gastar la data": 49.4,
                         "Siempre doble": 42.6,
-                        "Inteligente": 47.6
+                        "Campeón del doble 6": 47.6,
+                        "Campeón del doble 9": 43.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 59.6,
@@ -4267,7 +4870,8 @@ var SITE_JSON = {
                         "Agachao": 46.0,
                         "Gastar la data": 46.0,
                         "Siempre doble": 40.4,
-                        "Inteligente": 43.8
+                        "Campeón del doble 6": 43.8,
+                        "Campeón del doble 9": 41.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 55.8,
@@ -4282,7 +4886,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 46.0,
                         "Siempre doble": 47.4,
-                        "Inteligente": 43.4
+                        "Campeón del doble 6": 43.4,
+                        "Campeón del doble 9": 46.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 61.2,
@@ -4297,7 +4902,8 @@ var SITE_JSON = {
                         "Agachao": 54.8,
                         "Gastar la data": 56.8,
                         "Siempre doble": 47.0,
-                        "Inteligente": 52.6
+                        "Campeón del doble 6": 52.6,
+                        "Campeón del doble 9": 47.2
                     },
                     "Agachao": {
                         "Bota Gorda": 61.6,
@@ -4312,7 +4918,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 51.8,
                         "Siempre doble": 49.6,
-                        "Inteligente": 55.6
+                        "Campeón del doble 6": 55.6,
+                        "Campeón del doble 9": 44.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.0,
@@ -4327,7 +4934,8 @@ var SITE_JSON = {
                         "Agachao": 48.0,
                         "Gastar la data": 49.8,
                         "Siempre doble": 44.4,
-                        "Inteligente": 46.8
+                        "Campeón del doble 6": 46.8,
+                        "Campeón del doble 9": 43.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 63.2,
@@ -4342,13 +4950,14 @@ var SITE_JSON = {
                         "Agachao": 52.2,
                         "Gastar la data": 55.4,
                         "Siempre doble": 52.0,
-                        "Inteligente": 53.6
+                        "Campeón del doble 6": 53.6,
+                        "Campeón del doble 9": 50.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 60.0,
                         "Más Frecuente": 51.6,
                         "Aleatorio": 53.0,
-                        "Inteligente": 47.2,
+                        "Campeón del doble 6": 47.2,
                         "Repetidor": 53.0,
                         "Contador de la mesa": 52.0,
                         "Pasador": 52.4,
@@ -4357,7 +4966,23 @@ var SITE_JSON = {
                         "Bota Flaca": 47.4,
                         "Agachao": 44.4,
                         "Gastar la data": 53.2,
-                        "Siempre doble": 46.4
+                        "Siempre doble": 46.4,
+                        "Campeón del doble 9": 49.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 60.6,
+                        "Más Frecuente": 67.8,
+                        "Aleatorio": 56.8,
+                        "Campeón del doble 6": 51.0,
+                        "Repetidor": 61.0,
+                        "Contador de la mesa": 56.6,
+                        "Pasador": 56.6,
+                        "Menos Jugada": 58.4,
+                        "No gastar la data": 54.0,
+                        "Bota Flaca": 52.8,
+                        "Agachao": 56.0,
+                        "Gastar la data": 57.0,
+                        "Siempre doble": 49.6
                     }
                 }
             },
@@ -4376,7 +5001,8 @@ var SITE_JSON = {
                         "Agachao": 34.4,
                         "Gastar la data": 43.0,
                         "Siempre doble": 36.2,
-                        "Inteligente": 44.6
+                        "Campeón del doble 6": 44.6,
+                        "Campeón del doble 9": 38.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 60.2,
@@ -4391,7 +5017,8 @@ var SITE_JSON = {
                         "Agachao": 43.2,
                         "Gastar la data": 41.6,
                         "Siempre doble": 38.4,
-                        "Inteligente": 46.8
+                        "Campeón del doble 6": 46.8,
+                        "Campeón del doble 9": 31.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 56.0,
@@ -4406,7 +5033,8 @@ var SITE_JSON = {
                         "Agachao": 46.0,
                         "Gastar la data": 46.4,
                         "Siempre doble": 41.2,
-                        "Inteligente": 47.4
+                        "Campeón del doble 6": 47.4,
+                        "Campeón del doble 9": 38.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 54.6,
@@ -4421,7 +5049,8 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 48.6,
                         "Siempre doble": 44.0,
-                        "Inteligente": 48.4
+                        "Campeón del doble 6": 48.4,
+                        "Campeón del doble 9": 38.0
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.6,
@@ -4436,7 +5065,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 46.4,
                         "Siempre doble": 47.6,
-                        "Inteligente": 50.6
+                        "Campeón del doble 6": 50.6,
+                        "Campeón del doble 9": 43.2
                     },
                     "Pasador": {
                         "Bota Gorda": 57.4,
@@ -4451,7 +5081,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 49.4,
                         "Siempre doble": 39.6,
-                        "Inteligente": 48.2
+                        "Campeón del doble 6": 48.2,
+                        "Campeón del doble 9": 42.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 55.6,
@@ -4466,7 +5097,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 43.4,
                         "Siempre doble": 42.8,
-                        "Inteligente": 47.6
+                        "Campeón del doble 6": 47.6,
+                        "Campeón del doble 9": 41.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 59.6,
@@ -4481,7 +5113,8 @@ var SITE_JSON = {
                         "Agachao": 44.6,
                         "Gastar la data": 45.8,
                         "Siempre doble": 43.4,
-                        "Inteligente": 41.4
+                        "Campeón del doble 6": 41.4,
+                        "Campeón del doble 9": 44.8
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 62.4,
@@ -4496,7 +5129,8 @@ var SITE_JSON = {
                         "Agachao": 55.0,
                         "Gastar la data": 57.6,
                         "Siempre doble": 51.2,
-                        "Inteligente": 44.2
+                        "Campeón del doble 6": 44.2,
+                        "Campeón del doble 9": 47.6
                     },
                     "Agachao": {
                         "Bota Gorda": 65.4,
@@ -4511,7 +5145,8 @@ var SITE_JSON = {
                         "Agachao": 51.0,
                         "Gastar la data": 52.2,
                         "Siempre doble": 43.4,
-                        "Inteligente": 53.8
+                        "Campeón del doble 6": 53.8,
+                        "Campeón del doble 9": 42.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 57.4,
@@ -4526,7 +5161,8 @@ var SITE_JSON = {
                         "Agachao": 41.6,
                         "Gastar la data": 52.8,
                         "Siempre doble": 45.4,
-                        "Inteligente": 48.4
+                        "Campeón del doble 6": 48.4,
+                        "Campeón del doble 9": 44.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 63.0,
@@ -4541,13 +5177,14 @@ var SITE_JSON = {
                         "Agachao": 55.6,
                         "Gastar la data": 56.8,
                         "Siempre doble": 51.0,
-                        "Inteligente": 51.8
+                        "Campeón del doble 6": 51.8,
+                        "Campeón del doble 9": 51.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 55.4,
                         "Más Frecuente": 53.2,
                         "Aleatorio": 52.6,
-                        "Inteligente": 47.8,
+                        "Campeón del doble 6": 47.8,
                         "Repetidor": 51.6,
                         "Contador de la mesa": 49.4,
                         "Pasador": 51.8,
@@ -4556,7 +5193,23 @@ var SITE_JSON = {
                         "Bota Flaca": 55.8,
                         "Agachao": 46.2,
                         "Gastar la data": 51.6,
-                        "Siempre doble": 48.2
+                        "Siempre doble": 48.2,
+                        "Campeón del doble 9": 58.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 61.8,
+                        "Más Frecuente": 69.0,
+                        "Aleatorio": 61.2,
+                        "Campeón del doble 6": 41.2,
+                        "Repetidor": 62.0,
+                        "Contador de la mesa": 56.8,
+                        "Pasador": 57.6,
+                        "Menos Jugada": 58.4,
+                        "No gastar la data": 55.2,
+                        "Bota Flaca": 52.4,
+                        "Agachao": 58.0,
+                        "Gastar la data": 56.0,
+                        "Siempre doble": 48.4
                     }
                 },
                 "Cooperativo": {
@@ -4573,7 +5226,8 @@ var SITE_JSON = {
                         "Agachao": 36.8,
                         "Gastar la data": 43.6,
                         "Siempre doble": 36.0,
-                        "Inteligente": 43.0
+                        "Campeón del doble 6": 43.0,
+                        "Campeón del doble 9": 39.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 50.6,
@@ -4588,7 +5242,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 46.8,
                         "Siempre doble": 36.0,
-                        "Inteligente": 49.4
+                        "Campeón del doble 6": 49.4,
+                        "Campeón del doble 9": 37.6
                     },
                     "Aleatorio": {
                         "Bota Gorda": 58.6,
@@ -4603,7 +5258,8 @@ var SITE_JSON = {
                         "Agachao": 41.6,
                         "Gastar la data": 44.2,
                         "Siempre doble": 43.8,
-                        "Inteligente": 47.0
+                        "Campeón del doble 6": 47.0,
+                        "Campeón del doble 9": 40.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 52.2,
@@ -4618,7 +5274,8 @@ var SITE_JSON = {
                         "Agachao": 44.6,
                         "Gastar la data": 49.6,
                         "Siempre doble": 39.6,
-                        "Inteligente": 52.4
+                        "Campeón del doble 6": 52.4,
+                        "Campeón del doble 9": 42.6
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 58.6,
@@ -4633,7 +5290,8 @@ var SITE_JSON = {
                         "Agachao": 46.0,
                         "Gastar la data": 52.4,
                         "Siempre doble": 45.2,
-                        "Inteligente": 48.8
+                        "Campeón del doble 6": 48.8,
+                        "Campeón del doble 9": 43.8
                     },
                     "Pasador": {
                         "Bota Gorda": 59.0,
@@ -4648,7 +5306,8 @@ var SITE_JSON = {
                         "Agachao": 43.8,
                         "Gastar la data": 48.4,
                         "Siempre doble": 46.2,
-                        "Inteligente": 48.8
+                        "Campeón del doble 6": 48.8,
+                        "Campeón del doble 9": 45.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 57.0,
@@ -4663,7 +5322,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 46.0,
                         "Siempre doble": 41.2,
-                        "Inteligente": 49.2
+                        "Campeón del doble 6": 49.2,
+                        "Campeón del doble 9": 46.2
                     },
                     "No gastar la data": {
                         "Bota Gorda": 57.4,
@@ -4678,7 +5338,8 @@ var SITE_JSON = {
                         "Agachao": 52.8,
                         "Gastar la data": 46.8,
                         "Siempre doble": 46.6,
-                        "Inteligente": 45.4
+                        "Campeón del doble 6": 45.4,
+                        "Campeón del doble 9": 51.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 61.2,
@@ -4693,7 +5354,8 @@ var SITE_JSON = {
                         "Agachao": 55.0,
                         "Gastar la data": 58.6,
                         "Siempre doble": 46.4,
-                        "Inteligente": 48.0
+                        "Campeón del doble 6": 48.0,
+                        "Campeón del doble 9": 49.2
                     },
                     "Agachao": {
                         "Bota Gorda": 62.6,
@@ -4708,7 +5370,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 48.0,
                         "Siempre doble": 47.6,
-                        "Inteligente": 49.8
+                        "Campeón del doble 6": 49.8,
+                        "Campeón del doble 9": 48.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 58.8,
@@ -4723,7 +5386,8 @@ var SITE_JSON = {
                         "Agachao": 43.6,
                         "Gastar la data": 50.8,
                         "Siempre doble": 48.8,
-                        "Inteligente": 50.0
+                        "Campeón del doble 6": 50.0,
+                        "Campeón del doble 9": 46.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 60.6,
@@ -4738,13 +5402,14 @@ var SITE_JSON = {
                         "Agachao": 48.6,
                         "Gastar la data": 55.6,
                         "Siempre doble": 47.2,
-                        "Inteligente": 49.6
+                        "Campeón del doble 6": 49.6,
+                        "Campeón del doble 9": 55.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 57.0,
                         "Más Frecuente": 50.6,
                         "Aleatorio": 53.0,
-                        "Inteligente": 49.8,
+                        "Campeón del doble 6": 49.8,
                         "Repetidor": 47.6,
                         "Contador de la mesa": 51.2,
                         "Pasador": 51.2,
@@ -4753,7 +5418,23 @@ var SITE_JSON = {
                         "Bota Flaca": 52.0,
                         "Agachao": 50.2,
                         "Gastar la data": 50.0,
-                        "Siempre doble": 50.4
+                        "Siempre doble": 50.4,
+                        "Campeón del doble 9": 54.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 60.8,
+                        "Más Frecuente": 62.4,
+                        "Aleatorio": 59.2,
+                        "Campeón del doble 6": 45.8,
+                        "Repetidor": 57.4,
+                        "Contador de la mesa": 56.2,
+                        "Pasador": 54.2,
+                        "Menos Jugada": 53.8,
+                        "No gastar la data": 48.6,
+                        "Bota Flaca": 50.8,
+                        "Agachao": 51.4,
+                        "Gastar la data": 54.0,
+                        "Siempre doble": 45.0
                     }
                 }
             },
@@ -4772,7 +5453,8 @@ var SITE_JSON = {
                         "Agachao": 35.4,
                         "Gastar la data": 42.2,
                         "Siempre doble": 32.2,
-                        "Inteligente": 42.8
+                        "Campeón del doble 6": 42.8,
+                        "Campeón del doble 9": 38.6
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 59.2,
@@ -4787,7 +5469,8 @@ var SITE_JSON = {
                         "Agachao": 38.6,
                         "Gastar la data": 43.6,
                         "Siempre doble": 40.4,
-                        "Inteligente": 47.2
+                        "Campeón del doble 6": 47.2,
+                        "Campeón del doble 9": 29.599999999999994
                     },
                     "Aleatorio": {
                         "Bota Gorda": 58.6,
@@ -4802,7 +5485,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 50.6,
                         "Siempre doble": 41.2,
-                        "Inteligente": 47.6
+                        "Campeón del doble 6": 47.6,
+                        "Campeón del doble 9": 39.6
                     },
                     "Repetidor": {
                         "Bota Gorda": 56.4,
@@ -4817,7 +5501,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 51.4,
                         "Siempre doble": 45.2,
-                        "Inteligente": 47.6
+                        "Campeón del doble 6": 47.6,
+                        "Campeón del doble 9": 42.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 56.4,
@@ -4832,7 +5517,8 @@ var SITE_JSON = {
                         "Agachao": 48.6,
                         "Gastar la data": 51.4,
                         "Siempre doble": 41.0,
-                        "Inteligente": 50.4
+                        "Campeón del doble 6": 50.4,
+                        "Campeón del doble 9": 40.2
                     },
                     "Pasador": {
                         "Bota Gorda": 58.2,
@@ -4847,7 +5533,8 @@ var SITE_JSON = {
                         "Agachao": 43.8,
                         "Gastar la data": 50.4,
                         "Siempre doble": 42.6,
-                        "Inteligente": 46.2
+                        "Campeón del doble 6": 46.2,
+                        "Campeón del doble 9": 39.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 59.0,
@@ -4862,7 +5549,8 @@ var SITE_JSON = {
                         "Agachao": 44.6,
                         "Gastar la data": 46.6,
                         "Siempre doble": 38.8,
-                        "Inteligente": 42.2
+                        "Campeón del doble 6": 42.2,
+                        "Campeón del doble 9": 39.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 56.8,
@@ -4877,7 +5565,8 @@ var SITE_JSON = {
                         "Agachao": 48.6,
                         "Gastar la data": 47.2,
                         "Siempre doble": 46.6,
-                        "Inteligente": 42.4
+                        "Campeón del doble 6": 42.4,
+                        "Campeón del doble 9": 45.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 61.2,
@@ -4892,7 +5581,8 @@ var SITE_JSON = {
                         "Agachao": 56.8,
                         "Gastar la data": 55.4,
                         "Siempre doble": 48.0,
-                        "Inteligente": 48.0
+                        "Campeón del doble 6": 48.0,
+                        "Campeón del doble 9": 51.0
                     },
                     "Agachao": {
                         "Bota Gorda": 60.0,
@@ -4907,7 +5597,8 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 53.2,
                         "Siempre doble": 45.8,
-                        "Inteligente": 56.2
+                        "Campeón del doble 6": 56.2,
+                        "Campeón del doble 9": 42.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 59.6,
@@ -4922,7 +5613,8 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 47.6,
                         "Siempre doble": 43.4,
-                        "Inteligente": 49.4
+                        "Campeón del doble 6": 49.4,
+                        "Campeón del doble 9": 45.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 63.8,
@@ -4937,13 +5629,14 @@ var SITE_JSON = {
                         "Agachao": 53.4,
                         "Gastar la data": 58.0,
                         "Siempre doble": 48.4,
-                        "Inteligente": 52.8
+                        "Campeón del doble 6": 52.8,
+                        "Campeón del doble 9": 50.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 57.2,
                         "Más Frecuente": 52.8,
                         "Aleatorio": 52.4,
-                        "Inteligente": 50.4,
+                        "Campeón del doble 6": 50.4,
                         "Repetidor": 52.4,
                         "Contador de la mesa": 49.6,
                         "Pasador": 53.8,
@@ -4952,7 +5645,23 @@ var SITE_JSON = {
                         "Bota Flaca": 52.0,
                         "Agachao": 43.8,
                         "Gastar la data": 50.6,
-                        "Siempre doble": 47.2
+                        "Siempre doble": 47.2,
+                        "Campeón del doble 9": 54.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 61.4,
+                        "Más Frecuente": 70.4,
+                        "Aleatorio": 60.4,
+                        "Campeón del doble 6": 46.0,
+                        "Repetidor": 57.8,
+                        "Contador de la mesa": 59.8,
+                        "Pasador": 60.4,
+                        "Menos Jugada": 61.0,
+                        "No gastar la data": 54.8,
+                        "Bota Flaca": 49.0,
+                        "Agachao": 57.4,
+                        "Gastar la data": 54.4,
+                        "Siempre doble": 49.8
                     }
                 },
                 "Cooperativo": {
@@ -4969,7 +5678,8 @@ var SITE_JSON = {
                         "Agachao": 39.2,
                         "Gastar la data": 43.4,
                         "Siempre doble": 33.2,
-                        "Inteligente": 43.2
+                        "Campeón del doble 6": 43.2,
+                        "Campeón del doble 9": 35.400000000000006
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 58.0,
@@ -4984,7 +5694,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 48.4,
                         "Siempre doble": 36.2,
-                        "Inteligente": 49.0
+                        "Campeón del doble 6": 49.0,
+                        "Campeón del doble 9": 37.6
                     },
                     "Aleatorio": {
                         "Bota Gorda": 55.6,
@@ -4999,7 +5710,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 46.2,
                         "Siempre doble": 42.4,
-                        "Inteligente": 47.8
+                        "Campeón del doble 6": 47.8,
+                        "Campeón del doble 9": 44.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 53.8,
@@ -5014,7 +5726,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 52.2,
                         "Siempre doble": 43.8,
-                        "Inteligente": 51.4
+                        "Campeón del doble 6": 51.4,
+                        "Campeón del doble 9": 48.6
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 54.2,
@@ -5029,7 +5742,8 @@ var SITE_JSON = {
                         "Agachao": 49.6,
                         "Gastar la data": 48.0,
                         "Siempre doble": 47.0,
-                        "Inteligente": 48.6
+                        "Campeón del doble 6": 48.6,
+                        "Campeón del doble 9": 38.0
                     },
                     "Pasador": {
                         "Bota Gorda": 58.4,
@@ -5044,7 +5758,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 50.2,
                         "Siempre doble": 42.8,
-                        "Inteligente": 47.4
+                        "Campeón del doble 6": 47.4,
+                        "Campeón del doble 9": 40.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 51.8,
@@ -5059,7 +5774,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 45.2,
                         "Siempre doble": 39.4,
-                        "Inteligente": 46.0
+                        "Campeón del doble 6": 46.0,
+                        "Campeón del doble 9": 45.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 56.4,
@@ -5074,7 +5790,8 @@ var SITE_JSON = {
                         "Agachao": 48.8,
                         "Gastar la data": 51.8,
                         "Siempre doble": 41.0,
-                        "Inteligente": 44.8
+                        "Campeón del doble 6": 44.8,
+                        "Campeón del doble 9": 45.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 60.6,
@@ -5089,7 +5806,8 @@ var SITE_JSON = {
                         "Agachao": 55.0,
                         "Gastar la data": 55.4,
                         "Siempre doble": 43.8,
-                        "Inteligente": 44.6
+                        "Campeón del doble 6": 44.6,
+                        "Campeón del doble 9": 50.4
                     },
                     "Agachao": {
                         "Bota Gorda": 60.2,
@@ -5104,7 +5822,8 @@ var SITE_JSON = {
                         "Agachao": 53.4,
                         "Gastar la data": 52.6,
                         "Siempre doble": 49.0,
-                        "Inteligente": 53.2
+                        "Campeón del doble 6": 53.2,
+                        "Campeón del doble 9": 44.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 57.0,
@@ -5119,7 +5838,8 @@ var SITE_JSON = {
                         "Agachao": 49.6,
                         "Gastar la data": 51.4,
                         "Siempre doble": 46.2,
-                        "Inteligente": 48.8
+                        "Campeón del doble 6": 48.8,
+                        "Campeón del doble 9": 43.2
                     },
                     "Siempre doble": {
                         "Bota Gorda": 62.4,
@@ -5134,13 +5854,14 @@ var SITE_JSON = {
                         "Agachao": 52.4,
                         "Gastar la data": 54.6,
                         "Siempre doble": 48.4,
-                        "Inteligente": 52.6
+                        "Campeón del doble 6": 52.6,
+                        "Campeón del doble 9": 53.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 56.8,
                         "Más Frecuente": 51.0,
                         "Aleatorio": 52.2,
-                        "Inteligente": 49.4,
+                        "Campeón del doble 6": 49.4,
                         "Repetidor": 48.6,
                         "Contador de la mesa": 51.4,
                         "Pasador": 52.6,
@@ -5149,7 +5870,23 @@ var SITE_JSON = {
                         "Bota Flaca": 55.4,
                         "Agachao": 46.8,
                         "Gastar la data": 51.2,
-                        "Siempre doble": 47.4
+                        "Siempre doble": 47.4,
+                        "Campeón del doble 9": 51.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 64.6,
+                        "Más Frecuente": 62.4,
+                        "Aleatorio": 56.0,
+                        "Campeón del doble 6": 48.8,
+                        "Repetidor": 51.4,
+                        "Contador de la mesa": 62.0,
+                        "Pasador": 59.2,
+                        "Menos Jugada": 54.4,
+                        "No gastar la data": 54.6,
+                        "Bota Flaca": 49.6,
+                        "Agachao": 55.4,
+                        "Gastar la data": 56.8,
+                        "Siempre doble": 46.4
                     }
                 }
             },
@@ -5168,7 +5905,8 @@ var SITE_JSON = {
                         "Agachao": 37.4,
                         "Gastar la data": 45.4,
                         "Siempre doble": 34.4,
-                        "Inteligente": 41.2
+                        "Campeón del doble 6": 41.2,
+                        "Campeón del doble 9": 40.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 57.2,
@@ -5183,7 +5921,8 @@ var SITE_JSON = {
                         "Agachao": 39.8,
                         "Gastar la data": 46.8,
                         "Siempre doble": 38.4,
-                        "Inteligente": 51.2
+                        "Campeón del doble 6": 51.2,
+                        "Campeón del doble 9": 30.799999999999997
                     },
                     "Aleatorio": {
                         "Bota Gorda": 56.2,
@@ -5198,7 +5937,8 @@ var SITE_JSON = {
                         "Agachao": 41.8,
                         "Gastar la data": 48.2,
                         "Siempre doble": 40.2,
-                        "Inteligente": 47.4
+                        "Campeón del doble 6": 47.4,
+                        "Campeón del doble 9": 37.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 60.0,
@@ -5213,7 +5953,8 @@ var SITE_JSON = {
                         "Agachao": 46.0,
                         "Gastar la data": 52.6,
                         "Siempre doble": 44.6,
-                        "Inteligente": 49.8
+                        "Campeón del doble 6": 49.8,
+                        "Campeón del doble 9": 39.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 54.2,
@@ -5228,7 +5969,8 @@ var SITE_JSON = {
                         "Agachao": 46.0,
                         "Gastar la data": 47.8,
                         "Siempre doble": 44.0,
-                        "Inteligente": 49.2
+                        "Campeón del doble 6": 49.2,
+                        "Campeón del doble 9": 41.0
                     },
                     "Pasador": {
                         "Bota Gorda": 54.0,
@@ -5243,7 +5985,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 46.8,
                         "Siempre doble": 41.6,
-                        "Inteligente": 46.4
+                        "Campeón del doble 6": 46.4,
+                        "Campeón del doble 9": 38.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 56.0,
@@ -5258,7 +6001,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 49.2,
                         "Siempre doble": 41.0,
-                        "Inteligente": 43.4
+                        "Campeón del doble 6": 43.4,
+                        "Campeón del doble 9": 36.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 55.0,
@@ -5273,7 +6017,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 50.2,
                         "Siempre doble": 41.6,
-                        "Inteligente": 42.0
+                        "Campeón del doble 6": 42.0,
+                        "Campeón del doble 9": 47.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 61.0,
@@ -5288,7 +6033,8 @@ var SITE_JSON = {
                         "Agachao": 59.0,
                         "Gastar la data": 55.8,
                         "Siempre doble": 42.2,
-                        "Inteligente": 47.8
+                        "Campeón del doble 6": 47.8,
+                        "Campeón del doble 9": 50.2
                     },
                     "Agachao": {
                         "Bota Gorda": 63.6,
@@ -5303,7 +6049,8 @@ var SITE_JSON = {
                         "Agachao": 54.4,
                         "Gastar la data": 51.4,
                         "Siempre doble": 50.8,
-                        "Inteligente": 56.4
+                        "Campeón del doble 6": 56.4,
+                        "Campeón del doble 9": 45.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 57.2,
@@ -5318,7 +6065,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 49.2,
                         "Siempre doble": 46.0,
-                        "Inteligente": 52.2
+                        "Campeón del doble 6": 52.2,
+                        "Campeón del doble 9": 41.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 63.8,
@@ -5333,13 +6081,14 @@ var SITE_JSON = {
                         "Agachao": 54.2,
                         "Gastar la data": 55.6,
                         "Siempre doble": 49.2,
-                        "Inteligente": 54.4
+                        "Campeón del doble 6": 54.4,
+                        "Campeón del doble 9": 45.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 58.8,
                         "Más Frecuente": 48.8,
                         "Aleatorio": 52.6,
-                        "Inteligente": 51.4,
+                        "Campeón del doble 6": 51.4,
                         "Repetidor": 50.2,
                         "Contador de la mesa": 50.8,
                         "Pasador": 53.6,
@@ -5348,7 +6097,23 @@ var SITE_JSON = {
                         "Bota Flaca": 52.2,
                         "Agachao": 43.6,
                         "Gastar la data": 47.8,
-                        "Siempre doble": 45.6
+                        "Siempre doble": 45.6,
+                        "Campeón del doble 9": 59.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 60.0,
+                        "Más Frecuente": 69.2,
+                        "Aleatorio": 62.2,
+                        "Campeón del doble 6": 40.8,
+                        "Repetidor": 60.8,
+                        "Contador de la mesa": 59.0,
+                        "Pasador": 61.6,
+                        "Menos Jugada": 63.6,
+                        "No gastar la data": 52.6,
+                        "Bota Flaca": 49.8,
+                        "Agachao": 54.2,
+                        "Gastar la data": 58.4,
+                        "Siempre doble": 54.8
                     }
                 },
                 "Cooperativo": {
@@ -5365,7 +6130,8 @@ var SITE_JSON = {
                         "Agachao": 41.8,
                         "Gastar la data": 38.6,
                         "Siempre doble": 40.0,
-                        "Inteligente": 39.2
+                        "Campeón del doble 6": 39.2,
+                        "Campeón del doble 9": 39.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 58.4,
@@ -5380,7 +6146,8 @@ var SITE_JSON = {
                         "Agachao": 44.0,
                         "Gastar la data": 50.4,
                         "Siempre doble": 39.2,
-                        "Inteligente": 49.8
+                        "Campeón del doble 6": 49.8,
+                        "Campeón del doble 9": 41.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 57.6,
@@ -5395,7 +6162,8 @@ var SITE_JSON = {
                         "Agachao": 42.8,
                         "Gastar la data": 49.0,
                         "Siempre doble": 43.2,
-                        "Inteligente": 48.4
+                        "Campeón del doble 6": 48.4,
+                        "Campeón del doble 9": 42.6
                     },
                     "Repetidor": {
                         "Bota Gorda": 58.6,
@@ -5410,7 +6178,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 46.8,
                         "Siempre doble": 48.0,
-                        "Inteligente": 47.8
+                        "Campeón del doble 6": 47.8,
+                        "Campeón del doble 9": 44.0
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.8,
@@ -5425,7 +6194,8 @@ var SITE_JSON = {
                         "Agachao": 47.6,
                         "Gastar la data": 50.6,
                         "Siempre doble": 45.4,
-                        "Inteligente": 55.2
+                        "Campeón del doble 6": 55.2,
+                        "Campeón del doble 9": 44.2
                     },
                     "Pasador": {
                         "Bota Gorda": 57.2,
@@ -5440,7 +6210,8 @@ var SITE_JSON = {
                         "Agachao": 51.8,
                         "Gastar la data": 50.4,
                         "Siempre doble": 41.0,
-                        "Inteligente": 49.0
+                        "Campeón del doble 6": 49.0,
+                        "Campeón del doble 9": 39.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 59.2,
@@ -5455,7 +6226,8 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 48.8,
                         "Siempre doble": 45.2,
-                        "Inteligente": 49.8
+                        "Campeón del doble 6": 49.8,
+                        "Campeón del doble 9": 45.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 56.6,
@@ -5470,7 +6242,8 @@ var SITE_JSON = {
                         "Agachao": 47.8,
                         "Gastar la data": 47.6,
                         "Siempre doble": 47.8,
-                        "Inteligente": 49.4
+                        "Campeón del doble 6": 49.4,
+                        "Campeón del doble 9": 46.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 59.8,
@@ -5485,7 +6258,8 @@ var SITE_JSON = {
                         "Agachao": 56.8,
                         "Gastar la data": 53.6,
                         "Siempre doble": 48.4,
-                        "Inteligente": 50.2
+                        "Campeón del doble 6": 50.2,
+                        "Campeón del doble 9": 49.4
                     },
                     "Agachao": {
                         "Bota Gorda": 58.8,
@@ -5500,7 +6274,8 @@ var SITE_JSON = {
                         "Agachao": 51.0,
                         "Gastar la data": 48.6,
                         "Siempre doble": 46.4,
-                        "Inteligente": 53.8
+                        "Campeón del doble 6": 53.8,
+                        "Campeón del doble 9": 45.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 57.4,
@@ -5515,7 +6290,8 @@ var SITE_JSON = {
                         "Agachao": 51.2,
                         "Gastar la data": 50.6,
                         "Siempre doble": 50.4,
-                        "Inteligente": 50.8
+                        "Campeón del doble 6": 50.8,
+                        "Campeón del doble 9": 45.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 69.8,
@@ -5530,13 +6306,14 @@ var SITE_JSON = {
                         "Agachao": 48.6,
                         "Gastar la data": 51.4,
                         "Siempre doble": 50.6,
-                        "Inteligente": 51.0
+                        "Campeón del doble 6": 51.0,
+                        "Campeón del doble 9": 51.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 60.8,
                         "Más Frecuente": 50.2,
                         "Aleatorio": 51.6,
-                        "Inteligente": 51.6,
+                        "Campeón del doble 6": 51.6,
                         "Repetidor": 52.2,
                         "Contador de la mesa": 44.8,
                         "Pasador": 51.0,
@@ -5545,7 +6322,23 @@ var SITE_JSON = {
                         "Bota Flaca": 49.8,
                         "Agachao": 46.2,
                         "Gastar la data": 49.2,
-                        "Siempre doble": 49.0
+                        "Siempre doble": 49.0,
+                        "Campeón del doble 9": 54.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 60.8,
+                        "Más Frecuente": 58.2,
+                        "Aleatorio": 57.4,
+                        "Campeón del doble 6": 45.2,
+                        "Repetidor": 56.0,
+                        "Contador de la mesa": 55.8,
+                        "Pasador": 60.2,
+                        "Menos Jugada": 54.2,
+                        "No gastar la data": 54.0,
+                        "Bota Flaca": 50.6,
+                        "Agachao": 54.6,
+                        "Gastar la data": 55.0,
+                        "Siempre doble": 48.6
                     }
                 }
             },
@@ -5564,7 +6357,8 @@ var SITE_JSON = {
                         "Agachao": 39.0,
                         "Gastar la data": 38.6,
                         "Siempre doble": 32.4,
-                        "Inteligente": 40.2
+                        "Campeón del doble 6": 40.2,
+                        "Campeón del doble 9": 37.6
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 55.4,
@@ -5579,7 +6373,8 @@ var SITE_JSON = {
                         "Agachao": 37.6,
                         "Gastar la data": 45.2,
                         "Siempre doble": 40.6,
-                        "Inteligente": 42.0
+                        "Campeón del doble 6": 42.0,
+                        "Campeón del doble 9": 28.400000000000006
                     },
                     "Aleatorio": {
                         "Bota Gorda": 58.0,
@@ -5594,7 +6389,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 44.2,
                         "Siempre doble": 42.6,
-                        "Inteligente": 43.4
+                        "Campeón del doble 6": 43.4,
+                        "Campeón del doble 9": 40.6
                     },
                     "Repetidor": {
                         "Bota Gorda": 57.4,
@@ -5609,7 +6405,8 @@ var SITE_JSON = {
                         "Agachao": 50.6,
                         "Gastar la data": 52.0,
                         "Siempre doble": 44.4,
-                        "Inteligente": 47.2
+                        "Campeón del doble 6": 47.2,
+                        "Campeón del doble 9": 38.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.4,
@@ -5624,7 +6421,8 @@ var SITE_JSON = {
                         "Agachao": 44.4,
                         "Gastar la data": 48.8,
                         "Siempre doble": 48.0,
-                        "Inteligente": 50.6
+                        "Campeón del doble 6": 50.6,
+                        "Campeón del doble 9": 37.2
                     },
                     "Pasador": {
                         "Bota Gorda": 59.0,
@@ -5639,7 +6437,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 50.2,
                         "Siempre doble": 43.8,
-                        "Inteligente": 49.4
+                        "Campeón del doble 6": 49.4,
+                        "Campeón del doble 9": 41.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 54.2,
@@ -5654,7 +6453,8 @@ var SITE_JSON = {
                         "Agachao": 50.2,
                         "Gastar la data": 45.2,
                         "Siempre doble": 39.8,
-                        "Inteligente": 44.2
+                        "Campeón del doble 6": 44.2,
+                        "Campeón del doble 9": 38.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 60.0,
@@ -5669,7 +6469,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 49.4,
                         "Siempre doble": 43.6,
-                        "Inteligente": 42.0
+                        "Campeón del doble 6": 42.0,
+                        "Campeón del doble 9": 46.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 62.6,
@@ -5684,7 +6485,8 @@ var SITE_JSON = {
                         "Agachao": 57.4,
                         "Gastar la data": 58.2,
                         "Siempre doble": 47.4,
-                        "Inteligente": 48.2
+                        "Campeón del doble 6": 48.2,
+                        "Campeón del doble 9": 49.0
                     },
                     "Agachao": {
                         "Bota Gorda": 65.6,
@@ -5699,7 +6501,8 @@ var SITE_JSON = {
                         "Agachao": 52.6,
                         "Gastar la data": 53.4,
                         "Siempre doble": 46.6,
-                        "Inteligente": 51.0
+                        "Campeón del doble 6": 51.0,
+                        "Campeón del doble 9": 38.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 63.2,
@@ -5714,7 +6517,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 48.8,
                         "Siempre doble": 45.0,
-                        "Inteligente": 48.0
+                        "Campeón del doble 6": 48.0,
+                        "Campeón del doble 9": 42.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 65.2,
@@ -5729,13 +6533,14 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 55.2,
                         "Siempre doble": 51.2,
-                        "Inteligente": 55.8
+                        "Campeón del doble 6": 55.8,
+                        "Campeón del doble 9": 48.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 59.8,
                         "Más Frecuente": 58.0,
                         "Aleatorio": 56.6,
-                        "Inteligente": 52.4,
+                        "Campeón del doble 6": 52.4,
                         "Repetidor": 52.8,
                         "Contador de la mesa": 49.4,
                         "Pasador": 50.6,
@@ -5744,7 +6549,23 @@ var SITE_JSON = {
                         "Bota Flaca": 51.8,
                         "Agachao": 49.0,
                         "Gastar la data": 52.0,
-                        "Siempre doble": 44.2
+                        "Siempre doble": 44.2,
+                        "Campeón del doble 9": 53.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 62.4,
+                        "Más Frecuente": 71.6,
+                        "Aleatorio": 59.4,
+                        "Campeón del doble 6": 46.2,
+                        "Repetidor": 61.8,
+                        "Contador de la mesa": 62.8,
+                        "Pasador": 59.0,
+                        "Menos Jugada": 62.0,
+                        "No gastar la data": 53.8,
+                        "Bota Flaca": 51.0,
+                        "Agachao": 61.2,
+                        "Gastar la data": 57.2,
+                        "Siempre doble": 51.4
                     }
                 },
                 "Cooperativo": {
@@ -5761,7 +6582,8 @@ var SITE_JSON = {
                         "Agachao": 38.0,
                         "Gastar la data": 41.4,
                         "Siempre doble": 40.2,
-                        "Inteligente": 44.4
+                        "Campeón del doble 6": 44.4,
+                        "Campeón del doble 9": 36.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 63.0,
@@ -5776,7 +6598,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 48.6,
                         "Siempre doble": 39.4,
-                        "Inteligente": 43.8
+                        "Campeón del doble 6": 43.8,
+                        "Campeón del doble 9": 37.4
                     },
                     "Aleatorio": {
                         "Bota Gorda": 57.0,
@@ -5791,7 +6614,8 @@ var SITE_JSON = {
                         "Agachao": 44.0,
                         "Gastar la data": 51.2,
                         "Siempre doble": 44.6,
-                        "Inteligente": 45.2
+                        "Campeón del doble 6": 45.2,
+                        "Campeón del doble 9": 41.6
                     },
                     "Repetidor": {
                         "Bota Gorda": 56.0,
@@ -5806,7 +6630,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 43.4,
                         "Siempre doble": 48.2,
-                        "Inteligente": 48.2
+                        "Campeón del doble 6": 48.2,
+                        "Campeón del doble 9": 43.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 58.8,
@@ -5821,7 +6646,8 @@ var SITE_JSON = {
                         "Agachao": 50.6,
                         "Gastar la data": 48.2,
                         "Siempre doble": 47.0,
-                        "Inteligente": 47.0
+                        "Campeón del doble 6": 47.0,
+                        "Campeón del doble 9": 42.4
                     },
                     "Pasador": {
                         "Bota Gorda": 59.0,
@@ -5836,7 +6662,8 @@ var SITE_JSON = {
                         "Agachao": 45.4,
                         "Gastar la data": 52.8,
                         "Siempre doble": 40.2,
-                        "Inteligente": 52.0
+                        "Campeón del doble 6": 52.0,
+                        "Campeón del doble 9": 46.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 61.4,
@@ -5851,7 +6678,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 47.6,
                         "Siempre doble": 43.4,
-                        "Inteligente": 43.8
+                        "Campeón del doble 6": 43.8,
+                        "Campeón del doble 9": 42.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 58.4,
@@ -5866,7 +6694,8 @@ var SITE_JSON = {
                         "Agachao": 48.6,
                         "Gastar la data": 50.4,
                         "Siempre doble": 42.2,
-                        "Inteligente": 47.2
+                        "Campeón del doble 6": 47.2,
+                        "Campeón del doble 9": 45.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 63.6,
@@ -5881,7 +6710,8 @@ var SITE_JSON = {
                         "Agachao": 54.4,
                         "Gastar la data": 53.4,
                         "Siempre doble": 48.8,
-                        "Inteligente": 49.0
+                        "Campeón del doble 6": 49.0,
+                        "Campeón del doble 9": 49.4
                     },
                     "Agachao": {
                         "Bota Gorda": 63.4,
@@ -5896,7 +6726,8 @@ var SITE_JSON = {
                         "Agachao": 50.6,
                         "Gastar la data": 54.2,
                         "Siempre doble": 50.4,
-                        "Inteligente": 52.2
+                        "Campeón del doble 6": 52.2,
+                        "Campeón del doble 9": 50.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 57.0,
@@ -5911,7 +6742,8 @@ var SITE_JSON = {
                         "Agachao": 44.6,
                         "Gastar la data": 48.4,
                         "Siempre doble": 43.6,
-                        "Inteligente": 53.0
+                        "Campeón del doble 6": 53.0,
+                        "Campeón del doble 9": 43.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 61.4,
@@ -5926,13 +6758,14 @@ var SITE_JSON = {
                         "Agachao": 52.6,
                         "Gastar la data": 53.2,
                         "Siempre doble": 47.2,
-                        "Inteligente": 54.6
+                        "Campeón del doble 6": 54.6,
+                        "Campeón del doble 9": 50.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 55.6,
                         "Más Frecuente": 56.2,
                         "Aleatorio": 54.8,
-                        "Inteligente": 52.2,
+                        "Campeón del doble 6": 52.2,
                         "Repetidor": 51.8,
                         "Contador de la mesa": 53.0,
                         "Pasador": 48.0,
@@ -5941,12 +6774,28 @@ var SITE_JSON = {
                         "Bota Flaca": 51.0,
                         "Agachao": 47.8,
                         "Gastar la data": 47.0,
-                        "Siempre doble": 45.4
+                        "Siempre doble": 45.4,
+                        "Campeón del doble 9": 52.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 63.2,
+                        "Más Frecuente": 62.6,
+                        "Aleatorio": 58.4,
+                        "Campeón del doble 6": 47.8,
+                        "Repetidor": 56.2,
+                        "Contador de la mesa": 57.6,
+                        "Pasador": 53.8,
+                        "Menos Jugada": 57.2,
+                        "No gastar la data": 54.4,
+                        "Bota Flaca": 50.6,
+                        "Agachao": 49.6,
+                        "Gastar la data": 57.0,
+                        "Siempre doble": 50.0
                     }
                 }
             }
         },
-        "FirstDoble": {
+        "Primera doble": {
             "Aleatorio": {
                 "Normal": {
                     "Bota Gorda": {
@@ -5962,7 +6811,8 @@ var SITE_JSON = {
                         "Agachao": 35.6,
                         "Gastar la data": 42.4,
                         "Siempre doble": 32.0,
-                        "Inteligente": 42.8
+                        "Campeón del doble 6": 42.8,
+                        "Campeón del doble 9": 37.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 60.4,
@@ -5977,7 +6827,8 @@ var SITE_JSON = {
                         "Agachao": 44.6,
                         "Gastar la data": 46.2,
                         "Siempre doble": 41.0,
-                        "Inteligente": 44.8
+                        "Campeón del doble 6": 44.8,
+                        "Campeón del doble 9": 29.599999999999994
                     },
                     "Aleatorio": {
                         "Bota Gorda": 57.2,
@@ -5992,7 +6843,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 49.0,
                         "Siempre doble": 41.8,
-                        "Inteligente": 48.2
+                        "Campeón del doble 6": 48.2,
+                        "Campeón del doble 9": 40.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 54.0,
@@ -6007,7 +6859,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 48.6,
                         "Siempre doble": 41.2,
-                        "Inteligente": 52.8
+                        "Campeón del doble 6": 52.8,
+                        "Campeón del doble 9": 43.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 58.0,
@@ -6022,7 +6875,8 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 50.0,
                         "Siempre doble": 43.4,
-                        "Inteligente": 47.8
+                        "Campeón del doble 6": 47.8,
+                        "Campeón del doble 9": 47.4
                     },
                     "Pasador": {
                         "Bota Gorda": 58.8,
@@ -6037,7 +6891,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 49.0,
                         "Siempre doble": 42.8,
-                        "Inteligente": 47.6
+                        "Campeón del doble 6": 47.6,
+                        "Campeón del doble 9": 42.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 62.0,
@@ -6052,7 +6907,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 50.2,
                         "Siempre doble": 44.0,
-                        "Inteligente": 48.0
+                        "Campeón del doble 6": 48.0,
+                        "Campeón del doble 9": 42.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 54.8,
@@ -6067,7 +6923,8 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 46.0,
                         "Siempre doble": 43.4,
-                        "Inteligente": 44.2
+                        "Campeón del doble 6": 44.2,
+                        "Campeón del doble 9": 46.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 61.2,
@@ -6082,7 +6939,8 @@ var SITE_JSON = {
                         "Agachao": 56.8,
                         "Gastar la data": 57.2,
                         "Siempre doble": 47.6,
-                        "Inteligente": 45.6
+                        "Campeón del doble 6": 45.6,
+                        "Campeón del doble 9": 49.6
                     },
                     "Agachao": {
                         "Bota Gorda": 63.6,
@@ -6097,7 +6955,8 @@ var SITE_JSON = {
                         "Agachao": 50.6,
                         "Gastar la data": 54.0,
                         "Siempre doble": 47.0,
-                        "Inteligente": 51.2
+                        "Campeón del doble 6": 51.2,
+                        "Campeón del doble 9": 44.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 58.0,
@@ -6112,7 +6971,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 52.2,
                         "Siempre doble": 46.0,
-                        "Inteligente": 45.6
+                        "Campeón del doble 6": 45.6,
+                        "Campeón del doble 9": 46.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 63.4,
@@ -6127,13 +6987,14 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 52.6,
                         "Siempre doble": 47.6,
-                        "Inteligente": 51.2
+                        "Campeón del doble 6": 51.2,
+                        "Campeón del doble 9": 48.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 57.2,
                         "Más Frecuente": 55.2,
                         "Aleatorio": 51.8,
-                        "Inteligente": 48.2,
+                        "Campeón del doble 6": 48.2,
                         "Repetidor": 47.2,
                         "Contador de la mesa": 52.2,
                         "Pasador": 52.4,
@@ -6142,7 +7003,23 @@ var SITE_JSON = {
                         "Bota Flaca": 54.4,
                         "Agachao": 48.8,
                         "Gastar la data": 54.4,
-                        "Siempre doble": 48.8
+                        "Siempre doble": 48.8,
+                        "Campeón del doble 9": 55.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 63.0,
+                        "Más Frecuente": 70.4,
+                        "Aleatorio": 59.8,
+                        "Campeón del doble 6": 44.6,
+                        "Repetidor": 56.8,
+                        "Contador de la mesa": 52.6,
+                        "Pasador": 57.4,
+                        "Menos Jugada": 57.6,
+                        "No gastar la data": 53.4,
+                        "Bota Flaca": 50.4,
+                        "Agachao": 56.0,
+                        "Gastar la data": 53.4,
+                        "Siempre doble": 51.2
                     }
                 },
                 "Cooperativo": {
@@ -6159,7 +7036,8 @@ var SITE_JSON = {
                         "Agachao": 37.6,
                         "Gastar la data": 41.6,
                         "Siempre doble": 40.8,
-                        "Inteligente": 43.2
+                        "Campeón del doble 6": 43.2,
+                        "Campeón del doble 9": 37.6
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 55.6,
@@ -6174,7 +7052,8 @@ var SITE_JSON = {
                         "Agachao": 41.6,
                         "Gastar la data": 42.8,
                         "Siempre doble": 42.8,
-                        "Inteligente": 47.8
+                        "Campeón del doble 6": 47.8,
+                        "Campeón del doble 9": 35.400000000000006
                     },
                     "Aleatorio": {
                         "Bota Gorda": 58.2,
@@ -6189,7 +7068,8 @@ var SITE_JSON = {
                         "Agachao": 47.8,
                         "Gastar la data": 47.2,
                         "Siempre doble": 41.4,
-                        "Inteligente": 49.4
+                        "Campeón del doble 6": 49.4,
+                        "Campeón del doble 9": 48.6
                     },
                     "Repetidor": {
                         "Bota Gorda": 53.2,
@@ -6204,7 +7084,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 44.8,
                         "Siempre doble": 45.0,
-                        "Inteligente": 52.4
+                        "Campeón del doble 6": 52.4,
+                        "Campeón del doble 9": 43.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.6,
@@ -6219,7 +7100,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 47.4,
                         "Siempre doble": 48.8,
-                        "Inteligente": 48.6
+                        "Campeón del doble 6": 48.6,
+                        "Campeón del doble 9": 43.4
                     },
                     "Pasador": {
                         "Bota Gorda": 58.0,
@@ -6234,7 +7116,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 49.6,
                         "Siempre doble": 47.2,
-                        "Inteligente": 51.8
+                        "Campeón del doble 6": 51.8,
+                        "Campeón del doble 9": 44.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 60.8,
@@ -6249,7 +7132,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 48.4,
                         "Siempre doble": 41.2,
-                        "Inteligente": 42.8
+                        "Campeón del doble 6": 42.8,
+                        "Campeón del doble 9": 38.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 56.2,
@@ -6264,7 +7148,8 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 44.6,
                         "Siempre doble": 42.0,
-                        "Inteligente": 44.4
+                        "Campeón del doble 6": 44.4,
+                        "Campeón del doble 9": 46.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 62.4,
@@ -6279,7 +7164,8 @@ var SITE_JSON = {
                         "Agachao": 56.4,
                         "Gastar la data": 54.2,
                         "Siempre doble": 47.0,
-                        "Inteligente": 49.0
+                        "Campeón del doble 6": 49.0,
+                        "Campeón del doble 9": 47.4
                     },
                     "Agachao": {
                         "Bota Gorda": 58.6,
@@ -6294,7 +7180,8 @@ var SITE_JSON = {
                         "Agachao": 52.2,
                         "Gastar la data": 51.8,
                         "Siempre doble": 47.6,
-                        "Inteligente": 53.6
+                        "Campeón del doble 6": 53.6,
+                        "Campeón del doble 9": 40.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.2,
@@ -6309,7 +7196,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 50.8,
                         "Siempre doble": 46.4,
-                        "Inteligente": 50.8
+                        "Campeón del doble 6": 50.8,
+                        "Campeón del doble 9": 45.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 63.2,
@@ -6324,13 +7212,14 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 52.0,
                         "Siempre doble": 47.0,
-                        "Inteligente": 49.0
+                        "Campeón del doble 6": 49.0,
+                        "Campeón del doble 9": 47.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 56.8,
                         "Más Frecuente": 52.2,
                         "Aleatorio": 50.6,
-                        "Inteligente": 49.4,
+                        "Campeón del doble 6": 49.4,
                         "Repetidor": 47.6,
                         "Contador de la mesa": 51.4,
                         "Pasador": 48.2,
@@ -6339,7 +7228,23 @@ var SITE_JSON = {
                         "Bota Flaca": 51.0,
                         "Agachao": 46.4,
                         "Gastar la data": 49.2,
-                        "Siempre doble": 51.0
+                        "Siempre doble": 51.0,
+                        "Campeón del doble 9": 47.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 62.4,
+                        "Más Frecuente": 64.6,
+                        "Aleatorio": 51.4,
+                        "Campeón del doble 6": 52.4,
+                        "Repetidor": 56.8,
+                        "Contador de la mesa": 56.6,
+                        "Pasador": 55.4,
+                        "Menos Jugada": 62.0,
+                        "No gastar la data": 53.6,
+                        "Bota Flaca": 52.6,
+                        "Agachao": 59.2,
+                        "Gastar la data": 54.2,
+                        "Siempre doble": 53.0
                     }
                 }
             },
@@ -6358,7 +7263,8 @@ var SITE_JSON = {
                         "Agachao": 39.2,
                         "Gastar la data": 42.2,
                         "Siempre doble": 39.6,
-                        "Inteligente": 39.6
+                        "Campeón del doble 6": 39.6,
+                        "Campeón del doble 9": 39.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 55.0,
@@ -6373,7 +7279,8 @@ var SITE_JSON = {
                         "Agachao": 44.8,
                         "Gastar la data": 43.0,
                         "Siempre doble": 39.6,
-                        "Inteligente": 45.6
+                        "Campeón del doble 6": 45.6,
+                        "Campeón del doble 9": 30.599999999999994
                     },
                     "Aleatorio": {
                         "Bota Gorda": 58.8,
@@ -6388,7 +7295,8 @@ var SITE_JSON = {
                         "Agachao": 45.4,
                         "Gastar la data": 47.8,
                         "Siempre doble": 40.8,
-                        "Inteligente": 52.0
+                        "Campeón del doble 6": 52.0,
+                        "Campeón del doble 9": 44.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 53.6,
@@ -6403,7 +7311,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 47.4,
                         "Siempre doble": 46.6,
-                        "Inteligente": 48.6
+                        "Campeón del doble 6": 48.6,
+                        "Campeón del doble 9": 43.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 56.8,
@@ -6418,7 +7327,8 @@ var SITE_JSON = {
                         "Agachao": 48.6,
                         "Gastar la data": 48.0,
                         "Siempre doble": 47.6,
-                        "Inteligente": 51.4
+                        "Campeón del doble 6": 51.4,
+                        "Campeón del doble 9": 42.4
                     },
                     "Pasador": {
                         "Bota Gorda": 57.4,
@@ -6433,7 +7343,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 46.6,
                         "Siempre doble": 39.8,
-                        "Inteligente": 54.6
+                        "Campeón del doble 6": 54.6,
+                        "Campeón del doble 9": 43.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 57.2,
@@ -6448,7 +7359,8 @@ var SITE_JSON = {
                         "Agachao": 43.8,
                         "Gastar la data": 49.2,
                         "Siempre doble": 43.2,
-                        "Inteligente": 46.6
+                        "Campeón del doble 6": 46.6,
+                        "Campeón del doble 9": 41.2
                     },
                     "No gastar la data": {
                         "Bota Gorda": 58.2,
@@ -6463,7 +7375,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 50.2,
                         "Siempre doble": 41.2,
-                        "Inteligente": 44.6
+                        "Campeón del doble 6": 44.6,
+                        "Campeón del doble 9": 45.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 60.8,
@@ -6478,7 +7391,8 @@ var SITE_JSON = {
                         "Agachao": 57.2,
                         "Gastar la data": 51.8,
                         "Siempre doble": 49.8,
-                        "Inteligente": 46.8
+                        "Campeón del doble 6": 46.8,
+                        "Campeón del doble 9": 50.6
                     },
                     "Agachao": {
                         "Bota Gorda": 64.4,
@@ -6493,7 +7407,8 @@ var SITE_JSON = {
                         "Agachao": 50.2,
                         "Gastar la data": 55.0,
                         "Siempre doble": 48.2,
-                        "Inteligente": 54.8
+                        "Campeón del doble 6": 54.8,
+                        "Campeón del doble 9": 46.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 61.6,
@@ -6508,7 +7423,8 @@ var SITE_JSON = {
                         "Agachao": 48.0,
                         "Gastar la data": 49.4,
                         "Siempre doble": 44.8,
-                        "Inteligente": 52.6
+                        "Campeón del doble 6": 52.6,
+                        "Campeón del doble 9": 47.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 63.8,
@@ -6523,13 +7439,14 @@ var SITE_JSON = {
                         "Agachao": 52.0,
                         "Gastar la data": 52.4,
                         "Siempre doble": 52.0,
-                        "Inteligente": 49.0
+                        "Campeón del doble 6": 49.0,
+                        "Campeón del doble 9": 53.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 60.4,
                         "Más Frecuente": 54.4,
                         "Aleatorio": 48.0,
-                        "Inteligente": 51.0,
+                        "Campeón del doble 6": 51.0,
                         "Repetidor": 51.4,
                         "Contador de la mesa": 48.6,
                         "Pasador": 45.4,
@@ -6538,7 +7455,23 @@ var SITE_JSON = {
                         "Bota Flaca": 53.2,
                         "Agachao": 45.2,
                         "Gastar la data": 47.4,
-                        "Siempre doble": 51.0
+                        "Siempre doble": 51.0,
+                        "Campeón del doble 9": 49.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 61.0,
+                        "Más Frecuente": 69.4,
+                        "Aleatorio": 56.0,
+                        "Campeón del doble 6": 50.8,
+                        "Repetidor": 56.6,
+                        "Contador de la mesa": 57.6,
+                        "Pasador": 57.0,
+                        "Menos Jugada": 58.8,
+                        "No gastar la data": 54.6,
+                        "Bota Flaca": 49.4,
+                        "Agachao": 53.8,
+                        "Gastar la data": 52.4,
+                        "Siempre doble": 46.4
                     }
                 },
                 "Cooperativo": {
@@ -6555,7 +7488,8 @@ var SITE_JSON = {
                         "Agachao": 42.8,
                         "Gastar la data": 42.4,
                         "Siempre doble": 41.6,
-                        "Inteligente": 41.8
+                        "Campeón del doble 6": 41.8,
+                        "Campeón del doble 9": 42.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 52.0,
@@ -6570,7 +7504,8 @@ var SITE_JSON = {
                         "Agachao": 46.0,
                         "Gastar la data": 47.2,
                         "Siempre doble": 42.8,
-                        "Inteligente": 49.8
+                        "Campeón del doble 6": 49.8,
+                        "Campeón del doble 9": 37.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 55.2,
@@ -6585,7 +7520,8 @@ var SITE_JSON = {
                         "Agachao": 47.6,
                         "Gastar la data": 49.8,
                         "Siempre doble": 44.2,
-                        "Inteligente": 48.8
+                        "Campeón del doble 6": 48.8,
+                        "Campeón del doble 9": 44.6
                     },
                     "Repetidor": {
                         "Bota Gorda": 53.8,
@@ -6600,7 +7536,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 49.0,
                         "Siempre doble": 45.2,
-                        "Inteligente": 49.0
+                        "Campeón del doble 6": 49.0,
+                        "Campeón del doble 9": 47.0
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.6,
@@ -6615,7 +7552,8 @@ var SITE_JSON = {
                         "Agachao": 46.0,
                         "Gastar la data": 47.6,
                         "Siempre doble": 48.0,
-                        "Inteligente": 48.8
+                        "Campeón del doble 6": 48.8,
+                        "Campeón del doble 9": 42.4
                     },
                     "Pasador": {
                         "Bota Gorda": 59.6,
@@ -6630,7 +7568,8 @@ var SITE_JSON = {
                         "Agachao": 45.6,
                         "Gastar la data": 49.2,
                         "Siempre doble": 44.2,
-                        "Inteligente": 45.4
+                        "Campeón del doble 6": 45.4,
+                        "Campeón del doble 9": 39.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 56.2,
@@ -6645,7 +7584,8 @@ var SITE_JSON = {
                         "Agachao": 50.6,
                         "Gastar la data": 50.0,
                         "Siempre doble": 44.6,
-                        "Inteligente": 44.8
+                        "Campeón del doble 6": 44.8,
+                        "Campeón del doble 9": 43.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 57.2,
@@ -6660,7 +7600,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 52.0,
                         "Siempre doble": 47.6,
-                        "Inteligente": 46.0
+                        "Campeón del doble 6": 46.0,
+                        "Campeón del doble 9": 45.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 59.4,
@@ -6675,7 +7616,8 @@ var SITE_JSON = {
                         "Agachao": 56.8,
                         "Gastar la data": 53.0,
                         "Siempre doble": 52.2,
-                        "Inteligente": 49.6
+                        "Campeón del doble 6": 49.6,
+                        "Campeón del doble 9": 48.2
                     },
                     "Agachao": {
                         "Bota Gorda": 59.8,
@@ -6690,7 +7632,8 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 50.6,
                         "Siempre doble": 50.4,
-                        "Inteligente": 54.4
+                        "Campeón del doble 6": 54.4,
+                        "Campeón del doble 9": 43.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 58.2,
@@ -6705,7 +7648,8 @@ var SITE_JSON = {
                         "Agachao": 52.4,
                         "Gastar la data": 51.2,
                         "Siempre doble": 46.8,
-                        "Inteligente": 49.2
+                        "Campeón del doble 6": 49.2,
+                        "Campeón del doble 9": 43.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 57.2,
@@ -6720,13 +7664,14 @@ var SITE_JSON = {
                         "Agachao": 52.8,
                         "Gastar la data": 49.4,
                         "Siempre doble": 49.8,
-                        "Inteligente": 53.8
+                        "Campeón del doble 6": 53.8,
+                        "Campeón del doble 9": 48.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 58.2,
                         "Más Frecuente": 50.2,
                         "Aleatorio": 51.2,
-                        "Inteligente": 48.0,
+                        "Campeón del doble 6": 48.0,
                         "Repetidor": 51.0,
                         "Contador de la mesa": 51.2,
                         "Pasador": 54.6,
@@ -6735,7 +7680,23 @@ var SITE_JSON = {
                         "Bota Flaca": 50.4,
                         "Agachao": 45.6,
                         "Gastar la data": 50.8,
-                        "Siempre doble": 46.2
+                        "Siempre doble": 46.2,
+                        "Campeón del doble 9": 49.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 58.0,
+                        "Más Frecuente": 63.0,
+                        "Aleatorio": 55.4,
+                        "Campeón del doble 6": 50.2,
+                        "Repetidor": 53.0,
+                        "Contador de la mesa": 57.6,
+                        "Pasador": 60.2,
+                        "Menos Jugada": 57.0,
+                        "No gastar la data": 54.8,
+                        "Bota Flaca": 51.8,
+                        "Agachao": 56.2,
+                        "Gastar la data": 56.2,
+                        "Siempre doble": 51.2
                     }
                 }
             },
@@ -6754,7 +7715,8 @@ var SITE_JSON = {
                         "Agachao": 39.2,
                         "Gastar la data": 38.6,
                         "Siempre doble": 37.8,
-                        "Inteligente": 38.2
+                        "Campeón del doble 6": 38.2,
+                        "Campeón del doble 9": 38.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 60.2,
@@ -6769,7 +7731,8 @@ var SITE_JSON = {
                         "Agachao": 42.0,
                         "Gastar la data": 46.8,
                         "Siempre doble": 40.6,
-                        "Inteligente": 45.8
+                        "Campeón del doble 6": 45.8,
+                        "Campeón del doble 9": 34.599999999999994
                     },
                     "Aleatorio": {
                         "Bota Gorda": 58.8,
@@ -6784,7 +7747,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 46.0,
                         "Siempre doble": 39.4,
-                        "Inteligente": 49.4
+                        "Campeón del doble 6": 49.4,
+                        "Campeón del doble 9": 45.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 52.0,
@@ -6799,7 +7763,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 49.8,
                         "Siempre doble": 42.0,
-                        "Inteligente": 45.6
+                        "Campeón del doble 6": 45.6,
+                        "Campeón del doble 9": 37.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 56.0,
@@ -6814,7 +7779,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 49.6,
                         "Siempre doble": 44.8,
-                        "Inteligente": 50.0
+                        "Campeón del doble 6": 50.0,
+                        "Campeón del doble 9": 40.8
                     },
                     "Pasador": {
                         "Bota Gorda": 59.6,
@@ -6829,7 +7795,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 42.2,
                         "Siempre doble": 44.0,
-                        "Inteligente": 48.0
+                        "Campeón del doble 6": 48.0,
+                        "Campeón del doble 9": 47.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 52.2,
@@ -6844,7 +7811,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 47.6,
                         "Siempre doble": 39.8,
-                        "Inteligente": 46.0
+                        "Campeón del doble 6": 46.0,
+                        "Campeón del doble 9": 40.2
                     },
                     "No gastar la data": {
                         "Bota Gorda": 57.4,
@@ -6859,7 +7827,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 46.8,
                         "Siempre doble": 46.6,
-                        "Inteligente": 45.2
+                        "Campeón del doble 6": 45.2,
+                        "Campeón del doble 9": 45.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 59.4,
@@ -6874,7 +7843,8 @@ var SITE_JSON = {
                         "Agachao": 55.2,
                         "Gastar la data": 55.8,
                         "Siempre doble": 50.0,
-                        "Inteligente": 44.4
+                        "Campeón del doble 6": 44.4,
+                        "Campeón del doble 9": 51.8
                     },
                     "Agachao": {
                         "Bota Gorda": 64.2,
@@ -6889,7 +7859,8 @@ var SITE_JSON = {
                         "Agachao": 52.2,
                         "Gastar la data": 53.6,
                         "Siempre doble": 47.8,
-                        "Inteligente": 51.2
+                        "Campeón del doble 6": 51.2,
+                        "Campeón del doble 9": 44.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 58.8,
@@ -6904,7 +7875,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 49.8,
                         "Siempre doble": 46.0,
-                        "Inteligente": 48.8
+                        "Campeón del doble 6": 48.8,
+                        "Campeón del doble 9": 47.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 66.0,
@@ -6919,13 +7891,14 @@ var SITE_JSON = {
                         "Agachao": 53.8,
                         "Gastar la data": 50.4,
                         "Siempre doble": 55.0,
-                        "Inteligente": 49.8
+                        "Campeón del doble 6": 49.8,
+                        "Campeón del doble 9": 48.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 61.8,
                         "Más Frecuente": 54.2,
                         "Aleatorio": 50.6,
-                        "Inteligente": 51.2,
+                        "Campeón del doble 6": 51.2,
                         "Repetidor": 54.4,
                         "Contador de la mesa": 50.0,
                         "Pasador": 52.0,
@@ -6934,7 +7907,23 @@ var SITE_JSON = {
                         "Bota Flaca": 55.6,
                         "Agachao": 48.8,
                         "Gastar la data": 51.2,
-                        "Siempre doble": 50.2
+                        "Siempre doble": 50.2,
+                        "Campeón del doble 9": 53.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 62.0,
+                        "Más Frecuente": 65.4,
+                        "Aleatorio": 55.0,
+                        "Campeón del doble 6": 46.8,
+                        "Repetidor": 62.6,
+                        "Contador de la mesa": 59.2,
+                        "Pasador": 53.0,
+                        "Menos Jugada": 59.8,
+                        "No gastar la data": 55.0,
+                        "Bota Flaca": 48.2,
+                        "Agachao": 56.0,
+                        "Gastar la data": 52.2,
+                        "Siempre doble": 51.2
                     }
                 },
                 "Cooperativo": {
@@ -6951,7 +7940,8 @@ var SITE_JSON = {
                         "Agachao": 42.0,
                         "Gastar la data": 44.8,
                         "Siempre doble": 38.4,
-                        "Inteligente": 39.8
+                        "Campeón del doble 6": 39.8,
+                        "Campeón del doble 9": 39.6
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 55.8,
@@ -6966,7 +7956,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 48.6,
                         "Siempre doble": 39.4,
-                        "Inteligente": 46.0
+                        "Campeón del doble 6": 46.0,
+                        "Campeón del doble 9": 39.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 53.8,
@@ -6981,7 +7972,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 49.2,
                         "Siempre doble": 48.0,
-                        "Inteligente": 51.0
+                        "Campeón del doble 6": 51.0,
+                        "Campeón del doble 9": 43.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 56.6,
@@ -6996,7 +7988,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 47.8,
                         "Siempre doble": 45.2,
-                        "Inteligente": 49.4
+                        "Campeón del doble 6": 49.4,
+                        "Campeón del doble 9": 43.6
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 57.8,
@@ -7011,7 +8004,8 @@ var SITE_JSON = {
                         "Agachao": 41.8,
                         "Gastar la data": 52.0,
                         "Siempre doble": 44.2,
-                        "Inteligente": 52.0
+                        "Campeón del doble 6": 52.0,
+                        "Campeón del doble 9": 40.8
                     },
                     "Pasador": {
                         "Bota Gorda": 57.2,
@@ -7026,7 +8020,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 47.0,
                         "Siempre doble": 46.2,
-                        "Inteligente": 48.6
+                        "Campeón del doble 6": 48.6,
+                        "Campeón del doble 9": 42.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 53.2,
@@ -7041,7 +8036,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 47.0,
                         "Siempre doble": 40.0,
-                        "Inteligente": 46.4
+                        "Campeón del doble 6": 46.4,
+                        "Campeón del doble 9": 42.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 58.6,
@@ -7056,7 +8052,8 @@ var SITE_JSON = {
                         "Agachao": 49.6,
                         "Gastar la data": 51.4,
                         "Siempre doble": 46.6,
-                        "Inteligente": 47.6
+                        "Campeón del doble 6": 47.6,
+                        "Campeón del doble 9": 44.8
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 61.2,
@@ -7071,7 +8068,8 @@ var SITE_JSON = {
                         "Agachao": 55.0,
                         "Gastar la data": 55.0,
                         "Siempre doble": 50.8,
-                        "Inteligente": 52.6
+                        "Campeón del doble 6": 52.6,
+                        "Campeón del doble 9": 50.2
                     },
                     "Agachao": {
                         "Bota Gorda": 63.4,
@@ -7086,7 +8084,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 51.8,
                         "Siempre doble": 47.4,
-                        "Inteligente": 53.8
+                        "Campeón del doble 6": 53.8,
+                        "Campeón del doble 9": 47.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 53.8,
@@ -7101,7 +8100,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 50.8,
                         "Siempre doble": 44.8,
-                        "Inteligente": 46.2
+                        "Campeón del doble 6": 46.2,
+                        "Campeón del doble 9": 48.2
                     },
                     "Siempre doble": {
                         "Bota Gorda": 59.6,
@@ -7116,13 +8116,14 @@ var SITE_JSON = {
                         "Agachao": 55.2,
                         "Gastar la data": 50.8,
                         "Siempre doble": 49.6,
-                        "Inteligente": 54.6
+                        "Campeón del doble 6": 54.6,
+                        "Campeón del doble 9": 53.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 60.2,
                         "Más Frecuente": 54.0,
                         "Aleatorio": 49.0,
-                        "Inteligente": 50.6,
+                        "Campeón del doble 6": 50.6,
                         "Repetidor": 50.6,
                         "Contador de la mesa": 48.0,
                         "Pasador": 51.4,
@@ -7131,7 +8132,23 @@ var SITE_JSON = {
                         "Bota Flaca": 47.4,
                         "Agachao": 46.2,
                         "Gastar la data": 53.8,
-                        "Siempre doble": 45.4
+                        "Siempre doble": 45.4,
+                        "Campeón del doble 9": 49.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 60.4,
+                        "Más Frecuente": 61.0,
+                        "Aleatorio": 56.2,
+                        "Campeón del doble 6": 51.0,
+                        "Repetidor": 56.4,
+                        "Contador de la mesa": 59.2,
+                        "Pasador": 57.8,
+                        "Menos Jugada": 58.0,
+                        "No gastar la data": 55.2,
+                        "Bota Flaca": 49.8,
+                        "Agachao": 52.2,
+                        "Gastar la data": 51.8,
+                        "Siempre doble": 47.0
                     }
                 }
             },
@@ -7150,7 +8167,8 @@ var SITE_JSON = {
                         "Agachao": 43.6,
                         "Gastar la data": 40.6,
                         "Siempre doble": 38.4,
-                        "Inteligente": 39.4
+                        "Campeón del doble 6": 39.4,
+                        "Campeón del doble 9": 34.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 61.2,
@@ -7165,7 +8183,8 @@ var SITE_JSON = {
                         "Agachao": 41.8,
                         "Gastar la data": 47.0,
                         "Siempre doble": 37.2,
-                        "Inteligente": 48.2
+                        "Campeón del doble 6": 48.2,
+                        "Campeón del doble 9": 32.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 57.0,
@@ -7180,7 +8199,8 @@ var SITE_JSON = {
                         "Agachao": 44.2,
                         "Gastar la data": 45.8,
                         "Siempre doble": 40.6,
-                        "Inteligente": 46.2
+                        "Campeón del doble 6": 46.2,
+                        "Campeón del doble 9": 38.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 61.4,
@@ -7195,7 +8215,8 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 45.4,
                         "Siempre doble": 45.6,
-                        "Inteligente": 49.2
+                        "Campeón del doble 6": 49.2,
+                        "Campeón del doble 9": 40.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 51.6,
@@ -7210,7 +8231,8 @@ var SITE_JSON = {
                         "Agachao": 52.0,
                         "Gastar la data": 54.2,
                         "Siempre doble": 45.6,
-                        "Inteligente": 51.6
+                        "Campeón del doble 6": 51.6,
+                        "Campeón del doble 9": 41.2
                     },
                     "Pasador": {
                         "Bota Gorda": 59.6,
@@ -7225,7 +8247,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 49.2,
                         "Siempre doble": 49.6,
-                        "Inteligente": 49.2
+                        "Campeón del doble 6": 49.2,
+                        "Campeón del doble 9": 42.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 55.2,
@@ -7240,7 +8263,8 @@ var SITE_JSON = {
                         "Agachao": 46.0,
                         "Gastar la data": 44.6,
                         "Siempre doble": 40.4,
-                        "Inteligente": 47.8
+                        "Campeón del doble 6": 47.8,
+                        "Campeón del doble 9": 44.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 57.4,
@@ -7255,7 +8279,8 @@ var SITE_JSON = {
                         "Agachao": 47.8,
                         "Gastar la data": 49.0,
                         "Siempre doble": 47.6,
-                        "Inteligente": 49.0
+                        "Campeón del doble 6": 49.0,
+                        "Campeón del doble 9": 43.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 59.0,
@@ -7270,7 +8295,8 @@ var SITE_JSON = {
                         "Agachao": 55.2,
                         "Gastar la data": 53.2,
                         "Siempre doble": 52.2,
-                        "Inteligente": 47.2
+                        "Campeón del doble 6": 47.2,
+                        "Campeón del doble 9": 51.2
                     },
                     "Agachao": {
                         "Bota Gorda": 62.8,
@@ -7285,7 +8311,8 @@ var SITE_JSON = {
                         "Agachao": 49.6,
                         "Gastar la data": 55.4,
                         "Siempre doble": 45.0,
-                        "Inteligente": 52.8
+                        "Campeón del doble 6": 52.8,
+                        "Campeón del doble 9": 41.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 59.2,
@@ -7300,7 +8327,8 @@ var SITE_JSON = {
                         "Agachao": 43.8,
                         "Gastar la data": 48.2,
                         "Siempre doble": 47.2,
-                        "Inteligente": 55.6
+                        "Campeón del doble 6": 55.6,
+                        "Campeón del doble 9": 43.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 63.0,
@@ -7315,13 +8343,14 @@ var SITE_JSON = {
                         "Agachao": 47.6,
                         "Gastar la data": 54.6,
                         "Siempre doble": 52.4,
-                        "Inteligente": 51.2
+                        "Campeón del doble 6": 51.2,
+                        "Campeón del doble 9": 54.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 60.6,
                         "Más Frecuente": 51.8,
                         "Aleatorio": 53.8,
-                        "Inteligente": 50.2,
+                        "Campeón del doble 6": 50.2,
                         "Repetidor": 50.8,
                         "Contador de la mesa": 48.4,
                         "Pasador": 50.8,
@@ -7330,7 +8359,23 @@ var SITE_JSON = {
                         "Bota Flaca": 52.8,
                         "Agachao": 47.2,
                         "Gastar la data": 44.4,
-                        "Siempre doble": 48.8
+                        "Siempre doble": 48.8,
+                        "Campeón del doble 9": 54.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 65.2,
+                        "Más Frecuente": 67.2,
+                        "Aleatorio": 61.6,
+                        "Campeón del doble 6": 45.8,
+                        "Repetidor": 59.8,
+                        "Contador de la mesa": 58.8,
+                        "Pasador": 57.4,
+                        "Menos Jugada": 55.4,
+                        "No gastar la data": 57.0,
+                        "Bota Flaca": 48.8,
+                        "Agachao": 58.4,
+                        "Gastar la data": 57.0,
+                        "Siempre doble": 45.8
                     }
                 },
                 "Cooperativo": {
@@ -7347,7 +8392,8 @@ var SITE_JSON = {
                         "Agachao": 37.2,
                         "Gastar la data": 41.2,
                         "Siempre doble": 38.0,
-                        "Inteligente": 42.2
+                        "Campeón del doble 6": 42.2,
+                        "Campeón del doble 9": 40.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 57.8,
@@ -7362,7 +8408,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 45.6,
                         "Siempre doble": 44.2,
-                        "Inteligente": 46.8
+                        "Campeón del doble 6": 46.8,
+                        "Campeón del doble 9": 38.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 59.4,
@@ -7377,7 +8424,8 @@ var SITE_JSON = {
                         "Agachao": 43.4,
                         "Gastar la data": 50.2,
                         "Siempre doble": 43.8,
-                        "Inteligente": 46.8
+                        "Campeón del doble 6": 46.8,
+                        "Campeón del doble 9": 42.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 53.2,
@@ -7392,7 +8440,8 @@ var SITE_JSON = {
                         "Agachao": 48.0,
                         "Gastar la data": 48.8,
                         "Siempre doble": 47.0,
-                        "Inteligente": 52.2
+                        "Campeón del doble 6": 52.2,
+                        "Campeón del doble 9": 43.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.2,
@@ -7407,7 +8456,8 @@ var SITE_JSON = {
                         "Agachao": 52.0,
                         "Gastar la data": 46.2,
                         "Siempre doble": 48.8,
-                        "Inteligente": 45.4
+                        "Campeón del doble 6": 45.4,
+                        "Campeón del doble 9": 46.2
                     },
                     "Pasador": {
                         "Bota Gorda": 55.2,
@@ -7422,7 +8472,8 @@ var SITE_JSON = {
                         "Agachao": 48.8,
                         "Gastar la data": 51.8,
                         "Siempre doble": 45.6,
-                        "Inteligente": 51.8
+                        "Campeón del doble 6": 51.8,
+                        "Campeón del doble 9": 42.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 57.6,
@@ -7437,7 +8488,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 48.8,
                         "Siempre doble": 40.4,
-                        "Inteligente": 48.8
+                        "Campeón del doble 6": 48.8,
+                        "Campeón del doble 9": 41.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 57.2,
@@ -7452,7 +8504,8 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 51.2,
                         "Siempre doble": 44.4,
-                        "Inteligente": 50.2
+                        "Campeón del doble 6": 50.2,
+                        "Campeón del doble 9": 45.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 62.0,
@@ -7467,7 +8520,8 @@ var SITE_JSON = {
                         "Agachao": 54.0,
                         "Gastar la data": 53.4,
                         "Siempre doble": 48.4,
-                        "Inteligente": 50.6
+                        "Campeón del doble 6": 50.6,
+                        "Campeón del doble 9": 50.2
                     },
                     "Agachao": {
                         "Bota Gorda": 59.6,
@@ -7482,7 +8536,8 @@ var SITE_JSON = {
                         "Agachao": 44.2,
                         "Gastar la data": 52.6,
                         "Siempre doble": 47.8,
-                        "Inteligente": 54.2
+                        "Campeón del doble 6": 54.2,
+                        "Campeón del doble 9": 45.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 59.4,
@@ -7497,7 +8552,8 @@ var SITE_JSON = {
                         "Agachao": 51.0,
                         "Gastar la data": 47.6,
                         "Siempre doble": 49.0,
-                        "Inteligente": 54.2
+                        "Campeón del doble 6": 54.2,
+                        "Campeón del doble 9": 45.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 61.6,
@@ -7512,13 +8568,14 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 52.8,
                         "Siempre doble": 48.0,
-                        "Inteligente": 52.4
+                        "Campeón del doble 6": 52.4,
+                        "Campeón del doble 9": 47.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 57.8,
                         "Más Frecuente": 53.2,
                         "Aleatorio": 53.2,
-                        "Inteligente": 55.8,
+                        "Campeón del doble 6": 55.8,
                         "Repetidor": 47.8,
                         "Contador de la mesa": 54.6,
                         "Pasador": 48.2,
@@ -7527,7 +8584,23 @@ var SITE_JSON = {
                         "Bota Flaca": 49.4,
                         "Agachao": 45.8,
                         "Gastar la data": 45.8,
-                        "Siempre doble": 47.6
+                        "Siempre doble": 47.6,
+                        "Campeón del doble 9": 52.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 59.6,
+                        "Más Frecuente": 61.2,
+                        "Aleatorio": 57.6,
+                        "Campeón del doble 6": 48.0,
+                        "Repetidor": 56.2,
+                        "Contador de la mesa": 53.8,
+                        "Pasador": 57.2,
+                        "Menos Jugada": 58.2,
+                        "No gastar la data": 54.8,
+                        "Bota Flaca": 49.8,
+                        "Agachao": 54.8,
+                        "Gastar la data": 54.4,
+                        "Siempre doble": 53.0
                     }
                 }
             },
@@ -7546,7 +8619,8 @@ var SITE_JSON = {
                         "Agachao": 40.6,
                         "Gastar la data": 39.6,
                         "Siempre doble": 37.6,
-                        "Inteligente": 42.4
+                        "Campeón del doble 6": 42.4,
+                        "Campeón del doble 9": 36.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 60.6,
@@ -7561,7 +8635,8 @@ var SITE_JSON = {
                         "Agachao": 43.4,
                         "Gastar la data": 42.4,
                         "Siempre doble": 39.2,
-                        "Inteligente": 47.0
+                        "Campeón del doble 6": 47.0,
+                        "Campeón del doble 9": 41.2
                     },
                     "Aleatorio": {
                         "Bota Gorda": 57.8,
@@ -7576,7 +8651,8 @@ var SITE_JSON = {
                         "Agachao": 43.4,
                         "Gastar la data": 48.0,
                         "Siempre doble": 44.2,
-                        "Inteligente": 47.6
+                        "Campeón del doble 6": 47.6,
+                        "Campeón del doble 9": 42.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 55.8,
@@ -7591,7 +8667,8 @@ var SITE_JSON = {
                         "Agachao": 44.8,
                         "Gastar la data": 50.6,
                         "Siempre doble": 50.2,
-                        "Inteligente": 47.2
+                        "Campeón del doble 6": 47.2,
+                        "Campeón del doble 9": 46.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 57.6,
@@ -7606,7 +8683,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 52.0,
                         "Siempre doble": 43.4,
-                        "Inteligente": 50.8
+                        "Campeón del doble 6": 50.8,
+                        "Campeón del doble 9": 40.4
                     },
                     "Pasador": {
                         "Bota Gorda": 52.4,
@@ -7621,7 +8699,8 @@ var SITE_JSON = {
                         "Agachao": 50.6,
                         "Gastar la data": 50.0,
                         "Siempre doble": 46.6,
-                        "Inteligente": 47.4
+                        "Campeón del doble 6": 47.4,
+                        "Campeón del doble 9": 40.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 52.8,
@@ -7636,7 +8715,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 48.8,
                         "Siempre doble": 42.0,
-                        "Inteligente": 43.8
+                        "Campeón del doble 6": 43.8,
+                        "Campeón del doble 9": 41.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 57.6,
@@ -7651,7 +8731,8 @@ var SITE_JSON = {
                         "Agachao": 52.0,
                         "Gastar la data": 51.2,
                         "Siempre doble": 45.0,
-                        "Inteligente": 45.8
+                        "Campeón del doble 6": 45.8,
+                        "Campeón del doble 9": 40.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 62.8,
@@ -7666,7 +8747,8 @@ var SITE_JSON = {
                         "Agachao": 57.6,
                         "Gastar la data": 55.8,
                         "Siempre doble": 47.8,
-                        "Inteligente": 46.0
+                        "Campeón del doble 6": 46.0,
+                        "Campeón del doble 9": 50.4
                     },
                     "Agachao": {
                         "Bota Gorda": 60.4,
@@ -7681,7 +8763,8 @@ var SITE_JSON = {
                         "Agachao": 51.0,
                         "Gastar la data": 52.8,
                         "Siempre doble": 48.6,
-                        "Inteligente": 53.2
+                        "Campeón del doble 6": 53.2,
+                        "Campeón del doble 9": 45.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 61.8,
@@ -7696,7 +8779,8 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 50.2,
                         "Siempre doble": 45.6,
-                        "Inteligente": 49.0
+                        "Campeón del doble 6": 49.0,
+                        "Campeón del doble 9": 45.2
                     },
                     "Siempre doble": {
                         "Bota Gorda": 64.0,
@@ -7711,13 +8795,14 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 52.2,
                         "Siempre doble": 48.4,
-                        "Inteligente": 52.2
+                        "Campeón del doble 6": 52.2,
+                        "Campeón del doble 9": 49.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 57.6,
                         "Más Frecuente": 53.0,
                         "Aleatorio": 52.4,
-                        "Inteligente": 51.8,
+                        "Campeón del doble 6": 51.8,
                         "Repetidor": 52.8,
                         "Contador de la mesa": 49.2,
                         "Pasador": 52.6,
@@ -7726,7 +8811,23 @@ var SITE_JSON = {
                         "Bota Flaca": 54.0,
                         "Agachao": 46.8,
                         "Gastar la data": 51.0,
-                        "Siempre doble": 47.8
+                        "Siempre doble": 47.8,
+                        "Campeón del doble 9": 52.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 64.0,
+                        "Más Frecuente": 58.8,
+                        "Aleatorio": 58.0,
+                        "Campeón del doble 6": 47.2,
+                        "Repetidor": 53.8,
+                        "Contador de la mesa": 59.6,
+                        "Pasador": 59.2,
+                        "Menos Jugada": 59.0,
+                        "No gastar la data": 59.6,
+                        "Bota Flaca": 49.6,
+                        "Agachao": 54.2,
+                        "Gastar la data": 54.8,
+                        "Siempre doble": 50.2
                     }
                 },
                 "Cooperativo": {
@@ -7743,7 +8844,8 @@ var SITE_JSON = {
                         "Agachao": 40.6,
                         "Gastar la data": 41.6,
                         "Siempre doble": 34.2,
-                        "Inteligente": 46.2
+                        "Campeón del doble 6": 46.2,
+                        "Campeón del doble 9": 38.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 53.0,
@@ -7758,7 +8860,8 @@ var SITE_JSON = {
                         "Agachao": 44.4,
                         "Gastar la data": 46.0,
                         "Siempre doble": 42.0,
-                        "Inteligente": 43.8
+                        "Campeón del doble 6": 43.8,
+                        "Campeón del doble 9": 38.6
                     },
                     "Aleatorio": {
                         "Bota Gorda": 57.2,
@@ -7773,7 +8876,8 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 48.0,
                         "Siempre doble": 45.4,
-                        "Inteligente": 45.4
+                        "Campeón del doble 6": 45.4,
+                        "Campeón del doble 9": 48.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 54.2,
@@ -7788,7 +8892,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 50.0,
                         "Siempre doble": 46.6,
-                        "Inteligente": 46.8
+                        "Campeón del doble 6": 46.8,
+                        "Campeón del doble 9": 46.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.2,
@@ -7803,7 +8908,8 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 55.4,
                         "Siempre doble": 48.8,
-                        "Inteligente": 52.2
+                        "Campeón del doble 6": 52.2,
+                        "Campeón del doble 9": 46.4
                     },
                     "Pasador": {
                         "Bota Gorda": 52.8,
@@ -7818,7 +8924,8 @@ var SITE_JSON = {
                         "Agachao": 50.6,
                         "Gastar la data": 51.4,
                         "Siempre doble": 43.2,
-                        "Inteligente": 48.8
+                        "Campeón del doble 6": 48.8,
+                        "Campeón del doble 9": 40.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 55.4,
@@ -7833,7 +8940,8 @@ var SITE_JSON = {
                         "Agachao": 50.2,
                         "Gastar la data": 46.2,
                         "Siempre doble": 39.8,
-                        "Inteligente": 45.0
+                        "Campeón del doble 6": 45.0,
+                        "Campeón del doble 9": 42.2
                     },
                     "No gastar la data": {
                         "Bota Gorda": 57.2,
@@ -7848,7 +8956,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 48.2,
                         "Siempre doble": 49.0,
-                        "Inteligente": 46.4
+                        "Campeón del doble 6": 46.4,
+                        "Campeón del doble 9": 48.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 62.6,
@@ -7863,7 +8972,8 @@ var SITE_JSON = {
                         "Agachao": 54.0,
                         "Gastar la data": 53.0,
                         "Siempre doble": 48.6,
-                        "Inteligente": 48.8
+                        "Campeón del doble 6": 48.8,
+                        "Campeón del doble 9": 49.6
                     },
                     "Agachao": {
                         "Bota Gorda": 62.0,
@@ -7878,7 +8988,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 51.0,
                         "Siempre doble": 49.2,
-                        "Inteligente": 52.8
+                        "Campeón del doble 6": 52.8,
+                        "Campeón del doble 9": 46.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 59.0,
@@ -7893,7 +9004,8 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 48.4,
                         "Siempre doble": 44.4,
-                        "Inteligente": 50.0
+                        "Campeón del doble 6": 50.0,
+                        "Campeón del doble 9": 41.2
                     },
                     "Siempre doble": {
                         "Bota Gorda": 65.0,
@@ -7908,13 +9020,14 @@ var SITE_JSON = {
                         "Agachao": 52.2,
                         "Gastar la data": 50.2,
                         "Siempre doble": 48.0,
-                        "Inteligente": 51.0
+                        "Campeón del doble 6": 51.0,
+                        "Campeón del doble 9": 49.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 53.8,
                         "Más Frecuente": 56.2,
                         "Aleatorio": 54.6,
-                        "Inteligente": 50.8,
+                        "Campeón del doble 6": 50.8,
                         "Repetidor": 53.2,
                         "Contador de la mesa": 47.8,
                         "Pasador": 51.2,
@@ -7923,7 +9036,23 @@ var SITE_JSON = {
                         "Bota Flaca": 51.2,
                         "Agachao": 47.2,
                         "Gastar la data": 50.0,
-                        "Siempre doble": 49.0
+                        "Siempre doble": 49.0,
+                        "Campeón del doble 9": 51.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 62.0,
+                        "Más Frecuente": 61.4,
+                        "Aleatorio": 51.6,
+                        "Campeón del doble 6": 49.0,
+                        "Repetidor": 53.6,
+                        "Contador de la mesa": 53.6,
+                        "Pasador": 59.6,
+                        "Menos Jugada": 57.8,
+                        "No gastar la data": 51.8,
+                        "Bota Flaca": 50.4,
+                        "Agachao": 53.8,
+                        "Gastar la data": 58.8,
+                        "Siempre doble": 50.6
                     }
                 }
             }
@@ -7944,7 +9073,8 @@ var SITE_JSON = {
                         "Agachao": 31.8,
                         "Gastar la data": 41.8,
                         "Siempre doble": 32.2,
-                        "Inteligente": 42.2
+                        "Campeón del doble 6": 42.2,
+                        "Campeón del doble 9": 43.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 58.0,
@@ -7959,7 +9089,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 44.8,
                         "Siempre doble": 39.4,
-                        "Inteligente": 48.6
+                        "Campeón del doble 6": 48.6,
+                        "Campeón del doble 9": 29.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 59.6,
@@ -7974,7 +9105,8 @@ var SITE_JSON = {
                         "Agachao": 42.0,
                         "Gastar la data": 49.4,
                         "Siempre doble": 40.6,
-                        "Inteligente": 41.2
+                        "Campeón del doble 6": 41.2,
+                        "Campeón del doble 9": 42.6
                     },
                     "Repetidor": {
                         "Bota Gorda": 57.6,
@@ -7989,7 +9121,8 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 48.0,
                         "Siempre doble": 46.0,
-                        "Inteligente": 45.8
+                        "Campeón del doble 6": 45.8,
+                        "Campeón del doble 9": 41.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 60.4,
@@ -8004,7 +9137,8 @@ var SITE_JSON = {
                         "Agachao": 48.8,
                         "Gastar la data": 49.6,
                         "Siempre doble": 40.8,
-                        "Inteligente": 47.8
+                        "Campeón del doble 6": 47.8,
+                        "Campeón del doble 9": 41.6
                     },
                     "Pasador": {
                         "Bota Gorda": 57.8,
@@ -8019,7 +9153,8 @@ var SITE_JSON = {
                         "Agachao": 45.6,
                         "Gastar la data": 50.2,
                         "Siempre doble": 38.4,
-                        "Inteligente": 43.8
+                        "Campeón del doble 6": 43.8,
+                        "Campeón del doble 9": 40.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 58.8,
@@ -8034,7 +9169,8 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 48.2,
                         "Siempre doble": 43.8,
-                        "Inteligente": 45.2
+                        "Campeón del doble 6": 45.2,
+                        "Campeón del doble 9": 39.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 56.2,
@@ -8049,7 +9185,8 @@ var SITE_JSON = {
                         "Agachao": 45.8,
                         "Gastar la data": 49.0,
                         "Siempre doble": 40.6,
-                        "Inteligente": 48.2
+                        "Campeón del doble 6": 48.2,
+                        "Campeón del doble 9": 44.8
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 58.0,
@@ -8064,7 +9201,8 @@ var SITE_JSON = {
                         "Agachao": 59.8,
                         "Gastar la data": 57.8,
                         "Siempre doble": 48.0,
-                        "Inteligente": 44.8
+                        "Campeón del doble 6": 44.8,
+                        "Campeón del doble 9": 50.8
                     },
                     "Agachao": {
                         "Bota Gorda": 68.6,
@@ -8079,7 +9217,8 @@ var SITE_JSON = {
                         "Agachao": 51.6,
                         "Gastar la data": 54.6,
                         "Siempre doble": 48.4,
-                        "Inteligente": 54.8
+                        "Campeón del doble 6": 54.8,
+                        "Campeón del doble 9": 42.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 63.2,
@@ -8094,7 +9233,8 @@ var SITE_JSON = {
                         "Agachao": 44.4,
                         "Gastar la data": 49.8,
                         "Siempre doble": 48.4,
-                        "Inteligente": 51.4
+                        "Campeón del doble 6": 51.4,
+                        "Campeón del doble 9": 46.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 64.6,
@@ -8109,13 +9249,14 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 55.0,
                         "Siempre doble": 52.0,
-                        "Inteligente": 52.8
+                        "Campeón del doble 6": 52.8,
+                        "Campeón del doble 9": 50.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 57.8,
                         "Más Frecuente": 51.4,
                         "Aleatorio": 58.8,
-                        "Inteligente": 51.0,
+                        "Campeón del doble 6": 51.0,
                         "Repetidor": 54.2,
                         "Contador de la mesa": 52.2,
                         "Pasador": 56.2,
@@ -8124,7 +9265,23 @@ var SITE_JSON = {
                         "Bota Flaca": 55.2,
                         "Agachao": 45.2,
                         "Gastar la data": 48.6,
-                        "Siempre doble": 47.2
+                        "Siempre doble": 47.2,
+                        "Campeón del doble 9": 53.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 56.2,
+                        "Más Frecuente": 71.0,
+                        "Aleatorio": 57.4,
+                        "Campeón del doble 6": 47.0,
+                        "Repetidor": 58.8,
+                        "Contador de la mesa": 58.4,
+                        "Pasador": 59.4,
+                        "Menos Jugada": 60.6,
+                        "No gastar la data": 55.2,
+                        "Bota Flaca": 49.2,
+                        "Agachao": 57.6,
+                        "Gastar la data": 53.2,
+                        "Siempre doble": 49.6
                     }
                 },
                 "Cooperativo": {
@@ -8141,7 +9298,8 @@ var SITE_JSON = {
                         "Agachao": 34.8,
                         "Gastar la data": 41.6,
                         "Siempre doble": 31.4,
-                        "Inteligente": 41.2
+                        "Campeón del doble 6": 41.2,
+                        "Campeón del doble 9": 36.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 55.4,
@@ -8156,7 +9314,8 @@ var SITE_JSON = {
                         "Agachao": 42.4,
                         "Gastar la data": 44.0,
                         "Siempre doble": 41.2,
-                        "Inteligente": 46.6
+                        "Campeón del doble 6": 46.6,
+                        "Campeón del doble 9": 36.4
                     },
                     "Aleatorio": {
                         "Bota Gorda": 55.8,
@@ -8171,7 +9330,8 @@ var SITE_JSON = {
                         "Agachao": 50.6,
                         "Gastar la data": 46.0,
                         "Siempre doble": 43.0,
-                        "Inteligente": 48.0
+                        "Campeón del doble 6": 48.0,
+                        "Campeón del doble 9": 41.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 58.0,
@@ -8186,7 +9346,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 49.2,
                         "Siempre doble": 45.2,
-                        "Inteligente": 52.0
+                        "Campeón del doble 6": 52.0,
+                        "Campeón del doble 9": 41.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 54.8,
@@ -8201,7 +9362,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 51.6,
                         "Siempre doble": 45.2,
-                        "Inteligente": 44.8
+                        "Campeón del doble 6": 44.8,
+                        "Campeón del doble 9": 42.2
                     },
                     "Pasador": {
                         "Bota Gorda": 55.2,
@@ -8216,7 +9378,8 @@ var SITE_JSON = {
                         "Agachao": 48.6,
                         "Gastar la data": 46.8,
                         "Siempre doble": 44.8,
-                        "Inteligente": 43.4
+                        "Campeón del doble 6": 43.4,
+                        "Campeón del doble 9": 42.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 58.6,
@@ -8231,7 +9394,8 @@ var SITE_JSON = {
                         "Agachao": 45.8,
                         "Gastar la data": 48.0,
                         "Siempre doble": 39.6,
-                        "Inteligente": 46.0
+                        "Campeón del doble 6": 46.0,
+                        "Campeón del doble 9": 43.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 60.2,
@@ -8246,7 +9410,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 49.4,
                         "Siempre doble": 43.8,
-                        "Inteligente": 48.0
+                        "Campeón del doble 6": 48.0,
+                        "Campeón del doble 9": 47.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 63.8,
@@ -8261,7 +9426,8 @@ var SITE_JSON = {
                         "Agachao": 57.2,
                         "Gastar la data": 54.0,
                         "Siempre doble": 47.0,
-                        "Inteligente": 44.4
+                        "Campeón del doble 6": 44.4,
+                        "Campeón del doble 9": 48.2
                     },
                     "Agachao": {
                         "Bota Gorda": 63.6,
@@ -8276,7 +9442,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 52.8,
                         "Siempre doble": 42.8,
-                        "Inteligente": 55.6
+                        "Campeón del doble 6": 55.6,
+                        "Campeón del doble 9": 42.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 58.6,
@@ -8291,7 +9458,8 @@ var SITE_JSON = {
                         "Agachao": 48.0,
                         "Gastar la data": 49.0,
                         "Siempre doble": 44.4,
-                        "Inteligente": 51.2
+                        "Campeón del doble 6": 51.2,
+                        "Campeón del doble 9": 47.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 66.6,
@@ -8306,13 +9474,14 @@ var SITE_JSON = {
                         "Agachao": 52.2,
                         "Gastar la data": 52.4,
                         "Siempre doble": 49.2,
-                        "Inteligente": 53.6
+                        "Campeón del doble 6": 53.6,
+                        "Campeón del doble 9": 48.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 58.8,
                         "Más Frecuente": 53.4,
                         "Aleatorio": 52.0,
-                        "Inteligente": 49.6,
+                        "Campeón del doble 6": 49.6,
                         "Repetidor": 48.0,
                         "Contador de la mesa": 55.2,
                         "Pasador": 56.6,
@@ -8321,7 +9490,23 @@ var SITE_JSON = {
                         "Bota Flaca": 55.6,
                         "Agachao": 44.4,
                         "Gastar la data": 48.8,
-                        "Siempre doble": 46.4
+                        "Siempre doble": 46.4,
+                        "Campeón del doble 9": 50.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 63.6,
+                        "Más Frecuente": 63.6,
+                        "Aleatorio": 58.2,
+                        "Campeón del doble 6": 49.8,
+                        "Repetidor": 58.2,
+                        "Contador de la mesa": 57.8,
+                        "Pasador": 57.4,
+                        "Menos Jugada": 56.6,
+                        "No gastar la data": 52.4,
+                        "Bota Flaca": 51.8,
+                        "Agachao": 57.6,
+                        "Gastar la data": 53.0,
+                        "Siempre doble": 52.0
                     }
                 }
             },
@@ -8340,7 +9525,8 @@ var SITE_JSON = {
                         "Agachao": 33.6,
                         "Gastar la data": 41.2,
                         "Siempre doble": 35.6,
-                        "Inteligente": 41.2
+                        "Campeón del doble 6": 41.2,
+                        "Campeón del doble 9": 42.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 58.4,
@@ -8355,7 +9541,8 @@ var SITE_JSON = {
                         "Agachao": 42.2,
                         "Gastar la data": 47.2,
                         "Siempre doble": 40.6,
-                        "Inteligente": 49.2
+                        "Campeón del doble 6": 49.2,
+                        "Campeón del doble 9": 34.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 60.2,
@@ -8370,7 +9557,8 @@ var SITE_JSON = {
                         "Agachao": 45.2,
                         "Gastar la data": 51.2,
                         "Siempre doble": 41.0,
-                        "Inteligente": 47.8
+                        "Campeón del doble 6": 47.8,
+                        "Campeón del doble 9": 42.6
                     },
                     "Repetidor": {
                         "Bota Gorda": 59.0,
@@ -8385,7 +9573,8 @@ var SITE_JSON = {
                         "Agachao": 45.8,
                         "Gastar la data": 45.6,
                         "Siempre doble": 43.6,
-                        "Inteligente": 48.4
+                        "Campeón del doble 6": 48.4,
+                        "Campeón del doble 9": 41.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 61.2,
@@ -8400,7 +9589,8 @@ var SITE_JSON = {
                         "Agachao": 44.2,
                         "Gastar la data": 50.4,
                         "Siempre doble": 43.2,
-                        "Inteligente": 49.0
+                        "Campeón del doble 6": 49.0,
+                        "Campeón del doble 9": 42.2
                     },
                     "Pasador": {
                         "Bota Gorda": 57.8,
@@ -8415,7 +9605,8 @@ var SITE_JSON = {
                         "Agachao": 45.4,
                         "Gastar la data": 50.8,
                         "Siempre doble": 38.8,
-                        "Inteligente": 47.6
+                        "Campeón del doble 6": 47.6,
+                        "Campeón del doble 9": 41.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 57.4,
@@ -8430,7 +9621,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 47.8,
                         "Siempre doble": 45.0,
-                        "Inteligente": 46.0
+                        "Campeón del doble 6": 46.0,
+                        "Campeón del doble 9": 43.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 59.6,
@@ -8445,7 +9637,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 51.2,
                         "Siempre doble": 43.0,
-                        "Inteligente": 46.2
+                        "Campeón del doble 6": 46.2,
+                        "Campeón del doble 9": 46.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 58.0,
@@ -8460,7 +9653,8 @@ var SITE_JSON = {
                         "Agachao": 53.0,
                         "Gastar la data": 56.8,
                         "Siempre doble": 48.8,
-                        "Inteligente": 45.8
+                        "Campeón del doble 6": 45.8,
+                        "Campeón del doble 9": 51.0
                     },
                     "Agachao": {
                         "Bota Gorda": 64.6,
@@ -8475,7 +9669,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 59.0,
                         "Siempre doble": 46.6,
-                        "Inteligente": 57.0
+                        "Campeón del doble 6": 57.0,
+                        "Campeón del doble 9": 44.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.8,
@@ -8490,7 +9685,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 52.0,
                         "Siempre doble": 49.6,
-                        "Inteligente": 53.8
+                        "Campeón del doble 6": 53.8,
+                        "Campeón del doble 9": 45.2
                     },
                     "Siempre doble": {
                         "Bota Gorda": 65.8,
@@ -8505,13 +9701,14 @@ var SITE_JSON = {
                         "Agachao": 53.0,
                         "Gastar la data": 53.2,
                         "Siempre doble": 48.8,
-                        "Inteligente": 53.8
+                        "Campeón del doble 6": 53.8,
+                        "Campeón del doble 9": 50.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 58.8,
                         "Más Frecuente": 50.8,
                         "Aleatorio": 52.2,
-                        "Inteligente": 50.4,
+                        "Campeón del doble 6": 50.4,
                         "Repetidor": 51.6,
                         "Contador de la mesa": 51.0,
                         "Pasador": 52.4,
@@ -8520,7 +9717,23 @@ var SITE_JSON = {
                         "Bota Flaca": 54.2,
                         "Agachao": 43.0,
                         "Gastar la data": 46.2,
-                        "Siempre doble": 46.2
+                        "Siempre doble": 46.2,
+                        "Campeón del doble 9": 52.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 57.2,
+                        "Más Frecuente": 66.0,
+                        "Aleatorio": 57.4,
+                        "Campeón del doble 6": 47.4,
+                        "Repetidor": 58.8,
+                        "Contador de la mesa": 57.8,
+                        "Pasador": 58.6,
+                        "Menos Jugada": 56.6,
+                        "No gastar la data": 53.8,
+                        "Bota Flaca": 49.0,
+                        "Agachao": 55.4,
+                        "Gastar la data": 54.8,
+                        "Siempre doble": 49.6
                     }
                 },
                 "Cooperativo": {
@@ -8537,7 +9750,8 @@ var SITE_JSON = {
                         "Agachao": 43.0,
                         "Gastar la data": 37.4,
                         "Siempre doble": 34.6,
-                        "Inteligente": 43.4
+                        "Campeón del doble 6": 43.4,
+                        "Campeón del doble 9": 35.400000000000006
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 56.4,
@@ -8552,7 +9766,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 47.0,
                         "Siempre doble": 35.2,
-                        "Inteligente": 46.2
+                        "Campeón del doble 6": 46.2,
+                        "Campeón del doble 9": 35.400000000000006
                     },
                     "Aleatorio": {
                         "Bota Gorda": 56.2,
@@ -8567,7 +9782,8 @@ var SITE_JSON = {
                         "Agachao": 41.8,
                         "Gastar la data": 46.4,
                         "Siempre doble": 41.6,
-                        "Inteligente": 44.8
+                        "Campeón del doble 6": 44.8,
+                        "Campeón del doble 9": 44.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 54.2,
@@ -8582,7 +9798,8 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 48.6,
                         "Siempre doble": 43.6,
-                        "Inteligente": 48.4
+                        "Campeón del doble 6": 48.4,
+                        "Campeón del doble 9": 43.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.4,
@@ -8597,7 +9814,8 @@ var SITE_JSON = {
                         "Agachao": 44.8,
                         "Gastar la data": 44.2,
                         "Siempre doble": 45.2,
-                        "Inteligente": 52.4
+                        "Campeón del doble 6": 52.4,
+                        "Campeón del doble 9": 47.2
                     },
                     "Pasador": {
                         "Bota Gorda": 55.6,
@@ -8612,7 +9830,8 @@ var SITE_JSON = {
                         "Agachao": 48.6,
                         "Gastar la data": 46.4,
                         "Siempre doble": 41.0,
-                        "Inteligente": 49.8
+                        "Campeón del doble 6": 49.8,
+                        "Campeón del doble 9": 41.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 57.6,
@@ -8627,7 +9846,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 49.2,
                         "Siempre doble": 47.2,
-                        "Inteligente": 51.4
+                        "Campeón del doble 6": 51.4,
+                        "Campeón del doble 9": 43.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 57.4,
@@ -8642,7 +9862,8 @@ var SITE_JSON = {
                         "Agachao": 47.6,
                         "Gastar la data": 47.8,
                         "Siempre doble": 41.4,
-                        "Inteligente": 41.4
+                        "Campeón del doble 6": 41.4,
+                        "Campeón del doble 9": 44.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 59.6,
@@ -8657,7 +9878,8 @@ var SITE_JSON = {
                         "Agachao": 54.0,
                         "Gastar la data": 52.6,
                         "Siempre doble": 49.2,
-                        "Inteligente": 45.4
+                        "Campeón del doble 6": 45.4,
+                        "Campeón del doble 9": 50.4
                     },
                     "Agachao": {
                         "Bota Gorda": 67.0,
@@ -8672,7 +9894,8 @@ var SITE_JSON = {
                         "Agachao": 51.0,
                         "Gastar la data": 52.6,
                         "Siempre doble": 46.8,
-                        "Inteligente": 51.4
+                        "Campeón del doble 6": 51.4,
+                        "Campeón del doble 9": 46.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 55.2,
@@ -8687,7 +9910,8 @@ var SITE_JSON = {
                         "Agachao": 51.8,
                         "Gastar la data": 51.0,
                         "Siempre doble": 42.2,
-                        "Inteligente": 49.4
+                        "Campeón del doble 6": 49.4,
+                        "Campeón del doble 9": 45.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 65.2,
@@ -8702,13 +9926,14 @@ var SITE_JSON = {
                         "Agachao": 51.0,
                         "Gastar la data": 51.0,
                         "Siempre doble": 51.4,
-                        "Inteligente": 53.4
+                        "Campeón del doble 6": 53.4,
+                        "Campeón del doble 9": 47.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 56.6,
                         "Más Frecuente": 53.8,
                         "Aleatorio": 55.2,
-                        "Inteligente": 50.2,
+                        "Campeón del doble 6": 50.2,
                         "Repetidor": 51.6,
                         "Contador de la mesa": 47.6,
                         "Pasador": 50.2,
@@ -8717,7 +9942,23 @@ var SITE_JSON = {
                         "Bota Flaca": 54.6,
                         "Agachao": 48.6,
                         "Gastar la data": 50.6,
-                        "Siempre doble": 46.6
+                        "Siempre doble": 46.6,
+                        "Campeón del doble 9": 51.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 64.6,
+                        "Más Frecuente": 64.6,
+                        "Aleatorio": 56.0,
+                        "Campeón del doble 6": 49.0,
+                        "Repetidor": 56.6,
+                        "Contador de la mesa": 52.8,
+                        "Pasador": 58.4,
+                        "Menos Jugada": 56.4,
+                        "No gastar la data": 56.0,
+                        "Bota Flaca": 49.6,
+                        "Agachao": 54.0,
+                        "Gastar la data": 54.2,
+                        "Siempre doble": 52.2
                     }
                 }
             },
@@ -8736,7 +9977,8 @@ var SITE_JSON = {
                         "Agachao": 31.6,
                         "Gastar la data": 40.4,
                         "Siempre doble": 36.8,
-                        "Inteligente": 40.4
+                        "Campeón del doble 6": 40.4,
+                        "Campeón del doble 9": 41.6
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 60.6,
@@ -8751,7 +9993,8 @@ var SITE_JSON = {
                         "Agachao": 45.8,
                         "Gastar la data": 47.0,
                         "Siempre doble": 37.6,
-                        "Inteligente": 50.8
+                        "Campeón del doble 6": 50.8,
+                        "Campeón del doble 9": 30.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 58.4,
@@ -8766,7 +10009,8 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 49.6,
                         "Siempre doble": 39.2,
-                        "Inteligente": 44.8
+                        "Campeón del doble 6": 44.8,
+                        "Campeón del doble 9": 39.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 58.0,
@@ -8781,7 +10025,8 @@ var SITE_JSON = {
                         "Agachao": 43.2,
                         "Gastar la data": 44.8,
                         "Siempre doble": 46.8,
-                        "Inteligente": 50.0
+                        "Campeón del doble 6": 50.0,
+                        "Campeón del doble 9": 40.6
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.6,
@@ -8796,7 +10041,8 @@ var SITE_JSON = {
                         "Agachao": 50.4,
                         "Gastar la data": 49.4,
                         "Siempre doble": 45.4,
-                        "Inteligente": 48.4
+                        "Campeón del doble 6": 48.4,
+                        "Campeón del doble 9": 42.8
                     },
                     "Pasador": {
                         "Bota Gorda": 60.4,
@@ -8811,7 +10057,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 46.2,
                         "Siempre doble": 44.8,
-                        "Inteligente": 47.0
+                        "Campeón del doble 6": 47.0,
+                        "Campeón del doble 9": 39.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 62.0,
@@ -8826,7 +10073,8 @@ var SITE_JSON = {
                         "Agachao": 44.6,
                         "Gastar la data": 47.4,
                         "Siempre doble": 45.0,
-                        "Inteligente": 43.0
+                        "Campeón del doble 6": 43.0,
+                        "Campeón del doble 9": 38.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 58.8,
@@ -8841,7 +10089,8 @@ var SITE_JSON = {
                         "Agachao": 49.6,
                         "Gastar la data": 48.6,
                         "Siempre doble": 46.8,
-                        "Inteligente": 48.2
+                        "Campeón del doble 6": 48.2,
+                        "Campeón del doble 9": 45.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 57.6,
@@ -8856,7 +10105,8 @@ var SITE_JSON = {
                         "Agachao": 54.4,
                         "Gastar la data": 57.4,
                         "Siempre doble": 48.0,
-                        "Inteligente": 44.8
+                        "Campeón del doble 6": 44.8,
+                        "Campeón del doble 9": 49.4
                     },
                     "Agachao": {
                         "Bota Gorda": 63.8,
@@ -8871,7 +10121,8 @@ var SITE_JSON = {
                         "Agachao": 51.8,
                         "Gastar la data": 51.8,
                         "Siempre doble": 49.4,
-                        "Inteligente": 55.8
+                        "Campeón del doble 6": 55.8,
+                        "Campeón del doble 9": 47.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 54.4,
@@ -8886,7 +10137,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 47.0,
                         "Siempre doble": 47.2,
-                        "Inteligente": 45.8
+                        "Campeón del doble 6": 45.8,
+                        "Campeón del doble 9": 42.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 63.0,
@@ -8901,13 +10153,14 @@ var SITE_JSON = {
                         "Agachao": 51.2,
                         "Gastar la data": 52.0,
                         "Siempre doble": 52.0,
-                        "Inteligente": 49.8
+                        "Campeón del doble 6": 49.8,
+                        "Campeón del doble 9": 51.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 59.6,
                         "Más Frecuente": 49.2,
                         "Aleatorio": 55.2,
-                        "Inteligente": 51.6,
+                        "Campeón del doble 6": 51.6,
                         "Repetidor": 50.0,
                         "Contador de la mesa": 51.6,
                         "Pasador": 53.0,
@@ -8916,7 +10169,23 @@ var SITE_JSON = {
                         "Bota Flaca": 55.2,
                         "Agachao": 44.2,
                         "Gastar la data": 54.2,
-                        "Siempre doble": 50.2
+                        "Siempre doble": 50.2,
+                        "Campeón del doble 9": 56.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 58.4,
+                        "Más Frecuente": 70.0,
+                        "Aleatorio": 60.6,
+                        "Campeón del doble 6": 44.0,
+                        "Repetidor": 59.4,
+                        "Contador de la mesa": 57.2,
+                        "Pasador": 60.2,
+                        "Menos Jugada": 61.4,
+                        "No gastar la data": 54.4,
+                        "Bota Flaca": 50.6,
+                        "Agachao": 53.0,
+                        "Gastar la data": 57.2,
+                        "Siempre doble": 48.6
                     }
                 },
                 "Cooperativo": {
@@ -8933,7 +10202,8 @@ var SITE_JSON = {
                         "Agachao": 37.6,
                         "Gastar la data": 42.0,
                         "Siempre doble": 40.2,
-                        "Inteligente": 41.0
+                        "Campeón del doble 6": 41.0,
+                        "Campeón del doble 9": 40.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 56.6,
@@ -8948,7 +10218,8 @@ var SITE_JSON = {
                         "Agachao": 43.6,
                         "Gastar la data": 49.2,
                         "Siempre doble": 42.2,
-                        "Inteligente": 46.4
+                        "Campeón del doble 6": 46.4,
+                        "Campeón del doble 9": 36.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 53.8,
@@ -8963,7 +10234,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 44.2,
                         "Siempre doble": 40.6,
-                        "Inteligente": 47.0
+                        "Campeón del doble 6": 47.0,
+                        "Campeón del doble 9": 46.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 60.2,
@@ -8978,7 +10250,8 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 48.6,
                         "Siempre doble": 41.8,
-                        "Inteligente": 49.0
+                        "Campeón del doble 6": 49.0,
+                        "Campeón del doble 9": 44.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 57.8,
@@ -8993,7 +10266,8 @@ var SITE_JSON = {
                         "Agachao": 51.8,
                         "Gastar la data": 50.2,
                         "Siempre doble": 42.2,
-                        "Inteligente": 52.0
+                        "Campeón del doble 6": 52.0,
+                        "Campeón del doble 9": 43.8
                     },
                     "Pasador": {
                         "Bota Gorda": 62.0,
@@ -9008,7 +10282,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 48.4,
                         "Siempre doble": 40.8,
-                        "Inteligente": 47.8
+                        "Campeón del doble 6": 47.8,
+                        "Campeón del doble 9": 41.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 59.4,
@@ -9023,7 +10298,8 @@ var SITE_JSON = {
                         "Agachao": 43.8,
                         "Gastar la data": 45.4,
                         "Siempre doble": 40.8,
-                        "Inteligente": 47.4
+                        "Campeón del doble 6": 47.4,
+                        "Campeón del doble 9": 42.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 60.2,
@@ -9038,7 +10314,8 @@ var SITE_JSON = {
                         "Agachao": 43.4,
                         "Gastar la data": 49.6,
                         "Siempre doble": 44.4,
-                        "Inteligente": 49.6
+                        "Campeón del doble 6": 49.6,
+                        "Campeón del doble 9": 45.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 60.6,
@@ -9053,7 +10330,8 @@ var SITE_JSON = {
                         "Agachao": 55.0,
                         "Gastar la data": 57.2,
                         "Siempre doble": 47.0,
-                        "Inteligente": 47.2
+                        "Campeón del doble 6": 47.2,
+                        "Campeón del doble 9": 51.2
                     },
                     "Agachao": {
                         "Bota Gorda": 62.6,
@@ -9068,7 +10346,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 52.2,
                         "Siempre doble": 44.6,
-                        "Inteligente": 56.0
+                        "Campeón del doble 6": 56.0,
+                        "Campeón del doble 9": 41.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 53.4,
@@ -9083,7 +10362,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 51.0,
                         "Siempre doble": 44.4,
-                        "Inteligente": 49.6
+                        "Campeón del doble 6": 49.6,
+                        "Campeón del doble 9": 51.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 63.6,
@@ -9098,13 +10378,14 @@ var SITE_JSON = {
                         "Agachao": 51.2,
                         "Gastar la data": 56.0,
                         "Siempre doble": 46.0,
-                        "Inteligente": 55.2
+                        "Campeón del doble 6": 55.2,
+                        "Campeón del doble 9": 55.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 59.0,
                         "Más Frecuente": 53.6,
                         "Aleatorio": 53.0,
-                        "Inteligente": 51.2,
+                        "Campeón del doble 6": 51.2,
                         "Repetidor": 51.0,
                         "Contador de la mesa": 48.0,
                         "Pasador": 52.2,
@@ -9113,7 +10394,23 @@ var SITE_JSON = {
                         "Bota Flaca": 52.8,
                         "Agachao": 44.0,
                         "Gastar la data": 50.4,
-                        "Siempre doble": 44.8
+                        "Siempre doble": 44.8,
+                        "Campeón del doble 9": 52.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 60.0,
+                        "Más Frecuente": 64.0,
+                        "Aleatorio": 54.0,
+                        "Campeón del doble 6": 47.6,
+                        "Repetidor": 55.6,
+                        "Contador de la mesa": 56.2,
+                        "Pasador": 59.0,
+                        "Menos Jugada": 57.6,
+                        "No gastar la data": 55.0,
+                        "Bota Flaca": 48.8,
+                        "Agachao": 58.8,
+                        "Gastar la data": 49.0,
+                        "Siempre doble": 44.6
                     }
                 }
             },
@@ -9132,7 +10429,8 @@ var SITE_JSON = {
                         "Agachao": 39.6,
                         "Gastar la data": 40.0,
                         "Siempre doble": 36.8,
-                        "Inteligente": 38.2
+                        "Campeón del doble 6": 38.2,
+                        "Campeón del doble 9": 37.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 58.6,
@@ -9147,7 +10445,8 @@ var SITE_JSON = {
                         "Agachao": 43.2,
                         "Gastar la data": 52.4,
                         "Siempre doble": 39.0,
-                        "Inteligente": 46.8
+                        "Campeón del doble 6": 46.8,
+                        "Campeón del doble 9": 33.2
                     },
                     "Aleatorio": {
                         "Bota Gorda": 58.8,
@@ -9162,7 +10461,8 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 44.0,
                         "Siempre doble": 43.8,
-                        "Inteligente": 46.0
+                        "Campeón del doble 6": 46.0,
+                        "Campeón del doble 9": 42.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 55.2,
@@ -9177,7 +10477,8 @@ var SITE_JSON = {
                         "Agachao": 47.6,
                         "Gastar la data": 49.6,
                         "Siempre doble": 47.4,
-                        "Inteligente": 46.0
+                        "Campeón del doble 6": 46.0,
+                        "Campeón del doble 9": 42.0
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 56.8,
@@ -9192,7 +10493,8 @@ var SITE_JSON = {
                         "Agachao": 47.6,
                         "Gastar la data": 49.6,
                         "Siempre doble": 45.6,
-                        "Inteligente": 52.0
+                        "Campeón del doble 6": 52.0,
+                        "Campeón del doble 9": 42.4
                     },
                     "Pasador": {
                         "Bota Gorda": 58.8,
@@ -9207,7 +10509,8 @@ var SITE_JSON = {
                         "Agachao": 44.0,
                         "Gastar la data": 48.6,
                         "Siempre doble": 43.0,
-                        "Inteligente": 49.0
+                        "Campeón del doble 6": 49.0,
+                        "Campeón del doble 9": 35.400000000000006
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 60.2,
@@ -9222,7 +10525,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 46.4,
                         "Siempre doble": 39.4,
-                        "Inteligente": 49.4
+                        "Campeón del doble 6": 49.4,
+                        "Campeón del doble 9": 39.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 58.0,
@@ -9237,7 +10541,8 @@ var SITE_JSON = {
                         "Agachao": 44.8,
                         "Gastar la data": 52.4,
                         "Siempre doble": 41.8,
-                        "Inteligente": 42.8
+                        "Campeón del doble 6": 42.8,
+                        "Campeón del doble 9": 45.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 57.4,
@@ -9252,7 +10557,8 @@ var SITE_JSON = {
                         "Agachao": 60.0,
                         "Gastar la data": 55.0,
                         "Siempre doble": 49.2,
-                        "Inteligente": 43.2
+                        "Campeón del doble 6": 43.2,
+                        "Campeón del doble 9": 49.6
                     },
                     "Agachao": {
                         "Bota Gorda": 64.6,
@@ -9267,7 +10573,8 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 54.4,
                         "Siempre doble": 48.2,
-                        "Inteligente": 52.2
+                        "Campeón del doble 6": 52.2,
+                        "Campeón del doble 9": 41.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 56.8,
@@ -9282,7 +10589,8 @@ var SITE_JSON = {
                         "Agachao": 50.4,
                         "Gastar la data": 49.2,
                         "Siempre doble": 47.2,
-                        "Inteligente": 49.8
+                        "Campeón del doble 6": 49.8,
+                        "Campeón del doble 9": 40.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 67.6,
@@ -9297,13 +10605,14 @@ var SITE_JSON = {
                         "Agachao": 49.6,
                         "Gastar la data": 54.6,
                         "Siempre doble": 47.8,
-                        "Inteligente": 52.6
+                        "Campeón del doble 6": 52.6,
+                        "Campeón del doble 9": 47.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 61.8,
                         "Más Frecuente": 53.2,
                         "Aleatorio": 54.0,
-                        "Inteligente": 49.6,
+                        "Campeón del doble 6": 49.6,
                         "Repetidor": 54.0,
                         "Contador de la mesa": 48.0,
                         "Pasador": 51.0,
@@ -9312,7 +10621,23 @@ var SITE_JSON = {
                         "Bota Flaca": 56.8,
                         "Agachao": 47.8,
                         "Gastar la data": 50.2,
-                        "Siempre doble": 47.4
+                        "Siempre doble": 47.4,
+                        "Campeón del doble 9": 51.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 62.8,
+                        "Más Frecuente": 66.8,
+                        "Aleatorio": 57.6,
+                        "Campeón del doble 6": 48.6,
+                        "Repetidor": 58.0,
+                        "Contador de la mesa": 57.6,
+                        "Pasador": 64.6,
+                        "Menos Jugada": 60.4,
+                        "No gastar la data": 54.4,
+                        "Bota Flaca": 50.4,
+                        "Agachao": 58.4,
+                        "Gastar la data": 59.4,
+                        "Siempre doble": 53.0
                     }
                 },
                 "Cooperativo": {
@@ -9329,7 +10654,8 @@ var SITE_JSON = {
                         "Agachao": 39.2,
                         "Gastar la data": 40.8,
                         "Siempre doble": 39.8,
-                        "Inteligente": 37.0
+                        "Campeón del doble 6": 37.0,
+                        "Campeón del doble 9": 38.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 56.6,
@@ -9344,7 +10670,8 @@ var SITE_JSON = {
                         "Agachao": 41.2,
                         "Gastar la data": 45.2,
                         "Siempre doble": 40.4,
-                        "Inteligente": 47.4
+                        "Campeón del doble 6": 47.4,
+                        "Campeón del doble 9": 35.400000000000006
                     },
                     "Aleatorio": {
                         "Bota Gorda": 57.8,
@@ -9359,7 +10686,8 @@ var SITE_JSON = {
                         "Agachao": 44.8,
                         "Gastar la data": 44.2,
                         "Siempre doble": 42.6,
-                        "Inteligente": 48.4
+                        "Campeón del doble 6": 48.4,
+                        "Campeón del doble 9": 44.6
                     },
                     "Repetidor": {
                         "Bota Gorda": 56.2,
@@ -9374,7 +10702,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 48.8,
                         "Siempre doble": 45.6,
-                        "Inteligente": 53.6
+                        "Campeón del doble 6": 53.6,
+                        "Campeón del doble 9": 39.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.6,
@@ -9389,7 +10718,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 50.0,
                         "Siempre doble": 45.4,
-                        "Inteligente": 48.4
+                        "Campeón del doble 6": 48.4,
+                        "Campeón del doble 9": 44.2
                     },
                     "Pasador": {
                         "Bota Gorda": 55.6,
@@ -9404,7 +10734,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 51.0,
                         "Siempre doble": 44.4,
-                        "Inteligente": 49.6
+                        "Campeón del doble 6": 49.6,
+                        "Campeón del doble 9": 36.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 58.0,
@@ -9419,7 +10750,8 @@ var SITE_JSON = {
                         "Agachao": 47.6,
                         "Gastar la data": 46.0,
                         "Siempre doble": 46.6,
-                        "Inteligente": 48.8
+                        "Campeón del doble 6": 48.8,
+                        "Campeón del doble 9": 38.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 55.2,
@@ -9434,7 +10766,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 51.0,
                         "Siempre doble": 43.6,
-                        "Inteligente": 48.6
+                        "Campeón del doble 6": 48.6,
+                        "Campeón del doble 9": 45.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 62.2,
@@ -9449,7 +10782,8 @@ var SITE_JSON = {
                         "Agachao": 58.6,
                         "Gastar la data": 55.4,
                         "Siempre doble": 48.2,
-                        "Inteligente": 47.8
+                        "Campeón del doble 6": 47.8,
+                        "Campeón del doble 9": 50.0
                     },
                     "Agachao": {
                         "Bota Gorda": 59.4,
@@ -9464,7 +10798,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 50.2,
                         "Siempre doble": 45.6,
-                        "Inteligente": 55.2
+                        "Campeón del doble 6": 55.2,
+                        "Campeón del doble 9": 48.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 61.6,
@@ -9479,7 +10814,8 @@ var SITE_JSON = {
                         "Agachao": 51.6,
                         "Gastar la data": 48.6,
                         "Siempre doble": 47.0,
-                        "Inteligente": 50.8
+                        "Campeón del doble 6": 50.8,
+                        "Campeón del doble 9": 45.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 65.6,
@@ -9494,13 +10830,14 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 54.6,
                         "Siempre doble": 49.2,
-                        "Inteligente": 50.2
+                        "Campeón del doble 6": 50.2,
+                        "Campeón del doble 9": 49.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 63.0,
                         "Más Frecuente": 52.6,
                         "Aleatorio": 51.6,
-                        "Inteligente": 46.6,
+                        "Campeón del doble 6": 46.6,
                         "Repetidor": 46.4,
                         "Contador de la mesa": 51.6,
                         "Pasador": 50.4,
@@ -9509,7 +10846,23 @@ var SITE_JSON = {
                         "Bota Flaca": 52.2,
                         "Agachao": 44.8,
                         "Gastar la data": 49.2,
-                        "Siempre doble": 49.8
+                        "Siempre doble": 49.8,
+                        "Campeón del doble 9": 52.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 61.2,
+                        "Más Frecuente": 64.6,
+                        "Aleatorio": 55.4,
+                        "Campeón del doble 6": 47.8,
+                        "Repetidor": 60.6,
+                        "Contador de la mesa": 55.8,
+                        "Pasador": 63.2,
+                        "Menos Jugada": 62.0,
+                        "No gastar la data": 54.8,
+                        "Bota Flaca": 50.0,
+                        "Agachao": 51.2,
+                        "Gastar la data": 54.4,
+                        "Siempre doble": 50.8
                     }
                 }
             },
@@ -9528,7 +10881,8 @@ var SITE_JSON = {
                         "Agachao": 39.6,
                         "Gastar la data": 38.0,
                         "Siempre doble": 34.0,
-                        "Inteligente": 38.6
+                        "Campeón del doble 6": 38.6,
+                        "Campeón del doble 9": 36.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 56.4,
@@ -9543,7 +10897,8 @@ var SITE_JSON = {
                         "Agachao": 45.2,
                         "Gastar la data": 45.4,
                         "Siempre doble": 42.4,
-                        "Inteligente": 46.0
+                        "Campeón del doble 6": 46.0,
+                        "Campeón del doble 9": 34.2
                     },
                     "Aleatorio": {
                         "Bota Gorda": 56.0,
@@ -9558,7 +10913,8 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 47.0,
                         "Siempre doble": 42.8,
-                        "Inteligente": 42.4
+                        "Campeón del doble 6": 42.4,
+                        "Campeón del doble 9": 37.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 55.2,
@@ -9573,7 +10929,8 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 47.2,
                         "Siempre doble": 49.0,
-                        "Inteligente": 48.8
+                        "Campeón del doble 6": 48.8,
+                        "Campeón del doble 9": 40.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 58.0,
@@ -9588,7 +10945,8 @@ var SITE_JSON = {
                         "Agachao": 42.6,
                         "Gastar la data": 46.0,
                         "Siempre doble": 46.2,
-                        "Inteligente": 53.6
+                        "Campeón del doble 6": 53.6,
+                        "Campeón del doble 9": 47.8
                     },
                     "Pasador": {
                         "Bota Gorda": 57.6,
@@ -9603,7 +10961,8 @@ var SITE_JSON = {
                         "Agachao": 44.2,
                         "Gastar la data": 48.8,
                         "Siempre doble": 37.8,
-                        "Inteligente": 47.4
+                        "Campeón del doble 6": 47.4,
+                        "Campeón del doble 9": 41.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 59.4,
@@ -9618,7 +10977,8 @@ var SITE_JSON = {
                         "Agachao": 45.2,
                         "Gastar la data": 47.0,
                         "Siempre doble": 37.8,
-                        "Inteligente": 50.6
+                        "Campeón del doble 6": 50.6,
+                        "Campeón del doble 9": 37.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 60.0,
@@ -9633,7 +10993,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 47.8,
                         "Siempre doble": 44.2,
-                        "Inteligente": 45.6
+                        "Campeón del doble 6": 45.6,
+                        "Campeón del doble 9": 44.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 60.4,
@@ -9648,7 +11009,8 @@ var SITE_JSON = {
                         "Agachao": 57.6,
                         "Gastar la data": 57.8,
                         "Siempre doble": 51.4,
-                        "Inteligente": 46.6
+                        "Campeón del doble 6": 46.6,
+                        "Campeón del doble 9": 52.6
                     },
                     "Agachao": {
                         "Bota Gorda": 65.0,
@@ -9663,7 +11025,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 52.2,
                         "Siempre doble": 50.0,
-                        "Inteligente": 53.2
+                        "Campeón del doble 6": 53.2,
+                        "Campeón del doble 9": 43.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 58.2,
@@ -9678,7 +11041,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 48.8,
                         "Siempre doble": 42.0,
-                        "Inteligente": 45.8
+                        "Campeón del doble 6": 45.8,
+                        "Campeón del doble 9": 48.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 64.2,
@@ -9693,13 +11057,14 @@ var SITE_JSON = {
                         "Agachao": 53.2,
                         "Gastar la data": 55.2,
                         "Siempre doble": 47.6,
-                        "Inteligente": 51.6
+                        "Campeón del doble 6": 51.6,
+                        "Campeón del doble 9": 52.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 61.4,
                         "Más Frecuente": 54.0,
                         "Aleatorio": 57.6,
-                        "Inteligente": 51.4,
+                        "Campeón del doble 6": 51.4,
                         "Repetidor": 51.2,
                         "Contador de la mesa": 46.4,
                         "Pasador": 52.6,
@@ -9708,7 +11073,23 @@ var SITE_JSON = {
                         "Bota Flaca": 53.4,
                         "Agachao": 46.8,
                         "Gastar la data": 54.2,
-                        "Siempre doble": 48.4
+                        "Siempre doble": 48.4,
+                        "Campeón del doble 9": 53.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 63.8,
+                        "Más Frecuente": 65.8,
+                        "Aleatorio": 62.6,
+                        "Campeón del doble 6": 46.2,
+                        "Repetidor": 59.6,
+                        "Contador de la mesa": 52.2,
+                        "Pasador": 58.6,
+                        "Menos Jugada": 62.2,
+                        "No gastar la data": 56.0,
+                        "Bota Flaca": 47.4,
+                        "Agachao": 56.8,
+                        "Gastar la data": 51.4,
+                        "Siempre doble": 48.0
                     }
                 },
                 "Cooperativo": {
@@ -9725,7 +11106,8 @@ var SITE_JSON = {
                         "Agachao": 43.0,
                         "Gastar la data": 43.6,
                         "Siempre doble": 35.6,
-                        "Inteligente": 40.2
+                        "Campeón del doble 6": 40.2,
+                        "Campeón del doble 9": 35.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 54.8,
@@ -9740,7 +11122,8 @@ var SITE_JSON = {
                         "Agachao": 41.8,
                         "Gastar la data": 44.0,
                         "Siempre doble": 41.0,
-                        "Inteligente": 44.0
+                        "Campeón del doble 6": 44.0,
+                        "Campeón del doble 9": 36.4
                     },
                     "Aleatorio": {
                         "Bota Gorda": 58.2,
@@ -9755,7 +11138,8 @@ var SITE_JSON = {
                         "Agachao": 48.8,
                         "Gastar la data": 53.2,
                         "Siempre doble": 43.4,
-                        "Inteligente": 46.0
+                        "Campeón del doble 6": 46.0,
+                        "Campeón del doble 9": 39.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 55.6,
@@ -9770,7 +11154,8 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 51.4,
                         "Siempre doble": 47.4,
-                        "Inteligente": 50.2
+                        "Campeón del doble 6": 50.2,
+                        "Campeón del doble 9": 46.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 58.0,
@@ -9785,7 +11170,8 @@ var SITE_JSON = {
                         "Agachao": 45.4,
                         "Gastar la data": 52.4,
                         "Siempre doble": 49.2,
-                        "Inteligente": 52.8
+                        "Campeón del doble 6": 52.8,
+                        "Campeón del doble 9": 45.6
                     },
                     "Pasador": {
                         "Bota Gorda": 60.2,
@@ -9800,7 +11186,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 49.6,
                         "Siempre doble": 45.2,
-                        "Inteligente": 51.0
+                        "Campeón del doble 6": 51.0,
+                        "Campeón del doble 9": 42.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 50.4,
@@ -9815,7 +11202,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 51.8,
                         "Siempre doble": 40.0,
-                        "Inteligente": 45.4
+                        "Campeón del doble 6": 45.4,
+                        "Campeón del doble 9": 46.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 56.6,
@@ -9830,7 +11218,8 @@ var SITE_JSON = {
                         "Agachao": 48.0,
                         "Gastar la data": 53.8,
                         "Siempre doble": 46.8,
-                        "Inteligente": 47.2
+                        "Campeón del doble 6": 47.2,
+                        "Campeón del doble 9": 49.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 60.0,
@@ -9845,7 +11234,8 @@ var SITE_JSON = {
                         "Agachao": 57.4,
                         "Gastar la data": 54.2,
                         "Siempre doble": 50.2,
-                        "Inteligente": 47.6
+                        "Campeón del doble 6": 47.6,
+                        "Campeón del doble 9": 49.6
                     },
                     "Agachao": {
                         "Bota Gorda": 60.0,
@@ -9860,7 +11250,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 48.8,
                         "Siempre doble": 43.4,
-                        "Inteligente": 51.8
+                        "Campeón del doble 6": 51.8,
+                        "Campeón del doble 9": 45.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 57.8,
@@ -9875,7 +11266,8 @@ var SITE_JSON = {
                         "Agachao": 50.6,
                         "Gastar la data": 51.8,
                         "Siempre doble": 49.2,
-                        "Inteligente": 52.4
+                        "Campeón del doble 6": 52.4,
+                        "Campeón del doble 9": 51.2
                     },
                     "Siempre doble": {
                         "Bota Gorda": 63.2,
@@ -9890,13 +11282,14 @@ var SITE_JSON = {
                         "Agachao": 53.0,
                         "Gastar la data": 54.4,
                         "Siempre doble": 49.4,
-                        "Inteligente": 55.6
+                        "Campeón del doble 6": 55.6,
+                        "Campeón del doble 9": 54.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 59.8,
                         "Más Frecuente": 56.0,
                         "Aleatorio": 54.0,
-                        "Inteligente": 52.8,
+                        "Campeón del doble 6": 52.8,
                         "Repetidor": 49.8,
                         "Contador de la mesa": 47.2,
                         "Pasador": 49.0,
@@ -9905,13 +11298,29 @@ var SITE_JSON = {
                         "Bota Flaca": 52.4,
                         "Agachao": 48.2,
                         "Gastar la data": 47.6,
-                        "Siempre doble": 44.4
+                        "Siempre doble": 44.4,
+                        "Campeón del doble 9": 50.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 64.2,
+                        "Más Frecuente": 63.6,
+                        "Aleatorio": 60.2,
+                        "Campeón del doble 6": 49.4,
+                        "Repetidor": 53.6,
+                        "Contador de la mesa": 54.4,
+                        "Pasador": 57.8,
+                        "Menos Jugada": 53.2,
+                        "No gastar la data": 51.0,
+                        "Bota Flaca": 50.4,
+                        "Agachao": 54.6,
+                        "Gastar la data": 48.8,
+                        "Siempre doble": 46.0
                     }
                 }
             }
         }
     },
-    "6x6": {
+    "Doble 6": {
         "Un juego": {
             "Aleatorio": {
                 "Normal": {
@@ -9928,7 +11337,8 @@ var SITE_JSON = {
                         "Agachao": 42.4,
                         "Gastar la data": 48.2,
                         "Siempre doble": 41.2,
-                        "Inteligente": 32.8
+                        "Campeón del doble 6": 32.8,
+                        "Campeón del doble 9": 37.6
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 51.8,
@@ -9943,7 +11353,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 50.4,
                         "Siempre doble": 42.4,
-                        "Inteligente": 37.4
+                        "Campeón del doble 6": 37.4,
+                        "Campeón del doble 9": 35.599999999999994
                     },
                     "Aleatorio": {
                         "Bota Gorda": 58.8,
@@ -9958,7 +11369,8 @@ var SITE_JSON = {
                         "Agachao": 50.2,
                         "Gastar la data": 48.2,
                         "Siempre doble": 43.4,
-                        "Inteligente": 33.8
+                        "Campeón del doble 6": 33.8,
+                        "Campeón del doble 9": 38.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 51.8,
@@ -9973,7 +11385,8 @@ var SITE_JSON = {
                         "Agachao": 47.6,
                         "Gastar la data": 51.2,
                         "Siempre doble": 48.0,
-                        "Inteligente": 37.4
+                        "Campeón del doble 6": 37.4,
+                        "Campeón del doble 9": 43.6
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.4,
@@ -9988,7 +11401,8 @@ var SITE_JSON = {
                         "Agachao": 42.4,
                         "Gastar la data": 46.6,
                         "Siempre doble": 45.6,
-                        "Inteligente": 41.4
+                        "Campeón del doble 6": 41.4,
+                        "Campeón del doble 9": 46.8
                     },
                     "Pasador": {
                         "Bota Gorda": 57.4,
@@ -10003,7 +11417,8 @@ var SITE_JSON = {
                         "Agachao": 50.2,
                         "Gastar la data": 50.0,
                         "Siempre doble": 43.0,
-                        "Inteligente": 37.2
+                        "Campeón del doble 6": 37.2,
+                        "Campeón del doble 9": 39.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 58.4,
@@ -10018,7 +11433,8 @@ var SITE_JSON = {
                         "Agachao": 51.8,
                         "Gastar la data": 51.0,
                         "Siempre doble": 43.0,
-                        "Inteligente": 36.6
+                        "Campeón del doble 6": 36.6,
+                        "Campeón del doble 9": 39.2
                     },
                     "No gastar la data": {
                         "Bota Gorda": 63.8,
@@ -10033,7 +11449,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 48.4,
                         "Siempre doble": 43.6,
-                        "Inteligente": 38.2
+                        "Campeón del doble 6": 38.2,
+                        "Campeón del doble 9": 43.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 66.4,
@@ -10048,7 +11465,8 @@ var SITE_JSON = {
                         "Agachao": 51.0,
                         "Gastar la data": 50.4,
                         "Siempre doble": 49.2,
-                        "Inteligente": 37.2
+                        "Campeón del doble 6": 37.2,
+                        "Campeón del doble 9": 43.4
                     },
                     "Agachao": {
                         "Bota Gorda": 67.8,
@@ -10063,7 +11481,8 @@ var SITE_JSON = {
                         "Agachao": 59.2,
                         "Gastar la data": 60.4,
                         "Siempre doble": 54.4,
-                        "Inteligente": 39.6
+                        "Campeón del doble 6": 39.6,
+                        "Campeón del doble 9": 46.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 64.6,
@@ -10078,7 +11497,8 @@ var SITE_JSON = {
                         "Agachao": 58.0,
                         "Gastar la data": 54.8,
                         "Siempre doble": 54.6,
-                        "Inteligente": 37.0
+                        "Campeón del doble 6": 37.0,
+                        "Campeón del doble 9": 45.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 72.0,
@@ -10093,13 +11513,14 @@ var SITE_JSON = {
                         "Agachao": 63.6,
                         "Gastar la data": 66.2,
                         "Siempre doble": 60.2,
-                        "Inteligente": 46.4
+                        "Campeón del doble 6": 46.4,
+                        "Campeón del doble 9": 54.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 67.2,
                         "Más Frecuente": 62.6,
                         "Aleatorio": 66.2,
-                        "Inteligente": 43.0,
+                        "Campeón del doble 6": 43.0,
                         "Repetidor": 62.6,
                         "Contador de la mesa": 58.6,
                         "Pasador": 62.8,
@@ -10108,7 +11529,23 @@ var SITE_JSON = {
                         "Bota Flaca": 62.8,
                         "Agachao": 60.4,
                         "Gastar la data": 63.0,
-                        "Siempre doble": 53.6
+                        "Siempre doble": 53.6,
+                        "Campeón del doble 9": 46.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 62.4,
+                        "Más Frecuente": 64.4,
+                        "Aleatorio": 62.0,
+                        "Campeón del doble 6": 53.2,
+                        "Repetidor": 56.4,
+                        "Contador de la mesa": 53.2,
+                        "Pasador": 61.0,
+                        "Menos Jugada": 60.8,
+                        "No gastar la data": 57.0,
+                        "Bota Flaca": 56.6,
+                        "Agachao": 53.2,
+                        "Gastar la data": 55.0,
+                        "Siempre doble": 46.0
                     }
                 },
                 "Cooperativo": {
@@ -10125,7 +11562,8 @@ var SITE_JSON = {
                         "Agachao": 41.6,
                         "Gastar la data": 46.0,
                         "Siempre doble": 43.6,
-                        "Inteligente": 32.599999999999994
+                        "Campeón del doble 6": 32.599999999999994,
+                        "Campeón del doble 9": 41.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 51.0,
@@ -10140,7 +11578,8 @@ var SITE_JSON = {
                         "Agachao": 45.6,
                         "Gastar la data": 46.6,
                         "Siempre doble": 42.6,
-                        "Inteligente": 35.8
+                        "Campeón del doble 6": 35.8,
+                        "Campeón del doble 9": 38.6
                     },
                     "Aleatorio": {
                         "Bota Gorda": 59.2,
@@ -10155,7 +11594,8 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 48.2,
                         "Siempre doble": 41.6,
-                        "Inteligente": 37.0
+                        "Campeón del doble 6": 37.0,
+                        "Campeón del doble 9": 41.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 51.0,
@@ -10170,7 +11610,8 @@ var SITE_JSON = {
                         "Agachao": 45.2,
                         "Gastar la data": 49.6,
                         "Siempre doble": 43.0,
-                        "Inteligente": 40.2
+                        "Campeón del doble 6": 40.2,
+                        "Campeón del doble 9": 46.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 58.4,
@@ -10185,7 +11626,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 54.4,
                         "Siempre doble": 43.6,
-                        "Inteligente": 39.4
+                        "Campeón del doble 6": 39.4,
+                        "Campeón del doble 9": 42.0
                     },
                     "Pasador": {
                         "Bota Gorda": 57.2,
@@ -10200,7 +11642,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 52.2,
                         "Siempre doble": 41.6,
-                        "Inteligente": 38.8
+                        "Campeón del doble 6": 38.8,
+                        "Campeón del doble 9": 40.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 59.2,
@@ -10215,7 +11658,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 50.8,
                         "Siempre doble": 46.2,
-                        "Inteligente": 31.0
+                        "Campeón del doble 6": 31.0,
+                        "Campeón del doble 9": 39.2
                     },
                     "No gastar la data": {
                         "Bota Gorda": 58.8,
@@ -10230,7 +11674,8 @@ var SITE_JSON = {
                         "Agachao": 52.6,
                         "Gastar la data": 50.0,
                         "Siempre doble": 48.6,
-                        "Inteligente": 33.2
+                        "Campeón del doble 6": 33.2,
+                        "Campeón del doble 9": 42.8
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 61.6,
@@ -10245,7 +11690,8 @@ var SITE_JSON = {
                         "Agachao": 53.4,
                         "Gastar la data": 54.2,
                         "Siempre doble": 45.8,
-                        "Inteligente": 35.8
+                        "Campeón del doble 6": 35.8,
+                        "Campeón del doble 9": 45.2
                     },
                     "Agachao": {
                         "Bota Gorda": 62.4,
@@ -10260,7 +11706,8 @@ var SITE_JSON = {
                         "Agachao": 56.2,
                         "Gastar la data": 63.8,
                         "Siempre doble": 51.4,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 45.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.8,
@@ -10275,7 +11722,8 @@ var SITE_JSON = {
                         "Agachao": 59.4,
                         "Gastar la data": 58.4,
                         "Siempre doble": 54.8,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 48.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 66.0,
@@ -10290,13 +11738,14 @@ var SITE_JSON = {
                         "Agachao": 61.2,
                         "Gastar la data": 61.8,
                         "Siempre doble": 55.2,
-                        "Inteligente": 42.0
+                        "Campeón del doble 6": 42.0,
+                        "Campeón del doble 9": 52.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 67.4,
                         "Más Frecuente": 64.2,
                         "Aleatorio": 63.0,
-                        "Inteligente": 42.0,
+                        "Campeón del doble 6": 42.0,
                         "Repetidor": 59.8,
                         "Contador de la mesa": 60.6,
                         "Pasador": 61.2,
@@ -10305,7 +11754,23 @@ var SITE_JSON = {
                         "Bota Flaca": 64.2,
                         "Agachao": 60.0,
                         "Gastar la data": 60.0,
-                        "Siempre doble": 58.0
+                        "Siempre doble": 58.0,
+                        "Campeón del doble 9": 46.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 59.0,
+                        "Más Frecuente": 61.4,
+                        "Aleatorio": 58.2,
+                        "Campeón del doble 6": 53.4,
+                        "Repetidor": 53.2,
+                        "Contador de la mesa": 58.0,
+                        "Pasador": 59.8,
+                        "Menos Jugada": 60.8,
+                        "No gastar la data": 57.2,
+                        "Bota Flaca": 54.8,
+                        "Agachao": 54.8,
+                        "Gastar la data": 51.2,
+                        "Siempre doble": 47.6
                     }
                 }
             },
@@ -10324,7 +11789,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 45.4,
                         "Siempre doble": 39.6,
-                        "Inteligente": 35.0
+                        "Campeón del doble 6": 35.0,
+                        "Campeón del doble 9": 34.599999999999994
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 57.8,
@@ -10339,7 +11805,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 50.0,
                         "Siempre doble": 42.0,
-                        "Inteligente": 33.599999999999994
+                        "Campeón del doble 6": 33.599999999999994,
+                        "Campeón del doble 9": 36.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 60.6,
@@ -10354,7 +11821,8 @@ var SITE_JSON = {
                         "Agachao": 47.6,
                         "Gastar la data": 49.2,
                         "Siempre doble": 46.2,
-                        "Inteligente": 38.4
+                        "Campeón del doble 6": 38.4,
+                        "Campeón del doble 9": 39.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 52.8,
@@ -10369,7 +11837,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 47.6,
                         "Siempre doble": 43.8,
-                        "Inteligente": 37.8
+                        "Campeón del doble 6": 37.8,
+                        "Campeón del doble 9": 39.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 56.0,
@@ -10384,7 +11853,8 @@ var SITE_JSON = {
                         "Agachao": 49.6,
                         "Gastar la data": 53.0,
                         "Siempre doble": 48.0,
-                        "Inteligente": 45.0
+                        "Campeón del doble 6": 45.0,
+                        "Campeón del doble 9": 45.0
                     },
                     "Pasador": {
                         "Bota Gorda": 57.6,
@@ -10399,7 +11869,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 50.0,
                         "Siempre doble": 48.2,
-                        "Inteligente": 39.4
+                        "Campeón del doble 6": 39.4,
+                        "Campeón del doble 9": 38.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 57.0,
@@ -10414,7 +11885,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 48.6,
                         "Siempre doble": 44.6,
-                        "Inteligente": 36.2
+                        "Campeón del doble 6": 36.2,
+                        "Campeón del doble 9": 40.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 57.2,
@@ -10429,7 +11901,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 50.4,
                         "Siempre doble": 44.8,
-                        "Inteligente": 35.8
+                        "Campeón del doble 6": 35.8,
+                        "Campeón del doble 9": 41.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 64.6,
@@ -10444,7 +11917,8 @@ var SITE_JSON = {
                         "Agachao": 55.2,
                         "Gastar la data": 55.8,
                         "Siempre doble": 52.4,
-                        "Inteligente": 36.0
+                        "Campeón del doble 6": 36.0,
+                        "Campeón del doble 9": 48.6
                     },
                     "Agachao": {
                         "Bota Gorda": 68.4,
@@ -10459,7 +11933,8 @@ var SITE_JSON = {
                         "Agachao": 60.4,
                         "Gastar la data": 56.4,
                         "Siempre doble": 52.2,
-                        "Inteligente": 42.8
+                        "Campeón del doble 6": 42.8,
+                        "Campeón del doble 9": 47.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 70.4,
@@ -10474,7 +11949,8 @@ var SITE_JSON = {
                         "Agachao": 52.4,
                         "Gastar la data": 58.6,
                         "Siempre doble": 47.6,
-                        "Inteligente": 44.4
+                        "Campeón del doble 6": 44.4,
+                        "Campeón del doble 9": 45.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 69.4,
@@ -10489,13 +11965,14 @@ var SITE_JSON = {
                         "Agachao": 62.8,
                         "Gastar la data": 62.8,
                         "Siempre doble": 60.0,
-                        "Inteligente": 51.0
+                        "Campeón del doble 6": 51.0,
+                        "Campeón del doble 9": 52.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 65.0,
                         "Más Frecuente": 66.4,
                         "Aleatorio": 61.6,
-                        "Inteligente": 42.4,
+                        "Campeón del doble 6": 42.4,
                         "Repetidor": 62.2,
                         "Contador de la mesa": 55.0,
                         "Pasador": 60.6,
@@ -10504,7 +11981,23 @@ var SITE_JSON = {
                         "Bota Flaca": 64.0,
                         "Agachao": 57.2,
                         "Gastar la data": 55.6,
-                        "Siempre doble": 49.0
+                        "Siempre doble": 49.0,
+                        "Campeón del doble 9": 51.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 65.4,
+                        "Más Frecuente": 63.2,
+                        "Aleatorio": 60.2,
+                        "Campeón del doble 6": 48.8,
+                        "Repetidor": 60.2,
+                        "Contador de la mesa": 55.0,
+                        "Pasador": 62.0,
+                        "Menos Jugada": 59.2,
+                        "No gastar la data": 58.6,
+                        "Bota Flaca": 51.4,
+                        "Agachao": 52.8,
+                        "Gastar la data": 55.0,
+                        "Siempre doble": 47.6
                     }
                 },
                 "Cooperativo": {
@@ -10521,7 +12014,8 @@ var SITE_JSON = {
                         "Agachao": 44.2,
                         "Gastar la data": 48.6,
                         "Siempre doble": 43.0,
-                        "Inteligente": 35.2
+                        "Campeón del doble 6": 35.2,
+                        "Campeón del doble 9": 33.400000000000006
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 54.2,
@@ -10536,7 +12030,8 @@ var SITE_JSON = {
                         "Agachao": 42.4,
                         "Gastar la data": 47.0,
                         "Siempre doble": 41.4,
-                        "Inteligente": 37.8
+                        "Campeón del doble 6": 37.8,
+                        "Campeón del doble 9": 40.4
                     },
                     "Aleatorio": {
                         "Bota Gorda": 56.6,
@@ -10551,7 +12046,8 @@ var SITE_JSON = {
                         "Agachao": 50.6,
                         "Gastar la data": 52.0,
                         "Siempre doble": 45.2,
-                        "Inteligente": 38.4
+                        "Campeón del doble 6": 38.4,
+                        "Campeón del doble 9": 43.6
                     },
                     "Repetidor": {
                         "Bota Gorda": 56.2,
@@ -10566,7 +12062,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 50.6,
                         "Siempre doble": 43.0,
-                        "Inteligente": 48.4
+                        "Campeón del doble 6": 48.4,
+                        "Campeón del doble 9": 39.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 54.4,
@@ -10581,7 +12078,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 49.4,
                         "Siempre doble": 45.6,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 49.4
                     },
                     "Pasador": {
                         "Bota Gorda": 54.4,
@@ -10596,7 +12094,8 @@ var SITE_JSON = {
                         "Agachao": 50.2,
                         "Gastar la data": 47.8,
                         "Siempre doble": 45.6,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 40.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 57.2,
@@ -10611,7 +12110,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 50.0,
                         "Siempre doble": 44.6,
-                        "Inteligente": 39.6
+                        "Campeón del doble 6": 39.6,
+                        "Campeón del doble 9": 41.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 62.2,
@@ -10626,7 +12126,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 50.8,
                         "Siempre doble": 44.0,
-                        "Inteligente": 41.8
+                        "Campeón del doble 6": 41.8,
+                        "Campeón del doble 9": 47.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 60.2,
@@ -10641,7 +12142,8 @@ var SITE_JSON = {
                         "Agachao": 53.8,
                         "Gastar la data": 59.0,
                         "Siempre doble": 47.0,
-                        "Inteligente": 36.4
+                        "Campeón del doble 6": 36.4,
+                        "Campeón del doble 9": 43.8
                     },
                     "Agachao": {
                         "Bota Gorda": 65.6,
@@ -10656,7 +12158,8 @@ var SITE_JSON = {
                         "Agachao": 56.8,
                         "Gastar la data": 59.2,
                         "Siempre doble": 49.4,
-                        "Inteligente": 43.2
+                        "Campeón del doble 6": 43.2,
+                        "Campeón del doble 9": 46.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 63.8,
@@ -10671,7 +12174,8 @@ var SITE_JSON = {
                         "Agachao": 56.2,
                         "Gastar la data": 52.4,
                         "Siempre doble": 53.8,
-                        "Inteligente": 40.6
+                        "Campeón del doble 6": 40.6,
+                        "Campeón del doble 9": 46.4
                     },
                     "Siempre doble": {
                         "Bota Gorda": 70.4,
@@ -10686,13 +12190,14 @@ var SITE_JSON = {
                         "Agachao": 57.6,
                         "Gastar la data": 62.2,
                         "Siempre doble": 57.6,
-                        "Inteligente": 41.2
+                        "Campeón del doble 6": 41.2,
+                        "Campeón del doble 9": 50.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 64.8,
                         "Más Frecuente": 62.2,
                         "Aleatorio": 61.6,
-                        "Inteligente": 44.0,
+                        "Campeón del doble 6": 44.0,
                         "Repetidor": 51.6,
                         "Contador de la mesa": 60.0,
                         "Pasador": 60.0,
@@ -10701,7 +12206,23 @@ var SITE_JSON = {
                         "Bota Flaca": 63.6,
                         "Agachao": 56.8,
                         "Gastar la data": 59.4,
-                        "Siempre doble": 58.8
+                        "Siempre doble": 58.8,
+                        "Campeón del doble 9": 49.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 66.6,
+                        "Más Frecuente": 59.6,
+                        "Aleatorio": 56.4,
+                        "Campeón del doble 6": 51.0,
+                        "Repetidor": 60.2,
+                        "Contador de la mesa": 50.6,
+                        "Pasador": 59.6,
+                        "Menos Jugada": 58.2,
+                        "No gastar la data": 52.4,
+                        "Bota Flaca": 56.2,
+                        "Agachao": 53.4,
+                        "Gastar la data": 53.6,
+                        "Siempre doble": 49.2
                     }
                 }
             },
@@ -10720,7 +12241,8 @@ var SITE_JSON = {
                         "Agachao": 44.8,
                         "Gastar la data": 44.2,
                         "Siempre doble": 43.6,
-                        "Inteligente": 34.0
+                        "Campeón del doble 6": 34.0,
+                        "Campeón del doble 9": 41.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 52.6,
@@ -10735,7 +12257,8 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 50.2,
                         "Siempre doble": 44.6,
-                        "Inteligente": 39.6
+                        "Campeón del doble 6": 39.6,
+                        "Campeón del doble 9": 39.6
                     },
                     "Aleatorio": {
                         "Bota Gorda": 57.0,
@@ -10750,7 +12273,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 50.0,
                         "Siempre doble": 45.4,
-                        "Inteligente": 42.0
+                        "Campeón del doble 6": 42.0,
+                        "Campeón del doble 9": 40.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 53.0,
@@ -10765,7 +12289,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 49.8,
                         "Siempre doble": 42.4,
-                        "Inteligente": 46.8
+                        "Campeón del doble 6": 46.8,
+                        "Campeón del doble 9": 43.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 53.4,
@@ -10780,7 +12305,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 52.4,
                         "Siempre doble": 48.4,
-                        "Inteligente": 42.4
+                        "Campeón del doble 6": 42.4,
+                        "Campeón del doble 9": 47.4
                     },
                     "Pasador": {
                         "Bota Gorda": 56.6,
@@ -10795,7 +12321,8 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 47.8,
                         "Siempre doble": 43.4,
-                        "Inteligente": 40.2
+                        "Campeón del doble 6": 40.2,
+                        "Campeón del doble 9": 40.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 56.4,
@@ -10810,7 +12337,8 @@ var SITE_JSON = {
                         "Agachao": 45.6,
                         "Gastar la data": 46.0,
                         "Siempre doble": 43.8,
-                        "Inteligente": 37.0
+                        "Campeón del doble 6": 37.0,
+                        "Campeón del doble 9": 42.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 58.0,
@@ -10825,7 +12353,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 55.2,
                         "Siempre doble": 46.8,
-                        "Inteligente": 34.400000000000006
+                        "Campeón del doble 6": 34.400000000000006,
+                        "Campeón del doble 9": 45.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 64.2,
@@ -10840,7 +12369,8 @@ var SITE_JSON = {
                         "Agachao": 50.6,
                         "Gastar la data": 54.8,
                         "Siempre doble": 43.0,
-                        "Inteligente": 39.2
+                        "Campeón del doble 6": 39.2,
+                        "Campeón del doble 9": 49.2
                     },
                     "Agachao": {
                         "Bota Gorda": 65.4,
@@ -10855,7 +12385,8 @@ var SITE_JSON = {
                         "Agachao": 57.0,
                         "Gastar la data": 52.0,
                         "Siempre doble": 46.6,
-                        "Inteligente": 40.8
+                        "Campeón del doble 6": 40.8,
+                        "Campeón del doble 9": 46.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.4,
@@ -10870,7 +12401,8 @@ var SITE_JSON = {
                         "Agachao": 55.8,
                         "Gastar la data": 51.8,
                         "Siempre doble": 49.0,
-                        "Inteligente": 43.4
+                        "Campeón del doble 6": 43.4,
+                        "Campeón del doble 9": 50.2
                     },
                     "Siempre doble": {
                         "Bota Gorda": 65.2,
@@ -10885,13 +12417,14 @@ var SITE_JSON = {
                         "Agachao": 61.8,
                         "Gastar la data": 59.0,
                         "Siempre doble": 55.2,
-                        "Inteligente": 45.0
+                        "Campeón del doble 6": 45.0,
+                        "Campeón del doble 9": 53.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 66.0,
                         "Más Frecuente": 60.4,
                         "Aleatorio": 58.0,
-                        "Inteligente": 46.6,
+                        "Campeón del doble 6": 46.6,
                         "Repetidor": 53.2,
                         "Contador de la mesa": 57.6,
                         "Pasador": 59.8,
@@ -10900,7 +12433,23 @@ var SITE_JSON = {
                         "Bota Flaca": 60.8,
                         "Agachao": 59.2,
                         "Gastar la data": 56.6,
-                        "Siempre doble": 55.0
+                        "Siempre doble": 55.0,
+                        "Campeón del doble 9": 51.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 58.8,
+                        "Más Frecuente": 60.4,
+                        "Aleatorio": 60.0,
+                        "Campeón del doble 6": 48.8,
+                        "Repetidor": 56.2,
+                        "Contador de la mesa": 52.6,
+                        "Pasador": 59.4,
+                        "Menos Jugada": 57.2,
+                        "No gastar la data": 55.0,
+                        "Bota Flaca": 50.8,
+                        "Agachao": 53.4,
+                        "Gastar la data": 49.8,
+                        "Siempre doble": 47.0
                     }
                 },
                 "Cooperativo": {
@@ -10917,7 +12466,8 @@ var SITE_JSON = {
                         "Agachao": 44.2,
                         "Gastar la data": 47.6,
                         "Siempre doble": 42.0,
-                        "Inteligente": 42.2
+                        "Campeón del doble 6": 42.2,
+                        "Campeón del doble 9": 40.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 53.0,
@@ -10932,7 +12482,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 46.4,
                         "Siempre doble": 37.4,
-                        "Inteligente": 38.2
+                        "Campeón del doble 6": 38.2,
+                        "Campeón del doble 9": 37.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 56.8,
@@ -10947,7 +12498,8 @@ var SITE_JSON = {
                         "Agachao": 50.4,
                         "Gastar la data": 46.6,
                         "Siempre doble": 44.4,
-                        "Inteligente": 43.8
+                        "Campeón del doble 6": 43.8,
+                        "Campeón del doble 9": 41.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 52.8,
@@ -10962,7 +12514,8 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 48.4,
                         "Siempre doble": 47.4,
-                        "Inteligente": 43.4
+                        "Campeón del doble 6": 43.4,
+                        "Campeón del doble 9": 43.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.0,
@@ -10977,7 +12530,8 @@ var SITE_JSON = {
                         "Agachao": 45.2,
                         "Gastar la data": 52.2,
                         "Siempre doble": 45.2,
-                        "Inteligente": 41.4
+                        "Campeón del doble 6": 41.4,
+                        "Campeón del doble 9": 48.6
                     },
                     "Pasador": {
                         "Bota Gorda": 56.2,
@@ -10992,7 +12546,8 @@ var SITE_JSON = {
                         "Agachao": 43.6,
                         "Gastar la data": 49.4,
                         "Siempre doble": 41.4,
-                        "Inteligente": 39.4
+                        "Campeón del doble 6": 39.4,
+                        "Campeón del doble 9": 45.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 52.6,
@@ -11007,7 +12562,8 @@ var SITE_JSON = {
                         "Agachao": 53.2,
                         "Gastar la data": 47.2,
                         "Siempre doble": 43.0,
-                        "Inteligente": 37.6
+                        "Campeón del doble 6": 37.6,
+                        "Campeón del doble 9": 44.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 57.4,
@@ -11022,7 +12578,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 52.8,
                         "Siempre doble": 44.8,
-                        "Inteligente": 41.2
+                        "Campeón del doble 6": 41.2,
+                        "Campeón del doble 9": 46.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 58.2,
@@ -11037,7 +12594,8 @@ var SITE_JSON = {
                         "Agachao": 51.8,
                         "Gastar la data": 52.8,
                         "Siempre doble": 45.2,
-                        "Inteligente": 38.2
+                        "Campeón del doble 6": 38.2,
+                        "Campeón del doble 9": 45.0
                     },
                     "Agachao": {
                         "Bota Gorda": 59.4,
@@ -11052,7 +12610,8 @@ var SITE_JSON = {
                         "Agachao": 55.8,
                         "Gastar la data": 58.2,
                         "Siempre doble": 45.4,
-                        "Inteligente": 47.4
+                        "Campeón del doble 6": 47.4,
+                        "Campeón del doble 9": 51.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.6,
@@ -11067,7 +12626,8 @@ var SITE_JSON = {
                         "Agachao": 51.0,
                         "Gastar la data": 51.6,
                         "Siempre doble": 49.4,
-                        "Inteligente": 49.4
+                        "Campeón del doble 6": 49.4,
+                        "Campeón del doble 9": 51.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 64.4,
@@ -11082,13 +12642,14 @@ var SITE_JSON = {
                         "Agachao": 56.6,
                         "Gastar la data": 59.8,
                         "Siempre doble": 51.0,
-                        "Inteligente": 47.4
+                        "Campeón del doble 6": 47.4,
+                        "Campeón del doble 9": 53.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 57.8,
                         "Más Frecuente": 61.8,
                         "Aleatorio": 56.2,
-                        "Inteligente": 45.6,
+                        "Campeón del doble 6": 45.6,
                         "Repetidor": 56.6,
                         "Contador de la mesa": 58.6,
                         "Pasador": 60.6,
@@ -11097,7 +12658,23 @@ var SITE_JSON = {
                         "Bota Flaca": 61.8,
                         "Agachao": 52.6,
                         "Gastar la data": 50.6,
-                        "Siempre doble": 52.6
+                        "Siempre doble": 52.6,
+                        "Campeón del doble 9": 53.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 59.2,
+                        "Más Frecuente": 62.2,
+                        "Aleatorio": 58.2,
+                        "Campeón del doble 6": 47.0,
+                        "Repetidor": 56.6,
+                        "Contador de la mesa": 51.4,
+                        "Pasador": 55.0,
+                        "Menos Jugada": 56.0,
+                        "No gastar la data": 53.6,
+                        "Bota Flaca": 55.0,
+                        "Agachao": 49.0,
+                        "Gastar la data": 48.4,
+                        "Siempre doble": 46.2
                     }
                 }
             },
@@ -11116,7 +12693,8 @@ var SITE_JSON = {
                         "Agachao": 48.0,
                         "Gastar la data": 52.0,
                         "Siempre doble": 43.6,
-                        "Inteligente": 33.400000000000006
+                        "Campeón del doble 6": 33.400000000000006,
+                        "Campeón del doble 9": 35.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 61.2,
@@ -11131,7 +12709,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 48.6,
                         "Siempre doble": 50.0,
-                        "Inteligente": 34.0
+                        "Campeón del doble 6": 34.0,
+                        "Campeón del doble 9": 34.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 62.4,
@@ -11146,7 +12725,8 @@ var SITE_JSON = {
                         "Agachao": 48.8,
                         "Gastar la data": 59.0,
                         "Siempre doble": 49.6,
-                        "Inteligente": 37.2
+                        "Campeón del doble 6": 37.2,
+                        "Campeón del doble 9": 39.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 59.4,
@@ -11161,7 +12741,8 @@ var SITE_JSON = {
                         "Agachao": 52.4,
                         "Gastar la data": 47.8,
                         "Siempre doble": 47.0,
-                        "Inteligente": 46.8
+                        "Campeón del doble 6": 46.8,
+                        "Campeón del doble 9": 42.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 57.6,
@@ -11176,7 +12757,8 @@ var SITE_JSON = {
                         "Agachao": 45.8,
                         "Gastar la data": 50.8,
                         "Siempre doble": 47.2,
-                        "Inteligente": 41.2
+                        "Campeón del doble 6": 41.2,
+                        "Campeón del doble 9": 42.2
                     },
                     "Pasador": {
                         "Bota Gorda": 61.0,
@@ -11191,7 +12773,8 @@ var SITE_JSON = {
                         "Agachao": 53.4,
                         "Gastar la data": 55.8,
                         "Siempre doble": 44.2,
-                        "Inteligente": 43.8
+                        "Campeón del doble 6": 43.8,
+                        "Campeón del doble 9": 40.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 63.2,
@@ -11206,7 +12789,8 @@ var SITE_JSON = {
                         "Agachao": 53.4,
                         "Gastar la data": 51.8,
                         "Siempre doble": 52.8,
-                        "Inteligente": 39.6
+                        "Campeón del doble 6": 39.6,
+                        "Campeón del doble 9": 41.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 63.0,
@@ -11221,7 +12805,8 @@ var SITE_JSON = {
                         "Agachao": 56.0,
                         "Gastar la data": 54.6,
                         "Siempre doble": 52.6,
-                        "Inteligente": 39.0
+                        "Campeón del doble 6": 39.0,
+                        "Campeón del doble 9": 43.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 66.4,
@@ -11236,7 +12821,8 @@ var SITE_JSON = {
                         "Agachao": 58.6,
                         "Gastar la data": 62.2,
                         "Siempre doble": 50.8,
-                        "Inteligente": 39.2
+                        "Campeón del doble 6": 39.2,
+                        "Campeón del doble 9": 40.2
                     },
                     "Agachao": {
                         "Bota Gorda": 70.8,
@@ -11251,7 +12837,8 @@ var SITE_JSON = {
                         "Agachao": 58.4,
                         "Gastar la data": 59.4,
                         "Siempre doble": 54.8,
-                        "Inteligente": 43.2
+                        "Campeón del doble 6": 43.2,
+                        "Campeón del doble 9": 45.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.6,
@@ -11266,7 +12853,8 @@ var SITE_JSON = {
                         "Agachao": 55.2,
                         "Gastar la data": 54.0,
                         "Siempre doble": 54.0,
-                        "Inteligente": 38.0
+                        "Campeón del doble 6": 38.0,
+                        "Campeón del doble 9": 45.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 71.6,
@@ -11281,13 +12869,14 @@ var SITE_JSON = {
                         "Agachao": 59.0,
                         "Gastar la data": 56.2,
                         "Siempre doble": 52.8,
-                        "Inteligente": 43.6
+                        "Campeón del doble 6": 43.6,
+                        "Campeón del doble 9": 49.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 66.6,
                         "Más Frecuente": 66.0,
                         "Aleatorio": 62.8,
-                        "Inteligente": 43.2,
+                        "Campeón del doble 6": 43.2,
                         "Repetidor": 53.2,
                         "Contador de la mesa": 58.8,
                         "Pasador": 56.2,
@@ -11296,7 +12885,23 @@ var SITE_JSON = {
                         "Bota Flaca": 60.8,
                         "Agachao": 56.8,
                         "Gastar la data": 62.0,
-                        "Siempre doble": 56.4
+                        "Siempre doble": 56.4,
+                        "Campeón del doble 9": 45.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 65.0,
+                        "Más Frecuente": 66.0,
+                        "Aleatorio": 61.0,
+                        "Campeón del doble 6": 54.2,
+                        "Repetidor": 57.2,
+                        "Contador de la mesa": 57.8,
+                        "Pasador": 59.6,
+                        "Menos Jugada": 59.0,
+                        "No gastar la data": 56.8,
+                        "Bota Flaca": 59.8,
+                        "Agachao": 54.6,
+                        "Gastar la data": 54.2,
+                        "Siempre doble": 50.8
                     }
                 },
                 "Cooperativo": {
@@ -11313,7 +12918,8 @@ var SITE_JSON = {
                         "Agachao": 51.0,
                         "Gastar la data": 55.2,
                         "Siempre doble": 50.0,
-                        "Inteligente": 34.8
+                        "Campeón del doble 6": 34.8,
+                        "Campeón del doble 9": 36.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 59.0,
@@ -11328,7 +12934,8 @@ var SITE_JSON = {
                         "Agachao": 51.6,
                         "Gastar la data": 50.6,
                         "Siempre doble": 46.2,
-                        "Inteligente": 38.0
+                        "Campeón del doble 6": 38.0,
+                        "Campeón del doble 9": 37.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 58.2,
@@ -11343,7 +12950,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 53.8,
                         "Siempre doble": 48.4,
-                        "Inteligente": 37.8
+                        "Campeón del doble 6": 37.8,
+                        "Campeón del doble 9": 39.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 55.2,
@@ -11358,7 +12966,8 @@ var SITE_JSON = {
                         "Agachao": 50.2,
                         "Gastar la data": 50.2,
                         "Siempre doble": 47.6,
-                        "Inteligente": 44.2
+                        "Campeón del doble 6": 44.2,
+                        "Campeón del doble 9": 39.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 58.8,
@@ -11373,7 +12982,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 50.6,
                         "Siempre doble": 48.4,
-                        "Inteligente": 41.8
+                        "Campeón del doble 6": 41.8,
+                        "Campeón del doble 9": 46.4
                     },
                     "Pasador": {
                         "Bota Gorda": 55.6,
@@ -11388,7 +12998,8 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 51.6,
                         "Siempre doble": 47.4,
-                        "Inteligente": 41.0
+                        "Campeón del doble 6": 41.0,
+                        "Campeón del doble 9": 45.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 58.0,
@@ -11403,7 +13014,8 @@ var SITE_JSON = {
                         "Agachao": 56.4,
                         "Gastar la data": 50.8,
                         "Siempre doble": 52.6,
-                        "Inteligente": 37.6
+                        "Campeón del doble 6": 37.6,
+                        "Campeón del doble 9": 41.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 61.8,
@@ -11418,7 +13030,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 54.2,
                         "Siempre doble": 47.4,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 44.8
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 63.8,
@@ -11433,7 +13046,8 @@ var SITE_JSON = {
                         "Agachao": 56.4,
                         "Gastar la data": 54.8,
                         "Siempre doble": 49.8,
-                        "Inteligente": 36.2
+                        "Campeón del doble 6": 36.2,
+                        "Campeón del doble 9": 43.6
                     },
                     "Agachao": {
                         "Bota Gorda": 61.8,
@@ -11448,7 +13062,8 @@ var SITE_JSON = {
                         "Agachao": 56.8,
                         "Gastar la data": 57.2,
                         "Siempre doble": 51.4,
-                        "Inteligente": 44.2
+                        "Campeón del doble 6": 44.2,
+                        "Campeón del doble 9": 42.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 67.6,
@@ -11463,7 +13078,8 @@ var SITE_JSON = {
                         "Agachao": 57.0,
                         "Gastar la data": 56.4,
                         "Siempre doble": 50.8,
-                        "Inteligente": 42.0
+                        "Campeón del doble 6": 42.0,
+                        "Campeón del doble 9": 41.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 67.2,
@@ -11478,13 +13094,14 @@ var SITE_JSON = {
                         "Agachao": 62.0,
                         "Gastar la data": 58.4,
                         "Siempre doble": 56.2,
-                        "Inteligente": 49.4
+                        "Campeón del doble 6": 49.4,
+                        "Campeón del doble 9": 43.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 65.2,
                         "Más Frecuente": 62.0,
                         "Aleatorio": 62.2,
-                        "Inteligente": 43.6,
+                        "Campeón del doble 6": 43.6,
                         "Repetidor": 55.8,
                         "Contador de la mesa": 58.2,
                         "Pasador": 59.0,
@@ -11493,7 +13110,23 @@ var SITE_JSON = {
                         "Bota Flaca": 63.8,
                         "Agachao": 55.8,
                         "Gastar la data": 58.0,
-                        "Siempre doble": 50.6
+                        "Siempre doble": 50.6,
+                        "Campeón del doble 9": 47.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 63.2,
+                        "Más Frecuente": 63.0,
+                        "Aleatorio": 60.8,
+                        "Campeón del doble 6": 52.4,
+                        "Repetidor": 60.2,
+                        "Contador de la mesa": 53.6,
+                        "Pasador": 54.4,
+                        "Menos Jugada": 58.2,
+                        "No gastar la data": 55.2,
+                        "Bota Flaca": 56.4,
+                        "Agachao": 57.2,
+                        "Gastar la data": 59.0,
+                        "Siempre doble": 56.8
                     }
                 }
             },
@@ -11512,7 +13145,8 @@ var SITE_JSON = {
                         "Agachao": 41.4,
                         "Gastar la data": 47.4,
                         "Siempre doble": 40.8,
-                        "Inteligente": 35.400000000000006
+                        "Campeón del doble 6": 35.400000000000006,
+                        "Campeón del doble 9": 40.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 50.0,
@@ -11527,7 +13161,8 @@ var SITE_JSON = {
                         "Agachao": 44.0,
                         "Gastar la data": 48.8,
                         "Siempre doble": 40.6,
-                        "Inteligente": 35.2
+                        "Campeón del doble 6": 35.2,
+                        "Campeón del doble 9": 39.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 51.2,
@@ -11542,7 +13177,8 @@ var SITE_JSON = {
                         "Agachao": 44.0,
                         "Gastar la data": 52.2,
                         "Siempre doble": 40.8,
-                        "Inteligente": 38.0
+                        "Campeón del doble 6": 38.0,
+                        "Campeón del doble 9": 44.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 49.8,
@@ -11557,7 +13193,8 @@ var SITE_JSON = {
                         "Agachao": 52.4,
                         "Gastar la data": 46.6,
                         "Siempre doble": 42.6,
-                        "Inteligente": 40.8
+                        "Campeón del doble 6": 40.8,
+                        "Campeón del doble 9": 43.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 57.2,
@@ -11572,7 +13209,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 50.6,
                         "Siempre doble": 43.2,
-                        "Inteligente": 45.0
+                        "Campeón del doble 6": 45.0,
+                        "Campeón del doble 9": 45.8
                     },
                     "Pasador": {
                         "Bota Gorda": 58.4,
@@ -11587,7 +13225,8 @@ var SITE_JSON = {
                         "Agachao": 45.8,
                         "Gastar la data": 53.4,
                         "Siempre doble": 46.4,
-                        "Inteligente": 43.2
+                        "Campeón del doble 6": 43.2,
+                        "Campeón del doble 9": 46.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 57.8,
@@ -11602,7 +13241,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 46.6,
                         "Siempre doble": 41.2,
-                        "Inteligente": 40.4
+                        "Campeón del doble 6": 40.4,
+                        "Campeón del doble 9": 44.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 60.4,
@@ -11617,7 +13257,8 @@ var SITE_JSON = {
                         "Agachao": 54.0,
                         "Gastar la data": 49.0,
                         "Siempre doble": 46.4,
-                        "Inteligente": 39.6
+                        "Campeón del doble 6": 39.6,
+                        "Campeón del doble 9": 46.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 57.8,
@@ -11632,7 +13273,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 52.0,
                         "Siempre doble": 44.0,
-                        "Inteligente": 37.8
+                        "Campeón del doble 6": 37.8,
+                        "Campeón del doble 9": 48.4
                     },
                     "Agachao": {
                         "Bota Gorda": 62.2,
@@ -11647,7 +13289,8 @@ var SITE_JSON = {
                         "Agachao": 53.6,
                         "Gastar la data": 53.2,
                         "Siempre doble": 47.8,
-                        "Inteligente": 46.6
+                        "Campeón del doble 6": 46.6,
+                        "Campeón del doble 9": 49.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 55.6,
@@ -11662,7 +13305,8 @@ var SITE_JSON = {
                         "Agachao": 54.0,
                         "Gastar la data": 53.8,
                         "Siempre doble": 47.8,
-                        "Inteligente": 44.8
+                        "Campeón del doble 6": 44.8,
+                        "Campeón del doble 9": 52.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 65.8,
@@ -11677,13 +13321,14 @@ var SITE_JSON = {
                         "Agachao": 58.6,
                         "Gastar la data": 57.8,
                         "Siempre doble": 50.6,
-                        "Inteligente": 48.0
+                        "Campeón del doble 6": 48.0,
+                        "Campeón del doble 9": 56.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 64.6,
                         "Más Frecuente": 64.8,
                         "Aleatorio": 62.0,
-                        "Inteligente": 46.0,
+                        "Campeón del doble 6": 46.0,
                         "Repetidor": 59.2,
                         "Contador de la mesa": 55.0,
                         "Pasador": 56.8,
@@ -11692,7 +13337,23 @@ var SITE_JSON = {
                         "Bota Flaca": 62.2,
                         "Agachao": 53.4,
                         "Gastar la data": 55.2,
-                        "Siempre doble": 52.0
+                        "Siempre doble": 52.0,
+                        "Campeón del doble 9": 51.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 59.2,
+                        "Más Frecuente": 61.0,
+                        "Aleatorio": 56.0,
+                        "Campeón del doble 6": 48.2,
+                        "Repetidor": 56.2,
+                        "Contador de la mesa": 54.2,
+                        "Pasador": 53.2,
+                        "Menos Jugada": 55.4,
+                        "No gastar la data": 54.0,
+                        "Bota Flaca": 51.6,
+                        "Agachao": 50.6,
+                        "Gastar la data": 48.0,
+                        "Siempre doble": 43.2
                     }
                 },
                 "Cooperativo": {
@@ -11709,7 +13370,8 @@ var SITE_JSON = {
                         "Agachao": 46.0,
                         "Gastar la data": 40.8,
                         "Siempre doble": 39.0,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 42.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 52.2,
@@ -11724,7 +13386,8 @@ var SITE_JSON = {
                         "Agachao": 48.0,
                         "Gastar la data": 44.0,
                         "Siempre doble": 38.2,
-                        "Inteligente": 39.6
+                        "Campeón del doble 6": 39.6,
+                        "Campeón del doble 9": 39.4
                     },
                     "Aleatorio": {
                         "Bota Gorda": 53.8,
@@ -11739,7 +13402,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 47.8,
                         "Siempre doble": 45.0,
-                        "Inteligente": 42.4
+                        "Campeón del doble 6": 42.4,
+                        "Campeón del doble 9": 48.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 52.2,
@@ -11754,7 +13418,8 @@ var SITE_JSON = {
                         "Agachao": 47.8,
                         "Gastar la data": 49.6,
                         "Siempre doble": 42.2,
-                        "Inteligente": 41.4
+                        "Campeón del doble 6": 41.4,
+                        "Campeón del doble 9": 46.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 60.4,
@@ -11769,7 +13434,8 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 50.4,
                         "Siempre doble": 44.6,
-                        "Inteligente": 44.4
+                        "Campeón del doble 6": 44.4,
+                        "Campeón del doble 9": 46.6
                     },
                     "Pasador": {
                         "Bota Gorda": 54.4,
@@ -11784,7 +13450,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 48.2,
                         "Siempre doble": 40.4,
-                        "Inteligente": 41.0
+                        "Campeón del doble 6": 41.0,
+                        "Campeón del doble 9": 43.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 52.2,
@@ -11799,7 +13466,8 @@ var SITE_JSON = {
                         "Agachao": 45.2,
                         "Gastar la data": 45.8,
                         "Siempre doble": 44.0,
-                        "Inteligente": 39.4
+                        "Campeón del doble 6": 39.4,
+                        "Campeón del doble 9": 47.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 55.0,
@@ -11814,7 +13482,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 48.8,
                         "Siempre doble": 42.6,
-                        "Inteligente": 40.6
+                        "Campeón del doble 6": 40.6,
+                        "Campeón del doble 9": 49.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 61.6,
@@ -11829,7 +13498,8 @@ var SITE_JSON = {
                         "Agachao": 53.8,
                         "Gastar la data": 52.8,
                         "Siempre doble": 44.4,
-                        "Inteligente": 39.2
+                        "Campeón del doble 6": 39.2,
+                        "Campeón del doble 9": 51.6
                     },
                     "Agachao": {
                         "Bota Gorda": 61.6,
@@ -11844,7 +13514,8 @@ var SITE_JSON = {
                         "Agachao": 54.4,
                         "Gastar la data": 50.8,
                         "Siempre doble": 48.4,
-                        "Inteligente": 42.6
+                        "Campeón del doble 6": 42.6,
+                        "Campeón del doble 9": 48.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 55.0,
@@ -11859,7 +13530,8 @@ var SITE_JSON = {
                         "Agachao": 53.6,
                         "Gastar la data": 51.8,
                         "Siempre doble": 49.2,
-                        "Inteligente": 43.2
+                        "Campeón del doble 6": 43.2,
+                        "Campeón del doble 9": 49.2
                     },
                     "Siempre doble": {
                         "Bota Gorda": 64.2,
@@ -11874,13 +13546,14 @@ var SITE_JSON = {
                         "Agachao": 61.8,
                         "Gastar la data": 58.6,
                         "Siempre doble": 54.0,
-                        "Inteligente": 49.2
+                        "Campeón del doble 6": 49.2,
+                        "Campeón del doble 9": 52.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 60.0,
                         "Más Frecuente": 60.4,
                         "Aleatorio": 57.6,
-                        "Inteligente": 45.6,
+                        "Campeón del doble 6": 45.6,
                         "Repetidor": 58.6,
                         "Contador de la mesa": 55.6,
                         "Pasador": 59.0,
@@ -11889,7 +13562,23 @@ var SITE_JSON = {
                         "Bota Flaca": 60.8,
                         "Agachao": 57.4,
                         "Gastar la data": 56.8,
-                        "Siempre doble": 50.8
+                        "Siempre doble": 50.8,
+                        "Campeón del doble 9": 47.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 57.8,
+                        "Más Frecuente": 60.6,
+                        "Aleatorio": 51.8,
+                        "Campeón del doble 6": 52.8,
+                        "Repetidor": 53.8,
+                        "Contador de la mesa": 53.4,
+                        "Pasador": 56.8,
+                        "Menos Jugada": 52.6,
+                        "No gastar la data": 50.8,
+                        "Bota Flaca": 48.4,
+                        "Agachao": 51.4,
+                        "Gastar la data": 50.8,
+                        "Siempre doble": 47.4
                     }
                 }
             }
@@ -11910,7 +13599,8 @@ var SITE_JSON = {
                         "Agachao": 31.8,
                         "Gastar la data": 40.6,
                         "Siempre doble": 32.6,
-                        "Inteligente": 26.400000000000006
+                        "Campeón del doble 6": 26.400000000000006,
+                        "Campeón del doble 9": 41.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 52.4,
@@ -11925,7 +13615,8 @@ var SITE_JSON = {
                         "Agachao": 37.2,
                         "Gastar la data": 41.2,
                         "Siempre doble": 31.4,
-                        "Inteligente": 33.2
+                        "Campeón del doble 6": 33.2,
+                        "Campeón del doble 9": 30.799999999999997
                     },
                     "Aleatorio": {
                         "Bota Gorda": 55.0,
@@ -11940,7 +13631,8 @@ var SITE_JSON = {
                         "Agachao": 44.0,
                         "Gastar la data": 45.4,
                         "Siempre doble": 37.2,
-                        "Inteligente": 35.0
+                        "Campeón del doble 6": 35.0,
+                        "Campeón del doble 9": 46.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 55.2,
@@ -11955,7 +13647,8 @@ var SITE_JSON = {
                         "Agachao": 44.0,
                         "Gastar la data": 41.4,
                         "Siempre doble": 38.8,
-                        "Inteligente": 43.6
+                        "Campeón del doble 6": 43.6,
+                        "Campeón del doble 9": 38.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.2,
@@ -11970,7 +13663,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 47.0,
                         "Siempre doble": 41.0,
-                        "Inteligente": 42.2
+                        "Campeón del doble 6": 42.2,
+                        "Campeón del doble 9": 38.6
                     },
                     "Pasador": {
                         "Bota Gorda": 54.4,
@@ -11985,7 +13679,8 @@ var SITE_JSON = {
                         "Agachao": 39.4,
                         "Gastar la data": 43.2,
                         "Siempre doble": 32.0,
-                        "Inteligente": 37.4
+                        "Campeón del doble 6": 37.4,
+                        "Campeón del doble 9": 40.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 59.2,
@@ -12000,7 +13695,8 @@ var SITE_JSON = {
                         "Agachao": 41.0,
                         "Gastar la data": 37.8,
                         "Siempre doble": 36.2,
-                        "Inteligente": 41.0
+                        "Campeón del doble 6": 41.0,
+                        "Campeón del doble 9": 41.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 59.4,
@@ -12015,7 +13711,8 @@ var SITE_JSON = {
                         "Agachao": 43.0,
                         "Gastar la data": 45.6,
                         "Siempre doble": 39.4,
-                        "Inteligente": 42.0
+                        "Campeón del doble 6": 42.0,
+                        "Campeón del doble 9": 47.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 64.2,
@@ -12030,7 +13727,8 @@ var SITE_JSON = {
                         "Agachao": 51.0,
                         "Gastar la data": 50.8,
                         "Siempre doble": 37.6,
-                        "Inteligente": 39.4
+                        "Campeón del doble 6": 39.4,
+                        "Campeón del doble 9": 49.6
                     },
                     "Agachao": {
                         "Bota Gorda": 63.6,
@@ -12045,7 +13743,8 @@ var SITE_JSON = {
                         "Agachao": 52.0,
                         "Gastar la data": 51.2,
                         "Siempre doble": 47.0,
-                        "Inteligente": 51.0
+                        "Campeón del doble 6": 51.0,
+                        "Campeón del doble 9": 54.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 64.2,
@@ -12060,7 +13759,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 55.0,
                         "Siempre doble": 43.2,
-                        "Inteligente": 50.2
+                        "Campeón del doble 6": 50.2,
+                        "Campeón del doble 9": 49.4
                     },
                     "Siempre doble": {
                         "Bota Gorda": 75.0,
@@ -12075,13 +13775,14 @@ var SITE_JSON = {
                         "Agachao": 63.2,
                         "Gastar la data": 56.2,
                         "Siempre doble": 50.6,
-                        "Inteligente": 53.8
+                        "Campeón del doble 6": 53.8,
+                        "Campeón del doble 9": 61.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 73.6,
                         "Más Frecuente": 66.8,
                         "Aleatorio": 65.0,
-                        "Inteligente": 49.8,
+                        "Campeón del doble 6": 49.8,
                         "Repetidor": 56.4,
                         "Contador de la mesa": 57.8,
                         "Pasador": 62.6,
@@ -12090,7 +13791,23 @@ var SITE_JSON = {
                         "Bota Flaca": 60.6,
                         "Agachao": 49.0,
                         "Gastar la data": 49.8,
-                        "Siempre doble": 46.2
+                        "Siempre doble": 46.2,
+                        "Campeón del doble 9": 56.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 58.2,
+                        "Más Frecuente": 69.2,
+                        "Aleatorio": 53.6,
+                        "Campeón del doble 6": 43.8,
+                        "Repetidor": 61.6,
+                        "Contador de la mesa": 61.4,
+                        "Pasador": 59.2,
+                        "Menos Jugada": 58.6,
+                        "No gastar la data": 52.4,
+                        "Bota Flaca": 50.4,
+                        "Agachao": 45.2,
+                        "Gastar la data": 50.6,
+                        "Siempre doble": 38.8
                     }
                 },
                 "Cooperativo": {
@@ -12107,7 +13824,8 @@ var SITE_JSON = {
                         "Agachao": 38.0,
                         "Gastar la data": 42.2,
                         "Siempre doble": 30.0,
-                        "Inteligente": 30.799999999999997
+                        "Campeón del doble 6": 30.799999999999997,
+                        "Campeón del doble 9": 41.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 52.0,
@@ -12122,7 +13840,8 @@ var SITE_JSON = {
                         "Agachao": 38.6,
                         "Gastar la data": 39.4,
                         "Siempre doble": 29.2,
-                        "Inteligente": 31.599999999999994
+                        "Campeón del doble 6": 31.599999999999994,
+                        "Campeón del doble 9": 34.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 52.6,
@@ -12137,7 +13856,8 @@ var SITE_JSON = {
                         "Agachao": 41.6,
                         "Gastar la data": 46.4,
                         "Siempre doble": 33.4,
-                        "Inteligente": 34.2
+                        "Campeón del doble 6": 34.2,
+                        "Campeón del doble 9": 44.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 52.8,
@@ -12152,7 +13872,8 @@ var SITE_JSON = {
                         "Agachao": 43.2,
                         "Gastar la data": 46.4,
                         "Siempre doble": 37.6,
-                        "Inteligente": 41.6
+                        "Campeón del doble 6": 41.6,
+                        "Campeón del doble 9": 41.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.8,
@@ -12167,7 +13888,8 @@ var SITE_JSON = {
                         "Agachao": 44.4,
                         "Gastar la data": 43.6,
                         "Siempre doble": 39.8,
-                        "Inteligente": 41.2
+                        "Campeón del doble 6": 41.2,
+                        "Campeón del doble 9": 46.6
                     },
                     "Pasador": {
                         "Bota Gorda": 57.2,
@@ -12182,7 +13904,8 @@ var SITE_JSON = {
                         "Agachao": 42.4,
                         "Gastar la data": 45.6,
                         "Siempre doble": 30.6,
-                        "Inteligente": 34.8
+                        "Campeón del doble 6": 34.8,
+                        "Campeón del doble 9": 40.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 53.2,
@@ -12197,7 +13920,8 @@ var SITE_JSON = {
                         "Agachao": 44.6,
                         "Gastar la data": 41.0,
                         "Siempre doble": 35.4,
-                        "Inteligente": 37.8
+                        "Campeón del doble 6": 37.8,
+                        "Campeón del doble 9": 42.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 54.0,
@@ -12212,7 +13936,8 @@ var SITE_JSON = {
                         "Agachao": 45.4,
                         "Gastar la data": 46.4,
                         "Siempre doble": 36.4,
-                        "Inteligente": 37.8
+                        "Campeón del doble 6": 37.8,
+                        "Campeón del doble 9": 48.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 59.2,
@@ -12227,7 +13952,8 @@ var SITE_JSON = {
                         "Agachao": 52.2,
                         "Gastar la data": 46.8,
                         "Siempre doble": 38.8,
-                        "Inteligente": 40.2
+                        "Campeón del doble 6": 40.2,
+                        "Campeón del doble 9": 48.6
                     },
                     "Agachao": {
                         "Bota Gorda": 63.8,
@@ -12242,7 +13968,8 @@ var SITE_JSON = {
                         "Agachao": 55.2,
                         "Gastar la data": 52.6,
                         "Siempre doble": 43.6,
-                        "Inteligente": 50.0
+                        "Campeón del doble 6": 50.0,
+                        "Campeón del doble 9": 47.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 62.6,
@@ -12257,7 +13984,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 52.8,
                         "Siempre doble": 45.4,
-                        "Inteligente": 43.2
+                        "Campeón del doble 6": 43.2,
+                        "Campeón del doble 9": 51.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 70.6,
@@ -12272,13 +14000,14 @@ var SITE_JSON = {
                         "Agachao": 60.2,
                         "Gastar la data": 57.8,
                         "Siempre doble": 50.6,
-                        "Inteligente": 46.2
+                        "Campeón del doble 6": 46.2,
+                        "Campeón del doble 9": 57.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 69.2,
                         "Más Frecuente": 68.4,
                         "Aleatorio": 65.8,
-                        "Inteligente": 49.8,
+                        "Campeón del doble 6": 49.8,
                         "Repetidor": 58.4,
                         "Contador de la mesa": 58.8,
                         "Pasador": 65.2,
@@ -12287,7 +14016,23 @@ var SITE_JSON = {
                         "Bota Flaca": 59.8,
                         "Agachao": 50.0,
                         "Gastar la data": 56.8,
-                        "Siempre doble": 53.8
+                        "Siempre doble": 53.8,
+                        "Campeón del doble 9": 59.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 59.0,
+                        "Más Frecuente": 65.2,
+                        "Aleatorio": 56.0,
+                        "Campeón del doble 6": 41.0,
+                        "Repetidor": 58.6,
+                        "Contador de la mesa": 53.4,
+                        "Pasador": 59.8,
+                        "Menos Jugada": 57.6,
+                        "No gastar la data": 51.6,
+                        "Bota Flaca": 51.4,
+                        "Agachao": 52.4,
+                        "Gastar la data": 48.2,
+                        "Siempre doble": 42.6
                     }
                 }
             },
@@ -12306,7 +14051,8 @@ var SITE_JSON = {
                         "Agachao": 32.0,
                         "Gastar la data": 38.0,
                         "Siempre doble": 31.4,
-                        "Inteligente": 35.0
+                        "Campeón del doble 6": 35.0,
+                        "Campeón del doble 9": 36.6
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 52.8,
@@ -12321,7 +14067,8 @@ var SITE_JSON = {
                         "Agachao": 39.8,
                         "Gastar la data": 43.8,
                         "Siempre doble": 31.4,
-                        "Inteligente": 35.400000000000006
+                        "Campeón del doble 6": 35.400000000000006,
+                        "Campeón del doble 9": 36.2
                     },
                     "Aleatorio": {
                         "Bota Gorda": 55.8,
@@ -12336,7 +14083,8 @@ var SITE_JSON = {
                         "Agachao": 42.0,
                         "Gastar la data": 41.2,
                         "Siempre doble": 32.4,
-                        "Inteligente": 41.6
+                        "Campeón del doble 6": 41.6,
+                        "Campeón del doble 9": 41.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 55.4,
@@ -12351,7 +14099,8 @@ var SITE_JSON = {
                         "Agachao": 43.8,
                         "Gastar la data": 44.6,
                         "Siempre doble": 39.0,
-                        "Inteligente": 40.6
+                        "Campeón del doble 6": 40.6,
+                        "Campeón del doble 9": 45.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.6,
@@ -12366,7 +14115,8 @@ var SITE_JSON = {
                         "Agachao": 48.6,
                         "Gastar la data": 48.2,
                         "Siempre doble": 41.6,
-                        "Inteligente": 43.8
+                        "Campeón del doble 6": 43.8,
+                        "Campeón del doble 9": 44.0
                     },
                     "Pasador": {
                         "Bota Gorda": 57.2,
@@ -12381,7 +14131,8 @@ var SITE_JSON = {
                         "Agachao": 39.2,
                         "Gastar la data": 42.6,
                         "Siempre doble": 36.8,
-                        "Inteligente": 42.0
+                        "Campeón del doble 6": 42.0,
+                        "Campeón del doble 9": 40.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 55.2,
@@ -12396,7 +14147,8 @@ var SITE_JSON = {
                         "Agachao": 42.2,
                         "Gastar la data": 42.8,
                         "Siempre doble": 35.8,
-                        "Inteligente": 38.8
+                        "Campeón del doble 6": 38.8,
+                        "Campeón del doble 9": 43.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 57.2,
@@ -12411,7 +14163,8 @@ var SITE_JSON = {
                         "Agachao": 45.4,
                         "Gastar la data": 47.4,
                         "Siempre doble": 34.4,
-                        "Inteligente": 44.2
+                        "Campeón del doble 6": 44.2,
+                        "Campeón del doble 9": 46.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 62.4,
@@ -12426,7 +14179,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 45.4,
                         "Siempre doble": 37.0,
-                        "Inteligente": 38.6
+                        "Campeón del doble 6": 38.6,
+                        "Campeón del doble 9": 50.8
                     },
                     "Agachao": {
                         "Bota Gorda": 68.4,
@@ -12441,7 +14195,8 @@ var SITE_JSON = {
                         "Agachao": 49.6,
                         "Gastar la data": 52.2,
                         "Siempre doble": 45.0,
-                        "Inteligente": 47.6
+                        "Campeón del doble 6": 47.6,
+                        "Campeón del doble 9": 50.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 62.6,
@@ -12456,7 +14211,8 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 51.0,
                         "Siempre doble": 41.0,
-                        "Inteligente": 47.2
+                        "Campeón del doble 6": 47.2,
+                        "Campeón del doble 9": 51.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 67.4,
@@ -12471,13 +14227,14 @@ var SITE_JSON = {
                         "Agachao": 59.2,
                         "Gastar la data": 58.4,
                         "Siempre doble": 50.0,
-                        "Inteligente": 56.4
+                        "Campeón del doble 6": 56.4,
+                        "Campeón del doble 9": 55.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 65.0,
                         "Más Frecuente": 64.6,
                         "Aleatorio": 58.4,
-                        "Inteligente": 47.2,
+                        "Campeón del doble 6": 47.2,
                         "Repetidor": 59.4,
                         "Contador de la mesa": 56.2,
                         "Pasador": 58.0,
@@ -12486,7 +14243,23 @@ var SITE_JSON = {
                         "Bota Flaca": 61.4,
                         "Agachao": 52.4,
                         "Gastar la data": 52.8,
-                        "Siempre doble": 43.6
+                        "Siempre doble": 43.6,
+                        "Campeón del doble 9": 58.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 63.4,
+                        "Más Frecuente": 63.8,
+                        "Aleatorio": 59.0,
+                        "Campeón del doble 6": 41.2,
+                        "Repetidor": 54.2,
+                        "Contador de la mesa": 56.0,
+                        "Pasador": 59.4,
+                        "Menos Jugada": 56.4,
+                        "No gastar la data": 54.0,
+                        "Bota Flaca": 49.2,
+                        "Agachao": 50.0,
+                        "Gastar la data": 49.0,
+                        "Siempre doble": 44.8
                     }
                 },
                 "Cooperativo": {
@@ -12503,7 +14276,8 @@ var SITE_JSON = {
                         "Agachao": 33.8,
                         "Gastar la data": 42.0,
                         "Siempre doble": 34.2,
-                        "Inteligente": 36.0
+                        "Campeón del doble 6": 36.0,
+                        "Campeón del doble 9": 41.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 49.4,
@@ -12518,7 +14292,8 @@ var SITE_JSON = {
                         "Agachao": 38.4,
                         "Gastar la data": 36.4,
                         "Siempre doble": 33.8,
-                        "Inteligente": 35.599999999999994
+                        "Campeón del doble 6": 35.599999999999994,
+                        "Campeón del doble 9": 35.599999999999994
                     },
                     "Aleatorio": {
                         "Bota Gorda": 52.4,
@@ -12533,7 +14308,8 @@ var SITE_JSON = {
                         "Agachao": 42.4,
                         "Gastar la data": 45.6,
                         "Siempre doble": 30.4,
-                        "Inteligente": 39.6
+                        "Campeón del doble 6": 39.6,
+                        "Campeón del doble 9": 41.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 53.6,
@@ -12548,7 +14324,8 @@ var SITE_JSON = {
                         "Agachao": 41.6,
                         "Gastar la data": 44.8,
                         "Siempre doble": 47.8,
-                        "Inteligente": 42.8
+                        "Campeón del doble 6": 42.8,
+                        "Campeón del doble 9": 45.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 53.4,
@@ -12563,7 +14340,8 @@ var SITE_JSON = {
                         "Agachao": 43.0,
                         "Gastar la data": 43.6,
                         "Siempre doble": 45.8,
-                        "Inteligente": 40.4
+                        "Campeón del doble 6": 40.4,
+                        "Campeón del doble 9": 46.8
                     },
                     "Pasador": {
                         "Bota Gorda": 54.8,
@@ -12578,7 +14356,8 @@ var SITE_JSON = {
                         "Agachao": 42.8,
                         "Gastar la data": 45.0,
                         "Siempre doble": 30.2,
-                        "Inteligente": 40.6
+                        "Campeón del doble 6": 40.6,
+                        "Campeón del doble 9": 39.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 51.0,
@@ -12593,7 +14372,8 @@ var SITE_JSON = {
                         "Agachao": 43.2,
                         "Gastar la data": 38.4,
                         "Siempre doble": 39.4,
-                        "Inteligente": 39.2
+                        "Campeón del doble 6": 39.2,
+                        "Campeón del doble 9": 43.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 56.4,
@@ -12608,7 +14388,8 @@ var SITE_JSON = {
                         "Agachao": 50.6,
                         "Gastar la data": 49.0,
                         "Siempre doble": 36.4,
-                        "Inteligente": 41.6
+                        "Campeón del doble 6": 41.6,
+                        "Campeón del doble 9": 45.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 64.8,
@@ -12623,7 +14404,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 48.2,
                         "Siempre doble": 36.8,
-                        "Inteligente": 41.0
+                        "Campeón del doble 6": 41.0,
+                        "Campeón del doble 9": 50.6
                     },
                     "Agachao": {
                         "Bota Gorda": 65.2,
@@ -12638,7 +14420,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 53.4,
                         "Siempre doble": 44.2,
-                        "Inteligente": 44.6
+                        "Campeón del doble 6": 44.6,
+                        "Campeón del doble 9": 48.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 66.0,
@@ -12653,7 +14436,8 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 49.6,
                         "Siempre doble": 43.6,
-                        "Inteligente": 42.4
+                        "Campeón del doble 6": 42.4,
+                        "Campeón del doble 9": 51.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 70.0,
@@ -12668,13 +14452,14 @@ var SITE_JSON = {
                         "Agachao": 58.2,
                         "Gastar la data": 58.6,
                         "Siempre doble": 47.6,
-                        "Inteligente": 55.4
+                        "Campeón del doble 6": 55.4,
+                        "Campeón del doble 9": 58.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 64.0,
                         "Más Frecuente": 64.4,
                         "Aleatorio": 60.4,
-                        "Inteligente": 48.4,
+                        "Campeón del doble 6": 48.4,
                         "Repetidor": 57.2,
                         "Contador de la mesa": 59.6,
                         "Pasador": 59.4,
@@ -12683,7 +14468,23 @@ var SITE_JSON = {
                         "Bota Flaca": 59.0,
                         "Agachao": 55.4,
                         "Gastar la data": 57.6,
-                        "Siempre doble": 44.6
+                        "Siempre doble": 44.6,
+                        "Campeón del doble 9": 54.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 58.6,
+                        "Más Frecuente": 64.4,
+                        "Aleatorio": 59.0,
+                        "Campeón del doble 6": 45.8,
+                        "Repetidor": 54.8,
+                        "Contador de la mesa": 53.2,
+                        "Pasador": 60.4,
+                        "Menos Jugada": 56.4,
+                        "No gastar la data": 54.8,
+                        "Bota Flaca": 49.4,
+                        "Agachao": 51.6,
+                        "Gastar la data": 48.4,
+                        "Siempre doble": 41.2
                     }
                 }
             },
@@ -12702,7 +14503,8 @@ var SITE_JSON = {
                         "Agachao": 36.6,
                         "Gastar la data": 42.0,
                         "Siempre doble": 29.0,
-                        "Inteligente": 33.0
+                        "Campeón del doble 6": 33.0,
+                        "Campeón del doble 9": 36.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 52.6,
@@ -12717,7 +14519,8 @@ var SITE_JSON = {
                         "Agachao": 43.0,
                         "Gastar la data": 47.0,
                         "Siempre doble": 35.8,
-                        "Inteligente": 35.8
+                        "Campeón del doble 6": 35.8,
+                        "Campeón del doble 9": 38.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 52.2,
@@ -12732,7 +14535,8 @@ var SITE_JSON = {
                         "Agachao": 38.8,
                         "Gastar la data": 41.8,
                         "Siempre doble": 34.4,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 43.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 54.0,
@@ -12747,7 +14551,8 @@ var SITE_JSON = {
                         "Agachao": 41.0,
                         "Gastar la data": 45.6,
                         "Siempre doble": 39.6,
-                        "Inteligente": 46.4
+                        "Campeón del doble 6": 46.4,
+                        "Campeón del doble 9": 42.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 57.6,
@@ -12762,7 +14567,8 @@ var SITE_JSON = {
                         "Agachao": 43.0,
                         "Gastar la data": 47.8,
                         "Siempre doble": 42.0,
-                        "Inteligente": 44.6
+                        "Campeón del doble 6": 44.6,
+                        "Campeón del doble 9": 45.2
                     },
                     "Pasador": {
                         "Bota Gorda": 59.0,
@@ -12777,7 +14583,8 @@ var SITE_JSON = {
                         "Agachao": 40.2,
                         "Gastar la data": 41.2,
                         "Siempre doble": 33.6,
-                        "Inteligente": 39.4
+                        "Campeón del doble 6": 39.4,
+                        "Campeón del doble 9": 42.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 55.6,
@@ -12792,7 +14599,8 @@ var SITE_JSON = {
                         "Agachao": 43.6,
                         "Gastar la data": 46.0,
                         "Siempre doble": 35.4,
-                        "Inteligente": 36.4
+                        "Campeón del doble 6": 36.4,
+                        "Campeón del doble 9": 41.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 58.2,
@@ -12807,7 +14615,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 46.0,
                         "Siempre doble": 37.6,
-                        "Inteligente": 39.4
+                        "Campeón del doble 6": 39.4,
+                        "Campeón del doble 9": 43.8
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 58.8,
@@ -12822,7 +14631,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 47.6,
                         "Siempre doble": 43.2,
-                        "Inteligente": 41.0
+                        "Campeón del doble 6": 41.0,
+                        "Campeón del doble 9": 47.4
                     },
                     "Agachao": {
                         "Bota Gorda": 67.8,
@@ -12837,7 +14647,8 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 55.0,
                         "Siempre doble": 42.2,
-                        "Inteligente": 47.2
+                        "Campeón del doble 6": 47.2,
+                        "Campeón del doble 9": 47.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 62.6,
@@ -12852,7 +14663,8 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 48.8,
                         "Siempre doble": 43.0,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 54.2
                     },
                     "Siempre doble": {
                         "Bota Gorda": 73.0,
@@ -12867,13 +14679,14 @@ var SITE_JSON = {
                         "Agachao": 53.4,
                         "Gastar la data": 57.2,
                         "Siempre doble": 50.8,
-                        "Inteligente": 52.4
+                        "Campeón del doble 6": 52.4,
+                        "Campeón del doble 9": 56.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 67.0,
                         "Más Frecuente": 64.2,
                         "Aleatorio": 60.0,
-                        "Inteligente": 52.0,
+                        "Campeón del doble 6": 52.0,
                         "Repetidor": 53.6,
                         "Contador de la mesa": 55.4,
                         "Pasador": 60.6,
@@ -12882,7 +14695,23 @@ var SITE_JSON = {
                         "Bota Flaca": 59.0,
                         "Agachao": 52.8,
                         "Gastar la data": 60.0,
-                        "Siempre doble": 47.6
+                        "Siempre doble": 47.6,
+                        "Campeón del doble 9": 59.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 63.8,
+                        "Más Frecuente": 61.2,
+                        "Aleatorio": 56.8,
+                        "Campeón del doble 6": 41.0,
+                        "Repetidor": 57.6,
+                        "Contador de la mesa": 54.8,
+                        "Pasador": 57.6,
+                        "Menos Jugada": 58.2,
+                        "No gastar la data": 56.2,
+                        "Bota Flaca": 52.6,
+                        "Agachao": 53.0,
+                        "Gastar la data": 45.8,
+                        "Siempre doble": 43.6
                     }
                 },
                 "Cooperativo": {
@@ -12899,7 +14728,8 @@ var SITE_JSON = {
                         "Agachao": 36.2,
                         "Gastar la data": 42.0,
                         "Siempre doble": 34.8,
-                        "Inteligente": 38.0
+                        "Campeón del doble 6": 38.0,
+                        "Campeón del doble 9": 44.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 50.8,
@@ -12914,7 +14744,8 @@ var SITE_JSON = {
                         "Agachao": 38.2,
                         "Gastar la data": 38.2,
                         "Siempre doble": 37.6,
-                        "Inteligente": 38.6
+                        "Campeón del doble 6": 38.6,
+                        "Campeón del doble 9": 37.4
                     },
                     "Aleatorio": {
                         "Bota Gorda": 53.6,
@@ -12929,7 +14760,8 @@ var SITE_JSON = {
                         "Agachao": 44.2,
                         "Gastar la data": 41.8,
                         "Siempre doble": 39.0,
-                        "Inteligente": 39.8
+                        "Campeón del doble 6": 39.8,
+                        "Campeón del doble 9": 44.6
                     },
                     "Repetidor": {
                         "Bota Gorda": 56.4,
@@ -12944,7 +14776,8 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 47.2,
                         "Siempre doble": 37.0,
-                        "Inteligente": 44.0
+                        "Campeón del doble 6": 44.0,
+                        "Campeón del doble 9": 44.6
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 56.8,
@@ -12959,7 +14792,8 @@ var SITE_JSON = {
                         "Agachao": 43.0,
                         "Gastar la data": 48.0,
                         "Siempre doble": 45.0,
-                        "Inteligente": 45.6
+                        "Campeón del doble 6": 45.6,
+                        "Campeón del doble 9": 50.4
                     },
                     "Pasador": {
                         "Bota Gorda": 53.6,
@@ -12974,7 +14808,8 @@ var SITE_JSON = {
                         "Agachao": 43.6,
                         "Gastar la data": 45.6,
                         "Siempre doble": 36.2,
-                        "Inteligente": 37.6
+                        "Campeón del doble 6": 37.6,
+                        "Campeón del doble 9": 45.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 55.0,
@@ -12989,7 +14824,8 @@ var SITE_JSON = {
                         "Agachao": 45.2,
                         "Gastar la data": 48.2,
                         "Siempre doble": 31.2,
-                        "Inteligente": 39.2
+                        "Campeón del doble 6": 39.2,
+                        "Campeón del doble 9": 42.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 53.8,
@@ -13004,7 +14840,8 @@ var SITE_JSON = {
                         "Agachao": 46.0,
                         "Gastar la data": 51.0,
                         "Siempre doble": 39.6,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 47.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 59.0,
@@ -13019,7 +14856,8 @@ var SITE_JSON = {
                         "Agachao": 48.8,
                         "Gastar la data": 47.6,
                         "Siempre doble": 39.8,
-                        "Inteligente": 41.4
+                        "Campeón del doble 6": 41.4,
+                        "Campeón del doble 9": 47.2
                     },
                     "Agachao": {
                         "Bota Gorda": 61.4,
@@ -13034,7 +14872,8 @@ var SITE_JSON = {
                         "Agachao": 50.2,
                         "Gastar la data": 51.2,
                         "Siempre doble": 46.8,
-                        "Inteligente": 49.4
+                        "Campeón del doble 6": 49.4,
+                        "Campeón del doble 9": 56.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 58.0,
@@ -13049,7 +14888,8 @@ var SITE_JSON = {
                         "Agachao": 43.6,
                         "Gastar la data": 53.6,
                         "Siempre doble": 46.0,
-                        "Inteligente": 44.4
+                        "Campeón del doble 6": 44.4,
+                        "Campeón del doble 9": 52.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 67.0,
@@ -13064,13 +14904,14 @@ var SITE_JSON = {
                         "Agachao": 53.6,
                         "Gastar la data": 54.6,
                         "Siempre doble": 51.8,
-                        "Inteligente": 59.4
+                        "Campeón del doble 6": 59.4,
+                        "Campeón del doble 9": 61.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 62.0,
                         "Más Frecuente": 61.4,
                         "Aleatorio": 60.2,
-                        "Inteligente": 53.2,
+                        "Campeón del doble 6": 53.2,
                         "Repetidor": 56.0,
                         "Contador de la mesa": 54.4,
                         "Pasador": 62.4,
@@ -13079,7 +14920,23 @@ var SITE_JSON = {
                         "Bota Flaca": 58.6,
                         "Agachao": 50.6,
                         "Gastar la data": 55.6,
-                        "Siempre doble": 40.6
+                        "Siempre doble": 40.6,
+                        "Campeón del doble 9": 58.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 56.0,
+                        "Más Frecuente": 62.6,
+                        "Aleatorio": 55.4,
+                        "Campeón del doble 6": 41.8,
+                        "Repetidor": 55.4,
+                        "Contador de la mesa": 49.6,
+                        "Pasador": 54.8,
+                        "Menos Jugada": 57.6,
+                        "No gastar la data": 53.0,
+                        "Bota Flaca": 52.8,
+                        "Agachao": 43.6,
+                        "Gastar la data": 48.0,
+                        "Siempre doble": 38.4
                     }
                 }
             },
@@ -13098,7 +14955,8 @@ var SITE_JSON = {
                         "Agachao": 33.4,
                         "Gastar la data": 41.6,
                         "Siempre doble": 34.8,
-                        "Inteligente": 34.0
+                        "Campeón del doble 6": 34.0,
+                        "Campeón del doble 9": 37.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 53.0,
@@ -13113,7 +14971,8 @@ var SITE_JSON = {
                         "Agachao": 44.2,
                         "Gastar la data": 42.6,
                         "Siempre doble": 35.0,
-                        "Inteligente": 39.2
+                        "Campeón del doble 6": 39.2,
+                        "Campeón del doble 9": 37.6
                     },
                     "Aleatorio": {
                         "Bota Gorda": 57.4,
@@ -13128,7 +14987,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 49.0,
                         "Siempre doble": 34.2,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 39.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 55.2,
@@ -13143,7 +15003,8 @@ var SITE_JSON = {
                         "Agachao": 45.4,
                         "Gastar la data": 43.8,
                         "Siempre doble": 40.6,
-                        "Inteligente": 40.2
+                        "Campeón del doble 6": 40.2,
+                        "Campeón del doble 9": 42.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 53.0,
@@ -13158,7 +15019,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 49.6,
                         "Siempre doble": 39.0,
-                        "Inteligente": 43.2
+                        "Campeón del doble 6": 43.2,
+                        "Campeón del doble 9": 43.2
                     },
                     "Pasador": {
                         "Bota Gorda": 60.2,
@@ -13173,7 +15035,8 @@ var SITE_JSON = {
                         "Agachao": 49.0,
                         "Gastar la data": 46.6,
                         "Siempre doble": 35.8,
-                        "Inteligente": 42.4
+                        "Campeón del doble 6": 42.4,
+                        "Campeón del doble 9": 40.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 58.2,
@@ -13188,7 +15051,8 @@ var SITE_JSON = {
                         "Agachao": 43.8,
                         "Gastar la data": 45.8,
                         "Siempre doble": 38.6,
-                        "Inteligente": 39.2
+                        "Campeón del doble 6": 39.2,
+                        "Campeón del doble 9": 41.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 60.6,
@@ -13203,7 +15067,8 @@ var SITE_JSON = {
                         "Agachao": 46.8,
                         "Gastar la data": 47.8,
                         "Siempre doble": 40.2,
-                        "Inteligente": 40.8
+                        "Campeón del doble 6": 40.8,
+                        "Campeón del doble 9": 41.8
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 59.8,
@@ -13218,7 +15083,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 51.8,
                         "Siempre doble": 42.6,
-                        "Inteligente": 41.8
+                        "Campeón del doble 6": 41.8,
+                        "Campeón del doble 9": 48.4
                     },
                     "Agachao": {
                         "Bota Gorda": 68.4,
@@ -13233,7 +15099,8 @@ var SITE_JSON = {
                         "Agachao": 50.4,
                         "Gastar la data": 52.0,
                         "Siempre doble": 48.8,
-                        "Inteligente": 50.0
+                        "Campeón del doble 6": 50.0,
+                        "Campeón del doble 9": 50.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 58.2,
@@ -13248,7 +15115,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 51.6,
                         "Siempre doble": 44.8,
-                        "Inteligente": 46.4
+                        "Campeón del doble 6": 46.4,
+                        "Campeón del doble 9": 44.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 72.6,
@@ -13263,13 +15131,14 @@ var SITE_JSON = {
                         "Agachao": 56.8,
                         "Gastar la data": 56.4,
                         "Siempre doble": 54.2,
-                        "Inteligente": 51.8
+                        "Campeón del doble 6": 51.8,
+                        "Campeón del doble 9": 57.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 66.0,
                         "Más Frecuente": 60.8,
                         "Aleatorio": 60.0,
-                        "Inteligente": 50.6,
+                        "Campeón del doble 6": 50.6,
                         "Repetidor": 59.8,
                         "Contador de la mesa": 56.8,
                         "Pasador": 57.6,
@@ -13278,7 +15147,23 @@ var SITE_JSON = {
                         "Bota Flaca": 58.2,
                         "Agachao": 50.0,
                         "Gastar la data": 53.6,
-                        "Siempre doble": 48.2
+                        "Siempre doble": 48.2,
+                        "Campeón del doble 9": 57.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 62.6,
+                        "Más Frecuente": 62.4,
+                        "Aleatorio": 61.0,
+                        "Campeón del doble 6": 43.0,
+                        "Repetidor": 57.2,
+                        "Contador de la mesa": 56.8,
+                        "Pasador": 59.8,
+                        "Menos Jugada": 58.2,
+                        "No gastar la data": 58.2,
+                        "Bota Flaca": 51.6,
+                        "Agachao": 50.0,
+                        "Gastar la data": 56.0,
+                        "Siempre doble": 42.4
                     }
                 },
                 "Cooperativo": {
@@ -13295,7 +15180,8 @@ var SITE_JSON = {
                         "Agachao": 41.2,
                         "Gastar la data": 42.0,
                         "Siempre doble": 31.8,
-                        "Inteligente": 39.6
+                        "Campeón del doble 6": 39.6,
+                        "Campeón del doble 9": 40.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 53.4,
@@ -13310,7 +15196,8 @@ var SITE_JSON = {
                         "Agachao": 43.0,
                         "Gastar la data": 44.2,
                         "Siempre doble": 39.2,
-                        "Inteligente": 37.6
+                        "Campeón del doble 6": 37.6,
+                        "Campeón del doble 9": 38.6
                     },
                     "Aleatorio": {
                         "Bota Gorda": 59.4,
@@ -13325,7 +15212,8 @@ var SITE_JSON = {
                         "Agachao": 45.2,
                         "Gastar la data": 44.2,
                         "Siempre doble": 41.2,
-                        "Inteligente": 35.0
+                        "Campeón del doble 6": 35.0,
+                        "Campeón del doble 9": 44.6
                     },
                     "Repetidor": {
                         "Bota Gorda": 56.0,
@@ -13340,7 +15228,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 46.8,
                         "Siempre doble": 43.8,
-                        "Inteligente": 43.4
+                        "Campeón del doble 6": 43.4,
+                        "Campeón del doble 9": 45.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.0,
@@ -13355,7 +15244,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 51.4,
                         "Siempre doble": 45.8,
-                        "Inteligente": 42.8
+                        "Campeón del doble 6": 42.8,
+                        "Campeón del doble 9": 48.4
                     },
                     "Pasador": {
                         "Bota Gorda": 54.4,
@@ -13370,7 +15260,8 @@ var SITE_JSON = {
                         "Agachao": 43.6,
                         "Gastar la data": 43.4,
                         "Siempre doble": 42.8,
-                        "Inteligente": 38.0
+                        "Campeón del doble 6": 38.0,
+                        "Campeón del doble 9": 44.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 56.0,
@@ -13385,7 +15276,8 @@ var SITE_JSON = {
                         "Agachao": 43.4,
                         "Gastar la data": 46.8,
                         "Siempre doble": 33.0,
-                        "Inteligente": 39.8
+                        "Campeón del doble 6": 39.8,
+                        "Campeón del doble 9": 42.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 50.8,
@@ -13400,7 +15292,8 @@ var SITE_JSON = {
                         "Agachao": 45.6,
                         "Gastar la data": 48.0,
                         "Siempre doble": 35.4,
-                        "Inteligente": 43.6
+                        "Campeón del doble 6": 43.6,
+                        "Campeón del doble 9": 48.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 59.4,
@@ -13415,7 +15308,8 @@ var SITE_JSON = {
                         "Agachao": 45.2,
                         "Gastar la data": 51.4,
                         "Siempre doble": 42.4,
-                        "Inteligente": 43.2
+                        "Campeón del doble 6": 43.2,
+                        "Campeón del doble 9": 48.8
                     },
                     "Agachao": {
                         "Bota Gorda": 62.4,
@@ -13430,7 +15324,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 51.2,
                         "Siempre doble": 49.2,
-                        "Inteligente": 51.2
+                        "Campeón del doble 6": 51.2,
+                        "Campeón del doble 9": 50.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 55.8,
@@ -13445,7 +15340,8 @@ var SITE_JSON = {
                         "Agachao": 52.6,
                         "Gastar la data": 50.2,
                         "Siempre doble": 47.4,
-                        "Inteligente": 45.6
+                        "Campeón del doble 6": 45.6,
+                        "Campeón del doble 9": 47.4
                     },
                     "Siempre doble": {
                         "Bota Gorda": 70.0,
@@ -13460,13 +15356,14 @@ var SITE_JSON = {
                         "Agachao": 55.4,
                         "Gastar la data": 55.6,
                         "Siempre doble": 50.4,
-                        "Inteligente": 51.2
+                        "Campeón del doble 6": 51.2,
+                        "Campeón del doble 9": 56.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 60.4,
                         "Más Frecuente": 62.4,
                         "Aleatorio": 65.0,
-                        "Inteligente": 45.2,
+                        "Campeón del doble 6": 45.2,
                         "Repetidor": 56.6,
                         "Contador de la mesa": 57.2,
                         "Pasador": 62.0,
@@ -13475,7 +15372,23 @@ var SITE_JSON = {
                         "Bota Flaca": 56.8,
                         "Agachao": 48.8,
                         "Gastar la data": 54.4,
-                        "Siempre doble": 48.8
+                        "Siempre doble": 48.8,
+                        "Campeón del doble 9": 58.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 60.0,
+                        "Más Frecuente": 61.4,
+                        "Aleatorio": 55.4,
+                        "Campeón del doble 6": 41.6,
+                        "Repetidor": 54.6,
+                        "Contador de la mesa": 51.6,
+                        "Pasador": 56.0,
+                        "Menos Jugada": 57.2,
+                        "No gastar la data": 52.0,
+                        "Bota Flaca": 51.2,
+                        "Agachao": 49.8,
+                        "Gastar la data": 52.6,
+                        "Siempre doble": 43.2
                     }
                 }
             },
@@ -13494,7 +15407,8 @@ var SITE_JSON = {
                         "Agachao": 30.8,
                         "Gastar la data": 37.6,
                         "Siempre doble": 26.6,
-                        "Inteligente": 34.400000000000006
+                        "Campeón del doble 6": 34.400000000000006,
+                        "Campeón del doble 9": 41.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 50.8,
@@ -13509,7 +15423,8 @@ var SITE_JSON = {
                         "Agachao": 36.4,
                         "Gastar la data": 41.0,
                         "Siempre doble": 29.0,
-                        "Inteligente": 32.599999999999994
+                        "Campeón del doble 6": 32.599999999999994,
+                        "Campeón del doble 9": 34.2
                     },
                     "Aleatorio": {
                         "Bota Gorda": 55.6,
@@ -13524,7 +15439,8 @@ var SITE_JSON = {
                         "Agachao": 40.0,
                         "Gastar la data": 44.6,
                         "Siempre doble": 35.0,
-                        "Inteligente": 35.2
+                        "Campeón del doble 6": 35.2,
+                        "Campeón del doble 9": 43.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 57.4,
@@ -13539,7 +15455,8 @@ var SITE_JSON = {
                         "Agachao": 43.6,
                         "Gastar la data": 44.6,
                         "Siempre doble": 38.6,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 44.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 61.0,
@@ -13554,7 +15471,8 @@ var SITE_JSON = {
                         "Agachao": 42.4,
                         "Gastar la data": 45.2,
                         "Siempre doble": 39.6,
-                        "Inteligente": 41.4
+                        "Campeón del doble 6": 41.4,
+                        "Campeón del doble 9": 48.2
                     },
                     "Pasador": {
                         "Bota Gorda": 55.6,
@@ -13569,7 +15487,8 @@ var SITE_JSON = {
                         "Agachao": 41.6,
                         "Gastar la data": 42.6,
                         "Siempre doble": 36.8,
-                        "Inteligente": 43.2
+                        "Campeón del doble 6": 43.2,
+                        "Campeón del doble 9": 41.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 57.0,
@@ -13584,7 +15503,8 @@ var SITE_JSON = {
                         "Agachao": 44.8,
                         "Gastar la data": 42.2,
                         "Siempre doble": 34.4,
-                        "Inteligente": 35.599999999999994
+                        "Campeón del doble 6": 35.599999999999994,
+                        "Campeón del doble 9": 44.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 58.8,
@@ -13599,7 +15519,8 @@ var SITE_JSON = {
                         "Agachao": 45.2,
                         "Gastar la data": 45.6,
                         "Siempre doble": 37.8,
-                        "Inteligente": 41.6
+                        "Campeón del doble 6": 41.6,
+                        "Campeón del doble 9": 46.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 65.2,
@@ -13614,7 +15535,8 @@ var SITE_JSON = {
                         "Agachao": 51.8,
                         "Gastar la data": 56.0,
                         "Siempre doble": 38.4,
-                        "Inteligente": 38.4
+                        "Campeón del doble 6": 38.4,
+                        "Campeón del doble 9": 49.4
                     },
                     "Agachao": {
                         "Bota Gorda": 64.0,
@@ -13629,7 +15551,8 @@ var SITE_JSON = {
                         "Agachao": 53.6,
                         "Gastar la data": 48.4,
                         "Siempre doble": 40.2,
-                        "Inteligente": 44.2
+                        "Campeón del doble 6": 44.2,
+                        "Campeón del doble 9": 57.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 58.4,
@@ -13644,7 +15567,8 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 49.8,
                         "Siempre doble": 44.0,
-                        "Inteligente": 50.0
+                        "Campeón del doble 6": 50.0,
+                        "Campeón del doble 9": 51.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 72.2,
@@ -13659,13 +15583,14 @@ var SITE_JSON = {
                         "Agachao": 60.8,
                         "Gastar la data": 58.6,
                         "Siempre doble": 46.4,
-                        "Inteligente": 53.0
+                        "Campeón del doble 6": 53.0,
+                        "Campeón del doble 9": 60.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 65.6,
                         "Más Frecuente": 67.4,
                         "Aleatorio": 64.8,
-                        "Inteligente": 49.8,
+                        "Campeón del doble 6": 49.8,
                         "Repetidor": 60.0,
                         "Contador de la mesa": 58.6,
                         "Pasador": 56.8,
@@ -13674,7 +15599,23 @@ var SITE_JSON = {
                         "Bota Flaca": 61.6,
                         "Agachao": 55.8,
                         "Gastar la data": 50.0,
-                        "Siempre doble": 47.0
+                        "Siempre doble": 47.0,
+                        "Campeón del doble 9": 59.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 58.8,
+                        "Más Frecuente": 65.8,
+                        "Aleatorio": 56.6,
+                        "Campeón del doble 6": 40.6,
+                        "Repetidor": 55.2,
+                        "Contador de la mesa": 51.8,
+                        "Pasador": 58.4,
+                        "Menos Jugada": 55.4,
+                        "No gastar la data": 53.8,
+                        "Bota Flaca": 50.6,
+                        "Agachao": 42.6,
+                        "Gastar la data": 49.0,
+                        "Siempre doble": 39.2
                     }
                 },
                 "Cooperativo": {
@@ -13691,7 +15632,8 @@ var SITE_JSON = {
                         "Agachao": 40.6,
                         "Gastar la data": 39.0,
                         "Siempre doble": 36.0,
-                        "Inteligente": 36.8
+                        "Campeón del doble 6": 36.8,
+                        "Campeón del doble 9": 44.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 49.4,
@@ -13706,7 +15648,8 @@ var SITE_JSON = {
                         "Agachao": 38.8,
                         "Gastar la data": 41.2,
                         "Siempre doble": 32.4,
-                        "Inteligente": 34.8
+                        "Campeón del doble 6": 34.8,
+                        "Campeón del doble 9": 37.2
                     },
                     "Aleatorio": {
                         "Bota Gorda": 48.2,
@@ -13721,7 +15664,8 @@ var SITE_JSON = {
                         "Agachao": 45.2,
                         "Gastar la data": 43.2,
                         "Siempre doble": 34.0,
-                        "Inteligente": 41.6
+                        "Campeón del doble 6": 41.6,
+                        "Campeón del doble 9": 47.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 56.4,
@@ -13736,7 +15680,8 @@ var SITE_JSON = {
                         "Agachao": 39.6,
                         "Gastar la data": 45.2,
                         "Siempre doble": 40.6,
-                        "Inteligente": 44.2
+                        "Campeón del doble 6": 44.2,
+                        "Campeón del doble 9": 43.6
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 62.8,
@@ -13751,7 +15696,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 45.4,
                         "Siempre doble": 39.4,
-                        "Inteligente": 44.0
+                        "Campeón del doble 6": 44.0,
+                        "Campeón del doble 9": 49.6
                     },
                     "Pasador": {
                         "Bota Gorda": 50.0,
@@ -13766,7 +15712,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 46.8,
                         "Siempre doble": 36.6,
-                        "Inteligente": 41.4
+                        "Campeón del doble 6": 41.4,
+                        "Campeón del doble 9": 46.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 56.6,
@@ -13781,7 +15728,8 @@ var SITE_JSON = {
                         "Agachao": 40.8,
                         "Gastar la data": 43.0,
                         "Siempre doble": 34.8,
-                        "Inteligente": 35.0
+                        "Campeón del doble 6": 35.0,
+                        "Campeón del doble 9": 46.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 58.4,
@@ -13796,7 +15744,8 @@ var SITE_JSON = {
                         "Agachao": 47.8,
                         "Gastar la data": 48.8,
                         "Siempre doble": 37.0,
-                        "Inteligente": 41.2
+                        "Campeón del doble 6": 41.2,
+                        "Campeón del doble 9": 49.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 59.0,
@@ -13811,7 +15760,8 @@ var SITE_JSON = {
                         "Agachao": 48.4,
                         "Gastar la data": 52.6,
                         "Siempre doble": 35.6,
-                        "Inteligente": 39.8
+                        "Campeón del doble 6": 39.8,
+                        "Campeón del doble 9": 52.4
                     },
                     "Agachao": {
                         "Bota Gorda": 61.2,
@@ -13826,7 +15776,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 54.6,
                         "Siempre doble": 42.8,
-                        "Inteligente": 47.2
+                        "Campeón del doble 6": 47.2,
+                        "Campeón del doble 9": 53.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.0,
@@ -13841,7 +15792,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 47.0,
                         "Siempre doble": 44.8,
-                        "Inteligente": 46.6
+                        "Campeón del doble 6": 46.6,
+                        "Campeón del doble 9": 52.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 67.8,
@@ -13856,13 +15808,14 @@ var SITE_JSON = {
                         "Agachao": 57.2,
                         "Gastar la data": 57.2,
                         "Siempre doble": 50.8,
-                        "Inteligente": 51.8
+                        "Campeón del doble 6": 51.8,
+                        "Campeón del doble 9": 62.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 63.2,
                         "Más Frecuente": 65.2,
                         "Aleatorio": 58.4,
-                        "Inteligente": 49.4,
+                        "Campeón del doble 6": 49.4,
                         "Repetidor": 55.8,
                         "Contador de la mesa": 56.0,
                         "Pasador": 58.6,
@@ -13871,7 +15824,23 @@ var SITE_JSON = {
                         "Bota Flaca": 60.2,
                         "Agachao": 52.8,
                         "Gastar la data": 53.4,
-                        "Siempre doble": 48.2
+                        "Siempre doble": 48.2,
+                        "Campeón del doble 9": 62.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 55.6,
+                        "Más Frecuente": 62.8,
+                        "Aleatorio": 52.8,
+                        "Campeón del doble 6": 37.6,
+                        "Repetidor": 56.4,
+                        "Contador de la mesa": 50.4,
+                        "Pasador": 54.0,
+                        "Menos Jugada": 53.4,
+                        "No gastar la data": 50.6,
+                        "Bota Flaca": 47.6,
+                        "Agachao": 46.2,
+                        "Gastar la data": 47.4,
+                        "Siempre doble": 38.0
                     }
                 }
             }
@@ -13892,7 +15861,8 @@ var SITE_JSON = {
                         "Agachao": 37.4,
                         "Gastar la data": 43.6,
                         "Siempre doble": 30.8,
-                        "Inteligente": 23.400000000000006
+                        "Campeón del doble 6": 23.400000000000006,
+                        "Campeón del doble 9": 65.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 36.6,
@@ -13907,7 +15877,8 @@ var SITE_JSON = {
                         "Agachao": 28.8,
                         "Gastar la data": 30.2,
                         "Siempre doble": 23.4,
-                        "Inteligente": 15.400000000000006
+                        "Campeón del doble 6": 15.400000000000006,
+                        "Campeón del doble 9": 38.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 43.8,
@@ -13922,7 +15893,8 @@ var SITE_JSON = {
                         "Agachao": 33.8,
                         "Gastar la data": 31.4,
                         "Siempre doble": 21.4,
-                        "Inteligente": 19.200000000000003
+                        "Campeón del doble 6": 19.200000000000003,
+                        "Campeón del doble 9": 53.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 50.4,
@@ -13937,7 +15909,8 @@ var SITE_JSON = {
                         "Agachao": 41.2,
                         "Gastar la data": 39.6,
                         "Siempre doble": 30.4,
-                        "Inteligente": 28.0
+                        "Campeón del doble 6": 28.0,
+                        "Campeón del doble 9": 45.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.4,
@@ -13952,7 +15925,8 @@ var SITE_JSON = {
                         "Agachao": 37.0,
                         "Gastar la data": 44.2,
                         "Siempre doble": 34.4,
-                        "Inteligente": 34.599999999999994
+                        "Campeón del doble 6": 34.599999999999994,
+                        "Campeón del doble 9": 43.8
                     },
                     "Pasador": {
                         "Bota Gorda": 46.0,
@@ -13967,7 +15941,8 @@ var SITE_JSON = {
                         "Agachao": 34.8,
                         "Gastar la data": 36.6,
                         "Siempre doble": 28.6,
-                        "Inteligente": 19.200000000000003
+                        "Campeón del doble 6": 19.200000000000003,
+                        "Campeón del doble 9": 46.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 44.2,
@@ -13982,7 +15957,8 @@ var SITE_JSON = {
                         "Agachao": 36.0,
                         "Gastar la data": 35.2,
                         "Siempre doble": 26.2,
-                        "Inteligente": 17.0
+                        "Campeón del doble 6": 17.0,
+                        "Campeón del doble 9": 49.2
                     },
                     "No gastar la data": {
                         "Bota Gorda": 43.6,
@@ -13997,7 +15973,8 @@ var SITE_JSON = {
                         "Agachao": 37.4,
                         "Gastar la data": 33.0,
                         "Siempre doble": 23.6,
-                        "Inteligente": 16.0
+                        "Campeón del doble 6": 16.0,
+                        "Campeón del doble 9": 54.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 37.0,
@@ -14012,7 +15989,8 @@ var SITE_JSON = {
                         "Agachao": 34.4,
                         "Gastar la data": 34.2,
                         "Siempre doble": 20.6,
-                        "Inteligente": 11.799999999999997
+                        "Campeón del doble 6": 11.799999999999997,
+                        "Campeón del doble 9": 47.8
                     },
                     "Agachao": {
                         "Bota Gorda": 69.0,
@@ -14027,7 +16005,8 @@ var SITE_JSON = {
                         "Agachao": 56.2,
                         "Gastar la data": 56.0,
                         "Siempre doble": 47.6,
-                        "Inteligente": 35.599999999999994
+                        "Campeón del doble 6": 35.599999999999994,
+                        "Campeón del doble 9": 64.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 65.8,
@@ -14042,7 +16021,8 @@ var SITE_JSON = {
                         "Agachao": 51.2,
                         "Gastar la data": 50.8,
                         "Siempre doble": 44.4,
-                        "Inteligente": 32.2
+                        "Campeón del doble 6": 32.2,
+                        "Campeón del doble 9": 66.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 75.4,
@@ -14057,13 +16037,14 @@ var SITE_JSON = {
                         "Agachao": 64.6,
                         "Gastar la data": 59.2,
                         "Siempre doble": 53.8,
-                        "Inteligente": 41.4
+                        "Campeón del doble 6": 41.4,
+                        "Campeón del doble 9": 80.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 76.6,
                         "Más Frecuente": 84.6,
                         "Aleatorio": 80.8,
-                        "Inteligente": 37.8,
+                        "Campeón del doble 6": 37.8,
                         "Repetidor": 72.0,
                         "Contador de la mesa": 65.4,
                         "Pasador": 80.8,
@@ -14072,7 +16053,23 @@ var SITE_JSON = {
                         "Bota Flaca": 88.2,
                         "Agachao": 64.4,
                         "Gastar la data": 67.8,
-                        "Siempre doble": 58.6
+                        "Siempre doble": 58.6,
+                        "Campeón del doble 9": 83.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 34.8,
+                        "Más Frecuente": 62.0,
+                        "Aleatorio": 46.8,
+                        "Campeón del doble 6": 16.6,
+                        "Repetidor": 54.2,
+                        "Contador de la mesa": 56.2,
+                        "Pasador": 54.0,
+                        "Menos Jugada": 50.8,
+                        "No gastar la data": 45.4,
+                        "Bota Flaca": 52.2,
+                        "Agachao": 35.2,
+                        "Gastar la data": 33.4,
+                        "Siempre doble": 19.6
                     }
                 },
                 "Cooperativo": {
@@ -14089,7 +16086,8 @@ var SITE_JSON = {
                         "Agachao": 37.6,
                         "Gastar la data": 39.0,
                         "Siempre doble": 28.2,
-                        "Inteligente": 24.0
+                        "Campeón del doble 6": 24.0,
+                        "Campeón del doble 9": 51.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 39.4,
@@ -14104,7 +16102,8 @@ var SITE_JSON = {
                         "Agachao": 30.6,
                         "Gastar la data": 28.8,
                         "Siempre doble": 19.8,
-                        "Inteligente": 17.400000000000006
+                        "Campeón del doble 6": 17.400000000000006,
+                        "Campeón del doble 9": 36.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 46.2,
@@ -14119,7 +16118,8 @@ var SITE_JSON = {
                         "Agachao": 33.8,
                         "Gastar la data": 37.2,
                         "Siempre doble": 23.2,
-                        "Inteligente": 23.599999999999994
+                        "Campeón del doble 6": 23.599999999999994,
+                        "Campeón del doble 9": 46.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 54.6,
@@ -14134,7 +16134,8 @@ var SITE_JSON = {
                         "Agachao": 39.8,
                         "Gastar la data": 38.8,
                         "Siempre doble": 37.0,
-                        "Inteligente": 32.400000000000006
+                        "Campeón del doble 6": 32.400000000000006,
+                        "Campeón del doble 9": 50.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 53.2,
@@ -14149,7 +16150,8 @@ var SITE_JSON = {
                         "Agachao": 38.4,
                         "Gastar la data": 41.0,
                         "Siempre doble": 37.4,
-                        "Inteligente": 32.8
+                        "Campeón del doble 6": 32.8,
+                        "Campeón del doble 9": 48.4
                     },
                     "Pasador": {
                         "Bota Gorda": 46.6,
@@ -14164,7 +16166,8 @@ var SITE_JSON = {
                         "Agachao": 34.8,
                         "Gastar la data": 35.4,
                         "Siempre doble": 25.6,
-                        "Inteligente": 24.200000000000003
+                        "Campeón del doble 6": 24.200000000000003,
+                        "Campeón del doble 9": 45.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 44.6,
@@ -14179,7 +16182,8 @@ var SITE_JSON = {
                         "Agachao": 32.6,
                         "Gastar la data": 35.8,
                         "Siempre doble": 25.0,
-                        "Inteligente": 17.799999999999997
+                        "Campeón del doble 6": 17.799999999999997,
+                        "Campeón del doble 9": 48.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 46.6,
@@ -14194,7 +16198,8 @@ var SITE_JSON = {
                         "Agachao": 39.8,
                         "Gastar la data": 39.2,
                         "Siempre doble": 26.0,
-                        "Inteligente": 20.0
+                        "Campeón del doble 6": 20.0,
+                        "Campeón del doble 9": 51.8
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 42.6,
@@ -14209,7 +16214,8 @@ var SITE_JSON = {
                         "Agachao": 36.8,
                         "Gastar la data": 37.4,
                         "Siempre doble": 27.2,
-                        "Inteligente": 19.200000000000003
+                        "Campeón del doble 6": 19.200000000000003,
+                        "Campeón del doble 9": 51.8
                     },
                     "Agachao": {
                         "Bota Gorda": 67.2,
@@ -14224,7 +16230,8 @@ var SITE_JSON = {
                         "Agachao": 52.6,
                         "Gastar la data": 54.8,
                         "Siempre doble": 45.2,
-                        "Inteligente": 35.2
+                        "Campeón del doble 6": 35.2,
+                        "Campeón del doble 9": 64.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 65.2,
@@ -14239,7 +16246,8 @@ var SITE_JSON = {
                         "Agachao": 52.2,
                         "Gastar la data": 55.2,
                         "Siempre doble": 42.6,
-                        "Inteligente": 34.8
+                        "Campeón del doble 6": 34.8,
+                        "Campeón del doble 9": 64.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 74.0,
@@ -14254,13 +16262,14 @@ var SITE_JSON = {
                         "Agachao": 64.0,
                         "Gastar la data": 63.8,
                         "Siempre doble": 53.2,
-                        "Inteligente": 43.6
+                        "Campeón del doble 6": 43.6,
+                        "Campeón del doble 9": 75.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 76.0,
                         "Más Frecuente": 82.6,
                         "Aleatorio": 76.4,
-                        "Inteligente": 44.2,
+                        "Campeón del doble 6": 44.2,
                         "Repetidor": 67.6,
                         "Contador de la mesa": 67.2,
                         "Pasador": 75.8,
@@ -14269,7 +16278,23 @@ var SITE_JSON = {
                         "Bota Flaca": 80.8,
                         "Agachao": 64.8,
                         "Gastar la data": 65.2,
-                        "Siempre doble": 56.4
+                        "Siempre doble": 56.4,
+                        "Campeón del doble 9": 79.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 48.6,
+                        "Más Frecuente": 64.0,
+                        "Aleatorio": 53.8,
+                        "Campeón del doble 6": 20.6,
+                        "Repetidor": 49.6,
+                        "Contador de la mesa": 51.6,
+                        "Pasador": 54.2,
+                        "Menos Jugada": 51.4,
+                        "No gastar la data": 48.2,
+                        "Bota Flaca": 48.2,
+                        "Agachao": 35.2,
+                        "Gastar la data": 35.2,
+                        "Siempre doble": 24.6
                     }
                 }
             },
@@ -14288,7 +16313,8 @@ var SITE_JSON = {
                         "Agachao": 35.4,
                         "Gastar la data": 38.8,
                         "Siempre doble": 31.2,
-                        "Inteligente": 24.599999999999994
+                        "Campeón del doble 6": 24.599999999999994,
+                        "Campeón del doble 9": 60.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 39.2,
@@ -14303,7 +16329,8 @@ var SITE_JSON = {
                         "Agachao": 31.2,
                         "Gastar la data": 33.4,
                         "Siempre doble": 22.6,
-                        "Inteligente": 18.599999999999994
+                        "Campeón del doble 6": 18.599999999999994,
+                        "Campeón del doble 9": 39.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 40.0,
@@ -14318,7 +16345,8 @@ var SITE_JSON = {
                         "Agachao": 33.2,
                         "Gastar la data": 36.4,
                         "Siempre doble": 23.8,
-                        "Inteligente": 15.200000000000003
+                        "Campeón del doble 6": 15.200000000000003,
+                        "Campeón del doble 9": 50.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 52.2,
@@ -14333,7 +16361,8 @@ var SITE_JSON = {
                         "Agachao": 40.6,
                         "Gastar la data": 39.4,
                         "Siempre doble": 31.2,
-                        "Inteligente": 33.400000000000006
+                        "Campeón del doble 6": 33.400000000000006,
+                        "Campeón del doble 9": 44.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.0,
@@ -14348,7 +16377,8 @@ var SITE_JSON = {
                         "Agachao": 34.4,
                         "Gastar la data": 40.6,
                         "Siempre doble": 33.4,
-                        "Inteligente": 37.0
+                        "Campeón del doble 6": 37.0,
+                        "Campeón del doble 9": 48.4
                     },
                     "Pasador": {
                         "Bota Gorda": 46.2,
@@ -14363,7 +16393,8 @@ var SITE_JSON = {
                         "Agachao": 34.0,
                         "Gastar la data": 37.2,
                         "Siempre doble": 30.8,
-                        "Inteligente": 23.799999999999997
+                        "Campeón del doble 6": 23.799999999999997,
+                        "Campeón del doble 9": 48.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 40.8,
@@ -14378,7 +16409,8 @@ var SITE_JSON = {
                         "Agachao": 29.6,
                         "Gastar la data": 33.6,
                         "Siempre doble": 24.2,
-                        "Inteligente": 19.400000000000006
+                        "Campeón del doble 6": 19.400000000000006,
+                        "Campeón del doble 9": 47.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 47.8,
@@ -14393,7 +16425,8 @@ var SITE_JSON = {
                         "Agachao": 33.4,
                         "Gastar la data": 37.4,
                         "Siempre doble": 29.6,
-                        "Inteligente": 20.400000000000006
+                        "Campeón del doble 6": 20.400000000000006,
+                        "Campeón del doble 9": 61.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 41.2,
@@ -14408,7 +16441,8 @@ var SITE_JSON = {
                         "Agachao": 34.0,
                         "Gastar la data": 34.6,
                         "Siempre doble": 25.8,
-                        "Inteligente": 12.200000000000003
+                        "Campeón del doble 6": 12.200000000000003,
+                        "Campeón del doble 9": 49.0
                     },
                     "Agachao": {
                         "Bota Gorda": 66.4,
@@ -14423,7 +16457,8 @@ var SITE_JSON = {
                         "Agachao": 52.2,
                         "Gastar la data": 56.8,
                         "Siempre doble": 41.4,
-                        "Inteligente": 38.2
+                        "Campeón del doble 6": 38.2,
+                        "Campeón del doble 9": 66.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.4,
@@ -14438,7 +16473,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 53.4,
                         "Siempre doble": 47.4,
-                        "Inteligente": 37.0
+                        "Campeón del doble 6": 37.0,
+                        "Campeón del doble 9": 61.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 69.4,
@@ -14453,13 +16489,14 @@ var SITE_JSON = {
                         "Agachao": 60.2,
                         "Gastar la data": 60.0,
                         "Siempre doble": 55.0,
-                        "Inteligente": 43.6
+                        "Campeón del doble 6": 43.6,
+                        "Campeón del doble 9": 76.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 75.4,
                         "Más Frecuente": 81.4,
                         "Aleatorio": 84.8,
-                        "Inteligente": 47.4,
+                        "Campeón del doble 6": 47.4,
                         "Repetidor": 66.6,
                         "Contador de la mesa": 63.0,
                         "Pasador": 76.2,
@@ -14468,7 +16505,23 @@ var SITE_JSON = {
                         "Bota Flaca": 87.8,
                         "Agachao": 61.8,
                         "Gastar la data": 63.0,
-                        "Siempre doble": 56.4
+                        "Siempre doble": 56.4,
+                        "Campeón del doble 9": 83.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 40.0,
+                        "Más Frecuente": 60.2,
+                        "Aleatorio": 49.6,
+                        "Campeón del doble 6": 17.0,
+                        "Repetidor": 55.8,
+                        "Contador de la mesa": 51.6,
+                        "Pasador": 51.2,
+                        "Menos Jugada": 52.6,
+                        "No gastar la data": 39.0,
+                        "Bota Flaca": 51.0,
+                        "Agachao": 33.2,
+                        "Gastar la data": 39.0,
+                        "Siempre doble": 23.4
                     }
                 },
                 "Cooperativo": {
@@ -14485,7 +16538,8 @@ var SITE_JSON = {
                         "Agachao": 38.2,
                         "Gastar la data": 41.2,
                         "Siempre doble": 30.0,
-                        "Inteligente": 27.0
+                        "Campeón del doble 6": 27.0,
+                        "Campeón del doble 9": 54.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 41.6,
@@ -14500,7 +16554,8 @@ var SITE_JSON = {
                         "Agachao": 32.6,
                         "Gastar la data": 34.4,
                         "Siempre doble": 21.6,
-                        "Inteligente": 21.599999999999994
+                        "Campeón del doble 6": 21.599999999999994,
+                        "Campeón del doble 9": 37.2
                     },
                     "Aleatorio": {
                         "Bota Gorda": 48.2,
@@ -14515,7 +16570,8 @@ var SITE_JSON = {
                         "Agachao": 35.0,
                         "Gastar la data": 39.0,
                         "Siempre doble": 26.8,
-                        "Inteligente": 24.799999999999997
+                        "Campeón del doble 6": 24.799999999999997,
+                        "Campeón del doble 9": 52.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 54.2,
@@ -14530,7 +16586,8 @@ var SITE_JSON = {
                         "Agachao": 38.4,
                         "Gastar la data": 40.4,
                         "Siempre doble": 34.4,
-                        "Inteligente": 30.200000000000003
+                        "Campeón del doble 6": 30.200000000000003,
+                        "Campeón del doble 9": 49.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 57.4,
@@ -14545,7 +16602,8 @@ var SITE_JSON = {
                         "Agachao": 40.2,
                         "Gastar la data": 45.4,
                         "Siempre doble": 36.0,
-                        "Inteligente": 38.2
+                        "Campeón del doble 6": 38.2,
+                        "Campeón del doble 9": 53.2
                     },
                     "Pasador": {
                         "Bota Gorda": 45.4,
@@ -14560,7 +16618,8 @@ var SITE_JSON = {
                         "Agachao": 29.6,
                         "Gastar la data": 38.8,
                         "Siempre doble": 28.0,
-                        "Inteligente": 24.200000000000003
+                        "Campeón del doble 6": 24.200000000000003,
+                        "Campeón del doble 9": 47.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 43.6,
@@ -14575,7 +16634,8 @@ var SITE_JSON = {
                         "Agachao": 37.0,
                         "Gastar la data": 39.4,
                         "Siempre doble": 27.0,
-                        "Inteligente": 24.400000000000006
+                        "Campeón del doble 6": 24.400000000000006,
+                        "Campeón del doble 9": 48.2
                     },
                     "No gastar la data": {
                         "Bota Gorda": 48.6,
@@ -14590,7 +16650,8 @@ var SITE_JSON = {
                         "Agachao": 41.4,
                         "Gastar la data": 37.0,
                         "Siempre doble": 27.2,
-                        "Inteligente": 21.200000000000003
+                        "Campeón del doble 6": 21.200000000000003,
+                        "Campeón del doble 9": 53.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 41.4,
@@ -14605,7 +16666,8 @@ var SITE_JSON = {
                         "Agachao": 34.0,
                         "Gastar la data": 38.0,
                         "Siempre doble": 25.8,
-                        "Inteligente": 18.799999999999997
+                        "Campeón del doble 6": 18.799999999999997,
+                        "Campeón del doble 9": 49.4
                     },
                     "Agachao": {
                         "Bota Gorda": 64.6,
@@ -14620,7 +16682,8 @@ var SITE_JSON = {
                         "Agachao": 48.8,
                         "Gastar la data": 54.4,
                         "Siempre doble": 42.6,
-                        "Inteligente": 34.400000000000006
+                        "Campeón del doble 6": 34.400000000000006,
+                        "Campeón del doble 9": 61.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.6,
@@ -14635,7 +16698,8 @@ var SITE_JSON = {
                         "Agachao": 53.8,
                         "Gastar la data": 52.8,
                         "Siempre doble": 44.2,
-                        "Inteligente": 39.0
+                        "Campeón del doble 6": 39.0,
+                        "Campeón del doble 9": 60.4
                     },
                     "Siempre doble": {
                         "Bota Gorda": 72.8,
@@ -14650,13 +16714,14 @@ var SITE_JSON = {
                         "Agachao": 61.4,
                         "Gastar la data": 57.4,
                         "Siempre doble": 53.0,
-                        "Inteligente": 45.2
+                        "Campeón del doble 6": 45.2,
+                        "Campeón del doble 9": 73.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 73.0,
                         "Más Frecuente": 78.4,
                         "Aleatorio": 75.2,
-                        "Inteligente": 47.6,
+                        "Campeón del doble 6": 47.6,
                         "Repetidor": 69.8,
                         "Contador de la mesa": 61.8,
                         "Pasador": 75.8,
@@ -14665,7 +16730,23 @@ var SITE_JSON = {
                         "Bota Flaca": 81.2,
                         "Agachao": 65.6,
                         "Gastar la data": 61.0,
-                        "Siempre doble": 54.8
+                        "Siempre doble": 54.8,
+                        "Campeón del doble 9": 80.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 46.0,
+                        "Más Frecuente": 62.8,
+                        "Aleatorio": 47.2,
+                        "Campeón del doble 6": 19.2,
+                        "Repetidor": 50.8,
+                        "Contador de la mesa": 46.8,
+                        "Pasador": 52.6,
+                        "Menos Jugada": 51.8,
+                        "No gastar la data": 46.8,
+                        "Bota Flaca": 50.6,
+                        "Agachao": 39.0,
+                        "Gastar la data": 39.6,
+                        "Siempre doble": 26.2
                     }
                 }
             },
@@ -14684,7 +16765,8 @@ var SITE_JSON = {
                         "Agachao": 40.0,
                         "Gastar la data": 44.6,
                         "Siempre doble": 32.6,
-                        "Inteligente": 26.400000000000006
+                        "Campeón del doble 6": 26.400000000000006,
+                        "Campeón del doble 9": 63.6
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 36.6,
@@ -14699,7 +16781,8 @@ var SITE_JSON = {
                         "Agachao": 30.4,
                         "Gastar la data": 38.8,
                         "Siempre doble": 21.0,
-                        "Inteligente": 20.599999999999994
+                        "Campeón del doble 6": 20.599999999999994,
+                        "Campeón del doble 9": 42.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 42.4,
@@ -14714,7 +16797,8 @@ var SITE_JSON = {
                         "Agachao": 36.6,
                         "Gastar la data": 36.8,
                         "Siempre doble": 28.6,
-                        "Inteligente": 20.599999999999994
+                        "Campeón del doble 6": 20.599999999999994,
+                        "Campeón del doble 9": 53.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 49.8,
@@ -14729,7 +16813,8 @@ var SITE_JSON = {
                         "Agachao": 40.0,
                         "Gastar la data": 36.6,
                         "Siempre doble": 36.2,
-                        "Inteligente": 31.599999999999994
+                        "Campeón del doble 6": 31.599999999999994,
+                        "Campeón del doble 9": 48.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 58.4,
@@ -14744,7 +16829,8 @@ var SITE_JSON = {
                         "Agachao": 40.4,
                         "Gastar la data": 43.8,
                         "Siempre doble": 34.6,
-                        "Inteligente": 35.2
+                        "Campeón del doble 6": 35.2,
+                        "Campeón del doble 9": 50.0
                     },
                     "Pasador": {
                         "Bota Gorda": 45.6,
@@ -14759,7 +16845,8 @@ var SITE_JSON = {
                         "Agachao": 34.0,
                         "Gastar la data": 39.6,
                         "Siempre doble": 30.6,
-                        "Inteligente": 22.799999999999997
+                        "Campeón del doble 6": 22.799999999999997,
+                        "Campeón del doble 9": 50.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 43.2,
@@ -14774,7 +16861,8 @@ var SITE_JSON = {
                         "Agachao": 35.4,
                         "Gastar la data": 36.6,
                         "Siempre doble": 28.0,
-                        "Inteligente": 19.200000000000003
+                        "Campeón del doble 6": 19.200000000000003,
+                        "Campeón del doble 9": 50.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 45.4,
@@ -14789,7 +16877,8 @@ var SITE_JSON = {
                         "Agachao": 38.0,
                         "Gastar la data": 42.6,
                         "Siempre doble": 30.2,
-                        "Inteligente": 20.599999999999994
+                        "Campeón del doble 6": 20.599999999999994,
+                        "Campeón del doble 9": 58.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 30.8,
@@ -14804,7 +16893,8 @@ var SITE_JSON = {
                         "Agachao": 32.6,
                         "Gastar la data": 35.8,
                         "Siempre doble": 21.0,
-                        "Inteligente": 14.400000000000006
+                        "Campeón del doble 6": 14.400000000000006,
+                        "Campeón del doble 9": 48.8
                     },
                     "Agachao": {
                         "Bota Gorda": 61.8,
@@ -14819,7 +16909,8 @@ var SITE_JSON = {
                         "Agachao": 53.2,
                         "Gastar la data": 52.8,
                         "Siempre doble": 46.2,
-                        "Inteligente": 36.0
+                        "Campeón del doble 6": 36.0,
+                        "Campeón del doble 9": 66.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 57.4,
@@ -14834,7 +16925,8 @@ var SITE_JSON = {
                         "Agachao": 47.2,
                         "Gastar la data": 51.4,
                         "Siempre doble": 44.0,
-                        "Inteligente": 39.8
+                        "Campeón del doble 6": 39.8,
+                        "Campeón del doble 9": 65.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 66.4,
@@ -14849,13 +16941,14 @@ var SITE_JSON = {
                         "Agachao": 60.6,
                         "Gastar la data": 62.6,
                         "Siempre doble": 53.0,
-                        "Inteligente": 41.6
+                        "Campeón del doble 6": 41.6,
+                        "Campeón del doble 9": 79.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 73.6,
                         "Más Frecuente": 79.4,
                         "Aleatorio": 79.4,
-                        "Inteligente": 48.2,
+                        "Campeón del doble 6": 48.2,
                         "Repetidor": 68.4,
                         "Contador de la mesa": 64.8,
                         "Pasador": 77.2,
@@ -14864,7 +16957,23 @@ var SITE_JSON = {
                         "Bota Flaca": 85.6,
                         "Agachao": 64.0,
                         "Gastar la data": 60.2,
-                        "Siempre doble": 58.4
+                        "Siempre doble": 58.4,
+                        "Campeón del doble 9": 79.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 36.4,
+                        "Más Frecuente": 58.0,
+                        "Aleatorio": 46.2,
+                        "Campeón del doble 6": 20.6,
+                        "Repetidor": 51.6,
+                        "Contador de la mesa": 50.0,
+                        "Pasador": 49.8,
+                        "Menos Jugada": 49.4,
+                        "No gastar la data": 42.0,
+                        "Bota Flaca": 51.2,
+                        "Agachao": 33.2,
+                        "Gastar la data": 34.4,
+                        "Siempre doble": 20.4
                     }
                 },
                 "Cooperativo": {
@@ -14881,7 +16990,8 @@ var SITE_JSON = {
                         "Agachao": 39.8,
                         "Gastar la data": 42.0,
                         "Siempre doble": 29.6,
-                        "Inteligente": 29.0
+                        "Campeón del doble 6": 29.0,
+                        "Campeón del doble 9": 53.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 40.4,
@@ -14896,7 +17006,8 @@ var SITE_JSON = {
                         "Agachao": 32.0,
                         "Gastar la data": 38.2,
                         "Siempre doble": 27.4,
-                        "Inteligente": 20.0
+                        "Campeón del doble 6": 20.0,
+                        "Campeón del doble 9": 41.2
                     },
                     "Aleatorio": {
                         "Bota Gorda": 45.0,
@@ -14911,7 +17022,8 @@ var SITE_JSON = {
                         "Agachao": 36.8,
                         "Gastar la data": 40.4,
                         "Siempre doble": 30.8,
-                        "Inteligente": 26.0
+                        "Campeón del doble 6": 26.0,
+                        "Campeón del doble 9": 51.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 51.2,
@@ -14926,7 +17038,8 @@ var SITE_JSON = {
                         "Agachao": 40.0,
                         "Gastar la data": 47.0,
                         "Siempre doble": 39.2,
-                        "Inteligente": 31.799999999999997
+                        "Campeón del doble 6": 31.799999999999997,
+                        "Campeón del doble 9": 46.0
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 58.8,
@@ -14941,7 +17054,8 @@ var SITE_JSON = {
                         "Agachao": 38.4,
                         "Gastar la data": 47.2,
                         "Siempre doble": 37.4,
-                        "Inteligente": 37.6
+                        "Campeón del doble 6": 37.6,
+                        "Campeón del doble 9": 53.2
                     },
                     "Pasador": {
                         "Bota Gorda": 51.0,
@@ -14956,7 +17070,8 @@ var SITE_JSON = {
                         "Agachao": 41.0,
                         "Gastar la data": 40.8,
                         "Siempre doble": 33.8,
-                        "Inteligente": 26.0
+                        "Campeón del doble 6": 26.0,
+                        "Campeón del doble 9": 49.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 42.8,
@@ -14971,7 +17086,8 @@ var SITE_JSON = {
                         "Agachao": 32.8,
                         "Gastar la data": 38.0,
                         "Siempre doble": 30.2,
-                        "Inteligente": 22.200000000000003
+                        "Campeón del doble 6": 22.200000000000003,
+                        "Campeón del doble 9": 51.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 45.6,
@@ -14986,7 +17102,8 @@ var SITE_JSON = {
                         "Agachao": 37.2,
                         "Gastar la data": 39.8,
                         "Siempre doble": 29.8,
-                        "Inteligente": 24.599999999999994
+                        "Campeón del doble 6": 24.599999999999994,
+                        "Campeón del doble 9": 55.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 37.8,
@@ -15001,7 +17118,8 @@ var SITE_JSON = {
                         "Agachao": 33.8,
                         "Gastar la data": 41.0,
                         "Siempre doble": 26.8,
-                        "Inteligente": 20.400000000000006
+                        "Campeón del doble 6": 20.400000000000006,
+                        "Campeón del doble 9": 53.6
                     },
                     "Agachao": {
                         "Bota Gorda": 60.0,
@@ -15016,7 +17134,8 @@ var SITE_JSON = {
                         "Agachao": 53.0,
                         "Gastar la data": 52.2,
                         "Siempre doble": 41.2,
-                        "Inteligente": 42.0
+                        "Campeón del doble 6": 42.0,
+                        "Campeón del doble 9": 63.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.4,
@@ -15031,7 +17150,8 @@ var SITE_JSON = {
                         "Agachao": 46.6,
                         "Gastar la data": 51.0,
                         "Siempre doble": 41.8,
-                        "Inteligente": 39.0
+                        "Campeón del doble 6": 39.0,
+                        "Campeón del doble 9": 64.4
                     },
                     "Siempre doble": {
                         "Bota Gorda": 71.0,
@@ -15046,13 +17166,14 @@ var SITE_JSON = {
                         "Agachao": 57.4,
                         "Gastar la data": 59.4,
                         "Siempre doble": 48.4,
-                        "Inteligente": 45.4
+                        "Campeón del doble 6": 45.4,
+                        "Campeón del doble 9": 72.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 71.0,
                         "Más Frecuente": 80.0,
                         "Aleatorio": 74.0,
-                        "Inteligente": 54.6,
+                        "Campeón del doble 6": 54.6,
                         "Repetidor": 68.2,
                         "Contador de la mesa": 62.4,
                         "Pasador": 74.0,
@@ -15061,7 +17182,23 @@ var SITE_JSON = {
                         "Bota Flaca": 79.6,
                         "Agachao": 58.0,
                         "Gastar la data": 61.0,
-                        "Siempre doble": 54.6
+                        "Siempre doble": 54.6,
+                        "Campeón del doble 9": 77.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 46.6,
+                        "Más Frecuente": 58.8,
+                        "Aleatorio": 48.2,
+                        "Campeón del doble 6": 22.4,
+                        "Repetidor": 54.0,
+                        "Contador de la mesa": 46.8,
+                        "Pasador": 51.0,
+                        "Menos Jugada": 48.4,
+                        "No gastar la data": 45.0,
+                        "Bota Flaca": 46.4,
+                        "Agachao": 36.2,
+                        "Gastar la data": 35.6,
+                        "Siempre doble": 27.4
                     }
                 }
             },
@@ -15080,7 +17217,8 @@ var SITE_JSON = {
                         "Agachao": 41.4,
                         "Gastar la data": 48.8,
                         "Siempre doble": 33.6,
-                        "Inteligente": 26.400000000000006
+                        "Campeón del doble 6": 26.400000000000006,
+                        "Campeón del doble 9": 61.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 43.0,
@@ -15095,7 +17233,8 @@ var SITE_JSON = {
                         "Agachao": 39.6,
                         "Gastar la data": 38.6,
                         "Siempre doble": 32.0,
-                        "Inteligente": 22.599999999999994
+                        "Campeón del doble 6": 22.599999999999994,
+                        "Campeón del doble 9": 40.6
                     },
                     "Aleatorio": {
                         "Bota Gorda": 42.8,
@@ -15110,7 +17249,8 @@ var SITE_JSON = {
                         "Agachao": 40.4,
                         "Gastar la data": 42.6,
                         "Siempre doble": 30.6,
-                        "Inteligente": 23.200000000000003
+                        "Campeón del doble 6": 23.200000000000003,
+                        "Campeón del doble 9": 50.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 51.2,
@@ -15125,7 +17265,8 @@ var SITE_JSON = {
                         "Agachao": 44.8,
                         "Gastar la data": 42.0,
                         "Siempre doble": 38.4,
-                        "Inteligente": 35.2
+                        "Campeón del doble 6": 35.2,
+                        "Campeón del doble 9": 50.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 61.0,
@@ -15140,7 +17281,8 @@ var SITE_JSON = {
                         "Agachao": 44.0,
                         "Gastar la data": 43.8,
                         "Siempre doble": 38.2,
-                        "Inteligente": 36.6
+                        "Campeón del doble 6": 36.6,
+                        "Campeón del doble 9": 43.4
                     },
                     "Pasador": {
                         "Bota Gorda": 48.4,
@@ -15155,7 +17297,8 @@ var SITE_JSON = {
                         "Agachao": 43.4,
                         "Gastar la data": 40.4,
                         "Siempre doble": 32.4,
-                        "Inteligente": 25.0
+                        "Campeón del doble 6": 25.0,
+                        "Campeón del doble 9": 47.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 46.8,
@@ -15170,7 +17313,8 @@ var SITE_JSON = {
                         "Agachao": 40.2,
                         "Gastar la data": 42.8,
                         "Siempre doble": 29.0,
-                        "Inteligente": 22.400000000000006
+                        "Campeón del doble 6": 22.400000000000006,
+                        "Campeón del doble 9": 49.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 49.0,
@@ -15185,7 +17329,8 @@ var SITE_JSON = {
                         "Agachao": 43.6,
                         "Gastar la data": 40.6,
                         "Siempre doble": 36.2,
-                        "Inteligente": 21.799999999999997
+                        "Campeón del doble 6": 21.799999999999997,
+                        "Campeón del doble 9": 60.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 40.8,
@@ -15200,7 +17345,8 @@ var SITE_JSON = {
                         "Agachao": 36.2,
                         "Gastar la data": 38.8,
                         "Siempre doble": 25.6,
-                        "Inteligente": 15.799999999999997
+                        "Campeón del doble 6": 15.799999999999997,
+                        "Campeón del doble 9": 47.0
                     },
                     "Agachao": {
                         "Bota Gorda": 63.2,
@@ -15215,7 +17361,8 @@ var SITE_JSON = {
                         "Agachao": 58.0,
                         "Gastar la data": 56.2,
                         "Siempre doble": 48.4,
-                        "Inteligente": 36.8
+                        "Campeón del doble 6": 36.8,
+                        "Campeón del doble 9": 60.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.2,
@@ -15230,7 +17377,8 @@ var SITE_JSON = {
                         "Agachao": 49.8,
                         "Gastar la data": 52.8,
                         "Siempre doble": 39.2,
-                        "Inteligente": 36.2
+                        "Campeón del doble 6": 36.2,
+                        "Campeón del doble 9": 64.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 70.8,
@@ -15245,13 +17393,14 @@ var SITE_JSON = {
                         "Agachao": 64.8,
                         "Gastar la data": 59.4,
                         "Siempre doble": 53.8,
-                        "Inteligente": 41.4
+                        "Campeón del doble 6": 41.4,
+                        "Campeón del doble 9": 71.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 73.6,
                         "Más Frecuente": 77.4,
                         "Aleatorio": 76.8,
-                        "Inteligente": 47.6,
+                        "Campeón del doble 6": 47.6,
                         "Repetidor": 64.8,
                         "Contador de la mesa": 63.4,
                         "Pasador": 75.0,
@@ -15260,7 +17409,23 @@ var SITE_JSON = {
                         "Bota Flaca": 84.2,
                         "Agachao": 63.2,
                         "Gastar la data": 63.8,
-                        "Siempre doble": 58.6
+                        "Siempre doble": 58.6,
+                        "Campeón del doble 9": 81.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 38.6,
+                        "Más Frecuente": 59.4,
+                        "Aleatorio": 49.6,
+                        "Campeón del doble 6": 19.0,
+                        "Repetidor": 49.8,
+                        "Contador de la mesa": 56.6,
+                        "Pasador": 53.0,
+                        "Menos Jugada": 50.2,
+                        "No gastar la data": 39.6,
+                        "Bota Flaca": 53.0,
+                        "Agachao": 39.2,
+                        "Gastar la data": 36.0,
+                        "Siempre doble": 28.6
                     }
                 },
                 "Cooperativo": {
@@ -15277,7 +17442,8 @@ var SITE_JSON = {
                         "Agachao": 42.8,
                         "Gastar la data": 46.0,
                         "Siempre doble": 36.6,
-                        "Inteligente": 30.0
+                        "Campeón del doble 6": 30.0,
+                        "Campeón del doble 9": 54.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 45.2,
@@ -15292,7 +17458,8 @@ var SITE_JSON = {
                         "Agachao": 36.4,
                         "Gastar la data": 39.0,
                         "Siempre doble": 28.0,
-                        "Inteligente": 24.799999999999997
+                        "Campeón del doble 6": 24.799999999999997,
+                        "Campeón del doble 9": 39.6
                     },
                     "Aleatorio": {
                         "Bota Gorda": 52.4,
@@ -15307,7 +17474,8 @@ var SITE_JSON = {
                         "Agachao": 33.2,
                         "Gastar la data": 44.2,
                         "Siempre doble": 31.4,
-                        "Inteligente": 25.200000000000003
+                        "Campeón del doble 6": 25.200000000000003,
+                        "Campeón del doble 9": 45.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 54.6,
@@ -15322,7 +17490,8 @@ var SITE_JSON = {
                         "Agachao": 44.2,
                         "Gastar la data": 44.2,
                         "Siempre doble": 39.0,
-                        "Inteligente": 33.599999999999994
+                        "Campeón del doble 6": 33.599999999999994,
+                        "Campeón del doble 9": 47.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.0,
@@ -15337,7 +17506,8 @@ var SITE_JSON = {
                         "Agachao": 43.0,
                         "Gastar la data": 47.2,
                         "Siempre doble": 39.2,
-                        "Inteligente": 41.0
+                        "Campeón del doble 6": 41.0,
+                        "Campeón del doble 9": 52.2
                     },
                     "Pasador": {
                         "Bota Gorda": 52.0,
@@ -15352,7 +17522,8 @@ var SITE_JSON = {
                         "Agachao": 40.8,
                         "Gastar la data": 40.8,
                         "Siempre doble": 33.0,
-                        "Inteligente": 24.200000000000003
+                        "Campeón del doble 6": 24.200000000000003,
+                        "Campeón del doble 9": 47.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 47.8,
@@ -15367,7 +17538,8 @@ var SITE_JSON = {
                         "Agachao": 38.2,
                         "Gastar la data": 42.8,
                         "Siempre doble": 31.4,
-                        "Inteligente": 22.799999999999997
+                        "Campeón del doble 6": 22.799999999999997,
+                        "Campeón del doble 9": 50.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 50.0,
@@ -15382,7 +17554,8 @@ var SITE_JSON = {
                         "Agachao": 41.8,
                         "Gastar la data": 45.0,
                         "Siempre doble": 32.0,
-                        "Inteligente": 25.799999999999997
+                        "Campeón del doble 6": 25.799999999999997,
+                        "Campeón del doble 9": 53.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 41.4,
@@ -15397,7 +17570,8 @@ var SITE_JSON = {
                         "Agachao": 40.4,
                         "Gastar la data": 44.0,
                         "Siempre doble": 29.4,
-                        "Inteligente": 24.400000000000006
+                        "Campeón del doble 6": 24.400000000000006,
+                        "Campeón del doble 9": 47.8
                     },
                     "Agachao": {
                         "Bota Gorda": 65.4,
@@ -15412,7 +17586,8 @@ var SITE_JSON = {
                         "Agachao": 49.6,
                         "Gastar la data": 56.0,
                         "Siempre doble": 45.4,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 62.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 59.2,
@@ -15427,7 +17602,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 54.6,
                         "Siempre doble": 43.8,
-                        "Inteligente": 37.2
+                        "Campeón del doble 6": 37.2,
+                        "Campeón del doble 9": 62.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 67.2,
@@ -15442,13 +17618,14 @@ var SITE_JSON = {
                         "Agachao": 62.0,
                         "Gastar la data": 59.4,
                         "Siempre doble": 50.8,
-                        "Inteligente": 47.2
+                        "Campeón del doble 6": 47.2,
+                        "Campeón del doble 9": 69.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 70.0,
                         "Más Frecuente": 75.2,
                         "Aleatorio": 74.8,
-                        "Inteligente": 44.0,
+                        "Campeón del doble 6": 44.0,
                         "Repetidor": 66.4,
                         "Contador de la mesa": 59.0,
                         "Pasador": 75.8,
@@ -15457,7 +17634,23 @@ var SITE_JSON = {
                         "Bota Flaca": 75.6,
                         "Agachao": 60.0,
                         "Gastar la data": 62.8,
-                        "Siempre doble": 52.8
+                        "Siempre doble": 52.8,
+                        "Campeón del doble 9": 72.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 45.2,
+                        "Más Frecuente": 60.4,
+                        "Aleatorio": 54.2,
+                        "Campeón del doble 6": 27.4,
+                        "Repetidor": 52.8,
+                        "Contador de la mesa": 47.8,
+                        "Pasador": 52.2,
+                        "Menos Jugada": 49.6,
+                        "No gastar la data": 46.8,
+                        "Bota Flaca": 52.2,
+                        "Agachao": 37.4,
+                        "Gastar la data": 38.0,
+                        "Siempre doble": 30.2
                     }
                 }
             },
@@ -15476,7 +17669,8 @@ var SITE_JSON = {
                         "Agachao": 41.8,
                         "Gastar la data": 43.2,
                         "Siempre doble": 32.6,
-                        "Inteligente": 30.599999999999994
+                        "Campeón del doble 6": 30.599999999999994,
+                        "Campeón del doble 9": 57.6
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 32.6,
@@ -15491,7 +17685,8 @@ var SITE_JSON = {
                         "Agachao": 29.4,
                         "Gastar la data": 28.6,
                         "Siempre doble": 19.2,
-                        "Inteligente": 17.400000000000006
+                        "Campeón del doble 6": 17.400000000000006,
+                        "Campeón del doble 9": 37.6
                     },
                     "Aleatorio": {
                         "Bota Gorda": 41.6,
@@ -15506,7 +17701,8 @@ var SITE_JSON = {
                         "Agachao": 40.0,
                         "Gastar la data": 34.6,
                         "Siempre doble": 30.8,
-                        "Inteligente": 19.400000000000006
+                        "Campeón del doble 6": 19.400000000000006,
+                        "Campeón del doble 9": 55.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 51.2,
@@ -15521,7 +17717,8 @@ var SITE_JSON = {
                         "Agachao": 40.6,
                         "Gastar la data": 42.6,
                         "Siempre doble": 32.2,
-                        "Inteligente": 30.0
+                        "Campeón del doble 6": 30.0,
+                        "Campeón del doble 9": 46.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 57.6,
@@ -15536,7 +17733,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 41.6,
                         "Siempre doble": 37.0,
-                        "Inteligente": 36.4
+                        "Campeón del doble 6": 36.4,
+                        "Campeón del doble 9": 51.2
                     },
                     "Pasador": {
                         "Bota Gorda": 47.2,
@@ -15551,7 +17749,8 @@ var SITE_JSON = {
                         "Agachao": 38.4,
                         "Gastar la data": 36.8,
                         "Siempre doble": 24.2,
-                        "Inteligente": 25.200000000000003
+                        "Campeón del doble 6": 25.200000000000003,
+                        "Campeón del doble 9": 54.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 42.8,
@@ -15566,7 +17765,8 @@ var SITE_JSON = {
                         "Agachao": 34.4,
                         "Gastar la data": 35.4,
                         "Siempre doble": 22.4,
-                        "Inteligente": 18.599999999999994
+                        "Campeón del doble 6": 18.599999999999994,
+                        "Campeón del doble 9": 51.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 47.2,
@@ -15581,7 +17781,8 @@ var SITE_JSON = {
                         "Agachao": 43.6,
                         "Gastar la data": 44.8,
                         "Siempre doble": 35.4,
-                        "Inteligente": 23.599999999999994
+                        "Campeón del doble 6": 23.599999999999994,
+                        "Campeón del doble 9": 58.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 37.6,
@@ -15596,7 +17797,8 @@ var SITE_JSON = {
                         "Agachao": 35.2,
                         "Gastar la data": 32.2,
                         "Siempre doble": 22.2,
-                        "Inteligente": 15.799999999999997
+                        "Campeón del doble 6": 15.799999999999997,
+                        "Campeón del doble 9": 44.2
                     },
                     "Agachao": {
                         "Bota Gorda": 62.0,
@@ -15611,7 +17813,8 @@ var SITE_JSON = {
                         "Agachao": 53.2,
                         "Gastar la data": 50.6,
                         "Siempre doble": 39.4,
-                        "Inteligente": 37.4
+                        "Campeón del doble 6": 37.4,
+                        "Campeón del doble 9": 64.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 57.8,
@@ -15626,7 +17829,8 @@ var SITE_JSON = {
                         "Agachao": 47.6,
                         "Gastar la data": 52.6,
                         "Siempre doble": 39.8,
-                        "Inteligente": 36.4
+                        "Campeón del doble 6": 36.4,
+                        "Campeón del doble 9": 65.2
                     },
                     "Siempre doble": {
                         "Bota Gorda": 71.6,
@@ -15641,13 +17845,14 @@ var SITE_JSON = {
                         "Agachao": 65.2,
                         "Gastar la data": 60.6,
                         "Siempre doble": 50.8,
-                        "Inteligente": 44.4
+                        "Campeón del doble 6": 44.4,
+                        "Campeón del doble 9": 75.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 69.4,
                         "Más Frecuente": 82.6,
                         "Aleatorio": 80.6,
-                        "Inteligente": 49.0,
+                        "Campeón del doble 6": 49.0,
                         "Repetidor": 70.0,
                         "Contador de la mesa": 63.6,
                         "Pasador": 74.8,
@@ -15656,7 +17861,23 @@ var SITE_JSON = {
                         "Bota Flaca": 84.2,
                         "Agachao": 62.6,
                         "Gastar la data": 63.6,
-                        "Siempre doble": 55.6
+                        "Siempre doble": 55.6,
+                        "Campeón del doble 9": 83.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 42.4,
+                        "Más Frecuente": 62.4,
+                        "Aleatorio": 44.6,
+                        "Campeón del doble 6": 16.6,
+                        "Repetidor": 53.6,
+                        "Contador de la mesa": 48.8,
+                        "Pasador": 45.6,
+                        "Menos Jugada": 49.0,
+                        "No gastar la data": 41.8,
+                        "Bota Flaca": 55.8,
+                        "Agachao": 35.8,
+                        "Gastar la data": 34.8,
+                        "Siempre doble": 24.4
                     }
                 },
                 "Cooperativo": {
@@ -15673,7 +17894,8 @@ var SITE_JSON = {
                         "Agachao": 43.8,
                         "Gastar la data": 45.0,
                         "Siempre doble": 30.0,
-                        "Inteligente": 25.599999999999994
+                        "Campeón del doble 6": 25.599999999999994,
+                        "Campeón del doble 9": 58.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 38.2,
@@ -15688,7 +17910,8 @@ var SITE_JSON = {
                         "Agachao": 28.8,
                         "Gastar la data": 33.2,
                         "Siempre doble": 18.6,
-                        "Inteligente": 19.799999999999997
+                        "Campeón del doble 6": 19.799999999999997,
+                        "Campeón del doble 9": 39.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 48.2,
@@ -15703,7 +17926,8 @@ var SITE_JSON = {
                         "Agachao": 39.6,
                         "Gastar la data": 36.6,
                         "Siempre doble": 24.0,
-                        "Inteligente": 25.400000000000006
+                        "Campeón del doble 6": 25.400000000000006,
+                        "Campeón del doble 9": 47.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 53.6,
@@ -15718,7 +17942,8 @@ var SITE_JSON = {
                         "Agachao": 44.2,
                         "Gastar la data": 43.4,
                         "Siempre doble": 34.8,
-                        "Inteligente": 34.2
+                        "Campeón del doble 6": 34.2,
+                        "Campeón del doble 9": 50.0
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.0,
@@ -15733,7 +17958,8 @@ var SITE_JSON = {
                         "Agachao": 41.4,
                         "Gastar la data": 47.4,
                         "Siempre doble": 36.8,
-                        "Inteligente": 36.6
+                        "Campeón del doble 6": 36.6,
+                        "Campeón del doble 9": 47.2
                     },
                     "Pasador": {
                         "Bota Gorda": 49.0,
@@ -15748,7 +17974,8 @@ var SITE_JSON = {
                         "Agachao": 39.0,
                         "Gastar la data": 38.2,
                         "Siempre doble": 27.8,
-                        "Inteligente": 26.0
+                        "Campeón del doble 6": 26.0,
+                        "Campeón del doble 9": 47.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 43.6,
@@ -15763,7 +17990,8 @@ var SITE_JSON = {
                         "Agachao": 35.2,
                         "Gastar la data": 37.6,
                         "Siempre doble": 25.4,
-                        "Inteligente": 26.799999999999997
+                        "Campeón del doble 6": 26.799999999999997,
+                        "Campeón del doble 9": 53.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 53.2,
@@ -15778,7 +18006,8 @@ var SITE_JSON = {
                         "Agachao": 41.0,
                         "Gastar la data": 42.8,
                         "Siempre doble": 27.2,
-                        "Inteligente": 29.799999999999997
+                        "Campeón del doble 6": 29.799999999999997,
+                        "Campeón del doble 9": 55.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 40.0,
@@ -15793,7 +18022,8 @@ var SITE_JSON = {
                         "Agachao": 38.2,
                         "Gastar la data": 41.4,
                         "Siempre doble": 26.2,
-                        "Inteligente": 22.200000000000003
+                        "Campeón del doble 6": 22.200000000000003,
+                        "Campeón del doble 9": 48.8
                     },
                     "Agachao": {
                         "Bota Gorda": 65.4,
@@ -15808,7 +18038,8 @@ var SITE_JSON = {
                         "Agachao": 52.0,
                         "Gastar la data": 49.6,
                         "Siempre doble": 40.2,
-                        "Inteligente": 39.6
+                        "Campeón del doble 6": 39.6,
+                        "Campeón del doble 9": 64.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 54.2,
@@ -15823,7 +18054,8 @@ var SITE_JSON = {
                         "Agachao": 50.2,
                         "Gastar la data": 48.4,
                         "Siempre doble": 42.2,
-                        "Inteligente": 37.8
+                        "Campeón del doble 6": 37.8,
+                        "Campeón del doble 9": 59.2
                     },
                     "Siempre doble": {
                         "Bota Gorda": 71.6,
@@ -15838,13 +18070,14 @@ var SITE_JSON = {
                         "Agachao": 63.6,
                         "Gastar la data": 59.2,
                         "Siempre doble": 51.2,
-                        "Inteligente": 51.0
+                        "Campeón del doble 6": 51.0,
+                        "Campeón del doble 9": 73.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 74.4,
                         "Más Frecuente": 80.2,
                         "Aleatorio": 74.6,
-                        "Inteligente": 48.4,
+                        "Campeón del doble 6": 48.4,
                         "Repetidor": 65.8,
                         "Contador de la mesa": 63.4,
                         "Pasador": 74.0,
@@ -15853,12 +18086,28 @@ var SITE_JSON = {
                         "Bota Flaca": 77.8,
                         "Agachao": 60.4,
                         "Gastar la data": 62.2,
-                        "Siempre doble": 49.0
+                        "Siempre doble": 49.0,
+                        "Campeón del doble 9": 74.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 41.8,
+                        "Más Frecuente": 60.2,
+                        "Aleatorio": 52.8,
+                        "Campeón del doble 6": 25.6,
+                        "Repetidor": 50.0,
+                        "Contador de la mesa": 52.8,
+                        "Pasador": 53.0,
+                        "Menos Jugada": 46.2,
+                        "No gastar la data": 44.4,
+                        "Bota Flaca": 51.2,
+                        "Agachao": 35.6,
+                        "Gastar la data": 40.8,
+                        "Siempre doble": 26.8
                     }
                 }
             }
         },
-        "FirstDoble": {
+        "Primera doble": {
             "Aleatorio": {
                 "Normal": {
                     "Bota Gorda": {
@@ -15874,7 +18123,8 @@ var SITE_JSON = {
                         "Agachao": 40.6,
                         "Gastar la data": 45.0,
                         "Siempre doble": 33.8,
-                        "Inteligente": 21.799999999999997
+                        "Campeón del doble 6": 21.799999999999997,
+                        "Campeón del doble 9": 59.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 38.2,
@@ -15889,7 +18139,8 @@ var SITE_JSON = {
                         "Agachao": 36.0,
                         "Gastar la data": 30.6,
                         "Siempre doble": 22.0,
-                        "Inteligente": 18.200000000000003
+                        "Campeón del doble 6": 18.200000000000003,
+                        "Campeón del doble 9": 41.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 44.0,
@@ -15904,7 +18155,8 @@ var SITE_JSON = {
                         "Agachao": 36.8,
                         "Gastar la data": 39.8,
                         "Siempre doble": 28.2,
-                        "Inteligente": 16.400000000000006
+                        "Campeón del doble 6": 16.400000000000006,
+                        "Campeón del doble 9": 52.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 50.4,
@@ -15919,7 +18171,8 @@ var SITE_JSON = {
                         "Agachao": 35.4,
                         "Gastar la data": 38.0,
                         "Siempre doble": 33.0,
-                        "Inteligente": 33.0
+                        "Campeón del doble 6": 33.0,
+                        "Campeón del doble 9": 45.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.4,
@@ -15934,7 +18187,8 @@ var SITE_JSON = {
                         "Agachao": 40.8,
                         "Gastar la data": 42.8,
                         "Siempre doble": 34.6,
-                        "Inteligente": 33.400000000000006
+                        "Campeón del doble 6": 33.400000000000006,
+                        "Campeón del doble 9": 48.0
                     },
                     "Pasador": {
                         "Bota Gorda": 44.4,
@@ -15949,7 +18203,8 @@ var SITE_JSON = {
                         "Agachao": 38.4,
                         "Gastar la data": 39.0,
                         "Siempre doble": 29.2,
-                        "Inteligente": 20.200000000000003
+                        "Campeón del doble 6": 20.200000000000003,
+                        "Campeón del doble 9": 53.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 40.6,
@@ -15964,7 +18219,8 @@ var SITE_JSON = {
                         "Agachao": 36.6,
                         "Gastar la data": 40.4,
                         "Siempre doble": 26.2,
-                        "Inteligente": 19.799999999999997
+                        "Campeón del doble 6": 19.799999999999997,
+                        "Campeón del doble 9": 51.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 45.8,
@@ -15979,7 +18235,8 @@ var SITE_JSON = {
                         "Agachao": 35.6,
                         "Gastar la data": 39.2,
                         "Siempre doble": 26.4,
-                        "Inteligente": 20.799999999999997
+                        "Campeón del doble 6": 20.799999999999997,
+                        "Campeón del doble 9": 61.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 38.4,
@@ -15994,7 +18251,8 @@ var SITE_JSON = {
                         "Agachao": 33.0,
                         "Gastar la data": 35.4,
                         "Siempre doble": 27.4,
-                        "Inteligente": 14.0
+                        "Campeón del doble 6": 14.0,
+                        "Campeón del doble 9": 49.0
                     },
                     "Agachao": {
                         "Bota Gorda": 68.4,
@@ -16009,7 +18267,8 @@ var SITE_JSON = {
                         "Agachao": 54.8,
                         "Gastar la data": 59.8,
                         "Siempre doble": 48.2,
-                        "Inteligente": 34.400000000000006
+                        "Campeón del doble 6": 34.400000000000006,
+                        "Campeón del doble 9": 67.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 59.8,
@@ -16024,7 +18283,8 @@ var SITE_JSON = {
                         "Agachao": 52.4,
                         "Gastar la data": 50.8,
                         "Siempre doble": 45.2,
-                        "Inteligente": 35.0
+                        "Campeón del doble 6": 35.0,
+                        "Campeón del doble 9": 61.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 76.2,
@@ -16039,13 +18299,14 @@ var SITE_JSON = {
                         "Agachao": 59.8,
                         "Gastar la data": 59.8,
                         "Siempre doble": 54.0,
-                        "Inteligente": 40.6
+                        "Campeón del doble 6": 40.6,
+                        "Campeón del doble 9": 77.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 78.2,
                         "Más Frecuente": 81.8,
                         "Aleatorio": 83.6,
-                        "Inteligente": 44.0,
+                        "Campeón del doble 6": 44.0,
                         "Repetidor": 67.0,
                         "Contador de la mesa": 66.6,
                         "Pasador": 79.8,
@@ -16054,7 +18315,23 @@ var SITE_JSON = {
                         "Bota Flaca": 86.0,
                         "Agachao": 65.6,
                         "Gastar la data": 65.0,
-                        "Siempre doble": 59.4
+                        "Siempre doble": 59.4,
+                        "Campeón del doble 9": 81.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 41.0,
+                        "Más Frecuente": 59.0,
+                        "Aleatorio": 47.6,
+                        "Campeón del doble 6": 18.6,
+                        "Repetidor": 54.8,
+                        "Contador de la mesa": 52.0,
+                        "Pasador": 46.6,
+                        "Menos Jugada": 49.0,
+                        "No gastar la data": 38.8,
+                        "Bota Flaca": 51.0,
+                        "Agachao": 33.0,
+                        "Gastar la data": 38.4,
+                        "Siempre doble": 23.0
                     }
                 },
                 "Cooperativo": {
@@ -16071,7 +18348,8 @@ var SITE_JSON = {
                         "Agachao": 33.8,
                         "Gastar la data": 37.4,
                         "Siempre doble": 32.0,
-                        "Inteligente": 23.400000000000006
+                        "Campeón del doble 6": 23.400000000000006,
+                        "Campeón del doble 9": 58.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 42.0,
@@ -16086,7 +18364,8 @@ var SITE_JSON = {
                         "Agachao": 30.4,
                         "Gastar la data": 31.6,
                         "Siempre doble": 24.2,
-                        "Inteligente": 21.200000000000003
+                        "Campeón del doble 6": 21.200000000000003,
+                        "Campeón del doble 9": 42.2
                     },
                     "Aleatorio": {
                         "Bota Gorda": 43.8,
@@ -16101,7 +18380,8 @@ var SITE_JSON = {
                         "Agachao": 38.2,
                         "Gastar la data": 39.0,
                         "Siempre doble": 28.6,
-                        "Inteligente": 17.799999999999997
+                        "Campeón del doble 6": 17.799999999999997,
+                        "Campeón del doble 9": 49.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 50.0,
@@ -16116,7 +18396,8 @@ var SITE_JSON = {
                         "Agachao": 39.4,
                         "Gastar la data": 36.4,
                         "Siempre doble": 38.2,
-                        "Inteligente": 39.2
+                        "Campeón del doble 6": 39.2,
+                        "Campeón del doble 9": 46.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 57.6,
@@ -16131,7 +18412,8 @@ var SITE_JSON = {
                         "Agachao": 40.2,
                         "Gastar la data": 42.6,
                         "Siempre doble": 31.2,
-                        "Inteligente": 34.400000000000006
+                        "Campeón del doble 6": 34.400000000000006,
+                        "Campeón del doble 9": 49.0
                     },
                     "Pasador": {
                         "Bota Gorda": 49.0,
@@ -16146,7 +18428,8 @@ var SITE_JSON = {
                         "Agachao": 37.0,
                         "Gastar la data": 41.4,
                         "Siempre doble": 28.4,
-                        "Inteligente": 26.599999999999994
+                        "Campeón del doble 6": 26.599999999999994,
+                        "Campeón del doble 9": 51.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 45.0,
@@ -16161,7 +18444,8 @@ var SITE_JSON = {
                         "Agachao": 32.6,
                         "Gastar la data": 35.4,
                         "Siempre doble": 24.0,
-                        "Inteligente": 22.799999999999997
+                        "Campeón del doble 6": 22.799999999999997,
+                        "Campeón del doble 9": 51.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 44.6,
@@ -16176,7 +18460,8 @@ var SITE_JSON = {
                         "Agachao": 35.0,
                         "Gastar la data": 42.0,
                         "Siempre doble": 30.0,
-                        "Inteligente": 23.200000000000003
+                        "Campeón del doble 6": 23.200000000000003,
+                        "Campeón del doble 9": 51.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 46.4,
@@ -16191,7 +18476,8 @@ var SITE_JSON = {
                         "Agachao": 38.4,
                         "Gastar la data": 38.0,
                         "Siempre doble": 25.2,
-                        "Inteligente": 21.400000000000006
+                        "Campeón del doble 6": 21.400000000000006,
+                        "Campeón del doble 9": 53.8
                     },
                     "Agachao": {
                         "Bota Gorda": 67.2,
@@ -16206,7 +18492,8 @@ var SITE_JSON = {
                         "Agachao": 53.2,
                         "Gastar la data": 55.8,
                         "Siempre doble": 44.0,
-                        "Inteligente": 35.8
+                        "Campeón del doble 6": 35.8,
+                        "Campeón del doble 9": 64.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 63.6,
@@ -16221,7 +18508,8 @@ var SITE_JSON = {
                         "Agachao": 47.8,
                         "Gastar la data": 53.0,
                         "Siempre doble": 43.0,
-                        "Inteligente": 35.400000000000006
+                        "Campeón del doble 6": 35.400000000000006,
+                        "Campeón del doble 9": 62.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 75.0,
@@ -16236,13 +18524,14 @@ var SITE_JSON = {
                         "Agachao": 61.8,
                         "Gastar la data": 60.0,
                         "Siempre doble": 52.4,
-                        "Inteligente": 44.8
+                        "Campeón del doble 6": 44.8,
+                        "Campeón del doble 9": 69.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 76.6,
                         "Más Frecuente": 78.8,
                         "Aleatorio": 82.2,
-                        "Inteligente": 44.8,
+                        "Campeón del doble 6": 44.8,
                         "Repetidor": 60.8,
                         "Contador de la mesa": 65.6,
                         "Pasador": 73.4,
@@ -16251,7 +18540,23 @@ var SITE_JSON = {
                         "Bota Flaca": 78.6,
                         "Agachao": 64.2,
                         "Gastar la data": 64.6,
-                        "Siempre doble": 55.2
+                        "Siempre doble": 55.2,
+                        "Campeón del doble 9": 74.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 42.0,
+                        "Más Frecuente": 57.8,
+                        "Aleatorio": 51.0,
+                        "Campeón del doble 6": 25.4,
+                        "Repetidor": 53.2,
+                        "Contador de la mesa": 51.0,
+                        "Pasador": 48.4,
+                        "Menos Jugada": 48.6,
+                        "No gastar la data": 48.8,
+                        "Bota Flaca": 46.2,
+                        "Agachao": 36.0,
+                        "Gastar la data": 38.0,
+                        "Siempre doble": 31.0
                     }
                 }
             },
@@ -16270,7 +18575,8 @@ var SITE_JSON = {
                         "Agachao": 42.0,
                         "Gastar la data": 42.0,
                         "Siempre doble": 30.8,
-                        "Inteligente": 25.200000000000003
+                        "Campeón del doble 6": 25.200000000000003,
+                        "Campeón del doble 9": 61.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 38.4,
@@ -16285,7 +18591,8 @@ var SITE_JSON = {
                         "Agachao": 30.2,
                         "Gastar la data": 33.0,
                         "Siempre doble": 23.8,
-                        "Inteligente": 20.799999999999997
+                        "Campeón del doble 6": 20.799999999999997,
+                        "Campeón del doble 9": 40.4
                     },
                     "Aleatorio": {
                         "Bota Gorda": 42.6,
@@ -16300,7 +18607,8 @@ var SITE_JSON = {
                         "Agachao": 35.0,
                         "Gastar la data": 37.6,
                         "Siempre doble": 24.0,
-                        "Inteligente": 21.400000000000006
+                        "Campeón del doble 6": 21.400000000000006,
+                        "Campeón del doble 9": 52.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 52.2,
@@ -16315,7 +18623,8 @@ var SITE_JSON = {
                         "Agachao": 36.8,
                         "Gastar la data": 42.0,
                         "Siempre doble": 40.6,
-                        "Inteligente": 34.2
+                        "Campeón del doble 6": 34.2,
+                        "Campeón del doble 9": 46.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 57.0,
@@ -16330,7 +18639,8 @@ var SITE_JSON = {
                         "Agachao": 39.0,
                         "Gastar la data": 45.8,
                         "Siempre doble": 41.0,
-                        "Inteligente": 34.2
+                        "Campeón del doble 6": 34.2,
+                        "Campeón del doble 9": 51.2
                     },
                     "Pasador": {
                         "Bota Gorda": 48.8,
@@ -16345,7 +18655,8 @@ var SITE_JSON = {
                         "Agachao": 34.4,
                         "Gastar la data": 39.6,
                         "Siempre doble": 31.8,
-                        "Inteligente": 24.599999999999994
+                        "Campeón del doble 6": 24.599999999999994,
+                        "Campeón del doble 9": 47.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 41.8,
@@ -16360,7 +18671,8 @@ var SITE_JSON = {
                         "Agachao": 35.6,
                         "Gastar la data": 41.4,
                         "Siempre doble": 27.2,
-                        "Inteligente": 21.599999999999994
+                        "Campeón del doble 6": 21.599999999999994,
+                        "Campeón del doble 9": 50.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 46.0,
@@ -16375,7 +18687,8 @@ var SITE_JSON = {
                         "Agachao": 36.2,
                         "Gastar la data": 41.2,
                         "Siempre doble": 30.0,
-                        "Inteligente": 24.599999999999994
+                        "Campeón del doble 6": 24.599999999999994,
+                        "Campeón del doble 9": 53.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 38.8,
@@ -16390,7 +18703,8 @@ var SITE_JSON = {
                         "Agachao": 38.8,
                         "Gastar la data": 34.4,
                         "Siempre doble": 27.8,
-                        "Inteligente": 15.400000000000006
+                        "Campeón del doble 6": 15.400000000000006,
+                        "Campeón del doble 9": 50.0
                     },
                     "Agachao": {
                         "Bota Gorda": 64.8,
@@ -16405,7 +18719,8 @@ var SITE_JSON = {
                         "Agachao": 54.0,
                         "Gastar la data": 53.8,
                         "Siempre doble": 49.6,
-                        "Inteligente": 36.8
+                        "Campeón del doble 6": 36.8,
+                        "Campeón del doble 9": 64.8
                     },
                     "Gastar la data": {
                         "Bota Gorda": 64.0,
@@ -16420,7 +18735,8 @@ var SITE_JSON = {
                         "Agachao": 49.2,
                         "Gastar la data": 49.0,
                         "Siempre doble": 44.8,
-                        "Inteligente": 37.6
+                        "Campeón del doble 6": 37.6,
+                        "Campeón del doble 9": 60.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 72.8,
@@ -16435,13 +18751,14 @@ var SITE_JSON = {
                         "Agachao": 60.6,
                         "Gastar la data": 61.4,
                         "Siempre doble": 51.8,
-                        "Inteligente": 39.4
+                        "Campeón del doble 6": 39.4,
+                        "Campeón del doble 9": 72.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 74.8,
                         "Más Frecuente": 79.2,
                         "Aleatorio": 78.6,
-                        "Inteligente": 42.6,
+                        "Campeón del doble 6": 42.6,
                         "Repetidor": 65.8,
                         "Contador de la mesa": 65.8,
                         "Pasador": 75.4,
@@ -16450,7 +18767,23 @@ var SITE_JSON = {
                         "Bota Flaca": 84.6,
                         "Agachao": 63.2,
                         "Gastar la data": 62.4,
-                        "Siempre doble": 60.6
+                        "Siempre doble": 60.6,
+                        "Campeón del doble 9": 76.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 38.2,
+                        "Más Frecuente": 59.6,
+                        "Aleatorio": 48.0,
+                        "Campeón del doble 6": 23.2,
+                        "Repetidor": 53.2,
+                        "Contador de la mesa": 48.8,
+                        "Pasador": 52.6,
+                        "Menos Jugada": 50.0,
+                        "No gastar la data": 46.4,
+                        "Bota Flaca": 50.0,
+                        "Agachao": 35.2,
+                        "Gastar la data": 39.4,
+                        "Siempre doble": 27.8
                     }
                 },
                 "Cooperativo": {
@@ -16467,7 +18800,8 @@ var SITE_JSON = {
                         "Agachao": 38.0,
                         "Gastar la data": 40.0,
                         "Siempre doble": 30.8,
-                        "Inteligente": 25.0
+                        "Campeón del doble 6": 25.0,
+                        "Campeón del doble 9": 59.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 41.2,
@@ -16482,7 +18816,8 @@ var SITE_JSON = {
                         "Agachao": 34.0,
                         "Gastar la data": 35.6,
                         "Siempre doble": 25.2,
-                        "Inteligente": 21.799999999999997
+                        "Campeón del doble 6": 21.799999999999997,
+                        "Campeón del doble 9": 41.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 52.0,
@@ -16497,7 +18832,8 @@ var SITE_JSON = {
                         "Agachao": 38.2,
                         "Gastar la data": 35.2,
                         "Siempre doble": 31.6,
-                        "Inteligente": 25.400000000000006
+                        "Campeón del doble 6": 25.400000000000006,
+                        "Campeón del doble 9": 48.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 51.8,
@@ -16512,7 +18848,8 @@ var SITE_JSON = {
                         "Agachao": 40.8,
                         "Gastar la data": 44.2,
                         "Siempre doble": 34.2,
-                        "Inteligente": 31.599999999999994
+                        "Campeón del doble 6": 31.599999999999994,
+                        "Campeón del doble 9": 49.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 54.4,
@@ -16527,7 +18864,8 @@ var SITE_JSON = {
                         "Agachao": 40.6,
                         "Gastar la data": 44.0,
                         "Siempre doble": 33.0,
-                        "Inteligente": 36.6
+                        "Campeón del doble 6": 36.6,
+                        "Campeón del doble 9": 49.8
                     },
                     "Pasador": {
                         "Bota Gorda": 47.4,
@@ -16542,7 +18880,8 @@ var SITE_JSON = {
                         "Agachao": 36.0,
                         "Gastar la data": 41.8,
                         "Siempre doble": 29.2,
-                        "Inteligente": 29.799999999999997
+                        "Campeón del doble 6": 29.799999999999997,
+                        "Campeón del doble 9": 50.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 47.4,
@@ -16557,7 +18896,8 @@ var SITE_JSON = {
                         "Agachao": 36.2,
                         "Gastar la data": 38.2,
                         "Siempre doble": 28.8,
-                        "Inteligente": 24.400000000000006
+                        "Campeón del doble 6": 24.400000000000006,
+                        "Campeón del doble 9": 49.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 45.6,
@@ -16572,7 +18912,8 @@ var SITE_JSON = {
                         "Agachao": 38.8,
                         "Gastar la data": 41.8,
                         "Siempre doble": 26.6,
-                        "Inteligente": 25.599999999999994
+                        "Campeón del doble 6": 25.599999999999994,
+                        "Campeón del doble 9": 53.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 44.4,
@@ -16587,7 +18928,8 @@ var SITE_JSON = {
                         "Agachao": 38.4,
                         "Gastar la data": 39.0,
                         "Siempre doble": 26.6,
-                        "Inteligente": 20.400000000000006
+                        "Campeón del doble 6": 20.400000000000006,
+                        "Campeón del doble 9": 47.2
                     },
                     "Agachao": {
                         "Bota Gorda": 66.4,
@@ -16602,7 +18944,8 @@ var SITE_JSON = {
                         "Agachao": 54.4,
                         "Gastar la data": 54.2,
                         "Siempre doble": 46.0,
-                        "Inteligente": 40.2
+                        "Campeón del doble 6": 40.2,
+                        "Campeón del doble 9": 59.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 59.2,
@@ -16617,7 +18960,8 @@ var SITE_JSON = {
                         "Agachao": 48.6,
                         "Gastar la data": 55.0,
                         "Siempre doble": 42.6,
-                        "Inteligente": 39.2
+                        "Campeón del doble 6": 39.2,
+                        "Campeón del doble 9": 66.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 74.2,
@@ -16632,13 +18976,14 @@ var SITE_JSON = {
                         "Agachao": 60.6,
                         "Gastar la data": 58.4,
                         "Siempre doble": 52.6,
-                        "Inteligente": 46.0
+                        "Campeón del doble 6": 46.0,
+                        "Campeón del doble 9": 69.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 75.0,
                         "Más Frecuente": 78.2,
                         "Aleatorio": 74.6,
-                        "Inteligente": 44.0,
+                        "Campeón del doble 6": 44.0,
                         "Repetidor": 68.4,
                         "Contador de la mesa": 63.4,
                         "Pasador": 70.2,
@@ -16647,7 +18992,23 @@ var SITE_JSON = {
                         "Bota Flaca": 79.6,
                         "Agachao": 59.8,
                         "Gastar la data": 60.8,
-                        "Siempre doble": 54.0
+                        "Siempre doble": 54.0,
+                        "Campeón del doble 9": 78.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 40.6,
+                        "Más Frecuente": 59.0,
+                        "Aleatorio": 52.0,
+                        "Campeón del doble 6": 21.6,
+                        "Repetidor": 50.2,
+                        "Contador de la mesa": 50.2,
+                        "Pasador": 49.6,
+                        "Menos Jugada": 50.2,
+                        "No gastar la data": 46.6,
+                        "Bota Flaca": 52.8,
+                        "Agachao": 40.4,
+                        "Gastar la data": 33.4,
+                        "Siempre doble": 30.6
                     }
                 }
             },
@@ -16666,7 +19027,8 @@ var SITE_JSON = {
                         "Agachao": 41.4,
                         "Gastar la data": 42.4,
                         "Siempre doble": 32.6,
-                        "Inteligente": 27.599999999999994
+                        "Campeón del doble 6": 27.599999999999994,
+                        "Campeón del doble 9": 65.6
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 39.4,
@@ -16681,7 +19043,8 @@ var SITE_JSON = {
                         "Agachao": 33.4,
                         "Gastar la data": 33.2,
                         "Siempre doble": 23.8,
-                        "Inteligente": 22.799999999999997
+                        "Campeón del doble 6": 22.799999999999997,
+                        "Campeón del doble 9": 41.2
                     },
                     "Aleatorio": {
                         "Bota Gorda": 46.0,
@@ -16696,7 +19059,8 @@ var SITE_JSON = {
                         "Agachao": 35.0,
                         "Gastar la data": 37.4,
                         "Siempre doble": 28.0,
-                        "Inteligente": 25.599999999999994
+                        "Campeón del doble 6": 25.599999999999994,
+                        "Campeón del doble 9": 55.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 50.0,
@@ -16711,7 +19075,8 @@ var SITE_JSON = {
                         "Agachao": 42.6,
                         "Gastar la data": 40.6,
                         "Siempre doble": 36.8,
-                        "Inteligente": 32.8
+                        "Campeón del doble 6": 32.8,
+                        "Campeón del doble 9": 49.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.4,
@@ -16726,7 +19091,8 @@ var SITE_JSON = {
                         "Agachao": 38.2,
                         "Gastar la data": 41.6,
                         "Siempre doble": 34.0,
-                        "Inteligente": 39.2
+                        "Campeón del doble 6": 39.2,
+                        "Campeón del doble 9": 48.4
                     },
                     "Pasador": {
                         "Bota Gorda": 46.4,
@@ -16741,7 +19107,8 @@ var SITE_JSON = {
                         "Agachao": 36.8,
                         "Gastar la data": 37.8,
                         "Siempre doble": 27.8,
-                        "Inteligente": 28.400000000000006
+                        "Campeón del doble 6": 28.400000000000006,
+                        "Campeón del doble 9": 54.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 44.0,
@@ -16756,7 +19123,8 @@ var SITE_JSON = {
                         "Agachao": 34.4,
                         "Gastar la data": 38.0,
                         "Siempre doble": 28.0,
-                        "Inteligente": 21.400000000000006
+                        "Campeón del doble 6": 21.400000000000006,
+                        "Campeón del doble 9": 49.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 45.0,
@@ -16771,7 +19139,8 @@ var SITE_JSON = {
                         "Agachao": 35.0,
                         "Gastar la data": 44.4,
                         "Siempre doble": 27.8,
-                        "Inteligente": 26.200000000000003
+                        "Campeón del doble 6": 26.200000000000003,
+                        "Campeón del doble 9": 59.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 40.0,
@@ -16786,7 +19155,8 @@ var SITE_JSON = {
                         "Agachao": 32.6,
                         "Gastar la data": 30.6,
                         "Siempre doble": 21.6,
-                        "Inteligente": 18.799999999999997
+                        "Campeón del doble 6": 18.799999999999997,
+                        "Campeón del doble 9": 50.8
                     },
                     "Agachao": {
                         "Bota Gorda": 66.8,
@@ -16801,7 +19171,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 51.6,
                         "Siempre doble": 43.8,
-                        "Inteligente": 38.6
+                        "Campeón del doble 6": 38.6,
+                        "Campeón del doble 9": 67.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 58.2,
@@ -16816,7 +19187,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 50.6,
                         "Siempre doble": 42.8,
-                        "Inteligente": 35.8
+                        "Campeón del doble 6": 35.8,
+                        "Campeón del doble 9": 63.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 69.0,
@@ -16831,13 +19203,14 @@ var SITE_JSON = {
                         "Agachao": 60.4,
                         "Gastar la data": 60.2,
                         "Siempre doble": 47.8,
-                        "Inteligente": 43.4
+                        "Campeón del doble 6": 43.4,
+                        "Campeón del doble 9": 74.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 72.4,
                         "Más Frecuente": 77.2,
                         "Aleatorio": 74.4,
-                        "Inteligente": 48.6,
+                        "Campeón del doble 6": 48.6,
                         "Repetidor": 67.2,
                         "Contador de la mesa": 60.8,
                         "Pasador": 71.6,
@@ -16846,7 +19219,23 @@ var SITE_JSON = {
                         "Bota Flaca": 81.2,
                         "Agachao": 61.4,
                         "Gastar la data": 64.2,
-                        "Siempre doble": 56.6
+                        "Siempre doble": 56.6,
+                        "Campeón del doble 9": 79.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 34.4,
+                        "Más Frecuente": 58.8,
+                        "Aleatorio": 45.0,
+                        "Campeón del doble 6": 20.2,
+                        "Repetidor": 50.2,
+                        "Contador de la mesa": 51.6,
+                        "Pasador": 45.8,
+                        "Menos Jugada": 50.4,
+                        "No gastar la data": 40.6,
+                        "Bota Flaca": 49.2,
+                        "Agachao": 32.6,
+                        "Gastar la data": 37.0,
+                        "Siempre doble": 25.2
                     }
                 },
                 "Cooperativo": {
@@ -16863,7 +19252,8 @@ var SITE_JSON = {
                         "Agachao": 36.8,
                         "Gastar la data": 43.0,
                         "Siempre doble": 32.6,
-                        "Inteligente": 31.400000000000006
+                        "Campeón del doble 6": 31.400000000000006,
+                        "Campeón del doble 9": 61.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 42.0,
@@ -16878,7 +19268,8 @@ var SITE_JSON = {
                         "Agachao": 36.8,
                         "Gastar la data": 38.0,
                         "Siempre doble": 24.8,
-                        "Inteligente": 26.599999999999994
+                        "Campeón del doble 6": 26.599999999999994,
+                        "Campeón del doble 9": 42.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 43.2,
@@ -16893,7 +19284,8 @@ var SITE_JSON = {
                         "Agachao": 38.4,
                         "Gastar la data": 42.6,
                         "Siempre doble": 32.2,
-                        "Inteligente": 24.400000000000006
+                        "Campeón del doble 6": 24.400000000000006,
+                        "Campeón del doble 9": 51.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 52.4,
@@ -16908,7 +19300,8 @@ var SITE_JSON = {
                         "Agachao": 43.0,
                         "Gastar la data": 40.6,
                         "Siempre doble": 37.8,
-                        "Inteligente": 32.8
+                        "Campeón del doble 6": 32.8,
+                        "Campeón del doble 9": 53.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 54.2,
@@ -16923,7 +19316,8 @@ var SITE_JSON = {
                         "Agachao": 43.8,
                         "Gastar la data": 45.8,
                         "Siempre doble": 39.8,
-                        "Inteligente": 38.8
+                        "Campeón del doble 6": 38.8,
+                        "Campeón del doble 9": 50.2
                     },
                     "Pasador": {
                         "Bota Gorda": 50.0,
@@ -16938,7 +19332,8 @@ var SITE_JSON = {
                         "Agachao": 37.4,
                         "Gastar la data": 42.8,
                         "Siempre doble": 29.4,
-                        "Inteligente": 29.400000000000006
+                        "Campeón del doble 6": 29.400000000000006,
+                        "Campeón del doble 9": 51.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 47.0,
@@ -16953,7 +19348,8 @@ var SITE_JSON = {
                         "Agachao": 36.0,
                         "Gastar la data": 37.6,
                         "Siempre doble": 27.2,
-                        "Inteligente": 25.799999999999997
+                        "Campeón del doble 6": 25.799999999999997,
+                        "Campeón del doble 9": 50.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 46.6,
@@ -16968,7 +19364,8 @@ var SITE_JSON = {
                         "Agachao": 40.8,
                         "Gastar la data": 44.2,
                         "Siempre doble": 31.6,
-                        "Inteligente": 25.799999999999997
+                        "Campeón del doble 6": 25.799999999999997,
+                        "Campeón del doble 9": 56.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 44.4,
@@ -16983,7 +19380,8 @@ var SITE_JSON = {
                         "Agachao": 39.8,
                         "Gastar la data": 38.4,
                         "Siempre doble": 27.4,
-                        "Inteligente": 20.200000000000003
+                        "Campeón del doble 6": 20.200000000000003,
+                        "Campeón del doble 9": 50.0
                     },
                     "Agachao": {
                         "Bota Gorda": 56.0,
@@ -16998,7 +19396,8 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 54.2,
                         "Siempre doble": 41.4,
-                        "Inteligente": 39.8
+                        "Campeón del doble 6": 39.8,
+                        "Campeón del doble 9": 63.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.0,
@@ -17013,7 +19412,8 @@ var SITE_JSON = {
                         "Agachao": 47.4,
                         "Gastar la data": 51.2,
                         "Siempre doble": 44.0,
-                        "Inteligente": 39.8
+                        "Campeón del doble 6": 39.8,
+                        "Campeón del doble 9": 60.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 69.2,
@@ -17028,13 +19428,14 @@ var SITE_JSON = {
                         "Agachao": 60.6,
                         "Gastar la data": 59.4,
                         "Siempre doble": 49.0,
-                        "Inteligente": 47.0
+                        "Campeón del doble 6": 47.0,
+                        "Campeón del doble 9": 76.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 68.6,
                         "Más Frecuente": 73.4,
                         "Aleatorio": 75.6,
-                        "Inteligente": 47.2,
+                        "Campeón del doble 6": 47.2,
                         "Repetidor": 67.2,
                         "Contador de la mesa": 61.2,
                         "Pasador": 70.6,
@@ -17043,7 +19444,23 @@ var SITE_JSON = {
                         "Bota Flaca": 79.8,
                         "Agachao": 60.2,
                         "Gastar la data": 60.2,
-                        "Siempre doble": 53.0
+                        "Siempre doble": 53.0,
+                        "Campeón del doble 9": 75.4
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 38.8,
+                        "Más Frecuente": 57.2,
+                        "Aleatorio": 48.8,
+                        "Campeón del doble 6": 24.6,
+                        "Repetidor": 46.6,
+                        "Contador de la mesa": 49.8,
+                        "Pasador": 48.6,
+                        "Menos Jugada": 49.2,
+                        "No gastar la data": 43.4,
+                        "Bota Flaca": 50.0,
+                        "Agachao": 37.0,
+                        "Gastar la data": 39.2,
+                        "Siempre doble": 23.8
                     }
                 }
             },
@@ -17062,7 +19479,8 @@ var SITE_JSON = {
                         "Agachao": 43.8,
                         "Gastar la data": 45.0,
                         "Siempre doble": 33.8,
-                        "Inteligente": 28.200000000000003
+                        "Campeón del doble 6": 28.200000000000003,
+                        "Campeón del doble 9": 59.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 41.2,
@@ -17077,7 +19495,8 @@ var SITE_JSON = {
                         "Agachao": 39.6,
                         "Gastar la data": 38.4,
                         "Siempre doble": 27.6,
-                        "Inteligente": 24.599999999999994
+                        "Campeón del doble 6": 24.599999999999994,
+                        "Campeón del doble 9": 39.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 43.0,
@@ -17092,7 +19511,8 @@ var SITE_JSON = {
                         "Agachao": 38.0,
                         "Gastar la data": 42.8,
                         "Siempre doble": 34.4,
-                        "Inteligente": 25.0
+                        "Campeón del doble 6": 25.0,
+                        "Campeón del doble 9": 53.6
                     },
                     "Repetidor": {
                         "Bota Gorda": 50.0,
@@ -17107,7 +19527,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 43.6,
                         "Siempre doble": 38.8,
-                        "Inteligente": 36.6
+                        "Campeón del doble 6": 36.6,
+                        "Campeón del doble 9": 48.0
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.6,
@@ -17122,7 +19543,8 @@ var SITE_JSON = {
                         "Agachao": 42.6,
                         "Gastar la data": 42.8,
                         "Siempre doble": 39.0,
-                        "Inteligente": 41.0
+                        "Campeón del doble 6": 41.0,
+                        "Campeón del doble 9": 46.2
                     },
                     "Pasador": {
                         "Bota Gorda": 43.6,
@@ -17137,7 +19559,8 @@ var SITE_JSON = {
                         "Agachao": 33.8,
                         "Gastar la data": 40.0,
                         "Siempre doble": 32.8,
-                        "Inteligente": 29.799999999999997
+                        "Campeón del doble 6": 29.799999999999997,
+                        "Campeón del doble 9": 45.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 46.0,
@@ -17152,7 +19575,8 @@ var SITE_JSON = {
                         "Agachao": 38.8,
                         "Gastar la data": 41.4,
                         "Siempre doble": 30.0,
-                        "Inteligente": 22.200000000000003
+                        "Campeón del doble 6": 22.200000000000003,
+                        "Campeón del doble 9": 45.2
                     },
                     "No gastar la data": {
                         "Bota Gorda": 49.6,
@@ -17167,7 +19591,8 @@ var SITE_JSON = {
                         "Agachao": 45.2,
                         "Gastar la data": 42.8,
                         "Siempre doble": 39.6,
-                        "Inteligente": 26.799999999999997
+                        "Campeón del doble 6": 26.799999999999997,
+                        "Campeón del doble 9": 56.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 39.4,
@@ -17182,7 +19607,8 @@ var SITE_JSON = {
                         "Agachao": 40.8,
                         "Gastar la data": 39.4,
                         "Siempre doble": 29.8,
-                        "Inteligente": 22.0
+                        "Campeón del doble 6": 22.0,
+                        "Campeón del doble 9": 47.8
                     },
                     "Agachao": {
                         "Bota Gorda": 64.6,
@@ -17197,7 +19623,8 @@ var SITE_JSON = {
                         "Agachao": 55.0,
                         "Gastar la data": 55.0,
                         "Siempre doble": 47.0,
-                        "Inteligente": 37.8
+                        "Campeón del doble 6": 37.8,
+                        "Campeón del doble 9": 58.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 58.0,
@@ -17212,7 +19639,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 51.8,
                         "Siempre doble": 46.4,
-                        "Inteligente": 33.400000000000006
+                        "Campeón del doble 6": 33.400000000000006,
+                        "Campeón del doble 9": 58.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 66.4,
@@ -17227,13 +19655,14 @@ var SITE_JSON = {
                         "Agachao": 59.4,
                         "Gastar la data": 56.8,
                         "Siempre doble": 56.4,
-                        "Inteligente": 42.8
+                        "Campeón del doble 6": 42.8,
+                        "Campeón del doble 9": 71.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 71.8,
                         "Más Frecuente": 75.4,
                         "Aleatorio": 75.0,
-                        "Inteligente": 45.0,
+                        "Campeón del doble 6": 45.0,
                         "Repetidor": 63.4,
                         "Contador de la mesa": 59.0,
                         "Pasador": 70.2,
@@ -17242,7 +19671,23 @@ var SITE_JSON = {
                         "Bota Flaca": 78.0,
                         "Agachao": 62.2,
                         "Gastar la data": 66.6,
-                        "Siempre doble": 57.2
+                        "Siempre doble": 57.2,
+                        "Campeón del doble 9": 78.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 40.2,
+                        "Más Frecuente": 60.2,
+                        "Aleatorio": 46.4,
+                        "Campeón del doble 6": 22.0,
+                        "Repetidor": 52.0,
+                        "Contador de la mesa": 53.8,
+                        "Pasador": 54.4,
+                        "Menos Jugada": 54.8,
+                        "No gastar la data": 43.6,
+                        "Bota Flaca": 52.2,
+                        "Agachao": 41.6,
+                        "Gastar la data": 42.0,
+                        "Siempre doble": 29.0
                     }
                 },
                 "Cooperativo": {
@@ -17259,7 +19704,8 @@ var SITE_JSON = {
                         "Agachao": 40.8,
                         "Gastar la data": 44.6,
                         "Siempre doble": 37.6,
-                        "Inteligente": 32.599999999999994
+                        "Campeón del doble 6": 32.599999999999994,
+                        "Campeón del doble 9": 55.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 47.0,
@@ -17274,7 +19720,8 @@ var SITE_JSON = {
                         "Agachao": 37.8,
                         "Gastar la data": 42.0,
                         "Siempre doble": 29.0,
-                        "Inteligente": 30.799999999999997
+                        "Campeón del doble 6": 30.799999999999997,
+                        "Campeón del doble 9": 41.4
                     },
                     "Aleatorio": {
                         "Bota Gorda": 50.0,
@@ -17289,7 +19736,8 @@ var SITE_JSON = {
                         "Agachao": 38.2,
                         "Gastar la data": 43.8,
                         "Siempre doble": 31.8,
-                        "Inteligente": 25.0
+                        "Campeón del doble 6": 25.0,
+                        "Campeón del doble 9": 49.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 54.0,
@@ -17304,7 +19752,8 @@ var SITE_JSON = {
                         "Agachao": 41.8,
                         "Gastar la data": 46.0,
                         "Siempre doble": 40.4,
-                        "Inteligente": 40.2
+                        "Campeón del doble 6": 40.2,
+                        "Campeón del doble 9": 49.6
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 57.0,
@@ -17319,7 +19768,8 @@ var SITE_JSON = {
                         "Agachao": 46.2,
                         "Gastar la data": 43.4,
                         "Siempre doble": 40.4,
-                        "Inteligente": 37.4
+                        "Campeón del doble 6": 37.4,
+                        "Campeón del doble 9": 48.6
                     },
                     "Pasador": {
                         "Bota Gorda": 50.4,
@@ -17334,7 +19784,8 @@ var SITE_JSON = {
                         "Agachao": 41.4,
                         "Gastar la data": 45.6,
                         "Siempre doble": 37.6,
-                        "Inteligente": 29.400000000000006
+                        "Campeón del doble 6": 29.400000000000006,
+                        "Campeón del doble 9": 51.8
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 49.0,
@@ -17349,7 +19800,8 @@ var SITE_JSON = {
                         "Agachao": 41.6,
                         "Gastar la data": 43.2,
                         "Siempre doble": 33.4,
-                        "Inteligente": 29.599999999999994
+                        "Campeón del doble 6": 29.599999999999994,
+                        "Campeón del doble 9": 49.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 52.4,
@@ -17364,7 +19816,8 @@ var SITE_JSON = {
                         "Agachao": 39.6,
                         "Gastar la data": 45.2,
                         "Siempre doble": 32.4,
-                        "Inteligente": 29.799999999999997
+                        "Campeón del doble 6": 29.799999999999997,
+                        "Campeón del doble 9": 49.8
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 44.8,
@@ -17379,7 +19832,8 @@ var SITE_JSON = {
                         "Agachao": 34.0,
                         "Gastar la data": 40.8,
                         "Siempre doble": 32.8,
-                        "Inteligente": 24.400000000000006
+                        "Campeón del doble 6": 24.400000000000006,
+                        "Campeón del doble 9": 44.8
                     },
                     "Agachao": {
                         "Bota Gorda": 65.8,
@@ -17394,7 +19848,8 @@ var SITE_JSON = {
                         "Agachao": 50.6,
                         "Gastar la data": 54.6,
                         "Siempre doble": 42.8,
-                        "Inteligente": 41.4
+                        "Campeón del doble 6": 41.4,
+                        "Campeón del doble 9": 58.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.6,
@@ -17409,7 +19864,8 @@ var SITE_JSON = {
                         "Agachao": 52.0,
                         "Gastar la data": 54.0,
                         "Siempre doble": 44.2,
-                        "Inteligente": 42.2
+                        "Campeón del doble 6": 42.2,
+                        "Campeón del doble 9": 58.8
                     },
                     "Siempre doble": {
                         "Bota Gorda": 65.0,
@@ -17424,13 +19880,14 @@ var SITE_JSON = {
                         "Agachao": 56.6,
                         "Gastar la data": 57.6,
                         "Siempre doble": 49.4,
-                        "Inteligente": 45.8
+                        "Campeón del doble 6": 45.8,
+                        "Campeón del doble 9": 70.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 67.4,
                         "Más Frecuente": 69.2,
                         "Aleatorio": 75.0,
-                        "Inteligente": 49.4,
+                        "Campeón del doble 6": 49.4,
                         "Repetidor": 59.8,
                         "Contador de la mesa": 62.6,
                         "Pasador": 70.6,
@@ -17439,7 +19896,23 @@ var SITE_JSON = {
                         "Bota Flaca": 75.6,
                         "Agachao": 58.6,
                         "Gastar la data": 57.8,
-                        "Siempre doble": 54.2
+                        "Siempre doble": 54.2,
+                        "Campeón del doble 9": 68.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 45.0,
+                        "Más Frecuente": 58.6,
+                        "Aleatorio": 50.2,
+                        "Campeón del doble 6": 31.8,
+                        "Repetidor": 50.4,
+                        "Contador de la mesa": 51.4,
+                        "Pasador": 48.2,
+                        "Menos Jugada": 50.6,
+                        "No gastar la data": 50.2,
+                        "Bota Flaca": 55.2,
+                        "Agachao": 42.0,
+                        "Gastar la data": 41.2,
+                        "Siempre doble": 29.4
                     }
                 }
             },
@@ -17458,7 +19931,8 @@ var SITE_JSON = {
                         "Agachao": 41.8,
                         "Gastar la data": 37.6,
                         "Siempre doble": 34.4,
-                        "Inteligente": 28.599999999999994
+                        "Campeón del doble 6": 28.599999999999994,
+                        "Campeón del doble 9": 57.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 33.2,
@@ -17473,7 +19947,8 @@ var SITE_JSON = {
                         "Agachao": 30.0,
                         "Gastar la data": 36.4,
                         "Siempre doble": 22.4,
-                        "Inteligente": 17.200000000000003
+                        "Campeón del doble 6": 17.200000000000003,
+                        "Campeón del doble 9": 36.4
                     },
                     "Aleatorio": {
                         "Bota Gorda": 45.8,
@@ -17488,7 +19963,8 @@ var SITE_JSON = {
                         "Agachao": 36.0,
                         "Gastar la data": 39.0,
                         "Siempre doble": 26.4,
-                        "Inteligente": 23.200000000000003
+                        "Campeón del doble 6": 23.200000000000003,
+                        "Campeón del doble 9": 51.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 51.6,
@@ -17503,7 +19979,8 @@ var SITE_JSON = {
                         "Agachao": 45.0,
                         "Gastar la data": 38.2,
                         "Siempre doble": 37.6,
-                        "Inteligente": 31.799999999999997
+                        "Campeón del doble 6": 31.799999999999997,
+                        "Campeón del doble 9": 48.6
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 56.8,
@@ -17518,7 +19995,8 @@ var SITE_JSON = {
                         "Agachao": 40.8,
                         "Gastar la data": 45.6,
                         "Siempre doble": 35.4,
-                        "Inteligente": 36.4
+                        "Campeón del doble 6": 36.4,
+                        "Campeón del doble 9": 45.8
                     },
                     "Pasador": {
                         "Bota Gorda": 40.0,
@@ -17533,7 +20011,8 @@ var SITE_JSON = {
                         "Agachao": 41.0,
                         "Gastar la data": 38.2,
                         "Siempre doble": 32.0,
-                        "Inteligente": 26.599999999999994
+                        "Campeón del doble 6": 26.599999999999994,
+                        "Campeón del doble 9": 48.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 47.2,
@@ -17548,7 +20027,8 @@ var SITE_JSON = {
                         "Agachao": 38.2,
                         "Gastar la data": 41.0,
                         "Siempre doble": 24.0,
-                        "Inteligente": 27.0
+                        "Campeón del doble 6": 27.0,
+                        "Campeón del doble 9": 53.2
                     },
                     "No gastar la data": {
                         "Bota Gorda": 49.0,
@@ -17563,7 +20043,8 @@ var SITE_JSON = {
                         "Agachao": 43.4,
                         "Gastar la data": 40.4,
                         "Siempre doble": 30.6,
-                        "Inteligente": 27.799999999999997
+                        "Campeón del doble 6": 27.799999999999997,
+                        "Campeón del doble 9": 57.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 38.0,
@@ -17578,7 +20059,8 @@ var SITE_JSON = {
                         "Agachao": 32.6,
                         "Gastar la data": 34.8,
                         "Siempre doble": 26.2,
-                        "Inteligente": 18.599999999999994
+                        "Campeón del doble 6": 18.599999999999994,
+                        "Campeón del doble 9": 51.4
                     },
                     "Agachao": {
                         "Bota Gorda": 59.6,
@@ -17593,7 +20075,8 @@ var SITE_JSON = {
                         "Agachao": 51.2,
                         "Gastar la data": 54.2,
                         "Siempre doble": 41.0,
-                        "Inteligente": 32.599999999999994
+                        "Campeón del doble 6": 32.599999999999994,
+                        "Campeón del doble 9": 63.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 57.2,
@@ -17608,7 +20091,8 @@ var SITE_JSON = {
                         "Agachao": 48.8,
                         "Gastar la data": 51.2,
                         "Siempre doble": 37.4,
-                        "Inteligente": 33.400000000000006
+                        "Campeón del doble 6": 33.400000000000006,
+                        "Campeón del doble 9": 66.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 70.8,
@@ -17623,13 +20107,14 @@ var SITE_JSON = {
                         "Agachao": 66.6,
                         "Gastar la data": 56.8,
                         "Siempre doble": 49.2,
-                        "Inteligente": 47.4
+                        "Campeón del doble 6": 47.4,
+                        "Campeón del doble 9": 73.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 71.4,
                         "Más Frecuente": 82.8,
                         "Aleatorio": 76.8,
-                        "Inteligente": 50.2,
+                        "Campeón del doble 6": 50.2,
                         "Repetidor": 68.2,
                         "Contador de la mesa": 63.6,
                         "Pasador": 73.4,
@@ -17638,7 +20123,23 @@ var SITE_JSON = {
                         "Bota Flaca": 81.4,
                         "Agachao": 67.4,
                         "Gastar la data": 66.6,
-                        "Siempre doble": 52.6
+                        "Siempre doble": 52.6,
+                        "Campeón del doble 9": 82.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 42.2,
+                        "Más Frecuente": 63.6,
+                        "Aleatorio": 48.6,
+                        "Campeón del doble 6": 18.0,
+                        "Repetidor": 51.4,
+                        "Contador de la mesa": 54.2,
+                        "Pasador": 51.8,
+                        "Menos Jugada": 46.8,
+                        "No gastar la data": 42.8,
+                        "Bota Flaca": 48.6,
+                        "Agachao": 36.4,
+                        "Gastar la data": 33.4,
+                        "Siempre doble": 26.4
                     }
                 },
                 "Cooperativo": {
@@ -17655,7 +20156,8 @@ var SITE_JSON = {
                         "Agachao": 40.2,
                         "Gastar la data": 42.8,
                         "Siempre doble": 33.0,
-                        "Inteligente": 28.799999999999997
+                        "Campeón del doble 6": 28.799999999999997,
+                        "Campeón del doble 9": 61.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 39.2,
@@ -17670,7 +20172,8 @@ var SITE_JSON = {
                         "Agachao": 34.2,
                         "Gastar la data": 32.8,
                         "Siempre doble": 21.4,
-                        "Inteligente": 23.799999999999997
+                        "Campeón del doble 6": 23.799999999999997,
+                        "Campeón del doble 9": 40.2
                     },
                     "Aleatorio": {
                         "Bota Gorda": 45.2,
@@ -17685,7 +20188,8 @@ var SITE_JSON = {
                         "Agachao": 40.0,
                         "Gastar la data": 39.6,
                         "Siempre doble": 26.4,
-                        "Inteligente": 21.599999999999994
+                        "Campeón del doble 6": 21.599999999999994,
+                        "Campeón del doble 9": 46.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 51.4,
@@ -17700,7 +20204,8 @@ var SITE_JSON = {
                         "Agachao": 44.2,
                         "Gastar la data": 41.0,
                         "Siempre doble": 35.4,
-                        "Inteligente": 36.4
+                        "Campeón del doble 6": 36.4,
+                        "Campeón del doble 9": 52.6
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.0,
@@ -17715,7 +20220,8 @@ var SITE_JSON = {
                         "Agachao": 46.4,
                         "Gastar la data": 44.4,
                         "Siempre doble": 37.6,
-                        "Inteligente": 36.8
+                        "Campeón del doble 6": 36.8,
+                        "Campeón del doble 9": 49.6
                     },
                     "Pasador": {
                         "Bota Gorda": 51.2,
@@ -17730,7 +20236,8 @@ var SITE_JSON = {
                         "Agachao": 36.6,
                         "Gastar la data": 37.4,
                         "Siempre doble": 28.2,
-                        "Inteligente": 32.400000000000006
+                        "Campeón del doble 6": 32.400000000000006,
+                        "Campeón del doble 9": 53.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 45.0,
@@ -17745,7 +20252,8 @@ var SITE_JSON = {
                         "Agachao": 39.2,
                         "Gastar la data": 40.2,
                         "Siempre doble": 29.0,
-                        "Inteligente": 23.799999999999997
+                        "Campeón del doble 6": 23.799999999999997,
+                        "Campeón del doble 9": 50.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 48.2,
@@ -17760,7 +20268,8 @@ var SITE_JSON = {
                         "Agachao": 39.6,
                         "Gastar la data": 42.2,
                         "Siempre doble": 34.6,
-                        "Inteligente": 28.0
+                        "Campeón del doble 6": 28.0,
+                        "Campeón del doble 9": 53.8
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 43.0,
@@ -17775,7 +20284,8 @@ var SITE_JSON = {
                         "Agachao": 42.4,
                         "Gastar la data": 38.2,
                         "Siempre doble": 27.8,
-                        "Inteligente": 23.400000000000006
+                        "Campeón del doble 6": 23.400000000000006,
+                        "Campeón del doble 9": 47.4
                     },
                     "Agachao": {
                         "Bota Gorda": 61.6,
@@ -17790,7 +20300,8 @@ var SITE_JSON = {
                         "Agachao": 51.4,
                         "Gastar la data": 52.8,
                         "Siempre doble": 42.0,
-                        "Inteligente": 39.4
+                        "Campeón del doble 6": 39.4,
+                        "Campeón del doble 9": 62.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 56.4,
@@ -17805,7 +20316,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 51.2,
                         "Siempre doble": 37.8,
-                        "Inteligente": 36.0
+                        "Campeón del doble 6": 36.0,
+                        "Campeón del doble 9": 62.2
                     },
                     "Siempre doble": {
                         "Bota Gorda": 67.6,
@@ -17820,13 +20332,14 @@ var SITE_JSON = {
                         "Agachao": 62.0,
                         "Gastar la data": 62.4,
                         "Siempre doble": 53.2,
-                        "Inteligente": 48.8
+                        "Campeón del doble 6": 48.8,
+                        "Campeón del doble 9": 67.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 71.2,
                         "Más Frecuente": 76.2,
                         "Aleatorio": 78.4,
-                        "Inteligente": 45.8,
+                        "Campeón del doble 6": 45.8,
                         "Repetidor": 63.6,
                         "Contador de la mesa": 63.2,
                         "Pasador": 67.6,
@@ -17835,7 +20348,23 @@ var SITE_JSON = {
                         "Bota Flaca": 76.6,
                         "Agachao": 60.6,
                         "Gastar la data": 64.0,
-                        "Siempre doble": 51.2
+                        "Siempre doble": 51.2,
+                        "Campeón del doble 9": 75.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 39.0,
+                        "Más Frecuente": 59.8,
+                        "Aleatorio": 53.8,
+                        "Campeón del doble 6": 24.4,
+                        "Repetidor": 47.4,
+                        "Contador de la mesa": 50.4,
+                        "Pasador": 46.4,
+                        "Menos Jugada": 49.4,
+                        "No gastar la data": 46.2,
+                        "Bota Flaca": 52.6,
+                        "Agachao": 37.6,
+                        "Gastar la data": 37.8,
+                        "Siempre doble": 32.4
                     }
                 }
             }
@@ -17856,7 +20385,8 @@ var SITE_JSON = {
                         "Agachao": 41.4,
                         "Gastar la data": 38.0,
                         "Siempre doble": 27.2,
-                        "Inteligente": 22.200000000000003
+                        "Campeón del doble 6": 22.200000000000003,
+                        "Campeón del doble 9": 66.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 29.6,
@@ -17871,7 +20401,8 @@ var SITE_JSON = {
                         "Agachao": 24.6,
                         "Gastar la data": 27.0,
                         "Siempre doble": 19.2,
-                        "Inteligente": 16.200000000000003
+                        "Campeón del doble 6": 16.200000000000003,
+                        "Campeón del doble 9": 39.4
                     },
                     "Aleatorio": {
                         "Bota Gorda": 40.6,
@@ -17886,7 +20417,8 @@ var SITE_JSON = {
                         "Agachao": 30.4,
                         "Gastar la data": 36.8,
                         "Siempre doble": 25.6,
-                        "Inteligente": 18.799999999999997
+                        "Campeón del doble 6": 18.799999999999997,
+                        "Campeón del doble 9": 52.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 52.0,
@@ -17901,7 +20433,8 @@ var SITE_JSON = {
                         "Agachao": 42.0,
                         "Gastar la data": 42.6,
                         "Siempre doble": 31.6,
-                        "Inteligente": 34.0
+                        "Campeón del doble 6": 34.0,
+                        "Campeón del doble 9": 52.6
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 54.8,
@@ -17916,7 +20449,8 @@ var SITE_JSON = {
                         "Agachao": 36.4,
                         "Gastar la data": 41.2,
                         "Siempre doble": 37.0,
-                        "Inteligente": 32.599999999999994
+                        "Campeón del doble 6": 32.599999999999994,
+                        "Campeón del doble 9": 48.4
                     },
                     "Pasador": {
                         "Bota Gorda": 45.0,
@@ -17931,7 +20465,8 @@ var SITE_JSON = {
                         "Agachao": 35.4,
                         "Gastar la data": 36.8,
                         "Siempre doble": 27.2,
-                        "Inteligente": 20.0
+                        "Campeón del doble 6": 20.0,
+                        "Campeón del doble 9": 50.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 41.8,
@@ -17946,7 +20481,8 @@ var SITE_JSON = {
                         "Agachao": 32.4,
                         "Gastar la data": 34.6,
                         "Siempre doble": 27.0,
-                        "Inteligente": 19.799999999999997
+                        "Campeón del doble 6": 19.799999999999997,
+                        "Campeón del doble 9": 53.0
                     },
                     "No gastar la data": {
                         "Bota Gorda": 46.0,
@@ -17961,7 +20497,8 @@ var SITE_JSON = {
                         "Agachao": 36.4,
                         "Gastar la data": 42.6,
                         "Siempre doble": 29.6,
-                        "Inteligente": 17.400000000000006
+                        "Campeón del doble 6": 17.400000000000006,
+                        "Campeón del doble 9": 59.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 34.6,
@@ -17976,7 +20513,8 @@ var SITE_JSON = {
                         "Agachao": 31.8,
                         "Gastar la data": 33.0,
                         "Siempre doble": 21.0,
-                        "Inteligente": 12.0
+                        "Campeón del doble 6": 12.0,
+                        "Campeón del doble 9": 51.4
                     },
                     "Agachao": {
                         "Bota Gorda": 66.0,
@@ -17991,7 +20529,8 @@ var SITE_JSON = {
                         "Agachao": 56.4,
                         "Gastar la data": 56.6,
                         "Siempre doble": 44.0,
-                        "Inteligente": 35.0
+                        "Campeón del doble 6": 35.0,
+                        "Campeón del doble 9": 66.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 63.0,
@@ -18006,7 +20545,8 @@ var SITE_JSON = {
                         "Agachao": 52.4,
                         "Gastar la data": 52.2,
                         "Siempre doble": 46.4,
-                        "Inteligente": 35.0
+                        "Campeón del doble 6": 35.0,
+                        "Campeón del doble 9": 66.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 71.4,
@@ -18021,13 +20561,14 @@ var SITE_JSON = {
                         "Agachao": 58.6,
                         "Gastar la data": 59.2,
                         "Siempre doble": 58.2,
-                        "Inteligente": 43.6
+                        "Campeón del doble 6": 43.6,
+                        "Campeón del doble 9": 76.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 77.8,
                         "Más Frecuente": 83.8,
                         "Aleatorio": 81.2,
-                        "Inteligente": 41.8,
+                        "Campeón del doble 6": 41.8,
                         "Repetidor": 66.0,
                         "Contador de la mesa": 67.4,
                         "Pasador": 80.0,
@@ -18036,7 +20577,23 @@ var SITE_JSON = {
                         "Bota Flaca": 88.0,
                         "Agachao": 65.0,
                         "Gastar la data": 65.0,
-                        "Siempre doble": 56.4
+                        "Siempre doble": 56.4,
+                        "Campeón del doble 9": 85.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 33.2,
+                        "Más Frecuente": 60.6,
+                        "Aleatorio": 47.8,
+                        "Campeón del doble 6": 15.0,
+                        "Repetidor": 47.4,
+                        "Contador de la mesa": 51.6,
+                        "Pasador": 49.8,
+                        "Menos Jugada": 47.0,
+                        "No gastar la data": 40.8,
+                        "Bota Flaca": 48.6,
+                        "Agachao": 34.0,
+                        "Gastar la data": 34.0,
+                        "Siempre doble": 23.4
                     }
                 },
                 "Cooperativo": {
@@ -18053,7 +20610,8 @@ var SITE_JSON = {
                         "Agachao": 37.0,
                         "Gastar la data": 44.4,
                         "Siempre doble": 30.2,
-                        "Inteligente": 25.0
+                        "Campeón del doble 6": 25.0,
+                        "Campeón del doble 9": 56.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 36.4,
@@ -18068,7 +20626,8 @@ var SITE_JSON = {
                         "Agachao": 31.8,
                         "Gastar la data": 30.2,
                         "Siempre doble": 22.8,
-                        "Inteligente": 15.0
+                        "Campeón del doble 6": 15.0,
+                        "Campeón del doble 9": 37.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 42.8,
@@ -18083,7 +20642,8 @@ var SITE_JSON = {
                         "Agachao": 36.8,
                         "Gastar la data": 37.4,
                         "Siempre doble": 22.8,
-                        "Inteligente": 20.400000000000006
+                        "Campeón del doble 6": 20.400000000000006,
+                        "Campeón del doble 9": 51.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 53.6,
@@ -18098,7 +20658,8 @@ var SITE_JSON = {
                         "Agachao": 40.6,
                         "Gastar la data": 39.8,
                         "Siempre doble": 33.4,
-                        "Inteligente": 33.0
+                        "Campeón del doble 6": 33.0,
+                        "Campeón del doble 9": 51.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.0,
@@ -18113,7 +20674,8 @@ var SITE_JSON = {
                         "Agachao": 38.8,
                         "Gastar la data": 39.6,
                         "Siempre doble": 36.2,
-                        "Inteligente": 30.799999999999997
+                        "Campeón del doble 6": 30.799999999999997,
+                        "Campeón del doble 9": 48.8
                     },
                     "Pasador": {
                         "Bota Gorda": 45.8,
@@ -18128,7 +20690,8 @@ var SITE_JSON = {
                         "Agachao": 38.0,
                         "Gastar la data": 41.0,
                         "Siempre doble": 22.8,
-                        "Inteligente": 22.0
+                        "Campeón del doble 6": 22.0,
+                        "Campeón del doble 9": 51.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 42.0,
@@ -18143,7 +20706,8 @@ var SITE_JSON = {
                         "Agachao": 35.6,
                         "Gastar la data": 34.4,
                         "Siempre doble": 26.0,
-                        "Inteligente": 21.599999999999994
+                        "Campeón del doble 6": 21.599999999999994,
+                        "Campeón del doble 9": 47.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 49.0,
@@ -18158,7 +20722,8 @@ var SITE_JSON = {
                         "Agachao": 41.6,
                         "Gastar la data": 37.0,
                         "Siempre doble": 27.8,
-                        "Inteligente": 23.400000000000006
+                        "Campeón del doble 6": 23.400000000000006,
+                        "Campeón del doble 9": 55.8
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 43.6,
@@ -18173,7 +20738,8 @@ var SITE_JSON = {
                         "Agachao": 36.8,
                         "Gastar la data": 34.0,
                         "Siempre doble": 23.4,
-                        "Inteligente": 23.599999999999994
+                        "Campeón del doble 6": 23.599999999999994,
+                        "Campeón del doble 9": 48.0
                     },
                     "Agachao": {
                         "Bota Gorda": 64.2,
@@ -18188,7 +20754,8 @@ var SITE_JSON = {
                         "Agachao": 52.8,
                         "Gastar la data": 53.2,
                         "Siempre doble": 47.2,
-                        "Inteligente": 37.0
+                        "Campeón del doble 6": 37.0,
+                        "Campeón del doble 9": 61.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 59.4,
@@ -18203,7 +20770,8 @@ var SITE_JSON = {
                         "Agachao": 52.2,
                         "Gastar la data": 52.2,
                         "Siempre doble": 44.0,
-                        "Inteligente": 38.4
+                        "Campeón del doble 6": 38.4,
+                        "Campeón del doble 9": 63.2
                     },
                     "Siempre doble": {
                         "Bota Gorda": 74.0,
@@ -18218,13 +20786,14 @@ var SITE_JSON = {
                         "Agachao": 60.4,
                         "Gastar la data": 56.6,
                         "Siempre doble": 51.0,
-                        "Inteligente": 44.2
+                        "Campeón del doble 6": 44.2,
+                        "Campeón del doble 9": 74.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 75.0,
                         "Más Frecuente": 85.0,
                         "Aleatorio": 79.6,
-                        "Inteligente": 44.4,
+                        "Campeón del doble 6": 44.4,
                         "Repetidor": 67.0,
                         "Contador de la mesa": 69.2,
                         "Pasador": 78.0,
@@ -18233,7 +20802,23 @@ var SITE_JSON = {
                         "Bota Flaca": 76.4,
                         "Agachao": 63.0,
                         "Gastar la data": 61.6,
-                        "Siempre doble": 55.8
+                        "Siempre doble": 55.8,
+                        "Campeón del doble 9": 82.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 43.6,
+                        "Más Frecuente": 62.2,
+                        "Aleatorio": 49.0,
+                        "Campeón del doble 6": 18.0,
+                        "Repetidor": 48.6,
+                        "Contador de la mesa": 51.2,
+                        "Pasador": 49.0,
+                        "Menos Jugada": 52.2,
+                        "No gastar la data": 44.2,
+                        "Bota Flaca": 52.0,
+                        "Agachao": 38.4,
+                        "Gastar la data": 36.8,
+                        "Siempre doble": 26.0
                     }
                 }
             },
@@ -18252,7 +20837,8 @@ var SITE_JSON = {
                         "Agachao": 37.2,
                         "Gastar la data": 38.2,
                         "Siempre doble": 32.2,
-                        "Inteligente": 25.400000000000006
+                        "Campeón del doble 6": 25.400000000000006,
+                        "Campeón del doble 9": 63.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 33.0,
@@ -18267,7 +20853,8 @@ var SITE_JSON = {
                         "Agachao": 35.2,
                         "Gastar la data": 36.6,
                         "Siempre doble": 23.0,
-                        "Inteligente": 17.799999999999997
+                        "Campeón del doble 6": 17.799999999999997,
+                        "Campeón del doble 9": 43.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 43.0,
@@ -18282,7 +20869,8 @@ var SITE_JSON = {
                         "Agachao": 34.4,
                         "Gastar la data": 39.8,
                         "Siempre doble": 25.4,
-                        "Inteligente": 22.0
+                        "Campeón del doble 6": 22.0,
+                        "Campeón del doble 9": 51.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 50.2,
@@ -18297,7 +20885,8 @@ var SITE_JSON = {
                         "Agachao": 41.0,
                         "Gastar la data": 43.0,
                         "Siempre doble": 38.4,
-                        "Inteligente": 31.799999999999997
+                        "Campeón del doble 6": 31.799999999999997,
+                        "Campeón del doble 9": 52.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 53.8,
@@ -18312,7 +20901,8 @@ var SITE_JSON = {
                         "Agachao": 41.6,
                         "Gastar la data": 42.0,
                         "Siempre doble": 37.0,
-                        "Inteligente": 32.2
+                        "Campeón del doble 6": 32.2,
+                        "Campeón del doble 9": 48.8
                     },
                     "Pasador": {
                         "Bota Gorda": 48.2,
@@ -18327,7 +20917,8 @@ var SITE_JSON = {
                         "Agachao": 32.0,
                         "Gastar la data": 39.6,
                         "Siempre doble": 31.4,
-                        "Inteligente": 24.599999999999994
+                        "Campeón del doble 6": 24.599999999999994,
+                        "Campeón del doble 9": 55.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 42.4,
@@ -18342,7 +20933,8 @@ var SITE_JSON = {
                         "Agachao": 36.0,
                         "Gastar la data": 37.4,
                         "Siempre doble": 24.8,
-                        "Inteligente": 25.200000000000003
+                        "Campeón del doble 6": 25.200000000000003,
+                        "Campeón del doble 9": 55.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 49.8,
@@ -18357,7 +20949,8 @@ var SITE_JSON = {
                         "Agachao": 36.8,
                         "Gastar la data": 37.4,
                         "Siempre doble": 28.4,
-                        "Inteligente": 23.0
+                        "Campeón del doble 6": 23.0,
+                        "Campeón del doble 9": 64.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 37.2,
@@ -18372,7 +20965,8 @@ var SITE_JSON = {
                         "Agachao": 32.4,
                         "Gastar la data": 35.8,
                         "Siempre doble": 23.2,
-                        "Inteligente": 15.799999999999997
+                        "Campeón del doble 6": 15.799999999999997,
+                        "Campeón del doble 9": 53.0
                     },
                     "Agachao": {
                         "Bota Gorda": 64.4,
@@ -18387,7 +20981,8 @@ var SITE_JSON = {
                         "Agachao": 53.2,
                         "Gastar la data": 51.2,
                         "Siempre doble": 48.4,
-                        "Inteligente": 37.0
+                        "Campeón del doble 6": 37.0,
+                        "Campeón del doble 9": 64.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 63.2,
@@ -18402,7 +20997,8 @@ var SITE_JSON = {
                         "Agachao": 52.0,
                         "Gastar la data": 54.6,
                         "Siempre doble": 47.4,
-                        "Inteligente": 32.599999999999994
+                        "Campeón del doble 6": 32.599999999999994,
+                        "Campeón del doble 9": 68.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 68.0,
@@ -18417,13 +21013,14 @@ var SITE_JSON = {
                         "Agachao": 64.6,
                         "Gastar la data": 56.2,
                         "Siempre doble": 53.6,
-                        "Inteligente": 46.2
+                        "Campeón del doble 6": 46.2,
+                        "Campeón del doble 9": 80.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 74.6,
                         "Más Frecuente": 82.2,
                         "Aleatorio": 78.0,
-                        "Inteligente": 47.0,
+                        "Campeón del doble 6": 47.0,
                         "Repetidor": 68.2,
                         "Contador de la mesa": 67.8,
                         "Pasador": 75.4,
@@ -18432,7 +21029,23 @@ var SITE_JSON = {
                         "Bota Flaca": 84.2,
                         "Agachao": 63.0,
                         "Gastar la data": 67.4,
-                        "Siempre doble": 53.8
+                        "Siempre doble": 53.8,
+                        "Campeón del doble 9": 79.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 36.8,
+                        "Más Frecuente": 57.0,
+                        "Aleatorio": 49.0,
+                        "Campeón del doble 6": 20.2,
+                        "Repetidor": 47.2,
+                        "Contador de la mesa": 51.2,
+                        "Pasador": 44.6,
+                        "Menos Jugada": 44.2,
+                        "No gastar la data": 35.6,
+                        "Bota Flaca": 47.0,
+                        "Agachao": 35.8,
+                        "Gastar la data": 32.0,
+                        "Siempre doble": 20.0
                     }
                 },
                 "Cooperativo": {
@@ -18449,7 +21062,8 @@ var SITE_JSON = {
                         "Agachao": 40.0,
                         "Gastar la data": 43.6,
                         "Siempre doble": 28.0,
-                        "Inteligente": 26.799999999999997
+                        "Campeón del doble 6": 26.799999999999997,
+                        "Campeón del doble 9": 59.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 40.6,
@@ -18464,7 +21078,8 @@ var SITE_JSON = {
                         "Agachao": 31.6,
                         "Gastar la data": 30.6,
                         "Siempre doble": 22.6,
-                        "Inteligente": 24.0
+                        "Campeón del doble 6": 24.0,
+                        "Campeón del doble 9": 39.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 44.0,
@@ -18479,7 +21094,8 @@ var SITE_JSON = {
                         "Agachao": 39.8,
                         "Gastar la data": 35.4,
                         "Siempre doble": 27.6,
-                        "Inteligente": 26.400000000000006
+                        "Campeón del doble 6": 26.400000000000006,
+                        "Campeón del doble 9": 49.2
                     },
                     "Repetidor": {
                         "Bota Gorda": 53.0,
@@ -18494,7 +21110,8 @@ var SITE_JSON = {
                         "Agachao": 43.4,
                         "Gastar la data": 41.0,
                         "Siempre doble": 31.4,
-                        "Inteligente": 35.400000000000006
+                        "Campeón del doble 6": 35.400000000000006,
+                        "Campeón del doble 9": 53.0
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.8,
@@ -18509,7 +21126,8 @@ var SITE_JSON = {
                         "Agachao": 40.4,
                         "Gastar la data": 42.4,
                         "Siempre doble": 41.6,
-                        "Inteligente": 33.8
+                        "Campeón del doble 6": 33.8,
+                        "Campeón del doble 9": 49.4
                     },
                     "Pasador": {
                         "Bota Gorda": 48.4,
@@ -18524,7 +21142,8 @@ var SITE_JSON = {
                         "Agachao": 37.2,
                         "Gastar la data": 38.0,
                         "Siempre doble": 32.2,
-                        "Inteligente": 23.400000000000006
+                        "Campeón del doble 6": 23.400000000000006,
+                        "Campeón del doble 9": 50.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 42.8,
@@ -18539,7 +21158,8 @@ var SITE_JSON = {
                         "Agachao": 33.8,
                         "Gastar la data": 38.8,
                         "Siempre doble": 27.6,
-                        "Inteligente": 24.400000000000006
+                        "Campeón del doble 6": 24.400000000000006,
+                        "Campeón del doble 9": 47.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 50.2,
@@ -18554,7 +21174,8 @@ var SITE_JSON = {
                         "Agachao": 38.2,
                         "Gastar la data": 41.2,
                         "Siempre doble": 30.4,
-                        "Inteligente": 26.599999999999994
+                        "Campeón del doble 6": 26.599999999999994,
+                        "Campeón del doble 9": 55.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 39.2,
@@ -18569,7 +21190,8 @@ var SITE_JSON = {
                         "Agachao": 38.4,
                         "Gastar la data": 35.8,
                         "Siempre doble": 26.6,
-                        "Inteligente": 16.400000000000006
+                        "Campeón del doble 6": 16.400000000000006,
+                        "Campeón del doble 9": 48.2
                     },
                     "Agachao": {
                         "Bota Gorda": 62.4,
@@ -18584,7 +21206,8 @@ var SITE_JSON = {
                         "Agachao": 47.0,
                         "Gastar la data": 51.0,
                         "Siempre doble": 47.6,
-                        "Inteligente": 42.0
+                        "Campeón del doble 6": 42.0,
+                        "Campeón del doble 9": 65.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 62.0,
@@ -18599,7 +21222,8 @@ var SITE_JSON = {
                         "Agachao": 53.0,
                         "Gastar la data": 49.0,
                         "Siempre doble": 49.0,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 63.4
                     },
                     "Siempre doble": {
                         "Bota Gorda": 72.8,
@@ -18614,13 +21238,14 @@ var SITE_JSON = {
                         "Agachao": 63.4,
                         "Gastar la data": 57.6,
                         "Siempre doble": 52.4,
-                        "Inteligente": 48.4
+                        "Campeón del doble 6": 48.4,
+                        "Campeón del doble 9": 76.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 73.2,
                         "Más Frecuente": 76.0,
                         "Aleatorio": 73.6,
-                        "Inteligente": 44.4,
+                        "Campeón del doble 6": 44.4,
                         "Repetidor": 64.6,
                         "Contador de la mesa": 66.2,
                         "Pasador": 76.6,
@@ -18629,7 +21254,23 @@ var SITE_JSON = {
                         "Bota Flaca": 83.6,
                         "Agachao": 58.0,
                         "Gastar la data": 60.0,
-                        "Siempre doble": 51.6
+                        "Siempre doble": 51.6,
+                        "Campeón del doble 9": 78.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 40.6,
+                        "Más Frecuente": 60.2,
+                        "Aleatorio": 50.8,
+                        "Campeón del doble 6": 21.4,
+                        "Repetidor": 47.0,
+                        "Contador de la mesa": 50.6,
+                        "Pasador": 49.4,
+                        "Menos Jugada": 52.4,
+                        "No gastar la data": 44.4,
+                        "Bota Flaca": 51.8,
+                        "Agachao": 34.4,
+                        "Gastar la data": 36.6,
+                        "Siempre doble": 23.4
                     }
                 }
             },
@@ -18648,7 +21289,8 @@ var SITE_JSON = {
                         "Agachao": 41.2,
                         "Gastar la data": 46.0,
                         "Siempre doble": 30.8,
-                        "Inteligente": 28.599999999999994
+                        "Campeón del doble 6": 28.599999999999994,
+                        "Campeón del doble 9": 65.8
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 33.6,
@@ -18663,7 +21305,8 @@ var SITE_JSON = {
                         "Agachao": 31.0,
                         "Gastar la data": 34.4,
                         "Siempre doble": 21.4,
-                        "Inteligente": 21.799999999999997
+                        "Campeón del doble 6": 21.799999999999997,
+                        "Campeón del doble 9": 39.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 44.0,
@@ -18678,7 +21321,8 @@ var SITE_JSON = {
                         "Agachao": 34.2,
                         "Gastar la data": 32.6,
                         "Siempre doble": 28.0,
-                        "Inteligente": 22.799999999999997
+                        "Campeón del doble 6": 22.799999999999997,
+                        "Campeón del doble 9": 52.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 52.0,
@@ -18693,7 +21337,8 @@ var SITE_JSON = {
                         "Agachao": 42.4,
                         "Gastar la data": 45.6,
                         "Siempre doble": 37.6,
-                        "Inteligente": 33.0
+                        "Campeón del doble 6": 33.0,
+                        "Campeón del doble 9": 52.4
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 57.0,
@@ -18708,7 +21353,8 @@ var SITE_JSON = {
                         "Agachao": 41.2,
                         "Gastar la data": 41.8,
                         "Siempre doble": 36.6,
-                        "Inteligente": 36.4
+                        "Campeón del doble 6": 36.4,
+                        "Campeón del doble 9": 46.6
                     },
                     "Pasador": {
                         "Bota Gorda": 45.6,
@@ -18723,7 +21369,8 @@ var SITE_JSON = {
                         "Agachao": 35.2,
                         "Gastar la data": 35.2,
                         "Siempre doble": 28.2,
-                        "Inteligente": 25.599999999999994
+                        "Campeón del doble 6": 25.599999999999994,
+                        "Campeón del doble 9": 54.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 39.8,
@@ -18738,7 +21385,8 @@ var SITE_JSON = {
                         "Agachao": 40.8,
                         "Gastar la data": 38.8,
                         "Siempre doble": 29.0,
-                        "Inteligente": 21.200000000000003
+                        "Campeón del doble 6": 21.200000000000003,
+                        "Campeón del doble 9": 52.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 48.6,
@@ -18753,7 +21401,8 @@ var SITE_JSON = {
                         "Agachao": 35.6,
                         "Gastar la data": 41.6,
                         "Siempre doble": 32.6,
-                        "Inteligente": 23.0
+                        "Campeón del doble 6": 23.0,
+                        "Campeón del doble 9": 65.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 32.4,
@@ -18768,7 +21417,8 @@ var SITE_JSON = {
                         "Agachao": 32.2,
                         "Gastar la data": 30.8,
                         "Siempre doble": 21.0,
-                        "Inteligente": 15.400000000000006
+                        "Campeón del doble 6": 15.400000000000006,
+                        "Campeón del doble 9": 48.2
                     },
                     "Agachao": {
                         "Bota Gorda": 61.8,
@@ -18783,7 +21433,8 @@ var SITE_JSON = {
                         "Agachao": 52.6,
                         "Gastar la data": 53.0,
                         "Siempre doble": 38.8,
-                        "Inteligente": 37.2
+                        "Campeón del doble 6": 37.2,
+                        "Campeón del doble 9": 66.6
                     },
                     "Gastar la data": {
                         "Bota Gorda": 62.6,
@@ -18798,7 +21449,8 @@ var SITE_JSON = {
                         "Agachao": 48.8,
                         "Gastar la data": 52.4,
                         "Siempre doble": 42.8,
-                        "Inteligente": 37.2
+                        "Campeón del doble 6": 37.2,
+                        "Campeón del doble 9": 68.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 65.6,
@@ -18813,13 +21465,14 @@ var SITE_JSON = {
                         "Agachao": 60.4,
                         "Gastar la data": 56.4,
                         "Siempre doble": 52.2,
-                        "Inteligente": 42.8
+                        "Campeón del doble 6": 42.8,
+                        "Campeón del doble 9": 77.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 71.4,
                         "Más Frecuente": 78.2,
                         "Aleatorio": 77.2,
-                        "Inteligente": 49.4,
+                        "Campeón del doble 6": 49.4,
                         "Repetidor": 67.0,
                         "Contador de la mesa": 63.6,
                         "Pasador": 74.4,
@@ -18828,7 +21481,23 @@ var SITE_JSON = {
                         "Bota Flaca": 84.6,
                         "Agachao": 62.8,
                         "Gastar la data": 62.8,
-                        "Siempre doble": 57.2
+                        "Siempre doble": 57.2,
+                        "Campeón del doble 9": 84.8
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 34.2,
+                        "Más Frecuente": 60.2,
+                        "Aleatorio": 48.0,
+                        "Campeón del doble 6": 15.2,
+                        "Repetidor": 47.6,
+                        "Contador de la mesa": 53.4,
+                        "Pasador": 46.0,
+                        "Menos Jugada": 47.6,
+                        "No gastar la data": 34.6,
+                        "Bota Flaca": 51.8,
+                        "Agachao": 33.4,
+                        "Gastar la data": 32.0,
+                        "Siempre doble": 22.8
                     }
                 },
                 "Cooperativo": {
@@ -18845,7 +21514,8 @@ var SITE_JSON = {
                         "Agachao": 40.4,
                         "Gastar la data": 40.8,
                         "Siempre doble": 32.8,
-                        "Inteligente": 29.0
+                        "Campeón del doble 6": 29.0,
+                        "Campeón del doble 9": 59.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 37.8,
@@ -18860,7 +21530,8 @@ var SITE_JSON = {
                         "Agachao": 32.8,
                         "Gastar la data": 33.4,
                         "Siempre doble": 24.6,
-                        "Inteligente": 20.599999999999994
+                        "Campeón del doble 6": 20.599999999999994,
+                        "Campeón del doble 9": 43.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 43.6,
@@ -18875,7 +21546,8 @@ var SITE_JSON = {
                         "Agachao": 37.2,
                         "Gastar la data": 39.2,
                         "Siempre doble": 27.0,
-                        "Inteligente": 26.200000000000003
+                        "Campeón del doble 6": 26.200000000000003,
+                        "Campeón del doble 9": 49.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 52.2,
@@ -18890,7 +21562,8 @@ var SITE_JSON = {
                         "Agachao": 42.0,
                         "Gastar la data": 43.6,
                         "Siempre doble": 40.2,
-                        "Inteligente": 34.2
+                        "Campeón del doble 6": 34.2,
+                        "Campeón del doble 9": 54.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 55.4,
@@ -18905,7 +21578,8 @@ var SITE_JSON = {
                         "Agachao": 39.6,
                         "Gastar la data": 44.2,
                         "Siempre doble": 38.0,
-                        "Inteligente": 41.6
+                        "Campeón del doble 6": 41.6,
+                        "Campeón del doble 9": 50.6
                     },
                     "Pasador": {
                         "Bota Gorda": 45.4,
@@ -18920,7 +21594,8 @@ var SITE_JSON = {
                         "Agachao": 43.6,
                         "Gastar la data": 40.6,
                         "Siempre doble": 30.0,
-                        "Inteligente": 30.200000000000003
+                        "Campeón del doble 6": 30.200000000000003,
+                        "Campeón del doble 9": 54.4
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 41.6,
@@ -18935,7 +21610,8 @@ var SITE_JSON = {
                         "Agachao": 36.8,
                         "Gastar la data": 40.2,
                         "Siempre doble": 27.2,
-                        "Inteligente": 25.0
+                        "Campeón del doble 6": 25.0,
+                        "Campeón del doble 9": 49.4
                     },
                     "No gastar la data": {
                         "Bota Gorda": 44.4,
@@ -18950,7 +21626,8 @@ var SITE_JSON = {
                         "Agachao": 38.8,
                         "Gastar la data": 43.0,
                         "Siempre doble": 30.6,
-                        "Inteligente": 28.599999999999994
+                        "Campeón del doble 6": 28.599999999999994,
+                        "Campeón del doble 9": 56.6
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 37.8,
@@ -18965,7 +21642,8 @@ var SITE_JSON = {
                         "Agachao": 34.8,
                         "Gastar la data": 36.6,
                         "Siempre doble": 23.0,
-                        "Inteligente": 22.0
+                        "Campeón del doble 6": 22.0,
+                        "Campeón del doble 9": 51.6
                     },
                     "Agachao": {
                         "Bota Gorda": 59.6,
@@ -18980,7 +21658,8 @@ var SITE_JSON = {
                         "Agachao": 51.2,
                         "Gastar la data": 52.8,
                         "Siempre doble": 45.4,
-                        "Inteligente": 38.8
+                        "Campeón del doble 6": 38.8,
+                        "Campeón del doble 9": 64.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 56.0,
@@ -18995,7 +21674,8 @@ var SITE_JSON = {
                         "Agachao": 52.2,
                         "Gastar la data": 51.8,
                         "Siempre doble": 42.0,
-                        "Inteligente": 38.6
+                        "Campeón del doble 6": 38.6,
+                        "Campeón del doble 9": 61.0
                     },
                     "Siempre doble": {
                         "Bota Gorda": 65.4,
@@ -19010,13 +21690,14 @@ var SITE_JSON = {
                         "Agachao": 57.2,
                         "Gastar la data": 57.2,
                         "Siempre doble": 52.8,
-                        "Inteligente": 44.0
+                        "Campeón del doble 6": 44.0,
+                        "Campeón del doble 9": 74.8
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 71.0,
                         "Más Frecuente": 79.4,
                         "Aleatorio": 73.8,
-                        "Inteligente": 50.6,
+                        "Campeón del doble 6": 50.6,
                         "Repetidor": 65.8,
                         "Contador de la mesa": 58.4,
                         "Pasador": 69.8,
@@ -19025,7 +21706,23 @@ var SITE_JSON = {
                         "Bota Flaca": 78.0,
                         "Agachao": 61.2,
                         "Gastar la data": 61.4,
-                        "Siempre doble": 56.0
+                        "Siempre doble": 56.0,
+                        "Campeón del doble 9": 77.0
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 41.0,
+                        "Más Frecuente": 56.2,
+                        "Aleatorio": 50.2,
+                        "Campeón del doble 6": 23.0,
+                        "Repetidor": 45.8,
+                        "Contador de la mesa": 49.4,
+                        "Pasador": 45.6,
+                        "Menos Jugada": 50.6,
+                        "No gastar la data": 43.4,
+                        "Bota Flaca": 48.4,
+                        "Agachao": 36.0,
+                        "Gastar la data": 39.0,
+                        "Siempre doble": 25.2
                     }
                 }
             },
@@ -19044,7 +21741,8 @@ var SITE_JSON = {
                         "Agachao": 41.8,
                         "Gastar la data": 44.4,
                         "Siempre doble": 39.8,
-                        "Inteligente": 27.799999999999997
+                        "Campeón del doble 6": 27.799999999999997,
+                        "Campeón del doble 9": 62.0
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 38.8,
@@ -19059,7 +21757,8 @@ var SITE_JSON = {
                         "Agachao": 36.0,
                         "Gastar la data": 40.2,
                         "Siempre doble": 30.2,
-                        "Inteligente": 21.799999999999997
+                        "Campeón del doble 6": 21.799999999999997,
+                        "Campeón del doble 9": 41.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 47.8,
@@ -19074,7 +21773,8 @@ var SITE_JSON = {
                         "Agachao": 38.2,
                         "Gastar la data": 41.4,
                         "Siempre doble": 30.8,
-                        "Inteligente": 23.799999999999997
+                        "Campeón del doble 6": 23.799999999999997,
+                        "Campeón del doble 9": 50.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 51.6,
@@ -19089,7 +21789,8 @@ var SITE_JSON = {
                         "Agachao": 40.4,
                         "Gastar la data": 40.6,
                         "Siempre doble": 39.4,
-                        "Inteligente": 35.8
+                        "Campeón del doble 6": 35.8,
+                        "Campeón del doble 9": 49.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 60.0,
@@ -19104,7 +21805,8 @@ var SITE_JSON = {
                         "Agachao": 44.0,
                         "Gastar la data": 43.2,
                         "Siempre doble": 41.4,
-                        "Inteligente": 38.2
+                        "Campeón del doble 6": 38.2,
+                        "Campeón del doble 9": 51.2
                     },
                     "Pasador": {
                         "Bota Gorda": 45.8,
@@ -19119,7 +21821,8 @@ var SITE_JSON = {
                         "Agachao": 41.6,
                         "Gastar la data": 38.0,
                         "Siempre doble": 32.4,
-                        "Inteligente": 25.200000000000003
+                        "Campeón del doble 6": 25.200000000000003,
+                        "Campeón del doble 9": 54.0
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 46.4,
@@ -19134,7 +21837,8 @@ var SITE_JSON = {
                         "Agachao": 41.2,
                         "Gastar la data": 42.0,
                         "Siempre doble": 31.6,
-                        "Inteligente": 26.0
+                        "Campeón del doble 6": 26.0,
+                        "Campeón del doble 9": 54.6
                     },
                     "No gastar la data": {
                         "Bota Gorda": 51.4,
@@ -19149,7 +21853,8 @@ var SITE_JSON = {
                         "Agachao": 44.4,
                         "Gastar la data": 41.8,
                         "Siempre doble": 37.4,
-                        "Inteligente": 24.200000000000003
+                        "Campeón del doble 6": 24.200000000000003,
+                        "Campeón del doble 9": 58.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 39.6,
@@ -19164,7 +21869,8 @@ var SITE_JSON = {
                         "Agachao": 38.8,
                         "Gastar la data": 33.8,
                         "Siempre doble": 28.8,
-                        "Inteligente": 16.400000000000006
+                        "Campeón del doble 6": 16.400000000000006,
+                        "Campeón del doble 9": 41.6
                     },
                     "Agachao": {
                         "Bota Gorda": 61.6,
@@ -19179,7 +21885,8 @@ var SITE_JSON = {
                         "Agachao": 52.4,
                         "Gastar la data": 51.8,
                         "Siempre doble": 43.6,
-                        "Inteligente": 34.599999999999994
+                        "Campeón del doble 6": 34.599999999999994,
+                        "Campeón del doble 9": 61.4
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.0,
@@ -19194,7 +21901,8 @@ var SITE_JSON = {
                         "Agachao": 50.0,
                         "Gastar la data": 57.2,
                         "Siempre doble": 48.2,
-                        "Inteligente": 37.0
+                        "Campeón del doble 6": 37.0,
+                        "Campeón del doble 9": 65.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 70.0,
@@ -19209,13 +21917,14 @@ var SITE_JSON = {
                         "Agachao": 59.8,
                         "Gastar la data": 53.6,
                         "Siempre doble": 55.0,
-                        "Inteligente": 41.4
+                        "Campeón del doble 6": 41.4,
+                        "Campeón del doble 9": 74.6
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 72.2,
                         "Más Frecuente": 78.2,
                         "Aleatorio": 76.2,
-                        "Inteligente": 44.0,
+                        "Campeón del doble 6": 44.0,
                         "Repetidor": 64.2,
                         "Contador de la mesa": 61.8,
                         "Pasador": 74.8,
@@ -19224,7 +21933,23 @@ var SITE_JSON = {
                         "Bota Flaca": 83.6,
                         "Agachao": 65.4,
                         "Gastar la data": 63.0,
-                        "Siempre doble": 58.6
+                        "Siempre doble": 58.6,
+                        "Campeón del doble 9": 78.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 38.0,
+                        "Más Frecuente": 58.2,
+                        "Aleatorio": 50.0,
+                        "Campeón del doble 6": 21.8,
+                        "Repetidor": 50.2,
+                        "Contador de la mesa": 48.8,
+                        "Pasador": 46.0,
+                        "Menos Jugada": 45.4,
+                        "No gastar la data": 41.8,
+                        "Bota Flaca": 58.4,
+                        "Agachao": 38.6,
+                        "Gastar la data": 34.4,
+                        "Siempre doble": 25.4
                     }
                 },
                 "Cooperativo": {
@@ -19241,7 +21966,8 @@ var SITE_JSON = {
                         "Agachao": 40.8,
                         "Gastar la data": 42.0,
                         "Siempre doble": 36.4,
-                        "Inteligente": 30.400000000000006
+                        "Campeón del doble 6": 30.400000000000006,
+                        "Campeón del doble 9": 57.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 42.2,
@@ -19256,7 +21982,8 @@ var SITE_JSON = {
                         "Agachao": 40.2,
                         "Gastar la data": 39.6,
                         "Siempre doble": 25.8,
-                        "Inteligente": 25.400000000000006
+                        "Campeón del doble 6": 25.400000000000006,
+                        "Campeón del doble 9": 43.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 48.4,
@@ -19271,7 +21998,8 @@ var SITE_JSON = {
                         "Agachao": 44.8,
                         "Gastar la data": 39.0,
                         "Siempre doble": 37.2,
-                        "Inteligente": 27.0
+                        "Campeón del doble 6": 27.0,
+                        "Campeón del doble 9": 53.4
                     },
                     "Repetidor": {
                         "Bota Gorda": 54.6,
@@ -19286,7 +22014,8 @@ var SITE_JSON = {
                         "Agachao": 43.0,
                         "Gastar la data": 44.4,
                         "Siempre doble": 38.4,
-                        "Inteligente": 36.6
+                        "Campeón del doble 6": 36.6,
+                        "Campeón del doble 9": 49.2
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 54.8,
@@ -19301,7 +22030,8 @@ var SITE_JSON = {
                         "Agachao": 44.2,
                         "Gastar la data": 44.8,
                         "Siempre doble": 41.0,
-                        "Inteligente": 35.599999999999994
+                        "Campeón del doble 6": 35.599999999999994,
+                        "Campeón del doble 9": 51.0
                     },
                     "Pasador": {
                         "Bota Gorda": 47.6,
@@ -19316,7 +22046,8 @@ var SITE_JSON = {
                         "Agachao": 36.2,
                         "Gastar la data": 41.8,
                         "Siempre doble": 34.0,
-                        "Inteligente": 29.0
+                        "Campeón del doble 6": 29.0,
+                        "Campeón del doble 9": 50.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 48.6,
@@ -19331,7 +22062,8 @@ var SITE_JSON = {
                         "Agachao": 41.0,
                         "Gastar la data": 37.4,
                         "Siempre doble": 32.8,
-                        "Inteligente": 24.0
+                        "Campeón del doble 6": 24.0,
+                        "Campeón del doble 9": 52.2
                     },
                     "No gastar la data": {
                         "Bota Gorda": 52.8,
@@ -19346,7 +22078,8 @@ var SITE_JSON = {
                         "Agachao": 47.8,
                         "Gastar la data": 41.8,
                         "Siempre doble": 32.8,
-                        "Inteligente": 28.599999999999994
+                        "Campeón del doble 6": 28.599999999999994,
+                        "Campeón del doble 9": 51.2
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 47.4,
@@ -19361,7 +22094,8 @@ var SITE_JSON = {
                         "Agachao": 35.2,
                         "Gastar la data": 36.0,
                         "Siempre doble": 30.0,
-                        "Inteligente": 24.599999999999994
+                        "Campeón del doble 6": 24.599999999999994,
+                        "Campeón del doble 9": 49.0
                     },
                     "Agachao": {
                         "Bota Gorda": 62.4,
@@ -19376,7 +22110,8 @@ var SITE_JSON = {
                         "Agachao": 48.2,
                         "Gastar la data": 54.4,
                         "Siempre doble": 48.0,
-                        "Inteligente": 40.0
+                        "Campeón del doble 6": 40.0,
+                        "Campeón del doble 9": 59.0
                     },
                     "Gastar la data": {
                         "Bota Gorda": 60.8,
@@ -19391,7 +22126,8 @@ var SITE_JSON = {
                         "Agachao": 52.6,
                         "Gastar la data": 57.6,
                         "Siempre doble": 45.0,
-                        "Inteligente": 44.8
+                        "Campeón del doble 6": 44.8,
+                        "Campeón del doble 9": 60.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 71.2,
@@ -19406,13 +22142,14 @@ var SITE_JSON = {
                         "Agachao": 61.2,
                         "Gastar la data": 55.8,
                         "Siempre doble": 52.0,
-                        "Inteligente": 41.8
+                        "Campeón del doble 6": 41.8,
+                        "Campeón del doble 9": 71.2
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 69.6,
                         "Más Frecuente": 74.6,
                         "Aleatorio": 73.0,
-                        "Inteligente": 48.2,
+                        "Campeón del doble 6": 48.2,
                         "Repetidor": 63.4,
                         "Contador de la mesa": 64.4,
                         "Pasador": 71.0,
@@ -19421,7 +22158,23 @@ var SITE_JSON = {
                         "Bota Flaca": 75.4,
                         "Agachao": 60.0,
                         "Gastar la data": 55.2,
-                        "Siempre doble": 58.2
+                        "Siempre doble": 58.2,
+                        "Campeón del doble 9": 75.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 42.6,
+                        "Más Frecuente": 57.0,
+                        "Aleatorio": 46.6,
+                        "Campeón del doble 6": 24.8,
+                        "Repetidor": 50.8,
+                        "Contador de la mesa": 49.0,
+                        "Pasador": 49.8,
+                        "Menos Jugada": 47.8,
+                        "No gastar la data": 48.8,
+                        "Bota Flaca": 51.0,
+                        "Agachao": 41.0,
+                        "Gastar la data": 39.4,
+                        "Siempre doble": 28.8
                     }
                 }
             },
@@ -19440,7 +22193,8 @@ var SITE_JSON = {
                         "Agachao": 41.2,
                         "Gastar la data": 44.2,
                         "Siempre doble": 33.0,
-                        "Inteligente": 24.0
+                        "Campeón del doble 6": 24.0,
+                        "Campeón del doble 9": 63.2
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 29.8,
@@ -19455,7 +22209,8 @@ var SITE_JSON = {
                         "Agachao": 28.4,
                         "Gastar la data": 25.2,
                         "Siempre doble": 17.8,
-                        "Inteligente": 16.400000000000006
+                        "Campeón del doble 6": 16.400000000000006,
+                        "Campeón del doble 9": 42.0
                     },
                     "Aleatorio": {
                         "Bota Gorda": 37.2,
@@ -19470,7 +22225,8 @@ var SITE_JSON = {
                         "Agachao": 39.6,
                         "Gastar la data": 33.4,
                         "Siempre doble": 26.8,
-                        "Inteligente": 22.200000000000003
+                        "Campeón del doble 6": 22.200000000000003,
+                        "Campeón del doble 9": 55.8
                     },
                     "Repetidor": {
                         "Bota Gorda": 50.8,
@@ -19485,7 +22241,8 @@ var SITE_JSON = {
                         "Agachao": 40.4,
                         "Gastar la data": 39.2,
                         "Siempre doble": 35.2,
-                        "Inteligente": 36.6
+                        "Campeón del doble 6": 36.6,
+                        "Campeón del doble 9": 49.0
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 53.4,
@@ -19500,7 +22257,8 @@ var SITE_JSON = {
                         "Agachao": 43.6,
                         "Gastar la data": 45.6,
                         "Siempre doble": 38.0,
-                        "Inteligente": 37.6
+                        "Campeón del doble 6": 37.6,
+                        "Campeón del doble 9": 51.2
                     },
                     "Pasador": {
                         "Bota Gorda": 45.8,
@@ -19515,7 +22273,8 @@ var SITE_JSON = {
                         "Agachao": 34.0,
                         "Gastar la data": 42.0,
                         "Siempre doble": 27.4,
-                        "Inteligente": 23.799999999999997
+                        "Campeón del doble 6": 23.799999999999997,
+                        "Campeón del doble 9": 50.6
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 41.8,
@@ -19530,7 +22289,8 @@ var SITE_JSON = {
                         "Agachao": 33.8,
                         "Gastar la data": 36.8,
                         "Siempre doble": 25.8,
-                        "Inteligente": 25.400000000000006
+                        "Campeón del doble 6": 25.400000000000006,
+                        "Campeón del doble 9": 52.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 51.4,
@@ -19545,7 +22305,8 @@ var SITE_JSON = {
                         "Agachao": 40.6,
                         "Gastar la data": 42.6,
                         "Siempre doble": 33.2,
-                        "Inteligente": 26.799999999999997
+                        "Campeón del doble 6": 26.799999999999997,
+                        "Campeón del doble 9": 64.0
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 36.6,
@@ -19560,7 +22321,8 @@ var SITE_JSON = {
                         "Agachao": 33.6,
                         "Gastar la data": 35.8,
                         "Siempre doble": 20.6,
-                        "Inteligente": 15.0
+                        "Campeón del doble 6": 15.0,
+                        "Campeón del doble 9": 47.6
                     },
                     "Agachao": {
                         "Bota Gorda": 60.4,
@@ -19575,7 +22337,8 @@ var SITE_JSON = {
                         "Agachao": 52.0,
                         "Gastar la data": 50.4,
                         "Siempre doble": 39.2,
-                        "Inteligente": 34.2
+                        "Campeón del doble 6": 34.2,
+                        "Campeón del doble 9": 66.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 56.6,
@@ -19590,7 +22353,8 @@ var SITE_JSON = {
                         "Agachao": 52.4,
                         "Gastar la data": 51.0,
                         "Siempre doble": 43.4,
-                        "Inteligente": 36.2
+                        "Campeón del doble 6": 36.2,
+                        "Campeón del doble 9": 67.6
                     },
                     "Siempre doble": {
                         "Bota Gorda": 65.6,
@@ -19605,13 +22369,14 @@ var SITE_JSON = {
                         "Agachao": 62.2,
                         "Gastar la data": 58.0,
                         "Siempre doble": 55.4,
-                        "Inteligente": 44.2
+                        "Campeón del doble 6": 44.2,
+                        "Campeón del doble 9": 74.0
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 76.0,
                         "Más Frecuente": 83.6,
                         "Aleatorio": 77.8,
-                        "Inteligente": 47.4,
+                        "Campeón del doble 6": 47.4,
                         "Repetidor": 63.4,
                         "Contador de la mesa": 62.4,
                         "Pasador": 76.2,
@@ -19620,7 +22385,23 @@ var SITE_JSON = {
                         "Bota Flaca": 85.0,
                         "Agachao": 65.8,
                         "Gastar la data": 63.8,
-                        "Siempre doble": 55.8
+                        "Siempre doble": 55.8,
+                        "Campeón del doble 9": 78.6
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 36.8,
+                        "Más Frecuente": 58.0,
+                        "Aleatorio": 44.2,
+                        "Campeón del doble 6": 21.4,
+                        "Repetidor": 51.0,
+                        "Contador de la mesa": 48.8,
+                        "Pasador": 49.4,
+                        "Menos Jugada": 47.2,
+                        "No gastar la data": 36.0,
+                        "Bota Flaca": 52.4,
+                        "Agachao": 33.8,
+                        "Gastar la data": 32.4,
+                        "Siempre doble": 26.0
                     }
                 },
                 "Cooperativo": {
@@ -19637,7 +22418,8 @@ var SITE_JSON = {
                         "Agachao": 42.6,
                         "Gastar la data": 42.6,
                         "Siempre doble": 29.0,
-                        "Inteligente": 32.400000000000006
+                        "Campeón del doble 6": 32.400000000000006,
+                        "Campeón del doble 9": 57.4
                     },
                     "Más Frecuente": {
                         "Bota Gorda": 37.0,
@@ -19652,7 +22434,8 @@ var SITE_JSON = {
                         "Agachao": 29.6,
                         "Gastar la data": 33.0,
                         "Siempre doble": 19.4,
-                        "Inteligente": 20.400000000000006
+                        "Campeón del doble 6": 20.400000000000006,
+                        "Campeón del doble 9": 39.8
                     },
                     "Aleatorio": {
                         "Bota Gorda": 44.0,
@@ -19667,7 +22450,8 @@ var SITE_JSON = {
                         "Agachao": 35.0,
                         "Gastar la data": 39.4,
                         "Siempre doble": 24.4,
-                        "Inteligente": 25.0
+                        "Campeón del doble 6": 25.0,
+                        "Campeón del doble 9": 55.0
                     },
                     "Repetidor": {
                         "Bota Gorda": 51.6,
@@ -19682,7 +22466,8 @@ var SITE_JSON = {
                         "Agachao": 38.0,
                         "Gastar la data": 46.4,
                         "Siempre doble": 37.0,
-                        "Inteligente": 31.400000000000006
+                        "Campeón del doble 6": 31.400000000000006,
+                        "Campeón del doble 9": 52.8
                     },
                     "Contador de la mesa": {
                         "Bota Gorda": 59.4,
@@ -19697,7 +22482,8 @@ var SITE_JSON = {
                         "Agachao": 44.8,
                         "Gastar la data": 44.8,
                         "Siempre doble": 39.2,
-                        "Inteligente": 37.6
+                        "Campeón del doble 6": 37.6,
+                        "Campeón del doble 9": 53.2
                     },
                     "Pasador": {
                         "Bota Gorda": 46.4,
@@ -19712,7 +22498,8 @@ var SITE_JSON = {
                         "Agachao": 36.2,
                         "Gastar la data": 37.4,
                         "Siempre doble": 30.2,
-                        "Inteligente": 27.400000000000006
+                        "Campeón del doble 6": 27.400000000000006,
+                        "Campeón del doble 9": 51.2
                     },
                     "Menos Jugada": {
                         "Bota Gorda": 44.0,
@@ -19727,7 +22514,8 @@ var SITE_JSON = {
                         "Agachao": 37.4,
                         "Gastar la data": 38.8,
                         "Siempre doble": 27.4,
-                        "Inteligente": 27.400000000000006
+                        "Campeón del doble 6": 27.400000000000006,
+                        "Campeón del doble 9": 50.8
                     },
                     "No gastar la data": {
                         "Bota Gorda": 47.2,
@@ -19742,7 +22530,8 @@ var SITE_JSON = {
                         "Agachao": 38.0,
                         "Gastar la data": 44.0,
                         "Siempre doble": 33.0,
-                        "Inteligente": 27.799999999999997
+                        "Campeón del doble 6": 27.799999999999997,
+                        "Campeón del doble 9": 56.4
                     },
                     "Bota Flaca": {
                         "Bota Gorda": 40.2,
@@ -19757,7 +22546,8 @@ var SITE_JSON = {
                         "Agachao": 38.0,
                         "Gastar la data": 36.8,
                         "Siempre doble": 28.4,
-                        "Inteligente": 23.0
+                        "Campeón del doble 6": 23.0,
+                        "Campeón del doble 9": 48.2
                     },
                     "Agachao": {
                         "Bota Gorda": 57.6,
@@ -19772,7 +22562,8 @@ var SITE_JSON = {
                         "Agachao": 49.4,
                         "Gastar la data": 50.8,
                         "Siempre doble": 36.2,
-                        "Inteligente": 42.2
+                        "Campeón del doble 6": 42.2,
+                        "Campeón del doble 9": 64.2
                     },
                     "Gastar la data": {
                         "Bota Gorda": 55.4,
@@ -19787,7 +22578,8 @@ var SITE_JSON = {
                         "Agachao": 50.8,
                         "Gastar la data": 51.8,
                         "Siempre doble": 41.4,
-                        "Inteligente": 41.0
+                        "Campeón del doble 6": 41.0,
+                        "Campeón del doble 9": 61.4
                     },
                     "Siempre doble": {
                         "Bota Gorda": 70.8,
@@ -19802,13 +22594,14 @@ var SITE_JSON = {
                         "Agachao": 61.6,
                         "Gastar la data": 62.0,
                         "Siempre doble": 47.2,
-                        "Inteligente": 50.2
+                        "Campeón del doble 6": 50.2,
+                        "Campeón del doble 9": 73.4
                     },
-                    "Inteligente": {
+                    "Campeón del doble 6": {
                         "Bota Gorda": 67.6,
                         "Más Frecuente": 79.6,
                         "Aleatorio": 75.0,
-                        "Inteligente": 50.0,
+                        "Campeón del doble 6": 50.0,
                         "Repetidor": 68.6,
                         "Contador de la mesa": 62.4,
                         "Pasador": 72.6,
@@ -19817,10 +22610,26 @@ var SITE_JSON = {
                         "Bota Flaca": 77.0,
                         "Agachao": 57.8,
                         "Gastar la data": 59.0,
-                        "Siempre doble": 49.8
+                        "Siempre doble": 49.8,
+                        "Campeón del doble 9": 77.2
+                    },
+                    "Campeón del doble 9": {
+                        "Bota Gorda": 42.6,
+                        "Más Frecuente": 60.2,
+                        "Aleatorio": 45.0,
+                        "Campeón del doble 6": 22.8,
+                        "Repetidor": 47.2,
+                        "Contador de la mesa": 46.8,
+                        "Pasador": 48.8,
+                        "Menos Jugada": 49.2,
+                        "No gastar la data": 43.6,
+                        "Bota Flaca": 51.8,
+                        "Agachao": 35.8,
+                        "Gastar la data": 38.6,
+                        "Siempre doble": 26.6
                     }
                 }
             }
         }
     }
-}
+};

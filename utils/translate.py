@@ -10,9 +10,16 @@ translate = [
     ('Repeater', 'Repetidor'),
     ('Frequent', 'Más Frecuente'),
     ('Random', 'Aleatorio'),
-    ('SimpleHybrid', 'Inteligente'),
+    ('SimpleHybrid', 'Campeón del doble 6'),
     ('TableCounter', 'Contador de la mesa'),
     ('Supportive', 'Cooperativo'),
+    ('ThePlayer', 'Campeón del doble 9'),
+    ('AllStrategies', 'Campeón del doble 9'),
+    ('NoDoublesAtTheEnd', 'No doblarse al final'),
+    ('DoublesAtTheEndIfNeeded', 'Doblarse sin restricción'),
+    ('DoubleNineIfNeeded', 'Salida MA'),
+    ('DoubleNine', 'Salida doble 9'),
+
 
     # Behaviors
     ('BestAccompanied', 'Mejor acompañada'),
@@ -24,8 +31,12 @@ translate = [
     ('OneGame', 'Un juego'),
     ('TwoOfThree', 'Dos de Tres'),
     ('FirstToGain100', 'Partida a ganar 100'),
-    ('FirstDouble', 'Primera doble'),
+    ('FirstDoble', 'Primera doble'),
     ('CapicuaDoble', 'Capicúa doble'),
+
+    # Games
+    ('6x6', 'Doble 6'),
+    ('9x9', 'Doble 9'),
 ]
 
 
