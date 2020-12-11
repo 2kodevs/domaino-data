@@ -1,0 +1,11 @@
+.myth-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.myth-description {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
