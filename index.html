@@ -1236,6 +1236,20 @@
         vaya a salir y tenga el doble 9, pero tenga en mente que salir con esa ficha no es una regla.
       </p>
     </div>
+
+    <p>
+      Cada jugador fue implementado de modo que recibe un conjunto de fichas válidas a jugar y devuelve un 
+      subconjunto (no vacío) de las mismas acordes a la estrategia que está utilizando. Esto permite tomar 
+      un grupo de estrategias y componerlas para crear nuevos y mejores jugadores.
+    </p>
+    <p>
+      El campeón del doble 9 fue creado a partir de la composición de las estrategias implementadas. Tras la 
+      ejecución de las simulaciones fue posible calcular el promedio de victorias para cada estrategia con respecto 
+      a las demás, y se definió este como su peso; lo que, a su vez, permitió la ordenación de las estrategias según 
+      su peso asignado. El orden obtenido fue el utilizado para componer las estrategias.
+    </p>
+
+
   </div>
 
   <div class="copyright">Copyright 2020</div>
