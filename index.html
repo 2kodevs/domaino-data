@@ -471,6 +471,7 @@
             generalmente cuentan con una data de blancos, y se arriesgan a jugar de esta forma pensando en apretar al
             contrario con la misma. ¿Mito o realidad?
           </p>
+
           <p>
             Para determinar la respuesta a esta interrogante se implementaron las simulaciones con el juego de 9x9. El
             jugador que inicia el juego cuenta con una data de blancos de al menos cinco fichas, entre las que se
@@ -480,6 +481,7 @@
             cooperativo. Se pone a jugar esta pareja contra todas las demás estrategias implementadas, también en modo
             cooperativo.
           </p>
+
           <p>
             Por otro lado, si se cuenta con una data de blancos, y la salida de casino es una mala idea, entonces la
             pareja
@@ -487,9 +489,11 @@
             simulaciones de juego de esta pareja contra las demás estrategias implementadas, también en modo
             cooperativo.
           </p>
+
           <p>
             Se corrieron 500 simulaciones de cada par y los resultados fueron los siguientes:
           </p>
+
           <p>
             Notoriamente la salida de casino es una mejor opción que ignorar tu data de blancos y jugar a botar la más
             gorda. Que la salida de casino es una mala idea es ... un mito.
@@ -607,6 +611,7 @@
             con
             el contrario. ¿Mito o realidad?
           </p>
+
           <p>
             Para realizar las simulaciones en este caso, se arregla que un jugador y alguno de sus oponentes compartan
             la
@@ -618,6 +623,7 @@
             las estrategias implementadas, obteniendo los siguientes resultados:
           </p>
         </div>
+
         <table class="styled-table">
           <thead>
             <tr>
@@ -700,6 +706,7 @@
           </tbody>
         </table>
       </div>
+
       <p>
         Se puede observar que con ambas estrategias se obtienen resultados muy similares, aunque el que juega con el
         contrario es ligeramente superior en casi todos los casos. En consecuencia, no es necesario frustrarse si el
@@ -731,6 +738,7 @@
             estrategia de gastar la data, y en modo cooperativo. Se pone a jugar esta pareja contra todas las
             demás estrategias implementadas, también en modo cooperativo.
           </p>
+
           <p>
             Los resultados indican que esta situación no es garantía de victoria, a pesar de que sea más
             probable ganar que perder. Al parecer una buena forma de enfrentar a una pareja en una posición
@@ -830,6 +838,7 @@
             esta
             situación, se pueden volver a repartir las fichas. ¿Será tan catastrófica como parece?
           </p>
+
           <p>
             Para llevar a cabo estas simulaciones, se fijó un jugador al cual se le reparten inicialmente al menos 5
             dobles;
@@ -839,6 +848,7 @@
             puso a
             esta pareja a jugar contra las otras estrategias implementadas, obteniendo los siguientes resultados:
           </p>
+
           <p>
             Como se puede observar, se puede llevar a cabo un juego con estas características y aún así ganar la
             partida,
@@ -921,45 +931,62 @@
       </div>
     </div>
 
+    <br />
+
     <div class="text-block">
 
       <div class="subtitle main-text">
         Doblarse al final: ¿Jugada de novatos o de valientes?
       </div>
 
-      <p>
-        No es raro escuchar en una mesa de Dominó: ¡¡¡Al final uno no se dobla!!!, sí, esta es una de las expresiones
-        más comunes
-        que ocurren cuando un jugador pierde y su pareja se dobla en las últimas etapas del juego. En el
-        Dominó, tal cual
-        como se juega en Cuba, se reprochan bastante los jugadores de una pareja entre sí. Pero ese no es el tema 
-        abordado en este instante.
-        Se dice mucho que un jugador debe evitar doblarse al final del juego (cuando un jugador esté cerca de pegarse
-        porque le quedan pocas fichas, o
-        porque queden pocas fichas por jugar entre todos los jugadores). Entre las razones de esta técnica, está tratar
-        de poner fichas que dejen a la pareja
-        en una situación favorable, cosa que no es muy difícil de hacer debido a que se puede contar la mesa, detectar
-        qué números son los más repetidos y más
-        frescos, a la vez que se conoce cuáles son los números a los que cada jugador se ha pasado. Poner un doble
-        implica dejar el estado de la mesa invariante,
-        y cualquier jugada al final del juego es crucial. Sin embargo, doblarse podría ser una jugada bien pensada como
-        cualquier otra. ¿Mito o realidad?
-      </p>
+      <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+        <div style="display: flex; flex-direction: column; width: 45%;">
+          <p>
+            No es raro escuchar en una mesa de Dominó: ¡¡¡Al final uno no se dobla!!!, sí, esta es una de las
+            expresiones
+            más comunes
+            que ocurren cuando un jugador pierde y su pareja se dobla en las últimas etapas del juego. En el
+            Dominó, tal cual
+            como se juega en Cuba, se reprochan bastante los jugadores de una pareja entre sí. Pero ese no es el tema
+            abordado en este instante.
+            Se dice mucho que un jugador debe evitar doblarse al final del juego (cuando un jugador esté cerca de
+            pegarse
+            porque le quedan pocas fichas, o
+            porque queden pocas fichas por jugar entre todos los jugadores). Entre las razones de esta técnica, está
+            tratar
+            de poner fichas que dejen a la pareja
+            en una situación favorable, cosa que no es muy difícil de hacer debido a que se puede contar la mesa,
+            detectar
+            qué números son los más repetidos y más
+            frescos, a la vez que se conoce cuáles son los números a los que cada jugador se ha pasado. Poner un doble
+            implica dejar el estado de la mesa invariante,
+            y cualquier jugada al final del juego es crucial. Sin embargo, doblarse podría ser una jugada bien pensada
+            como
+            cualquier otra. ¿Mito o realidad?
+          </p>
 
-      <p>
-        Para salir de la duda, se realizaron simulaciones de partidas de 100 puntos con dos jugadores que utilizan las
-        estrategias y tácticas del Campeón del doble 9,
-        jugando para la mano siempre que puede. La única diferencia que tienen es que uno evitará siempre de doblarse al
-        final del juego.
-      </p>
+          <p>
+            Para salir de la duda, se realizaron simulaciones de partidas de 100 puntos con dos jugadores que utilizan
+            las
+            estrategias y tácticas del Campeón del doble 9,
+            jugando para la mano siempre que puede. La única diferencia que tienen es que uno evitará siempre de
+            doblarse al
+            final del juego.
+          </p>
 
-      <div style="display: flex; justify-content: center;">
+          <p>
+            El lector puede notar que no doblarse al final o sí hacerlo, no marca una diferencia notable en el juego.
+            Doblarse al final no tiene el sello del fracaso, por tanto
+            se puede afirmar que es otro mito más.
+          </p>
+        </div>
+
         <table class="styled-table">
           <thead>
             <tr>
               <th>Estrategias</th>
-              <th>No doblarse al final</th>
-              <th>Doblarse sin restricción</th>
+              <th>Evitar dobles</th>
+              <th>Permitir dobles</th>
             </tr>
           </thead>
           <tbody>
@@ -1036,50 +1063,51 @@
           </tbody>
         </table>
       </div>
-
-      <p>
-        El lector puede notar que no doblarse al final o sí hacerlo, no marca una diferencia notable en el juego.
-        Doblarse al final no tiene el sello del fracaso, por tanto
-        se puede afirmar que es otro mito más.
-      </p>
-
     </div>
 
     <br />
+
     <div class="text-block">
 
       <div class="subtitle main-text">
         Salir con el doble 9: ¿No se piensa?
       </div>
 
-      <p>
-        Muchos jugadores ven al doble 9 como una ficha molesta, que se debe soltar en la primera oportunidad, y tiene
-        sus razones para
-        serlo, ya que es la ficha que más puntos contiene. Una jugada muy aceptada es salir con el doble 9 cuando se
-        está en posesión de la ficha
-        a la hora de la salida, a pesar de que no se tenga una data de 9. Se puede ver como un reflejo incondicionado,
-        de todas formas los contrarios
-        no saben en ese momento si se tiene una data de 9 o si es una jugada clásica para deshacerse de esa ficha. Salir
-        con el doble 9 sin pensarlo es cómodo
-        a veces debido a que no se pierde tiempo discutiendo con la pareja para coordinar a quién de los dos le va
-        a corresponder la salida. Sin embargo no faltan
-        los jugadores expertos que dicen que siempre se debe salir con la data más alta mejor acompañada, con el
-        objetivo de empezar fuerte y que la pareja sepa cómo
-        puede ayudar mejor a la mano; aunque los hay también que prefieren salir a la falla. Para ellos, no se debe
-        tomar la salida desde un enfoque arbitrario como es salir
-        con el doble 9 sin tomar en cuenta el resto de las fichas. ¿Qué será mejor?
-      </p>
+      <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+        <div style="display: flex; flex-direction: column; width: 45%;">
+          <p>
+            Muchos jugadores ven al doble 9 como una ficha molesta, que se debe soltar en la primera oportunidad, y
+            tiene
+            sus razones para
+            serlo, ya que es la ficha que más puntos contiene. Una jugada muy aceptada es salir con el doble 9 cuando se
+            está en posesión de la ficha
+            a la hora de la salida, a pesar de que no se tenga una data de 9. Se puede ver como un reflejo
+            incondicionado,
+            de todas formas los contrarios
+            no saben en ese momento si se tiene una data de 9 o si es una jugada clásica para deshacerse de esa ficha.
+            Salir
+            con el doble 9 sin pensarlo es cómodo
+            a veces debido a que no se pierde tiempo discutiendo con la pareja para coordinar a quién de los dos le va
+            a corresponder la salida. Sin embargo no faltan
+            los jugadores expertos que dicen que siempre se debe salir con la data más alta mejor acompañada, con el
+            objetivo de empezar fuerte y que la pareja sepa cómo
+            puede ayudar mejor a la mano; aunque los hay también que prefieren salir a la falla. Para ellos, no se debe
+            tomar la salida desde un enfoque arbitrario como es salir
+            con el doble 9 sin tomar en cuenta el resto de las fichas. ¿Qué será mejor?
+          </p>
 
-      <p>
-        Esta vez se realizaron simulaciones de partidas únicas, debido a que uno de los jugadores de la pareja a la que
-        le correspondería la salida, tendría el doble 9
-        siempre, cosa que no es real, aunque no imposible, en cada partida de un juego de 100 puntos. Los jugadores
-        utilizados para la comparación fueron campeones del doble 9,
-        jugando para la mano siempre que pueden, donde uno siempre sale con el doble nueve, y otro sale con la data mejor
-        acompañada (<b>MA</b>).
-      </p>
+          <p>
+            Esta vez se realizaron simulaciones de partidas únicas, debido a que uno de los jugadores de la pareja a la
+            que
+            le correspondería la salida, tendría el doble 9
+            siempre, cosa que no es real, aunque no imposible, en cada partida de un juego de 100 puntos. Los jugadores
+            utilizados para la comparación fueron campeones del doble 9,
+            jugando para la mano siempre que pueden, donde uno siempre sale con el doble nueve, y otro sale con la data
+            mejor
+            acompañada (<b>MA</b>).
+          </p>
+        </div>
 
-      <div style="display: flex; justify-content: center;">
         <table class="styled-table">
           <thead>
             <tr>
@@ -1162,16 +1190,16 @@
           </tbody>
         </table>
       </div>
+
       <p>
-        Tal vez no resulta muy evidente, pero los mejores resultados se alcanzaron de forma general con la salida con la
+        Tal vez no resulta muy evidente, pero los mejores resultados se alcanzaron de forma general con la salida
+        con la
         data mejor acompañada.
         La expresión inicial podría cambiarse por: Salir con el doble 9 con buena data de 9: ¡No se piensa!. Usted
         escoja lo que estime conveniente cuando
         vaya a salir y tenga el doble 9, pero tenga en mente que salir con esa ficha no es una regla.
       </p>
-
     </div>
-
   </div>
 
   <div class="copyright">Copyright 2020</div>
