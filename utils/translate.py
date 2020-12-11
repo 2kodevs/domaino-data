@@ -17,6 +17,9 @@ translate = [
     ('AllStrategies', 'Campeón del doble 9'),
     ('NoDoublesAtTheEnd', 'No doblarse al final'),
     ('DoublesAtTheEndIfNeeded', 'Doblarse sin restricción'),
+    ('DoubleNineIfNeeded', 'Salida MA'),
+    ('DoubleNine', 'Salida doble 9'),
+
 
     # Behaviors
     ('BestAccompanied', 'Mejor acompañada'),
