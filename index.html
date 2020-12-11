@@ -22,6 +22,8 @@
 
   <link href="css/table.css" rel="stylesheet">
   <link href="css/myth.css" rel="stylesheet">
+  <link href="css/hover.css" rel="stylesheet">
+
 
   <div class="article-header row  main-color">
     <div class="article-news-title">La mejor estrategia del Dominó</div>
@@ -1204,6 +1206,20 @@
         escoja lo que estime conveniente cuando
         vaya a salir y tenga el doble 9, pero tenga en mente que salir con esa ficha no es una regla.
       </p>
+    </div>
+
+    <div id="methodology" class="text-block">
+      <button type="button" class="button" onclick="toggle_methodology();">
+        <span id='hover' data-content='»'> ¿ Cómo se hizo ? </span> 
+      </button>
+
+      <div id="methodology-body" hidden>
+        <p>Comming soon...</p>
+
+        <button type="button" class="button" onclick="toggle_methodology();">
+          <span data-content='«'> Cerrar metodología </span> 
+        </button>
+      </div>
     </div>
   </div>
 
