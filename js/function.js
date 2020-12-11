@@ -34,7 +34,7 @@ function load(json, id){
   //TODO: get the json and remove the function argument
   json = json_data(json, id);
   var label = document.getElementById(`id${id}`).value;
-  document.getElementById('main-label').innerHTML = label;
+  document.getElementById('main-label').innerHTML = `${label} <h5>victorias sobre cada estrategia</h5>`;
   var data = json[label];
 
   var p = 0;
