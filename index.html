@@ -311,7 +311,7 @@
             <li class="strat">
               <a href="#event2">Mejor acompañada</a>
               <div>
-                <h2>Mejor acompa-<br/>ñada</h2>
+                <h2>Mejor acompa-<br />ñada</h2>
                 <p>
                   Determina el mayor subconjunto de fichas que tienen el mismo número en común, y entre esas fichas
                   elige
@@ -332,7 +332,7 @@
             <li class="strat">
               <a href="#event4">Más alta mejor acompañada</a>
               <div>
-                <h2>Más alta mejor acompa-<br/>ñada</h2>
+                <h2>Más alta mejor acompa-<br />ñada</h2>
                 <p>
                   Busca entre los números más altos (de 6 en adelante) los que están mejor acompañados, y de ese
                   conjunto
@@ -740,17 +740,20 @@
 
       <p>
         En ocasiones ocurre que el jugador obtiene un montón de dobles en su mano inicial (5 o más), y esto hace
-        muy difícil para él jugar, dado que las opciones que le permiten poner estas fichas disminuyen. En general, se 
-        considera que si algo así sucede, a menos que la suerte esté de su lado (o el de su compañero), la victoria del 
-        otro equipo es segura. Incluso se han visto jugadores, que definen como regla para jugar, que por lo injusto de esta 
+        muy difícil para él jugar, dado que las opciones que le permiten poner estas fichas disminuyen. En general, se
+        considera que si algo así sucede, a menos que la suerte esté de su lado (o el de su compañero), la victoria del
+        otro equipo es segura. Incluso se han visto jugadores, que definen como regla para jugar, que por lo injusto de
+        esta
         situación, se pueden volver a repartir las fichas. ¿Será tan catastrófica como parece?
       </p>
       <p>
-        Para llevar a cabo estas simulaciones, se fijó un jugador al cual se le reparten inicialmente al menos 5 dobles; este 
-        jugador y su pareja juegan de modo cooperativo con la estrategia de siempre que se pueda jugar algún doble. Se puso a
+        Para llevar a cabo estas simulaciones, se fijó un jugador al cual se le reparten inicialmente al menos 5 dobles;
+        este
+        jugador y su pareja juegan de modo cooperativo con la estrategia de siempre que se pueda jugar algún doble. Se
+        puso a
         esta pareja a jugar contra las otras estrategias implementadas, obteniendo los siguientes resultados:
       </p>
-  
+
       <div style="display: flex; justify-content: center;">
         <table class="styled-table">
           <thead>
@@ -821,95 +824,138 @@
       </div>
 
       <p>
-        Como se puede observar, se puede llevar a cabo un juego con estas características y aún así ganar la partida, siendo 
-        esto algo no poco común: en todos los casos los datos rondan la mitad de juegos ganados y la otra mitad, perdidos. Así 
-        que no es necesario dejarse influenciar por esta idea, y aquel que intente repartir las fichas nuevamente, bueno, pues
+        Como se puede observar, se puede llevar a cabo un juego con estas características y aún así ganar la partida,
+        siendo
+        esto algo no poco común: en todos los casos los datos rondan la mitad de juegos ganados y la otra mitad,
+        perdidos. Así
+        que no es necesario dejarse influenciar por esta idea, y aquel que intente repartir las fichas nuevamente,
+        bueno, pues
         aclararle que es solo un mito.
       </p>
     </div>
 
-    <div style="display: flex; justify-content: center;">
-      <table class="styled-table">
-        <thead>
-          <tr>
-            <th>Estrategias</th>
-            <th>No doblarse al final</th>
-            <th>Doblarse sin restricción</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>Bota Gorda</th>
-            <td>61.8 %</td>
-            <td>61.4 %</td>
-          </tr>
-          <tr>
-            <th>Más Frecuente</th>
-            <td>67.8 %</td>
-            <td>66.4 %</td>
-          </tr>
-          <tr>
-            <th>Aleatorio</th>
-            <td>65.0 %</td>
-            <td>60.4 %</td>
-          </tr>
-          <tr>
-            <th>Campeón del doble 6</th>
-            <td>47.2 %</td>
-            <td>51.4 %</td>
-          </tr>
-          <tr>
-            <th>Repetidor</th>
-            <td>64.8 %</td>
-            <td>61.4 %</td>
-          </tr>
-          <tr>
-            <th>Contador de la mesa</th>
-            <td>59.2 %</td>
-            <td>61.8 %</td>
-          </tr>
-          <tr>
-            <th>Pasador</th>
-            <td>61.4 %</td>
-            <td>58.4 %</td>
-          </tr>
-          <tr>
-            <th>Menos Jugada</th>
-            <td>60.8 %</td>
-            <td>60.6 %</td>
-          </tr>
-          <tr>
-            <th>No gastar la data</th>
-            <td>62.2 %</td>
-            <td>56.8 %</td>
-          </tr>
-          <tr>
-            <th>Bota Flaca</th>
-            <td>45.4 %</td>
-            <td>50.4 %</td>
-          </tr>
-          <tr>
-            <th>Agachao</th>
-            <td>58.8 %</td>
-            <td>58.6 %</td>
-          </tr>
-          <tr>
-            <th>Gastar la data</th>
-            <td>58.4 %</td>
-            <td>57.0 %</td>
-          </tr>
-          <tr>
-            <th>Siempre doble</th>
-            <td>46.8 %</td>
-            <td>52.4 %</td>
-          </tr>
-          <tr>
-            <th>Campeón del doble 9</th>
-            <td>47.0 %</td>
-            <td>52.4 %</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="text-block">
+
+      <div class="subtitle main-text">
+        Doblarse al final: ¿Jugada de novatos o de valientes?
+      </div>
+
+      <p>
+        No es raro escuchar en una mesa de Dominó: ¡¡¡Al final uno no se dobla!!!, si, esta es una de las expresiones
+        más comunes
+        que ocurren cuando un jugador pierde y su pareja se dobla en las últimas etapas del juego. En el
+        Dominó, tal cual
+        como se juega en Cuba, se reprochan bastante los jugadores de una pareja entre sí. Pero ese no es el tema que
+        abordado en este instante.
+        Se dice mucho que un jugador debe evitar doblarse al final del juego (cuando un jugador esté cerca de pegarse
+        porque le quedan pocas fichas, o
+        porque queden pocas fichas por jugar entre todos los jugadores). Entre las razones de esta técnica, está tratar
+        de poner fichas que dejen a la pareja
+        en una situación favorable, cosa que no es muy difícil de hacer debido a que se puede contar la mesa, detectar
+        que números son los más repetidos y más
+        frescos, a la vez que se conoce cuáles son los números a los que cada jugador se ha pasado. Poner un doble
+        implica dejar el estado de la mesa invariante,
+        y cualquier jugada al final del juego es crucial. Sin embargo, doblarse podría ser una jugada bien pensada como
+        cualquier otra. ¿Mito o realidad?
+      </p>
+
+      <p>
+        Para salir de la duda, se realizaron simulaciones de partidas de 100 puntos con dos jugadores que utilizan las
+        estrategias y tácticas del Campeón del doble 9,
+        jugando para la mano siempre que puede. La única diferencia que tienen es que uno evitará siempre de doblarse al
+        final del juego.
+      </p>
+
+      <div style="display: flex; justify-content: center;">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Estrategias</th>
+              <th>No doblarse al final</th>
+              <th>Doblarse sin restricción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Bota Gorda</th>
+              <td>61.8 %</td>
+              <td>61.4 %</td>
+            </tr>
+            <tr>
+              <th>Más Frecuente</th>
+              <td>67.8 %</td>
+              <td>66.4 %</td>
+            </tr>
+            <tr>
+              <th>Aleatorio</th>
+              <td>65.0 %</td>
+              <td>60.4 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 6</th>
+              <td>47.2 %</td>
+              <td>51.4 %</td>
+            </tr>
+            <tr>
+              <th>Repetidor</th>
+              <td>64.8 %</td>
+              <td>61.4 %</td>
+            </tr>
+            <tr>
+              <th>Contador de la mesa</th>
+              <td>59.2 %</td>
+              <td>61.8 %</td>
+            </tr>
+            <tr>
+              <th>Pasador</th>
+              <td>61.4 %</td>
+              <td>58.4 %</td>
+            </tr>
+            <tr>
+              <th>Menos Jugada</th>
+              <td>60.8 %</td>
+              <td>60.6 %</td>
+            </tr>
+            <tr>
+              <th>No gastar la data</th>
+              <td>62.2 %</td>
+              <td>56.8 %</td>
+            </tr>
+            <tr>
+              <th>Bota Flaca</th>
+              <td>45.4 %</td>
+              <td>50.4 %</td>
+            </tr>
+            <tr>
+              <th>Agachao</th>
+              <td>58.8 %</td>
+              <td>58.6 %</td>
+            </tr>
+            <tr>
+              <th>Gastar la data</th>
+              <td>58.4 %</td>
+              <td>57.0 %</td>
+            </tr>
+            <tr>
+              <th>Siempre doble</th>
+              <td>46.8 %</td>
+              <td>52.4 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 9</th>
+              <td>47.0 %</td>
+              <td>52.4 %</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        El lector puede notar que no doblarse al final o si hacerlo, no marca una diferencia notable en el juego.
+        Doblarse al final no tiene el sello del fracaso, por tanto
+        se puede afirmar que es otro mito más.
+      </p>
+
     </div>
 
     <div style="display: flex; justify-content: center;">
