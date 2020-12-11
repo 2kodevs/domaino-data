@@ -455,7 +455,52 @@
       </script>
     </div>
 
-    <!-- TODO: Conclusiones de las simulaciones -->
+    <br />
+
+    <div class="text-block">
+      <p>
+        Una de las estrategias más criticadas en el juego de Dominó ha sido siempre la de Bota Gorda; quizás por su 
+        simplicidad o por la creencia de que al final, si "se tranca el juego" será el que haga uso de ella el que 
+        tenga menos puntos, es que muchas personas la utilizan. No obstante, sobre todo los más experimentados, 
+        argumentan que no por botar la más gorda en cada ocasión estarás jugando la ficha más certera para 
+        apretar al contrario o ayudar a tu pareja. Tal como estos últimos seguro esperaban, en la modalidad de Dominó 
+        hasta el 9, queda claro que el "botagorda" es de todos, el peor jugador; raramente sobrepasa el 45 % de 
+        victorias teniendo en cuenta cualquier tipo de juego, salida o incluso tratando de jugar para la mano (modo 
+        cooperativo).
+      </p>
+      <p>
+        Incluso en la modalidad de doble 6, aunque no sigue siendo el peor jugador, sus resultados son estándar; pero 
+        aún así ocupa el octavo lugar entre todas las estrategias vistas, sin contar a los campeones.
+      </p>
+      <p>
+        Por el contrario, la estrategia de Bota Flaca, resultó ser la revelación de los juegos del Dominó de 9, quedando 
+        la mejor estrategia de todas. Tiene sentido que si el jugador siempre pone la ficha que menos pesa, obligue a 
+        sus contrincantes a jugar siempre sus fichas más bajas; por lo que si "se tranca el juego", ellos tendrán más 
+        puntos acumulados. Sin embargo, en la variante de 6x6 se desempeñó de forma similar a la estrategia de Bota Gorda.
+      </p>
+      <p>
+        Curiosamente, las estrategias en general, no tuvieron la misma efectividad en una modalidad que en otra. En 
+        consecuencia, los campeones de cada variante se construyeron de forma diferente, acordes a los resultados 
+        obtenidos; y fueron añadidos al gráfico para que también fuera visible su desempeño con respecto a las otras 
+        estrategias.
+      </p>
+      <p>
+        En la siguiente sección se tomarán algunos mitos del Dominó de 9 en Cuba, y se analizarán a partir de los 
+        datos, de forma tal que se pueda comprobar su veracidad.
+      </p>
+    </div>
+    
+    <br />
+    <div class="text-block">
+      <h2 class="main-text"> Desterrando mitos </h2>
+      <p>
+        Gracias a las facilidades que permiten las computadoras, no es una tarea complicada crear las situaciones 
+        requeridas para comprobar algún hecho o situación en el Dominó. Si bien no se puede afirmar que los resultados 
+        que se podrán presenciar son absolutos o completamente fiables, definitivamente son un punto válido para el 
+        análisis de las cuestiones del juego. El lector se puede sentir libre de comprobarlos en una buena mesa de 
+        Dominó, claro, no olvide dar buena agua a la mesa.
+      </p>
+    </div>
     <br />
 
     <div class="text-block">
@@ -1208,13 +1253,75 @@
       </p>
     </div>
 
+
     <div id="methodology" class="text-block">
       <button type="button" class="button" onclick="toggle_methodology();">
         <span id='hover' data-content='»'> ¿ Cómo se hizo ? </span> 
       </button>
 
       <div id="methodology-body" hidden>
-        <p>Comming soon...</p>
+        <p>
+          Los datos mostrados en este artículo se obtuvieron gracias a la utilización del software implementado
+          en <a class="main-text" href="https://github.com/2kodevs/domaino">2kodevs-domAIno</a>, el cual posee el 
+          ambiente necesario para simular un juego de dominó con un grupo de características definidas. Este cuenta
+          con la implementación de los distintos tipos de juego, los tipos de salida, el modo cooperativo, y los 
+          jugadores con las estrategias anteriormente mencionadas; todo esto, por supuesto, para ambas modalidades
+          de dominó.
+        </p>
+        <p>
+          Cada jugador fue desarrollado de modo que recibe un conjunto de fichas válidas a jugar y devuelve un 
+          subconjunto (no vacío) de las mismas acordes a la estrategia que está utilizando. Esto permite tomar 
+          un grupo de estrategias y componerlas para crear nuevos y mejores jugadores, mediante el uso de 
+          filtrados sucesivos sobre las fichas válidas. En el caso de la primera estrategia en la composición, 
+          las jugadas válidas que esta recibe serían todas las posibles jugadas a realizar en ese turno.
+        </p>
+        <p>
+          Para el desarrollo de dicho software se utilizó como base el proyecto 
+          <a class="main-text" href="https://github.com/mfornet/domaino">domAIno</a> que contaba con el soporte
+          básico y algunas implementaciones interesantes, como es el caso del campeón del doble 6.
+        </p>
+        <p>
+          El <em>campeón del doble 6</em> es un jugador híbrido que utiliza las estrategias Bota Gorda, Más Frecuente y 
+          Aleatorio; para cada ficha válida en un turno calcula un coeficiente por estrategia apoyado en un conjunto de 
+          parámetros prefijados, de modo que el coeficiente obtenido le permitirá elegir la mejor ficha a jugar en cada 
+          situación.
+        </p>
+        <p>
+          Para la obtención de los datos que se muestran en el primero de los gráficos se enfrentó cada par de 
+          estrategias con cada una de las características adicionales que se han mencionado (modalidad, tipo de 
+          juego, etcétera), 500 veces cada una, lo que suma un total de 6600 simulaciones. Cada una devuelve el 
+          equipo ganador, por lo que sumando las victorias de ambas estrategias según el equipo que las implementa,
+          se calcula el porciento de partidas ganadas mostrado en la gráfica. Los resultados que se obtuvieron 
+          en las simulaciones fueron guardados en un json, para su posterior utilización en este artículo.
+        </p>
+        <p>
+          A partir de los resultados obtenidos, se halló la media aritmética (promedio) de partidas ganadas por cada 
+          estrategia, y este número fue asignado como el peso de las mismas. El valor de promedio más alto determina 
+          entonces la mejor estrategia. Este cálculo se realizó de forma separada para las dos modalidades, puesto 
+          que se observó que la efectividad de las estrategias era variable según este aspecto.
+        </p>
+        <p>
+          En cuanto al <em>campeón del doble 9</em>, se tomaron todas las estrategias implementadas ordenadas
+          de acuerdo a su peso, en la modalidad del dominó hasta el 9, y se aplicó la composición de estas estrategias,
+          siguiendo la prioridad de la ordenación, para crear al nuevo jugador. Para añadirlo a los datos ya computados, 
+          fue necesario enfrentarlo contra los jugadores de las demás estrategias, e igualmente se realizaron 500 
+          simulaciones por enfrentamiento.
+        </p>
+        <p>
+          Para los jugadores de los mitos presentados, se tomó el conjunto de características que mejor representaran 
+          la situación elegida, y cada jugador se enfrentó a cada estrategia implementada para obtener los resultados 
+          en cada caso. De la misma forma, por cada enfrentamiento se desarrollaron 500 simulaciones.
+        </p>
+        <p>
+          Las posibles combinaciones de tableros para cada modalidad de dominó, así como las probabilidades, tanto 
+          de obtener una ficha específica en una mano de dominó, como de seleccionar una cierta data de fichas, se 
+          calcularon a través de los métodos <em>possible_hands</em>, <em>one_piece_prob</em> y <em>data_prob</em>
+          que pueden encontrarse en el repositorio 
+          <a class="main-text" href="https://github.com/2kodevs/domaino-data/blob/master/utils/prob.py">domAIno-data</a>.
+        </p>
+        
+        
+        
 
         <button type="button" class="button" onclick="toggle_methodology();">
           <span data-content='«'> Cerrar metodología </span> 
