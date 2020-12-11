@@ -442,7 +442,7 @@
       <script src="js/function.js"></script>
       <script>
         var levels = 5;
-        populate_selectors(levels);
+        populate_selectors(levels, SELECT_LABEL);
         upd_data(SITE_JSON, 1, levels);
       </script>
     </div>
@@ -462,19 +462,10 @@
         contrario con la misma. ¿Mito o realidad?
       </p>
       <p>
-        Para determinar la respuesta a esta interrogante se implementaron las simulaciones con el juego de 9x9. El
+        Para determinar la respuesta a esta interrogante se hicieron simulaciones con el juego de 9x9. El
         jugador que inicia el juego cuenta con una data de blancos de al menos cinco fichas, entre las que se encuentra
         el doble blanco, para poder realizar la salida. La pareja juega con la estrategia de gastar la data y en modo
-        cooperativo. Se pone a jugar esta pareja contra todas las demás estrategias implementadas, también en modo
-        cooperativo.
-      </p>
-      <p>
-        Por otro lado, si se cuenta con una data de blancos, y la salida de casino es una mala idea, entonces la pareja
-        que tiene al salidor con esta data implementa la estrategia de bota-gorda cooperativa, y se pasa a la
-        simulaciones de juego de esta pareja contra las demás estrategias implementadas, también en modo cooperativo.
-      </p>
-      <p>
-        Se corrieron 500 simulaciones de cada par y los resultados fueron los siguientes:
+        cooperativo. Los resultados de este jugador se compararán con los de un jugador bota-gorda cooperativo.
       </p>
 
       <div style="display: flex; justify-content: center;">
@@ -699,8 +690,7 @@
       <p>
         Simulaciones con el juego de 9x9 fueron las usadas, como ha sido usual, en la búsqueda de la
         respuesta. Los jugadores de una pareja comparten al menos 8 fichas de una data, juegan con la
-        estrategia de gastar la data, y en modo cooperativo. Se pone a jugar esta pareja contra todas las
-        demás estrategias implementadas, también en modo cooperativo.
+        estrategia de gastar la data, y en modo cooperativo.
       </p>
 
       <div style="display: flex; justify-content: center;">
@@ -788,17 +778,19 @@
 
       <p>
         En ocasiones ocurre que el jugador obtiene un montón de dobles en su mano inicial (5 o más), y esto hace
-        muy difícil para él jugar, dado que las opciones que le permiten poner estas fichas disminuyen. En general, se 
-        considera que si algo así sucede, a menos que la suerte esté de su lado (o el de su compañero), la victoria del 
-        otro equipo es segura. Incluso se han visto jugadores, que definen como regla para jugar, que por lo injusto de esta 
+        muy difícil para él jugar, dado que las opciones que le permiten poner estas fichas disminuyen. En general, se
+        considera que si algo así sucede, a menos que la suerte esté de su lado (o el de su compañero), la victoria del
+        otro equipo es segura. Incluso se han visto jugadores, que definen como regla para jugar, que por lo injusto de
+        esta
         situación, se pueden volver a repartir las fichas. ¿Será tan catastrófica como parece?
       </p>
       <p>
-        Para llevar a cabo estas simulaciones, se fijó un jugador al cual se le reparten inicialmente al menos 5 dobles; este 
-        jugador y su pareja juegan de modo cooperativo con la estrategia de siempre que se pueda jugar algún doble. Se puso a
-        esta pareja a jugar contra las otras estrategias implementadas, obteniendo los siguientes resultados:
+        Para llevar a cabo estas simulaciones, se fijó un jugador al cual se le reparten inicialmente al menos 5 dobles;
+        este
+        jugador y su pareja juegan de modo cooperativo con la estrategia de siempre que se pueda jugar algún doble, se
+        juegue.
       </p>
-  
+
       <div style="display: flex; justify-content: center;">
         <table class="styled-table">
           <thead>
@@ -869,95 +861,264 @@
       </div>
 
       <p>
-        Como se puede observar, se puede llevar a cabo un juego con estas características y aún así ganar la partida, siendo 
-        esto algo no poco común: en todos los casos los datos rondan la mitad de juegos ganados y la otra mitad, perdidos. Así 
-        que no es necesario dejarse influenciar por esta idea, y aquel que intente repartir las fichas nuevamente, bueno, pues
+        Como se puede observar, se puede llevar a cabo un juego con estas características y aún así ganar la partida,
+        siendo
+        esto algo no poco común: en todos los casos los datos rondan la mitad de juegos ganados y la otra mitad,
+        perdidos. Así
+        que no es necesario dejarse influenciar por esta idea, y aquel que intente repartir las fichas nuevamente,
+        bueno, pues
         aclararle que es solo un mito.
       </p>
     </div>
 
-    <div style="display: flex; justify-content: center;">
-      <table class="styled-table">
-        <thead>
-          <tr>
-            <th>Estrategias</th>
-            <th>No doblarse al final</th>
-            <th>Doblarse sin restricción</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>Bota Gorda</th>
-            <td>64.6 %</td>
-            <td>65.8 %</td>
-          </tr>
-          <tr>
-            <th>Más Frecuente</th>
-            <td>60.2 %</td>
-            <td>66.0 %</td>
-          </tr>
-          <tr>
-            <th>Aleatorio</th>
-            <td>59.6 %</td>
-            <td>60.8 %</td>
-          </tr>
-          <tr>
-            <th>Campeón del doble 6</th>
-            <td>59.0 %</td>
-            <td>61.2 %</td>
-          </tr>
-          <tr>
-            <th>Repetidor</th>
-            <td>57.4 %</td>
-            <td>62.8 %</td>
-          </tr>
-          <tr>
-            <th>Contador de la mesa</th>
-            <td>52.6 %</td>
-            <td>57.2 %</td>
-          </tr>
-          <tr>
-            <th>Pasador</th>
-            <td>59.0 %</td>
-            <td>55.4 %</td>
-          </tr>
-          <tr>
-            <th>Menos Jugada</th>
-            <td>62.0 %</td>
-            <td>60.2 %</td>
-          </tr>
-          <tr>
-            <th>No gastar la data</th>
-            <td>53.2 %</td>
-            <td>57.8 %</td>
-          </tr>
-          <tr>
-            <th>Bota Flaca</th>
-            <td>45.0 %</td>
-            <td>52.2 %</td>
-          </tr>
-          <tr>
-            <th>Agachao</th>
-            <td>58.2 %</td>
-            <td>58.4 %</td>
-          </tr>
-          <tr>
-            <th>Gastar la data</th>
-            <td>57.6 %</td>
-            <td>56.8 %</td>
-          </tr>
-          <tr>
-            <th>Siempre doble</th>
-            <td>51.8 %</td>
-            <td>53.0 %</td>
-          </tr>
-          <tr>
-            <th>Campeón del doble 9</th>
-            <td>47.6 %</td>
-            <td>49.4 %</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="text-block">
+
+      <div class="subtitle main-text">
+        Doblarse al final: ¿Jugada de novatos o de valientes?
+      </div>
+
+      <p>
+        No es raro escuchar en una mesa de Dominó: ¡¡¡Al final uno no se dobla!!!, si, esta es una de las expresiones
+        más comunes
+        que ocurren cuando un jugador pierde y su pareja se dobla en las últimas etapas del juego. En el
+        Dominó, tal cual
+        como se juega en Cuba, se reprochan bastante los jugadores de una pareja entre sí. Pero ese no es el tema que
+        abordado en este instante.
+        Se dice mucho que un jugador debe evitar doblarse al final del juego (cuando un jugador esté cerca de pegarse
+        porque le quedan pocas fichas, o
+        porque queden pocas fichas por jugar entre todos los jugadores). Entre las razones de esta técnica, está tratar
+        de poner fichas que dejen a la pareja
+        en una situación favorable, cosa que no es muy difícil de hacer debido a que se puede contar la mesa, detectar
+        que números son los más repetidos y más
+        frescos, a la vez que se conoce cuáles son los números a los que cada jugador se ha pasado. Poner un doble
+        implica dejar el estado de la mesa invariante,
+        y cualquier jugada al final del juego es crucial. Sin embargo, doblarse podría ser una jugada bien pensada como
+        cualquier otra. ¿Mito o realidad?
+      </p>
+
+      <p>
+        Para salir de la duda, se realizaron simulaciones de partidas de 100 puntos con dos jugadores que utilizan las
+        estrategias y tácticas del Campeón del doble 9,
+        jugando para la mano siempre que puede. La única diferencia que tienen es que uno evitará siempre de doblarse al
+        final del juego.
+      </p>
+
+      <div style="display: flex; justify-content: center;">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Estrategias</th>
+              <th>No doblarse al final</th>
+              <th>Doblarse sin restricción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Bota Gorda</th>
+              <td>61.8 %</td>
+              <td>61.4 %</td>
+            </tr>
+            <tr>
+              <th>Más Frecuente</th>
+              <td>67.8 %</td>
+              <td>66.4 %</td>
+            </tr>
+            <tr>
+              <th>Aleatorio</th>
+              <td>65.0 %</td>
+              <td>60.4 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 6</th>
+              <td>47.2 %</td>
+              <td>51.4 %</td>
+            </tr>
+            <tr>
+              <th>Repetidor</th>
+              <td>64.8 %</td>
+              <td>61.4 %</td>
+            </tr>
+            <tr>
+              <th>Contador de la mesa</th>
+              <td>59.2 %</td>
+              <td>61.8 %</td>
+            </tr>
+            <tr>
+              <th>Pasador</th>
+              <td>61.4 %</td>
+              <td>58.4 %</td>
+            </tr>
+            <tr>
+              <th>Menos Jugada</th>
+              <td>60.8 %</td>
+              <td>60.6 %</td>
+            </tr>
+            <tr>
+              <th>No gastar la data</th>
+              <td>62.2 %</td>
+              <td>56.8 %</td>
+            </tr>
+            <tr>
+              <th>Bota Flaca</th>
+              <td>45.4 %</td>
+              <td>50.4 %</td>
+            </tr>
+            <tr>
+              <th>Agachao</th>
+              <td>58.8 %</td>
+              <td>58.6 %</td>
+            </tr>
+            <tr>
+              <th>Gastar la data</th>
+              <td>58.4 %</td>
+              <td>57.0 %</td>
+            </tr>
+            <tr>
+              <th>Siempre doble</th>
+              <td>46.8 %</td>
+              <td>52.4 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 9</th>
+              <td>47.0 %</td>
+              <td>52.4 %</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        El lector puede notar que no doblarse al final o si hacerlo, no marca una diferencia notable en el juego.
+        Doblarse al final no tiene el sello del fracaso, por tanto
+        se puede afirmar que es otro mito más.
+      </p>
+
+    </div>
+
+    <div class="text-block">
+
+      <div class="subtitle main-text">
+        Salir con el doble 9: ¿No se piensa?
+      </div>
+
+      <p>
+        Muchos jugadores ven al doble 9 como una ficha molesta, que se debe soltar en la primera oportunidad, y tiene
+        sus razones para
+        serlo, ya que es la ficha que más puntos contiene. Una jugada muy aceptada es salir con el doble 9 cuando se
+        está en posesión de la ficha
+        a la hora de la salida, a pesar de que no se tenga una data de 9. Se puede ver como un reflejo incondicionado,
+        de todas formas los contrarios
+        no saben en ese momento si se tiene una data de 9 o si es una jugada clásica para deshacerse de esa ficha. Salir
+        con el doble 9 sin pensarlo es cómodo
+        a veces debido a que no se pierde tiempo discutiendo con la pareja para coordinar a quien de los dos le va
+        a corresponder la salida. Sin embargo no faltan
+        los jugadores expertos que dicen que siempre se debe salir con la data más alta mejor acompañada, con el
+        objetivo de empezar fuerte y que la pareja sepa como
+        puede ayudar mejor a la mano; aunque los hay también que prefieren salir a la falla. Para ellos, no se debe
+        tomar la salida desde un enfoque arbitrario como es salir
+        con el doble 9 sin tomar en cuenta el resto de las fichas. ¿Qué será mejor?
+      </p>
+
+      <p>
+        Esta vez se realizaron simulaciones de partidas únicas, debido a que uno de los jugadores de la pareja a la que
+        le correspondería la salida, tendría el doble 9
+        siempre, cosa que no es real, aunque no imposible, en cada partida de un juego de 100 puntos. Los jugadores
+        utilizados para la comparación fueron campeones del doble 9,
+        jugando para la mano siempre que puede, donde uno siempre sale con el doble nueve, y otro sale con la data mejor
+        acompañada (<b>MA</b>).
+      </p>
+
+      <div style="display: flex; justify-content: center;">
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Estrategias</th>
+              <th>Salida doble 9</th>
+              <th>Salida MA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Bota Gorda</th>
+              <td>62.0 %</td>
+              <td>65.4 %</td>
+            </tr>
+            <tr>
+              <th>Más Frecuente</th>
+              <td>60.4 %</td>
+              <td>63.2 %</td>
+            </tr>
+            <tr>
+              <th>Aleatorio</th>
+              <td>56.2 %</td>
+              <td>60.8 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 6</th>
+              <td>57.8 %</td>
+              <td>60.2 %</td>
+            </tr>
+            <tr>
+              <th>Repetidor</th>
+              <td>53.2 %</td>
+              <td>60.0 %</td>
+            </tr>
+            <tr>
+              <th>Contador de la mesa</th>
+              <td>52.0 %</td>
+              <td>54.6 %</td>
+            </tr>
+            <tr>
+              <th>Pasador</th>
+              <td>55.6 %</td>
+              <td>57.4 %</td>
+            </tr>
+            <tr>
+              <th>Menos Jugada</th>
+              <td>56.8 %</td>
+              <td>56.6 %</td>
+            </tr>
+            <tr>
+              <th>No gastar la data</th>
+              <td>55.6 %</td>
+              <td>60.2 %</td>
+            </tr>
+            <tr>
+              <th>Bota Flaca</th>
+              <td>50.0 %</td>
+              <td>49.6 %</td>
+            </tr>
+            <tr>
+              <th>Agachao</th>
+              <td>56.0 %</td>
+              <td>58.6 %</td>
+            </tr>
+            <tr>
+              <th>Gastar la data</th>
+              <td>55.4 %</td>
+              <td>60.2 %</td>
+            </tr>
+            <tr>
+              <th>Siempre doble</th>
+              <td>52.8 %</td>
+              <td>58.2 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 9</th>
+              <td>53.0 %</td>
+              <td>49.2 %</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Tal vez no resulta muy evidente, pero los mejores resultados se alcanzaron de forma general con la salida con la
+        data mejor acompañada.
+        La expresión inicial podría cambiarse por: Salir con el doble 9 con buena data de 9: ¡No se piensa!. Usted
+        escoja lo que estime conveniente cuando
+        vaya a salir y tenga el doble 9, pero tenga en mente que salir con esa ficha no es una regla.
+      </p>
+
     </div>
 
   </div>

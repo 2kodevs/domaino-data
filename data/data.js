@@ -1,3 +1,12 @@
+var SELECT_LABEL = [
+    '',
+    'Dominó',
+    'Tipo de partida',
+    'Salida',
+    'Modo',
+    'Estrategia',
+];
+
 var SITE_JSON = {
     "Doble 9": {
         "Un juego": {
@@ -22623,4 +22632,4 @@ var SITE_JSON = {
             }
         }
     }
-}
+};
