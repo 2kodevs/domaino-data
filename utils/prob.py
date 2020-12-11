@@ -28,5 +28,14 @@ def one_piece_prob(max_number=9, pieces=10):
     den = combinations(total, pieces)
     return num / den
 
+def possible_hands(total, k, players=4):
+    fac = factorial(total)
+    result = 1
+    for _ in range(players):
+        result *= combinations(total, k, fac)
+        total -= k
+    return result
+
 if __name__ == "__main__":
-    print(domino_prob(int(input('Cuantas quieres en la data: '))))
+    # print(domino_prob(int(input('Cuantas quieres en la data: '))))
+    print(possible_hands(55, 9))
