@@ -21,7 +21,8 @@
   <script src='data/data.js'></script>
 
   <link href="css/table.css" rel="stylesheet">
-
+  <link href="css/myth.css" rel="stylesheet">
+  <link href="css/hover.css" rel="stylesheet">
 
 
   <div class="article-header row  main-color">
@@ -52,41 +53,53 @@
         permitidos, evidentemente, en partidos oficiales.
       </p>
       <p>
-        En Cuba se juegan dos tipos de Dominó. En uno, que se juega fundamentalmente en la zona oriental,
-        las fichas llegan del blanco (cero) hasta el seis, por lo que las posibles combinaciones, teniendo
-        en cuenta que las fichas pueden repetir un mismo número por sus dos cabezas (los conocidos
-        “dobles”), es de 28. A la hora de jugar, cada jugador debe coger 7 fichas, por lo que no sobra
-        ninguna.
+        En Cuba se juegan dos tipos de Dominó: uno que llega del blanco (cero) hasta el seis y otro que
+        llega al nueve.
       </p>
       <p>
-        En la otra variante, que es la usada en la zona occidental y central, las fichas van del blanco
-        al nueve, por lo que las posibles combinaciones dan un total de 55 fichas. En esta modalidad
-        cada jugador coge diez fichas, por lo que restan 15 que no formarán parte de la partida y cuyo valor no conoce
-        ningún jugador.
-        Esta es la mayor diferencia entre ambas modalidades, y la que establece la manera de aplicar las estrategias en
-        cada una, pues en la primera se sabe que todas las fichas están en juego y las tiene algún
-        jugador en la mesa, mientras que en la segunda hay un margen de incertidumbre acerca de cuáles fichas
-        están en juego y cuáles no, al quedar siempre quince fichas, que no juegan en cada data y que,
-        por supuesto, varían de una data a otra. Nos enfocaremos principalmente en esta última variante.
+        El primero se juega fundamentalmente en la zona oriental, con un total de 28 fichas, teniendo en
+        cuenta que las fichas pueden repetir un mismo número por sus dos cabezas (los conocidos “dobles”).
+        A la hora de jugar, cada jugador debe coger 7 fichas, por lo que no sobra ninguna; en consecuencia
+        existen 472518347558400 posibles maneras para distribuir las fichas entre los cuatro jugadores.
       </p>
       <p>
-        Entre los jugadores abundan criterios con respecto a cuáles son las mejores prácticas para alcanzar
-        la victoria en este juego, ya sea por experiencia adquirida o las enseñanzas transmitidas de generación
-        en generación. Sin embargo, surge la duda de cuán eficiente realmente son las estrategias y tácticas
-        popularmente utilizadas; por tanto, en un intento de clarificar esta cuestión, se desarrollaron numerosas
-        simulaciones computarizadas que semejan el comportamiento real de los juegos y que permiten un posterior
-        análisis de los datos resultantes.
+        En la otra variante, que es la usada en la zona occidental y central, el total de fichas llega a 55. Con
+        el aumento de fichas totales, las posibles formas de distribución de las mismas entre los cuatro jugadores
+        alcanza un valor de 6019133259325104923266279017000000, cifra increíblemente grande comparada con la anterior
+        modalidad. En esta versión cada jugador coge diez fichas, por lo que restan 15 que no formarán parte de la
+        partida y cuyo valor no conoce ningún jugador. Cuando comienza una nueva data las 55 fichas se revuelven y los
+        jugadores vuelven a seleccionar sus fichas, por lo que las 15 que quedan desconocidas varían regularmente.
+        La impredictibilidad que aporta este hecho es lo que hace del dominó de 9 un juego único.
+      </p>
+      <p>
+        <em>"En mi opinión personal, las 15 fichas sobrantes en el juego son las que diferencian y hacen grande de este
+          tipo de dominó, porque aportan incertidumbre y tensión y fundamentalmente un ingrediente de “suerte” que nos
+          hace sentir inmensos cuando “contamos la mesa” y “adivinamos” la opción correcta en una jugada
+          decisiva."</em>,
+        comenta Renier González Mallol, subcampeón de un torneo nacional de la UNAIC, hace casi 20 años.
+      </p>
+      <p>
+        De una forma u otra, ya sea por experiencia adquirida o las enseñanzas transmitidas de generación en generación,
+        cada jugador adopta la forma de jugar que cree mejor para garantizar el éxito en cada partida. No faltan
+        aquellos,
+        que cuando lo consiguen se proclaman "inventores del dominó" o abuchean a los otros por haber perdido. Sin
+        embargo,
+        surge la duda de cuán eficiente realmente son las estrategias y tácticas popularmente utilizadas; por tanto, en
+        un
+        intento de clarificar esta cuestión, se desarrollaron numerosos enfrentamientos simulados por computadora que
+        nos
+        permitieran llegar a conclusiones.
       </p>
 
       <p>
-        Las estrategias implementadas fueron:
+        Se cuenta con las siguientes estrategias:
       </p>
       <div style="display: flex; justify-content: space-around;">
         <div>
           <article id="strategies">
             <ul>
               <li class="strat">
-                <a href="#event1">Bota Gorda</a>
+                <a href="#strategy1">Bota Gorda</a>
                 <div>
                   <h2>Bota Gorda</h2>
                   <p>
@@ -97,7 +110,7 @@
                 </div>
               </li>
               <li class="strat">
-                <a href="#event2">Bota Flaca</a>
+                <a href="#strategy2">Bota Flaca</a>
                 <div>
                   <h2>Bota Flaca</h2>
                   <p>
@@ -107,7 +120,7 @@
                 </div>
               </li>
               <li class="strat">
-                <a href="#event3">Más frecuente</a>
+                <a href="#strategy3">Más frecuente</a>
                 <div>
                   <h2>Más Frecuente</h2>
                   <p>
@@ -117,13 +130,23 @@
                 </div>
               </li>
               <li class="strat">
-                <a href="#event4">Agachao</a>
+                <a href="#strategy4">Agachao</a>
                 <div>
                   <h2>Agachao</h2>
                   <p>
                     El jugador que se "agacha" a una ficha, es porque es la que única que tiene
                     un número específico y está tratando de no quedarse sin ella; solamente jugará
                     esta ficha si es la única jugada válida para ese turno.
+                  </p>
+                </div>
+              </li>
+              <li class="strat">
+                <a href="#strategy5">Aleatorio</a>
+                <div>
+                  <h2>Aleatorio</h2>
+                  <p>
+                    El jugador escoge de forma aleatoria alguna de las fichas válidas a jugar en
+                    ese turno.
                   </p>
                 </div>
               </li>
@@ -134,17 +157,7 @@
           <article id="strategies">
             <ul>
               <li class="strat">
-                <a href="#event5">Aleatorio</a>
-                <div>
-                  <h2>Aleatorio</h2>
-                  <p>
-                    El jugador escoge de forma aleatoria alguna de las fichas válidas a jugar en
-                    ese turno.
-                  </p>
-                </div>
-              </li>
-              <li class="strat">
-                <a href="#event6">Repetidor</a>
+                <a href="#strategy6">Repetidor</a>
                 <div>
                   <h2>Repetidor</h2>
                   <p>
@@ -155,7 +168,7 @@
                 </div>
               </li>
               <li class="strat">
-                <a href="#event7">Contador de la mesa</a>
+                <a href="#strategy7">Contador de la mesa</a>
                 <div>
                   <h2>Contador de la mesa</h2>
                   <p>
@@ -165,7 +178,7 @@
                 </div>
               </li>
               <li class="strat">
-                <a href="#event8">Menos Jugada</a>
+                <a href="#strategy8">Menos Jugada</a>
                 <div>
                   <h2>Menos Jugada</h2>
                   <p>
@@ -174,14 +187,8 @@
                   </p>
                 </div>
               </li>
-            </ul>
-          </article>
-        </div>
-        <div>
-          <article id="strategies">
-            <ul>
               <li class="strat">
-                <a href="#event9">Pasador</a>
+                <a href="#strategy9">Pasador</a>
                 <div>
                   <h2>Pasador</h2>
                   <p>
@@ -192,7 +199,7 @@
                 </div>
               </li>
               <li class="strat">
-                <a href="#event10">No gastar la data</a>
+                <a href="#strategy10">No gastar la data</a>
                 <div>
                   <h2>No gastar la data</h2>
                   <p>
@@ -202,8 +209,14 @@
                   </p>
                 </div>
               </li>
+            </ul>
+          </article>
+        </div>
+        <div>
+          <article id="strategies">
+            <ul>
               <li class="strat">
-                <a href="#event11">Gastar la data</a>
+                <a href="#strategy11">Gastar la data</a>
                 <div>
                   <h2>Gastar la data</h2>
                   <p>
@@ -213,12 +226,34 @@
                 </div>
               </li>
               <li class="strat">
-                <a href="#event12">Siempre doble</a>
+                <a href="#strategy12">Siempre doble</a>
                 <div>
                   <h2>Siempre doble</h2>
                   <p>
                     Este jugador siempre que tiene la oportunidad de jugarlo, pone un doble (fichas
                     que tienen el mismo número por los dos extremos).
+                  </p>
+                </div>
+              </li>
+              <li class="strat">
+                <a href="#strategy13">Campeón del doble 6</a>
+                <div>
+                  <h2>Campeón del doble 6</h2>
+                  <p>
+                    Jugador inteligente que combina varias estrategias para obtener mejores resultados
+                    en la modalidad de dominó hasta el 6. Podrá leer más acerca de este jugador en la
+                    metodología.
+                  </p>
+                </div>
+              </li>
+              <li class="strat">
+                <a href="#strategy14">Campeón del doble 9</a>
+                <div>
+                  <h2>Campeón del doble 9</h2>
+                  <p>
+                    Jugador inteligente que combina varias estrategias para obtener mejores resultados
+                    en la modalidad de dominó hasta el 9. Podrá leer más acerca de este jugador en la
+                    metodología.
                   </p>
                 </div>
               </li>
@@ -229,152 +264,173 @@
 
       <p>
         Las partidas pueden desarrollarse en ambas variantes de juego (6x6 y 9x9). Igualmente se puede seleccionar la
-        regla
-        que determine el ganador de una partida, la cual puede tener, en dependencia de dicha regla, más de una data:
+        regla que determine el ganador de una partida, la cual puede tener, en dependencia de dicha regla, más de una
+        data:
       </p>
       <div style="display: flex; justify-content: space-around;">
-        <article id="strategies">
-          <ul>
-            <li class="strat">
-              <a href="#event1">Un juego</a>
-              <div>
-                <h2>Un juego</h2>
-                <p>
-                  El ganador de la data es el ganador de la partida.
-                </p>
-              </div>
-            </li>
-            <li class="strat">
-              <a href="#event2">Dos de Tres</a>
-              <div>
-                <h2>Dos de Tres</h2>
-                <p>
-                  El ganador de la partida es el primero en ganar dos datas.
-                </p>
-              </div>
-            </li>
-            <li class="strat">
-              <a href="#event3">Partida a ganar 100</a>
-              <div>
-                <h2>Partida a ganar 100</h2>
-                <p>
-                  El ganador de la partida es aquel que alcance primero los 100 puntos. Los puntos se acumulan
-                  sumando los valores de las fichas que tenía la pareja contraria cuando la pareja gana una data.
-                </p>
-              </div>
-            </li>
-            <li class="strat">
-              <a href="#event4">Primera doble</a>
-              <div>
-                <h2>Primera doble</h2>
-                <p>
-                  La partida termina cuando alguna de las parejas obtiene 100 puntos, pero la primera data se cuenta
-                  doble.
-                </p>
-              </div>
-            </li>
-            <li class="strat">
-              <a href="#event4">Capicúa doble</a>
-              <div>
-                <h2>Capicúa doble</h2>
-                <p>
-                  Se conoce como capicúa cuando una pareja gana el juego porque uno de los jugadores se pega, y podía
-                  poner
-                  su última ficha por cualquiera de las dos cabezas, en este caso los puntos obtenidos en esta data se
-                  cuentan doble. Igualmente
-                  la partida finaliza cuando alguna de las parejas alcance los 100 puntos.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </article>
+        <div>
+          <article id="strategies">
+            <ul>
+              <li class="strat">
+                <a href="#rule1">Un juego</a>
+                <div>
+                  <h2>Un juego</h2>
+                  <p>
+                    El ganador de la data es el ganador de la partida.
+                  </p>
+                </div>
+              </li>
+              <li class="strat">
+                <a href="#rule2">Dos de Tres</a>
+                <div>
+                  <h2>Dos de Tres</h2>
+                  <p>
+                    El ganador de la partida es el primero en ganar dos datas.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div>
+          <article id="strategies">
+            <ul>
+              <li class="strat">
+                <a href="#rule3">Partida a ganar 100</a>
+                <div>
+                  <h2>Partida a ganar 100</h2>
+                  <p>
+                    El ganador de la partida es aquel que alcance primero los 100 puntos. Los puntos se acumulan
+                    sumando los valores de las fichas que tenía la pareja contraria cuando la pareja gana una data.
+                  </p>
+                </div>
+              </li>
+              <li class="strat">
+                <a href="#rule4">Primera doble</a>
+                <div>
+                  <h2>Primera doble</h2>
+                  <p>
+                    La partida termina cuando alguna de las parejas obtiene 100 puntos, pero la primera data se cuenta
+                    doble.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div>
+          <article id="strategies">
+            <ul>
+              <li class="strat">
+                <a href="#rule4">Capicúa doble</a>
+                <div>
+                  <h2>Capicúa doble</h2>
+                  <p>
+                    Se conoce como capicúa cuando una pareja gana el juego porque uno de los jugadores se pega, y podía
+                    poner
+                    su última ficha por cualquiera de las dos cabezas, en este caso los puntos obtenidos en esta data se
+                    cuentan doble. Igualmente
+                    la partida finaliza cuando alguna de las parejas alcance los 100 puntos.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
       </div>
 
       <p>
-        Se tuvo en cuenta también, que independientemente de la estrategia escogida para una pareja, el salidor puede
-        elegir su ficha de salida
-        de formas diferentes; de ahí que se implementaran los siguientes comportamientos:
+        Independientemente de la estrategia que desarrolle una pareja, el salidor puede elegir su ficha de salida
+        de formas diferentes; algunas maneras son:
       </p>
       <div style="display: flex; justify-content: space-around;">
-        <article id="strategies">
-          <ul>
-            <li class="strat">
-              <a href="#event1">Aleatorio</a>
-              <div>
-                <h2>Aleatorio</h2>
-                <p>
-                  No hace ninguna elección especial, deja la decisión de la salida en manos de la estrategia
-                  seleccionada.
-                </p>
-              </div>
-            </li>
-            <li class="strat">
-              <a href="#event2">Mejor acompañada</a>
-              <div>
-                <h2>Mejor acompa-<br/>ñada</h2>
-                <p>
-                  Determina el mayor subconjunto de fichas que tienen el mismo número en común, y entre esas fichas
-                  elige
-                  la que será la salida, dando prioridad a los dobles.
-                </p>
-              </div>
-            </li>
-            <li class="strat">
-              <a href="#event3">Más alta</a>
-              <div>
-                <h2>Más alta</h2>
-                <p>
-                  Como su nombre indica, toma como salida la ficha más alta. Note que siempre que tenga el doble 9 la
-                  utilizará como salida.
-                </p>
-              </div>
-            </li>
-            <li class="strat">
-              <a href="#event4">Más alta mejor acompañada</a>
-              <div>
-                <h2>Más alta mejor acompa-<br/>ñada</h2>
-                <p>
-                  Busca entre los números más altos (de 6 en adelante) los que están mejor acompañados, y de ese
-                  conjunto
-                  selecciona la salida, dando prioridad a los dobles.
-                </p>
-              </div>
-            </li>
-            <li class="strat">
-              <a href="#event4">Salida a la falla</a>
-              <div>
-                <h2>Salida a la falla</h2>
-                <p>
-                  La "falla" es una ficha que contiene un número, tal que ese número no aparece en ninguna otra ficha.
-                  Busca
-                  entre las fichas alguna que sea falla y decide salir con ella. Este comportamiento también se aplica a
-                  la
-                  primera jugada de los integrantes de la otra pareja, si tienen varias opciones para matar la salida
-                  deciden
-                  jugar con la falla.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </article>
+        <div>
+          <article id="strategies">
+            <ul>
+              <li class="strat">
+                <a href="#start1">Aleatorio</a>
+                <div>
+                  <h2>Aleatorio</h2>
+                  <p>
+                    No hace ninguna elección especial, deja la decisión de la salida en manos de la estrategia
+                    seleccionada.
+                  </p>
+                </div>
+              </li>
+              <li class="strat">
+                <a href="#start2">Mejor acompañada</a>
+                <div>
+                  <h2>Mejor acompa-<br />ñada</h2>
+                  <p>
+                    Determina el mayor subconjunto de fichas que tienen el mismo número en común, y entre esas fichas
+                    elige
+                    la que será la salida, dando prioridad a los dobles.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div>
+          <article id="strategies">
+            <ul>
+              <li class="strat">
+                <a href="#start3">Más alta</a>
+                <div>
+                  <h2>Más alta</h2>
+                  <p>
+                    Como su nombre indica, toma como salida la ficha más alta. Note que siempre que tenga el doble 9 la
+                    utilizará como salida.
+                  </p>
+                </div>
+              </li>
+              <li class="strat">
+                <a href="#start4">Más alta mejor acompañada</a>
+                <div>
+                  <h2>Más alta mejor acompa-<br />ñada</h2>
+                  <p>
+                    Busca entre los números más altos (de 6 en adelante) los que están mejor acompañados, y de ese
+                    conjunto
+                    selecciona la salida, dando prioridad a los dobles.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div>
+          <article id="strategies">
+            <ul>
+              <li class="strat">
+                <a href="#start5">Salida a la falla</a>
+                <div>
+                  <h2>Salida a la falla</h2>
+                  <p>
+                    La "falla" es una ficha que contiene un número, tal que ese número no aparece en ninguna otra ficha.
+                    Busca entre las fichas alguna que sea falla y decide salir con ella. Este comportamiento también se
+                    aplica a la primera jugada de los integrantes de la otra pareja, si tienen varias opciones para
+                    matar
+                    la salida deciden jugar con la falla.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
       </div>
 
       <p>
-        Por último, los jugadores de una pareja juegan con la misma estrategia, pero también se implementó que pudieran
-        tener un
+        Por último, los jugadores de una pareja juegan con la misma estrategia, pero además pueden tener un
         comportamiento cooperativo, es decir, siempre uno de ellos juega para la mano de los dos. La mano en un juego,
-        es el jugador
-        que menos fichas tiene, lo cual se puede aplicar también en la misma pareja; este jugador es en principio, el
-        que tiene la
-        ventaja para quedarse sin fichas primero.
+        es el jugador que menos fichas tiene, lo cual se puede aplicar también en la misma pareja; este jugador es en
+        principio, el que tiene la ventaja para ser el primero en quedarse sin fichas.
       </p>
       <p>
-        En el siguiente gráfico usted podrá elegir el modo de juego que desee, la regla, la forma de salida, si se juega
-        en modo
-        cooperativo o no, y la estrategia que aplicará la pareja; y este mostrará el porciento de partidas ganadas
-        obtenido de esta
-        estrategia con respecto a cada una de las estrategias implementadas. (Se realizaron 100 simulaciones por cada
-        par de estrategias).
+        En el siguiente gráfico usted podrá elegir el tipo de dominó que desee, el tipo de juego, la forma de salida,
+        si se juega en modo cooperativo o no, y la estrategia que utilizará la pareja; y este mostrará el resultado
+        (% de victorias) de enfrentar a dicha pareja contra otra a la que se le asignará en cada caso una de las
+        estrategias
+        implementadas.
       </p>
 
       <br />
@@ -394,7 +450,7 @@
       <script src="js/function.js"></script>
       <script>
         var levels = 5;
-        populate_selectors(levels);
+        populate_selectors(levels, SELECT_LABEL);
         upd_data(SITE_JSON, 1, levels);
       </script>
     </div>
@@ -402,35 +458,91 @@
     <br />
 
     <div class="text-block">
+      <p>
+        Una de las estrategias más criticadas en el juego de Dominó ha sido siempre la de Bota Gorda; quizás por su 
+        simplicidad o por la creencia de que al final, si "se tranca el juego" será el que haga uso de ella el que 
+        tenga menos puntos, es que muchas personas la utilizan. No obstante, sobre todo los más experimentados, 
+        argumentan que no por botar la más gorda en cada ocasión estarás jugando la ficha más certera para 
+        apretar al contrario o ayudar a tu pareja. Tal como estos últimos seguro esperaban, en la modalidad de Dominó 
+        hasta el 9, queda claro que el "botagorda" es de todos, el peor jugador; raramente sobrepasa el 45 % de 
+        victorias teniendo en cuenta cualquier tipo de juego, salida o incluso tratando de jugar para la mano (modo 
+        cooperativo).
+      </p>
+      <p>
+        Incluso en la modalidad de doble 6, aunque no sigue siendo el peor jugador, sus resultados son estándar; pero 
+        aún así ocupa el octavo lugar entre todas las estrategias vistas, sin contar a los campeones.
+      </p>
+      <p>
+        Por el contrario, la estrategia de Bota Flaca, resultó ser la revelación de los juegos del Dominó de 9, quedando 
+        la mejor estrategia de todas. Tiene sentido que si el jugador siempre pone la ficha que menos pesa, obligue a 
+        sus contrincantes a jugar siempre sus fichas más bajas; por lo que si "se tranca el juego", ellos tendrán más 
+        puntos acumulados. Sin embargo, en la variante de 6x6 se desempeñó de forma similar a la estrategia de Bota Gorda.
+      </p>
+      <p>
+        Curiosamente, las estrategias en general, no tuvieron la misma efectividad en una modalidad que en otra. En 
+        consecuencia, los campeones de cada variante se construyeron de forma diferente, acordes a los resultados 
+        obtenidos; y fueron añadidos al gráfico para que también fuera visible su desempeño con respecto a las otras 
+        estrategias.
+      </p>
+      <p>
+        En la siguiente sección se tomarán algunos mitos del Dominó de 9 en Cuba, y se analizarán a partir de los 
+        datos, de forma tal que se pueda comprobar su veracidad.
+      </p>
+    </div>
+    
+    <br />
+    <div class="text-block">
+      <h2 class="main-text"> Desterrando mitos </h2>
+      <p>
+        Gracias a las facilidades que permiten las computadoras, no es una tarea complicada crear las situaciones 
+        requeridas para comprobar algún hecho o situación en el Dominó. Si bien no se puede afirmar que los resultados 
+        que se podrán presenciar son absolutos o completamente fiables, definitivamente son un punto válido para el 
+        análisis de las cuestiones del juego. El lector se puede sentir libre de comprobarlos en una buena mesa de 
+        Dominó, claro, no olvide dar buena agua a la mesa.
+      </p>
+    </div>
+    <br />
+
+    <div class="text-block">
       <div class="subtitle main-text">
         Salida de Casino vs Bota Gorda
       </div>
 
-      <p>
-        La "salida de casino" hace referencia a la salida con el doble blanco (doble cero). Esta es considerada
-        por muchos como una mala táctica, teniendo en cuenta que es la ficha más baja de todo el juego, y aseguran
-        que el jugador que la usa tiene la derrota asegurada. Sin embargo, los partidarios de emplear esta técnica
-        generalmente cuentan con una data de blancos, y se arriesgan a jugar de esta forma pensando en apretar al
-        contrario con la misma. ¿Mito o realidad?
-      </p>
-      <p>
-        Para determinar la respuesta a esta interrogante se implementaron las simulaciones con el juego de 9x9. El
-        jugador que inicia el juego cuenta con una data de blancos de al menos cinco fichas, entre las que se encuentra
-        el doble blanco, para poder realizar la salida. La pareja juega con la estrategia de gastar la data y en modo
-        cooperativo. Se pone a jugar esta pareja contra todas las demás estrategias implementadas, también en modo
-        cooperativo.
-      </p>
-      <p>
-        Por otro lado, si se cuenta con una data de blancos, y la salida de casino es una mala idea, entonces la pareja
-        que tiene al salidor con esta data implementa la estrategia de bota-gorda cooperativa, y se pasa a la 
-        simulaciones de juego de esta pareja contra las demás estrategias implementadas, también en modo cooperativo.
-      </p>
-      <p>
-        Se corrieron 500 simulaciones de cada par y los resultados fueron los siguientes:
-      </p>
+      <div class="myth-container">
 
-      <div style="display: flex; justify-content: center;">
+        <div class="myth-description">
+          <p>
+            La "salida de casino" hace referencia a la salida con el doble blanco (doble cero). Esta es considerada
+            por muchos como una mala táctica, teniendo en cuenta que es la ficha más baja de todo el juego, y aseguran
+            que el jugador que la usa tiene la derrota asegurada. Sin embargo, los partidarios de emplear esta técnica
+            generalmente cuentan con una data de blancos, y se arriesgan a jugar de esta forma pensando en apretar al
+            contrario con la misma. Simplemete el hecho de obtener al menos el doble blanco en una mano tiene una
+            probabilidad de ocurrir el 18 % de las veces aproximadamente; si a esto se le añade que el doble blanco
+            esté acompañado por una data de blancos (al menos 4 más), la probabilidad de que esto ocurra disminuye a un
+            0.5 %. Véalo de esta forma, existe un 0.5 % de probabilidad de que se reúnan las condiciones para que se
+            considere siquiera la salida de casino como una jugada válida, sin saber aún si es cierto que esta sea una
+            mala táctica de juego. ¿Mito o realidad?
+          </p>
+
+          <p>
+            Para determinar la respuesta a esta interrogante se implementaron las simulaciones con el juego de 9x9. El
+            jugador que inicia el juego cuenta con una data de blancos de al menos cinco fichas, entre las que se
+            encuentra el doble blanco, para poder realizar la salida. La pareja juega con la estrategia de gastar la
+            data y en modo cooperativo. Se pone a jugar esta pareja contra todas las demás estrategias implementadas,
+            también en modo cooperativo.
+          </p>
+
+          <p>
+            Por otro lado, si se cuenta con una data de blancos, y la salida de casino es una mala idea, entonces la
+            pareja que tiene al salidor con esta data implementa la estrategia de bota-gorda cooperativa, y se pasa
+            al enfrentamiento de esta pareja contra las demás estrategias implementadas, también en modo
+            cooperativo.
+          </p>
+
+        </div>
+
         <table class="styled-table">
+          <caption style="text-align: center;">Victorias sobre cada estrategia</caption>
           <thead>
             <tr>
               <th>Estrategias</th>
@@ -441,124 +553,126 @@
           <tbody>
             <tr>
               <th>Bota Gorda</th>
-              <td>
-                52</td>
-              <td>
-                28.2</td>
+              <td>52.2 %</td>
+              <td>28.4 %</td>
             </tr>
             <tr>
-              <th>Más frecuente</th>
-              <td>
-                48.4</td>
-              <td>
-                27.8</td>
+              <th>Más Frecuente</th>
+              <td>53.2 %</td>
+              <td>24.0 %</td>
             </tr>
             <tr>
               <th>Aleatorio</th>
-              <td>
-                50.6</td>
-              <td>
-                26.2</td>
+              <td>50.0 %</td>
+              <td>30.0 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 6</th>
+              <td>48.2 %</td>
+              <td>27.8 %</td>
             </tr>
             <tr>
               <th>Repetidor</th>
-              <td>
-                47.4</td>
-              <td>
-                28</td>
+              <td>46.0 %</td>
+              <td>26.8 %</td>
             </tr>
             <tr>
-              <th>Contador de mesa</th>
-              <td>
-                46</td>
-              <td>
-                24.6</td>
+              <th>Contador de la mesa</th>
+              <td>46.4 %</td>
+              <td>28.2 %</td>
             </tr>
             <tr>
               <th>Pasador</th>
-              <td>
-                47</td>
-              <td>
-                23</td>
+              <td>43.0 %</td>
+              <td>26.4 %</td>
             </tr>
             <tr>
               <th>Menos Jugada</th>
-              <td>
-                52.8</td>
-              <td>
-                25.2</td>
+              <td>48.8 %</td>
+              <td>23.6 %</td>
             </tr>
             <tr>
               <th>No gastar la data</th>
-              <td>
-                45</td>
-              <td>
-                29</td>
+              <td>50.8 %</td>
+              <td>28.4 %</td>
             </tr>
             <tr>
-              <th>Bota flaca</th>
-              <td>
-                44</td>
-              <td>
-                25</td>
+              <th>Bota Flaca</th>
+              <td>41.2 %</td>
+              <td>24.6 %</td>
             </tr>
             <tr>
               <th>Agachao</th>
-              <td>
-                48.2</td>
-              <td>
-                25</td>
+              <td>46.4 %</td>
+              <td>25.8 %</td>
             </tr>
             <tr>
               <th>Gastar la data</th>
-              <td>
-                49.2</td>
-              <td>
-                29.2</td>
+              <td>49.0 %</td>
+              <td>24.2 %</td>
             </tr>
             <tr>
               <th>Siempre doble</th>
-              <td>
-                44</td>
-              <td>
-                23.6</td>
+              <td>46.2 %</td>
+              <td>33.0 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 9</th>
+              <td>45.2 %</td>
+              <td>24.4 %</td>
             </tr>
           </tbody>
         </table>
       </div>
-
       <p>
-        Notoriamente la salida de casino es una mejor opción que ignorar tu data de blancos y jugar a botar la más
-        gorda. Que la salida de casino es una mala idea es ... un mito.
-      </p>
+          Notoriamente, después de observar los resultados de los enfrentamientos en cada caso, la salida de casino
+          es una mejor opción que ignorar tu data de blancos y jugar a botar la más gorda. Que la salida de casino es
+          una mala idea es ... un mito.
+        </p>
     </div>
+
+    <br />
 
     <div class="text-block">
       <div class="subtitle main-text">
         ¿Jugar con o en contra del enemigo?
       </div>
 
-      <p>
-        Cuando sucede que un jugador obtiene una buena data, inmediatamente arma su estrategia en torno a ella y asume
-        que probablemente vaya a ganar el juego si la aprovecha de forma correcta. Pero de repente el contrario, que es 
-        el salidor, comparte la misma data, y ya no es tan sencillo definir qué hacer: muchos optan por jugar tratando 
-        siempre de matar la jugada de su oponente, sacrificando su data, y apoyando a su compañero, que lo más probable 
-        es que no tenga fichas con ese número; pero hay otros que deciden probar fuerza, y juegan aprovechando la data 
-        del contrario con la suya, incluso aunque eso signifique que su compañero deba sufrir las consecuencias. Son 
-        generalmente esos compañeros los que, cuando no es exitosa la estrategia, acusan a su pareja como culpable del 
-        resultado y aseguran que jugando de esa forma no llegarán a ningún lado; bajo ninguna circunstancia se juega con 
-        el contrario. ¿Mito o realidad?
-      </p>
-      <p>
-        Para realizar las simulaciones en este caso, se arregla que un jugador y alguno de sus oponentes compartan la 
-        misma data y acumulen entre ellos al menos 8 fichas con el mismo número en común. En ambos casos las dos parejas
-        juegan en modo cooperativo. Nos interesa saber los resultados para la pareja que no es salidora, en un caso 
-        se le definió como estrategia gastar la data y en el otro no hacerlo; ambas variantes se enfrentaron al resto de 
-        las estrategias implementadas, obteniendo los siguientes resultados:
-      </p>
+      <div class="myth-container">
+        <div class="myth-description">
+          <p>
+            Cuando sucede que un jugador obtiene una buena data, inmediatamente arma su estrategia en torno a ella y
+            asume
+            que probablemente vaya a ganar el juego si la aprovecha de forma correcta. Pero de repente el contrario, que
+            es
+            el salidor, comparte la misma data, y ya no es tan sencillo definir qué hacer: muchos optan por jugar
+            tratando
+            siempre de matar la jugada de su oponente, sacrificando su data, y apoyando a su compañero, que lo más
+            probable
+            es que no tenga fichas con ese número; pero hay otros que deciden probar fuerza, y juegan aprovechando la
+            data
+            del contrario con la suya, incluso aunque eso signifique que su compañero deba sufrir las consecuencias. Son
+            generalmente esos compañeros los que, cuando no es exitosa la estrategia, acusan a su pareja como culpable
+            del
+            resultado y aseguran que jugando de esa forma no llegarán a ningún lado; bajo ninguna circunstancia se juega
+            con
+            el contrario. ¿Mito o realidad?
+          </p>
 
-      <div style="display: flex; justify-content: center;">
+          <p>
+            Para realizar las simulaciones en este caso, se arregla que un jugador y alguno de sus oponentes compartan
+            la
+            misma data y acumulen entre ellos al menos 8 fichas con el mismo número en común. En ambos casos las dos
+            parejas
+            juegan en modo cooperativo. Nos interesa saber los resultados para la pareja que no es salidora, en un caso
+            se le definió como estrategia gastar la data y en el otro no hacerlo; ambas variantes se enfrentaron al
+            resto de
+            las estrategias implementadas, obteniendo los siguientes resultados:
+          </p>
+        </div>
+
         <table class="styled-table">
+          <caption style="text-align: center;">Victorias sobre cada estrategia</caption>
           <thead>
             <tr>
               <th>Estrategias</th>
@@ -569,87 +683,73 @@
           <tbody>
             <tr>
               <th>Bota Gorda</th>
-              <td>
-                43.8</td>
-              <td>
-                42.8</td>
+              <td>43.0 %</td>
+              <td>38.4 %</td>
             </tr>
             <tr>
-              <th>Más frecuente</th>
-              <td>
-                52.0</td>
-              <td>
-                45.8</td>
+              <th>Más Frecuente</th>
+              <td>51.0 %</td>
+              <td>46.2 %</td>
             </tr>
             <tr>
               <th>Aleatorio</th>
-              <td>
-                50.6</td>
-              <td>
-                48.0</td>
+              <td>51.6 %</td>
+              <td>46.4 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 6</th>
+              <td>44.6 %</td>
+              <td>48.6 %</td>
             </tr>
             <tr>
               <th>Repetidor</th>
-              <td>
-                52.2</td>
-              <td>
-                48.2</td>
+              <td>49.0 %</td>
+              <td>49.4 %</td>
             </tr>
             <tr>
-              <th>Contador de mesa</th>
-              <td>
-                52.0</td>
-              <td>
-                48.6</td>
+              <th>Contador de la mesa</th>
+              <td>46.0 %</td>
+              <td>48.0 %</td>
             </tr>
             <tr>
               <th>Pasador</th>
-              <td>
-                50.4</td>
-              <td>
-                48.8</td>
+              <td>52.6 %</td>
+              <td>47.6 %</td>
             </tr>
             <tr>
               <th>Menos Jugada</th>
-              <td>
-                51.2</td>
-              <td>
-                49.0</td>
+              <td>54.4 %</td>
+              <td>47.6 %</td>
             </tr>
             <tr>
               <th>No gastar la data</th>
-              <td>
-                53.8</td>
-              <td>
-                53.6</td>
+              <td>48.6 %</td>
+              <td>53.2 %</td>
             </tr>
             <tr>
-              <th>Bota flaca</th>
-              <td>
-                60.6</td>
-              <td>
-                54.8</td>
+              <th>Bota Flaca</th>
+              <td>58.6 %</td>
+              <td>59.6 %</td>
             </tr>
             <tr>
               <th>Agachao</th>
-              <td>
-                51.6</td>
-              <td>
-                49.8</td>
+              <td>52.0 %</td>
+              <td>49.6 %</td>
             </tr>
             <tr>
               <th>Gastar la data</th>
-              <td>
-                53.0</td>
-              <td>
-                48.2</td>
+              <td>51.8 %</td>
+              <td>47.4 %</td>
             </tr>
             <tr>
               <th>Siempre doble</th>
-              <td>
-                52.0</td>
-              <td>
-                52.0</td>
+              <td>53.4 %</td>
+              <td>52.4 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 9</th>
+              <td>57.8 %</td>
+              <td>54.0 %</td>
             </tr>
           </tbody>
         </table>
@@ -657,34 +757,46 @@
 
       <p>
         Se puede observar que con ambas estrategias se obtienen resultados muy similares, aunque el que juega con el
-        contrario es ligeramente superior en casi todos los casos. En consecuencia, no es necesario frustrarse si el 
+        contrario es ligeramente superior en casi todos los casos. En consecuencia, no es necesario frustrarse si el
         resultado de una data no es el esperado, pues que esta estrategia sea una mala táctica es ... solo un mito.
       </p>
     </div>
+
+    <br />
 
     <div class="text-block">
       <div class="subtitle main-text">
         Compartir buena data con la pareja, ¿sinónimo de victoria segura?
       </div>
 
-      <p>
-        Se puede pensar que una partida en la que se tenga una buena data se puede jugar
-        de forma cómoda y optimista. Si entre las fichas de un jugador y su pareja, está
-        la mayoría de uno de los números, entonces las expectativas son aún mejores debido
-        a que esta pareja no tendrá muchos obstáculos para dominar buena parte de la partida.
-        El sentido común podría indicar lo mismo que piensan muchos jugadores experimentados
-        de Dominó: una partida así se gana casi al seguro. ¿Mito o realidad?
-      </p>
+      <div class="myth-container">
+        <div class="myth-description">
+          <p>
+            Se puede pensar que una partida en la que se tenga una buena data se puede jugar
+            de forma cómoda y optimista. Si entre las fichas de un jugador y su pareja, está
+            la mayoría de uno de los números, entonces las expectativas son aún mejores debido
+            a que esta pareja no tendrá muchos obstáculos para dominar buena parte de la partida.
+            El sentido común podría indicar lo mismo que piensan muchos jugadores experimentados
+            de Dominó: una partida así se gana casi al seguro. ¿Mito o realidad?
+          </p>
 
-      <p>
-        Simulaciones con el juego de 9x9 fueron las usadas, como ha sido usual, en la búsqueda de la
-        respuesta. Los jugadores de una pareja comparten al menos 8 fichas de una data, juegan con la
-        estrategia de gastar la data, y en modo cooperativo. Se pone a jugar esta pareja contra todas las
-        demás estrategias implementadas, también en modo cooperativo.
-      </p>
+          <p>
+            Simulaciones con el juego de 9x9 fueron las usadas, como ha sido usual, en la búsqueda de la
+            respuesta. Los jugadores de una pareja comparten al menos 8 fichas de una data, juegan con la
+            estrategia de gastar la data, y en modo cooperativo. Se pone a jugar esta pareja contra todas las
+            demás estrategias implementadas, también en modo cooperativo.
+          </p>
 
-      <div style="display: flex; justify-content: center;">
+          <p>
+            Los resultados indican que esta situación no es garantía de victoria, a pesar de que sea más
+            probable ganar que perder. Al parecer una buena forma de enfrentar a una pareja en una posición
+            tan ventajosa como esta, es repetirle fichas y tratar de pasarlos. Que compartir una buena data
+            con la pareja sea victoria segura es ... un mito.
+          </p>
+        </div>
+
         <table class="styled-table">
+          <caption style="text-align: center;">Victorias sobre cada estrategia</caption>
           <thead>
             <tr>
               <th>Estrategias</th>
@@ -694,97 +806,112 @@
           <tbody>
             <tr>
               <th>Bota Gorda</th>
-              <td>
-                62.0</td>
+              <td>62.6 %</td>
             </tr>
             <tr>
-              <th>Más frecuente</th>
-              <td>
-                55.6</td>
+              <th>Más Frecuente</th>
+              <td>53.2 %</td>
             </tr>
             <tr>
               <th>Aleatorio</th>
-              <td>
-                54.4</td>
+              <td>57.4 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 6</th>
+              <td>54.8 %</td>
             </tr>
             <tr>
               <th>Repetidor</th>
-              <td>
-                55.8</td>
+              <td>56.8 %</td>
             </tr>
             <tr>
-              <th>Contador de mesa</th>
-              <td>
-                53.6</td>
+              <th>Contador de la mesa</th>
+              <td>53.4 %</td>
             </tr>
             <tr>
               <th>Pasador</th>
-              <td>
-                53.8</td>
+              <td>54.0 %</td>
             </tr>
             <tr>
               <th>Menos Jugada</th>
-              <td>
-                57.8</td>
+              <td>59.2 %</td>
             </tr>
             <tr>
               <th>No gastar la data</th>
-              <td>
-                56.2</td>
+              <td>56.2 %</td>
             </tr>
             <tr>
-              <th>Bota flaca</th>
-              <td>
-                48.8</td>
+              <th>Bota Flaca</th>
+              <td>49.2 %</td>
             </tr>
             <tr>
               <th>Agachao</th>
-              <td>
-                58.8</td>
+              <td>55.2 %</td>
             </tr>
             <tr>
               <th>Gastar la data</th>
-              <td>
-                60.2</td>
+              <td>54.0 %</td>
             </tr>
             <tr>
               <th>Siempre doble</th>
-              <td>
-                56.2</td>
+              <td>59.8 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 9</th>
+              <td>54.4 %</td>
             </tr>
           </tbody>
         </table>
-      </div>
 
-      <p>
-        Los resultados indican que esta situación no es garantía de victoria, a pesar de que sea más
-        probable ganar que perder. Al parecer una buena forma de enfrentar a una pareja en una posición
-        tan ventajosa como esta, es repetirle fichas y tratar de pasarlos. Que compartir una buena data
-        con la pareja sea victoria segura es ... un mito.
-      </p>
+      </div>
     </div>
-    
+
+    <br />
+
     <div class="text-block">
-      
+
       <div class="subtitle main-text">
         ¡Data de dobles! Ya perdí
       </div>
-  
-      <p>
-        En ocasiones ocurre que el jugador obtiene un montón de dobles en su mano inicial (5 o más), y esto hace
-        muy difícil para él jugar, dado que las opciones que le permiten poner estas fichas disminuyen. En general, se 
-        considera que si algo así sucede, a menos que la suerte esté de su lado (o el de su compañero), la victoria del 
-        otro equipo es segura. Incluso se han visto jugadores, que definen como regla para jugar, que por lo injusto de esta 
-        situación, se pueden volver a repartir las fichas. ¿Será tan catastrófica como parece?
-      </p>
-      <p>
-        Para llevar a cabo estas simulaciones, se fijó un jugador al cual se le reparten inicialmente al menos 5 dobles; este 
-        jugador y su pareja juegan de modo cooperativo con la estrategia de siempre que se pueda jugar algún doble. Se puso a
-        esta pareja a jugar contra las otras estrategias implementadas, obteniendo los siguientes resultados:
-      </p>
-  
-      <div style="display: flex; justify-content: center;">
+
+      <div class="myth-container">
+        <div class="myth-description">
+          <p>
+            En ocasiones ocurre que el jugador obtiene un montón de dobles en su mano inicial (5 o más), y esto hace
+            muy difícil para él jugar, dado que las opciones que le permiten poner estas fichas disminuyen. En general,
+            se
+            considera que si algo así sucede, a menos que la suerte esté de su lado (o el de su compañero), la victoria
+            del
+            otro equipo es segura. Incluso se han visto jugadores, que definen como regla para jugar, que por lo injusto
+            de
+            esta
+            situación, se pueden volver a repartir las fichas. ¿Será tan catastrófica como parece?
+          </p>
+
+          <p>
+            Para llevar a cabo estas simulaciones, se fijó un jugador al cual se le reparten inicialmente al menos 5
+            dobles;
+            este
+            jugador y su pareja juegan de modo cooperativo con la estrategia de siempre que se pueda jugar algún doble.
+            Se
+            puso a
+            esta pareja a jugar contra las otras estrategias implementadas, obteniendo los siguientes resultados:
+          </p>
+
+          <p>
+            Como se puede observar, se puede llevar a cabo un juego con estas características y aún así ganar la
+            partida,
+            siendo
+            esto algo no poco común: en todos los casos los datos rondan la mitad de juegos ganados y la otra mitad,
+            perdidos. Así
+            que no es necesario dejarse influenciar por esta idea, y aquel que intente repartir las fichas nuevamente,
+            bueno, pues
+            aclararle que es solo un mito.
+          </p>
+        </div>
+
         <table class="styled-table">
+          <caption style="text-align: center;">Victorias sobre cada estrategia</caption>
           <thead>
             <tr>
               <th>Estrategias</th>
@@ -794,76 +921,421 @@
           <tbody>
             <tr>
               <th>Bota Gorda</th>
-              <td>
-                55.2</td>
+              <td>52.4 %</td>
             </tr>
             <tr>
-              <th>Más frecuente</th>
-              <td>
-                51.6</td>
+              <th>Más Frecuente</th>
+              <td>53.6 %</td>
             </tr>
             <tr>
               <th>Aleatorio</th>
-              <td>
-                44.8</td>
+              <td>52.4 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 6</th>
+              <td>57.0 %</td>
             </tr>
             <tr>
               <th>Repetidor</th>
-              <td>
-                50.8</td>
+              <td>45.6 %</td>
             </tr>
             <tr>
-              <th>Contador de mesa</th>
-              <td>
-                49.8</td>
+              <th>Contador de la mesa</th>
+              <td>50.8 %</td>
             </tr>
             <tr>
               <th>Pasador</th>
-              <td>
-                49.0</td>
+              <td>48.8 %</td>
             </tr>
             <tr>
               <th>Menos Jugada</th>
-              <td>
-                48.8</td>
+              <td>50.2 %</td>
             </tr>
             <tr>
               <th>No gastar la data</th>
-              <td>
-                49.2</td>
+              <td>49.0 %</td>
             </tr>
             <tr>
-              <th>Bota flaca</th>
-              <td>
-                45.2</td>
+              <th>Bota Flaca</th>
+              <td>43.8 %</td>
             </tr>
             <tr>
               <th>Agachao</th>
-              <td>
-                48.0</td>
+              <td>44.0 %</td>
             </tr>
             <tr>
               <th>Gastar la data</th>
-              <td>
-                49.6</td>
+              <td>46.0 %</td>
             </tr>
             <tr>
               <th>Siempre doble</th>
-              <td>
-                46.6</td>
+              <td>47.8 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 9</th>
+              <td>44.4 %</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <br />
+
+    <div class="text-block">
+
+      <div class="subtitle main-text">
+        Doblarse al final: ¿Jugada de novatos o de valientes?
+      </div>
+
+      <div class="myth-container">
+        <div class="myth-description">
+          <p>
+            No es raro escuchar en una mesa de Dominó: ¡¡¡Al final uno no se dobla!!!, sí, esta es una de las
+            expresiones
+            más comunes
+            que ocurren cuando un jugador pierde y su pareja se dobla en las últimas etapas del juego. En el
+            Dominó, tal cual
+            como se juega en Cuba, se reprochan bastante los jugadores de una pareja entre sí. Pero ese no es el tema
+            abordado en este instante.
+            Se dice mucho que un jugador debe evitar doblarse al final del juego (cuando un jugador esté cerca de
+            pegarse
+            porque le quedan pocas fichas, o
+            porque queden pocas fichas por jugar entre todos los jugadores). Entre las razones de esta técnica, está
+            tratar
+            de poner fichas que dejen a la pareja
+            en una situación favorable, cosa que no es muy difícil de hacer debido a que se puede contar la mesa,
+            detectar
+            qué números son los más repetidos y más
+            frescos, a la vez que se conoce cuáles son los números a los que cada jugador se ha pasado. Poner un doble
+            implica dejar el estado de la mesa invariante,
+            y cualquier jugada al final del juego es crucial. Sin embargo, doblarse podría ser una jugada bien pensada
+            como
+            cualquier otra. ¿Mito o realidad?
+          </p>
+
+          <p>
+            Para salir de la duda, se realizaron simulaciones de partidas de 100 puntos con dos jugadores que utilizan
+            las
+            estrategias y tácticas del Campeón del doble 9,
+            jugando para la mano siempre que puede. La única diferencia que tienen es que uno evitará siempre de
+            doblarse al
+            final del juego.
+          </p>
+
+          <p>
+            El lector puede notar que no doblarse al final o sí hacerlo, no marca una diferencia notable en el juego.
+            Doblarse al final no tiene el sello del fracaso, por tanto
+            se puede afirmar que es otro mito más.
+          </p>
+        </div>
+
+        <table class="styled-table">
+          <caption style="text-align: center;">Victorias sobre cada estrategia</caption>
+          <thead>
+            <tr>
+              <th>Estrategias</th>
+              <th>Evitar dobles</th>
+              <th>Permitir dobles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Bota Gorda</th>
+              <td>61.8 %</td>
+              <td>61.4 %</td>
+            </tr>
+            <tr>
+              <th>Más Frecuente</th>
+              <td>67.8 %</td>
+              <td>66.4 %</td>
+            </tr>
+            <tr>
+              <th>Aleatorio</th>
+              <td>65.0 %</td>
+              <td>60.4 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 6</th>
+              <td>47.2 %</td>
+              <td>51.4 %</td>
+            </tr>
+            <tr>
+              <th>Repetidor</th>
+              <td>64.8 %</td>
+              <td>61.4 %</td>
+            </tr>
+            <tr>
+              <th>Contador de la mesa</th>
+              <td>59.2 %</td>
+              <td>61.8 %</td>
+            </tr>
+            <tr>
+              <th>Pasador</th>
+              <td>61.4 %</td>
+              <td>58.4 %</td>
+            </tr>
+            <tr>
+              <th>Menos Jugada</th>
+              <td>60.8 %</td>
+              <td>60.6 %</td>
+            </tr>
+            <tr>
+              <th>No gastar la data</th>
+              <td>62.2 %</td>
+              <td>56.8 %</td>
+            </tr>
+            <tr>
+              <th>Bota Flaca</th>
+              <td>45.4 %</td>
+              <td>50.4 %</td>
+            </tr>
+            <tr>
+              <th>Agachao</th>
+              <td>58.8 %</td>
+              <td>58.6 %</td>
+            </tr>
+            <tr>
+              <th>Gastar la data</th>
+              <td>58.4 %</td>
+              <td>57.0 %</td>
+            </tr>
+            <tr>
+              <th>Siempre doble</th>
+              <td>46.8 %</td>
+              <td>52.4 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 9</th>
+              <td>47.0 %</td>
+              <td>52.4 %</td>
             </tr>
           </tbody>
         </table>
       </div>
-  
+    </div>
+
+    <br />
+
+    <div class="text-block">
+
+      <div class="subtitle main-text">
+        Salir con el doble 9: ¿No se piensa?
+      </div>
+
+      <div class="myth-container">
+        <div class="myth-description">
+          <p>
+            Muchos jugadores ven al doble 9 como una ficha molesta, que se debe soltar en la primera oportunidad, y
+            tiene
+            sus razones para
+            serlo, ya que es la ficha que más puntos contiene. Una jugada muy aceptada es salir con el doble 9 cuando se
+            está en posesión de la ficha
+            a la hora de la salida, a pesar de que no se tenga una data de 9. Se puede ver como un reflejo
+            incondicionado,
+            de todas formas los contrarios
+            no saben en ese momento si se tiene una data de 9 o si es una jugada clásica para deshacerse de esa ficha.
+            Salir
+            con el doble 9 sin pensarlo es cómodo
+            a veces debido a que no se pierde tiempo discutiendo con la pareja para coordinar a quién de los dos le va
+            a corresponder la salida. Sin embargo no faltan
+            los jugadores expertos que dicen que siempre se debe salir con la data más alta mejor acompañada, con el
+            objetivo de empezar fuerte y que la pareja sepa cómo
+            puede ayudar mejor a la mano; aunque los hay también que prefieren salir a la falla. Para ellos, no se debe
+            tomar la salida desde un enfoque arbitrario como es salir
+            con el doble 9 sin tomar en cuenta el resto de las fichas. ¿Qué será mejor?
+          </p>
+
+          <p>
+            Esta vez se realizaron simulaciones de partidas únicas, debido a que uno de los jugadores de la pareja a la
+            que
+            le correspondería la salida, tendría el doble 9
+            siempre, cosa que no es real, aunque no imposible, en cada partida de un juego de 100 puntos. Los jugadores
+            utilizados para la comparación fueron campeones del doble 9,
+            jugando para la mano siempre que pueden, donde uno siempre sale con el doble nueve, y otro sale con la data
+            mejor
+            acompañada (<b>MA</b>).
+          </p>
+        </div>
+
+        <table class="styled-table">
+          <caption style="text-align: center;">Victorias sobre cada estrategia</caption>
+          <thead>
+            <tr>
+              <th>Estrategias</th>
+              <th>Salida doble 9</th>
+              <th>Salida MA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Bota Gorda</th>
+              <td>62.0 %</td>
+              <td>65.4 %</td>
+            </tr>
+            <tr>
+              <th>Más Frecuente</th>
+              <td>60.4 %</td>
+              <td>63.2 %</td>
+            </tr>
+            <tr>
+              <th>Aleatorio</th>
+              <td>56.2 %</td>
+              <td>60.8 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 6</th>
+              <td>57.8 %</td>
+              <td>60.2 %</td>
+            </tr>
+            <tr>
+              <th>Repetidor</th>
+              <td>53.2 %</td>
+              <td>60.0 %</td>
+            </tr>
+            <tr>
+              <th>Contador de la mesa</th>
+              <td>52.0 %</td>
+              <td>54.6 %</td>
+            </tr>
+            <tr>
+              <th>Pasador</th>
+              <td>55.6 %</td>
+              <td>57.4 %</td>
+            </tr>
+            <tr>
+              <th>Menos Jugada</th>
+              <td>56.8 %</td>
+              <td>56.6 %</td>
+            </tr>
+            <tr>
+              <th>No gastar la data</th>
+              <td>55.6 %</td>
+              <td>60.2 %</td>
+            </tr>
+            <tr>
+              <th>Bota Flaca</th>
+              <td>50.0 %</td>
+              <td>49.6 %</td>
+            </tr>
+            <tr>
+              <th>Agachao</th>
+              <td>56.0 %</td>
+              <td>58.6 %</td>
+            </tr>
+            <tr>
+              <th>Gastar la data</th>
+              <td>55.4 %</td>
+              <td>60.2 %</td>
+            </tr>
+            <tr>
+              <th>Siempre doble</th>
+              <td>52.8 %</td>
+              <td>58.2 %</td>
+            </tr>
+            <tr>
+              <th>Campeón del doble 9</th>
+              <td>53.0 %</td>
+              <td>49.2 %</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <p>
-        Como se puede observar, se puede llevar a cabo un juego con estas características y aún así ganar la partida, siendo 
-        esto algo no poco común: en todos los casos los datos rondan la mitad de juegos ganados y la otra mitad, perdidos. Así 
-        que no es necesario dejarse influenciar por esta idea, y aquel que intente repartir las fichas nuevamente, bueno, pues
-        aclararle que es solo un mito.
+        Tal vez no resulta muy evidente, pero los mejores resultados se alcanzaron de forma general con la salida
+        con la
+        data mejor acompañada.
+        La expresión inicial podría cambiarse por: Salir con el doble 9 con buena data de 9: ¡No se piensa!. Usted
+        escoja lo que estime conveniente cuando
+        vaya a salir y tenga el doble 9, pero tenga en mente que salir con esa ficha no es una regla.
       </p>
     </div>
 
+
+    <div id="methodology" class="text-block">
+      <button type="button" class="button" onclick="toggle_methodology();">
+        <span id='hover' data-content='»'> ¿ Cómo se hizo ? </span> 
+      </button>
+
+      <div id="methodology-body" hidden>
+        <p>
+          Los datos mostrados en este artículo se obtuvieron gracias a la utilización del software implementado
+          en <a class="main-text" href="https://github.com/2kodevs/domaino">2kodevs-domAIno</a>, el cual posee el 
+          ambiente necesario para simular un juego de dominó con un grupo de características definidas. Este cuenta
+          con la implementación de los distintos tipos de juego, los tipos de salida, el modo cooperativo, y los 
+          jugadores con las estrategias anteriormente mencionadas; todo esto, por supuesto, para ambas modalidades
+          de dominó.
+        </p>
+
+        <p>
+          Cada jugador fue desarrollado de modo que recibe un conjunto de fichas válidas a jugar y devuelve un 
+          subconjunto (no vacío) de las mismas acordes a la estrategia que está utilizando. Esto permite tomar 
+          un grupo de estrategias y componerlas para crear nuevos y mejores jugadores, mediante el uso de 
+          filtrados sucesivos sobre las fichas válidas. En el caso de la primera estrategia en la composición, 
+          las jugadas válidas que esta recibe serían todas las posibles jugadas a realizar en ese turno.
+        </p>
+
+        <p>
+          Para el desarrollo de dicho software se utilizó como base el proyecto 
+          <a class="main-text" href="https://github.com/mfornet/domaino">domAIno</a> que contaba con el soporte
+          básico y algunas implementaciones interesantes, como es el caso del campeón del doble 6.
+        </p>
+
+        <p>
+          El <em>campeón del doble 6</em> es un jugador híbrido que utiliza las estrategias Bota Gorda, Más Frecuente y 
+          Aleatorio; para cada ficha válida en un turno calcula un coeficiente por estrategia apoyado en un conjunto de 
+          parámetros prefijados, de modo que el coeficiente obtenido le permitirá elegir la mejor ficha a jugar en cada 
+          situación.
+        </p>
+
+        <p>
+          Para la obtención de los datos que se muestran en el primero de los gráficos se enfrentó cada par de 
+          estrategias con cada una de las características adicionales que se han mencionado (modalidad, tipo de 
+          juego, etcétera), 500 veces cada una, lo que suma un total de 8450000 simulaciones. Cada una devuelve el 
+          equipo ganador, por lo que sumando las victorias de ambas estrategias según el equipo que las implementa,
+          se calcula el porciento de partidas ganadas mostrado en la gráfica. Los resultados que se obtuvieron 
+          en las simulaciones fueron guardados en un json, para su posterior utilización en este artículo.
+        </p>
+
+        <p>
+          A partir de los resultados obtenidos, se halló la media aritmética (promedio) de partidas ganadas por cada 
+          estrategia, y este número fue asignado como el peso de las mismas. El valor de promedio más alto determina 
+          entonces la mejor estrategia. Este cálculo se realizó de forma separada para las dos modalidades, puesto 
+          que se observó que la efectividad de las estrategias era variable según este aspecto.
+        </p>
+
+        <p>
+          En cuanto al <em>campeón del doble 9</em>, se tomaron todas las estrategias implementadas ordenadas
+          de acuerdo a su peso, en la modalidad del dominó hasta el 9, y se aplicó la composición de estas estrategias,
+          siguiendo la prioridad de la ordenación, para crear al nuevo jugador. El orden de estas estrategias, es el
+          siguiente: <em>Bota Flaca, Siempre Doble, Agachao, Mantener la data, Gastar la data, Campeón del doble 6, Contador 
+          de la mesa, Menos Jugada, Pasador, Aleatorio, Repetidor, Más frecuente, Bota Gorda</em>. Para añadirlo a los datos 
+          ya computados, fue necesario enfrentarlo contra los jugadores de las demás estrategias, e igualmente se realizaron 500 
+          simulaciones por enfrentamiento.
+        </p>
+        <p>
+          Para los jugadores de los mitos presentados, se tomó el conjunto de características que mejor representaran 
+          la situación elegida, y cada jugador se enfrentó a cada estrategia implementada para obtener los resultados 
+          en cada caso. De la misma forma, por cada enfrentamiento se desarrollaron 500 simulaciones.
+        </p>
+        <p>
+          Las posibles combinaciones de tableros para cada modalidad de dominó, así como las probabilidades, tanto 
+          de obtener una ficha específica en una mano de dominó, como de seleccionar una cierta data de fichas, se 
+          calcularon a través de los métodos <em>possible_hands</em>, <em>one_piece_prob</em> y <em>data_prob</em>
+          que pueden encontrarse en el repositorio 
+          <a class="main-text" href="https://github.com/2kodevs/domaino-data/blob/master/utils/prob.py">domAIno-data</a>.
+        </p>
+        
+        
+        
+
+        <button type="button" class="button" onclick="toggle_methodology();">
+          <span data-content='«'> Cerrar metodología </span> 
+        </button>
+      </div>
+    </div>
   </div>
 
   <div class="copyright">Copyright 2020</div>

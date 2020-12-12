@@ -34,7 +34,7 @@ function load(json, id){
   //TODO: get the json and remove the function argument
   json = json_data(json, id);
   var label = document.getElementById(`id${id}`).value;
-  document.getElementById('main-label').innerHTML = label;
+  document.getElementById('main-label').innerHTML = `${label} <h5>victorias sobre cada estrategia</h5>`;
   var data = json[label];
 
   var p = 0;
@@ -78,13 +78,27 @@ function populate_select(json, i){
     sel.value = new_value;
 };
 
-function populate_selectors(n){
+function populate_selectors(n, labels){
   //TODO: get the json and remove the function argument
   var div = document.getElementById('selectors');
-  lines = "";
+  lines = `<div style="display: flex; justify-content: space-between; flex-wrap: wrap;">\n`;
   for(var i = 1; i < n; i++){
+    lines += `<div style="display: flex; flex-direction: column;">\n`
+    lines += `<label for='id${i}'>${labels[i]}</label>\n`
     lines += `<select name='id${i}' id='id${i}' onchange="upd_data(SITE_JSON, ${i + 1}, ${n});"></select>\n`;
+    lines += `</div>\n`
   }
+  lines += `<div style="display: flex; flex-direction: column;">\n`
+  lines += `<label for='id${n}'>${labels[i]}</label>\n`
   lines += `<select name='id${n}' id='id${n}' onchange="load(SITE_JSON, ${n});"></select>\n`;
+  lines += `</div>\n</div>\n`
   div.innerHTML = lines;
+};
+
+function toggle_methodology() {
+  var container = document.getElementById('methodology-body');
+  var hover = document.getElementById('hover');
+  var i = 1 - container.hidden;
+  container.hidden = i;
+  hover.setAttribute('data-content', ['«', '»'][i]);
 };

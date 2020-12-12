@@ -11,11 +11,11 @@ table = '<div style="display: flex; justify-content: center;">\n<table class="st
 table += f'<thead>\n<tr>\n<th>Estrategias</th>\n'
 for k in keys:
     table += f'<th>{k}</th>\n'
-table += '\n</tr></thead>\n<tbody>\n'
+table += '</tr>\n</thead>\n<tbody>\n'
 for sk in second_level[0]:
     table += f'<tr>\n<th>{sk}</th>\n'
     for k in keys:
-        table += f'<td>\n{data[k][sk]}</td>\n'
+        table += f'<td>{data[k][sk]} %</td>\n'
     table += '</tr>'
 table += '</tbody>\n</table>\n</div>\n'
 open('table.html', 'w').write(table)

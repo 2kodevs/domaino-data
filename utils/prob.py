@@ -11,14 +11,32 @@ def combinations(n, k, fac=None):
         fac = factorial(n)
     return fac[n] // (fac[k] * fac[n - k])
 
-def domino_prob(n, max_number=9, pieces=10):
+def data_prob(n, max_number=9, pieces=10, fixed=0):
+    if fixed > n: return 0
     if n < 0 or n > pieces: return 0
     total = ((max_number + 1) * (max_number)) // 2
     total += max_number + 1
     fac = factorial(total)
-    num = combinations(max_number + 1, n, fac) * combinations(total - max_number - 1, pieces - n, fac)
+    num = combinations(max_number + 1 - fixed, n - fixed, fac) * combinations(total - max_number - 1, pieces - n, fac)
     den = combinations(total, pieces)
     return num / den
 
+def one_piece_prob(max_number=9, pieces=10):
+    total = ((max_number + 1) * (max_number)) // 2
+    total += max_number + 1
+    fac = factorial(total)
+    num = combinations(total - 1, pieces - 1, fac)
+    den = combinations(total, pieces)
+    return num / den
+
+def possible_hands(total, k, players=4):
+    fac = factorial(total)
+    result = 1
+    for _ in range(players):
+        result *= combinations(total, k, fac)
+        total -= k
+    return result
+
 if __name__ == "__main__":
-    print(domino_prob(int(input('Cuantas quieres en la data: '))))
+    print(data_prob(int(input('Cuantas quieres en la data: '))))
+    
