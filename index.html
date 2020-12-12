@@ -1268,6 +1268,7 @@
           jugadores con las estrategias anteriormente mencionadas; todo esto, por supuesto, para ambas modalidades
           de dominó.
         </p>
+
         <p>
           Cada jugador fue desarrollado de modo que recibe un conjunto de fichas válidas a jugar y devuelve un 
           subconjunto (no vacío) de las mismas acordes a la estrategia que está utilizando. Esto permite tomar 
@@ -1275,36 +1276,43 @@
           filtrados sucesivos sobre las fichas válidas. En el caso de la primera estrategia en la composición, 
           las jugadas válidas que esta recibe serían todas las posibles jugadas a realizar en ese turno.
         </p>
+
         <p>
           Para el desarrollo de dicho software se utilizó como base el proyecto 
           <a class="main-text" href="https://github.com/mfornet/domaino">domAIno</a> que contaba con el soporte
           básico y algunas implementaciones interesantes, como es el caso del campeón del doble 6.
         </p>
+
         <p>
           El <em>campeón del doble 6</em> es un jugador híbrido que utiliza las estrategias Bota Gorda, Más Frecuente y 
           Aleatorio; para cada ficha válida en un turno calcula un coeficiente por estrategia apoyado en un conjunto de 
           parámetros prefijados, de modo que el coeficiente obtenido le permitirá elegir la mejor ficha a jugar en cada 
           situación.
         </p>
+
         <p>
           Para la obtención de los datos que se muestran en el primero de los gráficos se enfrentó cada par de 
           estrategias con cada una de las características adicionales que se han mencionado (modalidad, tipo de 
-          juego, etcétera), 500 veces cada una, lo que suma un total de 6600 simulaciones. Cada una devuelve el 
+          juego, etcétera), 500 veces cada una, lo que suma un total de 8450000 simulaciones. Cada una devuelve el 
           equipo ganador, por lo que sumando las victorias de ambas estrategias según el equipo que las implementa,
           se calcula el porciento de partidas ganadas mostrado en la gráfica. Los resultados que se obtuvieron 
           en las simulaciones fueron guardados en un json, para su posterior utilización en este artículo.
         </p>
+
         <p>
           A partir de los resultados obtenidos, se halló la media aritmética (promedio) de partidas ganadas por cada 
           estrategia, y este número fue asignado como el peso de las mismas. El valor de promedio más alto determina 
           entonces la mejor estrategia. Este cálculo se realizó de forma separada para las dos modalidades, puesto 
           que se observó que la efectividad de las estrategias era variable según este aspecto.
         </p>
+
         <p>
           En cuanto al <em>campeón del doble 9</em>, se tomaron todas las estrategias implementadas ordenadas
           de acuerdo a su peso, en la modalidad del dominó hasta el 9, y se aplicó la composición de estas estrategias,
-          siguiendo la prioridad de la ordenación, para crear al nuevo jugador. Para añadirlo a los datos ya computados, 
-          fue necesario enfrentarlo contra los jugadores de las demás estrategias, e igualmente se realizaron 500 
+          siguiendo la prioridad de la ordenación, para crear al nuevo jugador. El orden de estas estrategias, es el
+          siguiente: <em>Bota Flaca, Siempre Doble, Agachao, Mantener la data, Gastar la data, Campeón del doble 6, Contador 
+          de la mesa, Menos Jugada, Pasador, Aleatorio, Repetidor, Más frecuente, Bota Gorda</em>. Para añadirlo a los datos 
+          ya computados, fue necesario enfrentarlo contra los jugadores de las demás estrategias, e igualmente se realizaron 500 
           simulaciones por enfrentamiento.
         </p>
         <p>
